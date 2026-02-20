@@ -1,5 +1,7 @@
 # QoL-Filter
 Quality of Life filter for ESR D2R Mod
+https://www.dropbox.com/t/nwKBqiN3zIC8A86e
+^^ Sound pack ^^
 To install this filter you will need to locate your EasternSunLan install location. This Should be within  D2RLan\D2R\Mods\
 Navigate to:
 EasternSunLAN\EasternSunLAN.mpq\D2RLAN\Filters
