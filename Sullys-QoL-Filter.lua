@@ -9,7 +9,7 @@ return {
     audioPlayback = true,
     debug = false,
     allowOverrides = true,
-    filter_level = 4,
+    filter_level = 1,
     rules = {
     
     -- Vendor item tooltips for some cube recipes
@@ -46,7 +46,7 @@ return {
         
         {
             code = "gld",
-            stat = { index = 14, op = "<=", value = 749 }, --hides gold under 1k
+            stat = { index = 14, op = "<=", value = 999 }, --hides gold under 1k
             pstat = { index = 12, op = ">=", value = 80 }, -- Char Level is >= 80
             hide = true, 
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" }
@@ -230,7 +230,7 @@ return {
             },
         -- Hiding any ESR runes below Gold
             {
-                codes = {"r01","r02","r03","r04","r05","r06","r07","r08","r09","r10","r11","r12","r13","r14","r15","r16","r17","r18","r19","r20","r22","r23","r24","r25","r26","r27","r28", "r29", "r30", "r31","r32","r33","r34","r35"}, -- Hiding White, Yellow, Orange, and Green ESR runes
+                codes = {"r01","r02","r03","r04","r05","r06","r07","r08","r09","r10","r11","r12","r13","r14","r15","r16","r17","r18","r19","r20","r21""r22","r23","r24","r25","r26","r27","r28", "r29", "r30", "r31","r32","r33","r34","r35"}, -- Hiding White, Yellow, Orange, and Green ESR runes
                 hide = true,
                 area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
                 filter_levels = 4
@@ -420,14 +420,13 @@ return {
         },
 
     -- Crafting Reagants Style and notifications
+       -- Ancient Decipherer
         {
-            code = "ddd", -- Ancient Decipherer
-            notify = "{Red}Crafting Reagant: {gold} Ancient Decipherer",
-            location = {"onplayer","atvendor","onground"},
-            prefix_desc = "{white}Cube with Multi-Stocker to store\n {red}Crafting Reagant \n",
+            code = "ddd", 
+            notify = "{red}Crafting Reagant: {gold}Ancient Decipherer",
             border = {255, 0, 0, 255}
         },
-    -- Socket Donut style and notification
+        -- Socket Donut style and notification
         {
             code = "sdo",
             notify = "{red}Crafting Material: {name}",
@@ -437,14 +436,14 @@ return {
             name_override = "{black}Socket Donut",
         },
         
-    -- Orb of Annointment Style and notification
+         -- Orb of Annointment Style and notification
         {
             code = "um7",
             notify = "{red}*{green}*{blue}* {red}Rare Crafting Reagant: {purple} Orb of Annointment {red}*{green}*{blue}*",
             border = {150,0,200,250},
             background = {255,255,255,250}
         },
-        
+        -- Worldstone Shard
         {
             code = "wss",
             notify = "{Red}Crafting Reagant: {white}Worldstone Shard",
@@ -458,6 +457,7 @@ return {
           location = {"onplayer","atvendor"},
           prefix = "{white}Cube with Multi-Stocker to store\n{red}Crafting Material\n"
         },
+        -- Maple Leaf
         {
             code = "map",
             notify = "{red}*{green}*{blue}* {red}Rare Crafting Reagant: {gold} Maple Leaf {red}*{green}*{blue}*",
@@ -466,7 +466,7 @@ return {
             name_override = "{black}Maple Leaf",
             audio = "gong.mp3"
         },
-        
+        -- Anvil Stone
         {
             code = "qqq",
             notify = "{red}*{green}*{blue}* {red}Rare Crafting Reagant: {gold} Anvil Stone {red}*{green}*{blue}*",
@@ -475,7 +475,7 @@ return {
             name_override = "{black}Anvil Stone",
             audio = "gong.mp3"
         },
-       
+        -- Elixir
         {
             code = "elx",
             notify = "{red}*{green}*{blue}* {red}Rare Crafting Reagant: {gold} Elixir {red}*{green}*{blue}*",
@@ -484,7 +484,7 @@ return {
             name_override = "{black}Elixir",
             audio = "gong.mp3"
         },
-      
+        -- Cookbook
         {
             code = "yyy",
             notify = "{red}*{green}*{blue}* {red}Rare Crafting Reagant: {gold} Cookbook {red}*{green}*{blue}*",
@@ -493,8 +493,9 @@ return {
             name_override = "{black}Cookbook",
             audio = "gong.mp3"
         },
+        --
         {
-            codes = {"map", "ggg", "elx", "yyy"},
+            codes = {"map", "ggg", "elx", "yyy","ddd"},
             location = {"onplayer","atvendor"},
             prefix = "{white}Cube with Multi-Stocker to store\n{red} Rare Crafting Reagant \n"
         },
