@@ -1,7 +1,7 @@
 --- Filter Title: Sully's Quality of Life Filter
 --- Filter Type: MultiStrict
 --- Filter Description: PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
---- Filter Link: 
+--- Filter Link: https://github.com/Thisisnotsully/QoL-Filter/edit/main/Sullys-QoL-Filter.lua
 return {
     reload = "{white}Sully's Quality of Life Filter {purple}v0.1", -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
     language = "enUS",
@@ -12,6 +12,11 @@ return {
     filter_level = 4,
     rules = {
     
+    --- Vendor item tooltips for some cube recipes
+    {code = "vps", location = "atvendor",suffix_desc = "{green}Hover Perfect Gems to see class crafting recipes\n"},
+    {code = "gvb", location = "atvendor",prefix ="{blue}Non-Barb Weapon:{gray} 25-35 Attack Speed|150-200 Enhanced Damage|15-25 Physical Leech Life|10-15 Physical Leech Mana|1-4 Random\n{blue}Weapon:{gray} +1-2 Barb Skills|25-35 Attack Speed|150-200 Enhanced Damage|1-4 Random\n{blue}Ring:{gray} +1-2 Barb Skills|10-15 Pct Max Life|20-30 Str|+20-30 Max Dmg to Attacks|1-4 Random\n{blue}Amulet:{gray} +1-2 Barb Skills|10-15 Pct Max Life|15-25 All Resists|1-4 Random\n{blue}Chest:{gray} +1-2 Barb Skills|80-100 ED|15-25 all attributes|+10-15 Phys Res|1-4 Random\n{blue}Shield:{gray} +1-2 Barb Skills|20-30 Faster Block|80-100 ED|3-5 Increased Block|1-4 Random\n{blue}Belt:{gray} +1 Barb Skills|20-30 Hit Recovery|80-100 ED|30-45 Str|1-4 Random\n{blue}Gloves:{gray} +1 Barb Skills|20-30 Attack Speed|80-100 ED|30-45 Dex|1-4 Random\n{blue}Boots:{gray} +1 Barb Skills|20-30 Faster Run/Walk|80-100 ED|30-45 Vit|1-4 Random\n{blue}Helm:{gray} +1-2 Barb Skills|ED|30-45 Energy|15-15 All Res|1-4 Random\n{blue}Magic{gray} Gear + Forging Hammer + P.Amethyst + Any Jewel\n"},
+    {code = "gyb", location = "atvendor",prefix =" {blue}Non-Druid Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|25-40 Spell Dmg|1-4 Random\n{blue}Druid Wpn: {gray}+1-2 Druid Skill|25-35 IAS|150-200% Enahcned Dmg|1-4 Random\n{blue}Ring: {gray}+1-2 Druid Skill|20-30 Vit|Max Life 10-15 Pct|12-18 Spell Dmg|1-4 Random\n{blue}Amulet: {gray}+1-2 Druid Skill|20-30 Vit|15 Pct Max Life|15-25 All Res|1-4 Random\n{blue}Chest: {gray}+1-2 Druid Skill|80-100 ED|15-25 All Attr|10-15 Phys Res|1-4 Random\n{blue}Shield:{gray} +1-2 Druid Skill|20-30 FBR|3-5 Block|80-100 ED|1-4 Random\n{blue}Belt{gray}+1 Druid Skill|20-30 FHR|80-100 ED|30-45 Str|1-4 Random\n{blue}Gloves:{gray}+1 Druid Skill|20-30 IAS|80-100 ED|30-45 Dex|1-4 Random\n{blue}Boots:{gray}+1 Druid Skill|20-30 FRW|80-100 ED|30-45 Vit|1-4 Random\n{blue}Helm{gray}+1-2 Druid Skills|90-100 ED|30-45 Energy|15-25 All Res|1-4 Random Stats\n{blue}Magic {gray}Gear    + Forging Hammer + Tyranium Ore + P.Topaz + Any Jewel\n"},
+
     --- Hiding small gold piles based on level
         {
             code = "gld",
@@ -556,21 +561,21 @@ return {
             notify = "{gold}Normal Coupon: {white}{name}", 
             audio = "other.mp3",
             border = {255,165,0,255},
-            name_override = "{rarity}{name}"
+            name_override = "{name}"
         },
         {
             codes = {"01d","02d","03d","04d","05d","06d","07d","08d","09d","10d","11d","12d","13d","14d","15d","16d","17d","18d","19d","20d","21d","22d","23d","24d","25d","26d","27d","28d","29d","30d","31d","32d","33d","34d","35d","36d","37d","38d","39d","40d","41d","42d","43d","44d","45d","46d","47d","48d","49d","50d","01g","02g","03g","04g","05g","06g","07g","08g","09g","10g","11g","12g","13g","14g","15g","16g","17g","18g","19g","20g","21g","22g","23g","24g","25g","26g","27g","28g","29g","30g","31g","32g","33g","34g","35g","36g","37g","38g","39g","40g","41g","42g","43g","44g","45g","46g","47g","48g","49g","50g","51g","52g","53g","54g","55g","56g","57g","58g","59g","60g","61g","62g","63g","64g","65g","66g","67g","68g","69g","70g","71g","72g","73g","74g","75g","76g","77g","78g","05i","06i","07i","08i","05j","06j","07j","08j","04i"},
             notify = "{gold}Exceptional Coupon: {white}{name}", 
             audio = "other.mp3",
             border = {255,165,0,255},
-            name_override = "{rarity}{name}"
+            name_override = "{name}"
         },
         {
             codes = {"01e","02e","03e","04e","05e","06e","07e","08e","09e","10e","11e","12e","13e","14e","15e","16e","17e","18e","19e","20e","21e","22e","23e","24e","25e","26e","27e","28e","29e","30e","31e","32e","33e","34e","35e","36e","37e","38e","39e","40e","41e","01h","02k","03h","04h","05h","06h","07h","08h","09h","10h","11h","12k","13h","14h","15h","16h","17h","18h","19h","20h","21h","22k","23h","24h","25h","26h","27h","28h","29h","30h","31h","32k","33h","34h","35h","36h","37h","38h","39h","40h","41h","42k","43h","44h","45h","46h","47h","48h","49h","50h","51h","52k","53h","54h","55h","56h","57h","58h","59h","60h","61h","62k","09i","10i","11i","12i","09j","10j"},
             notify = "{gold}Elite Coupon: {white}{name}", 
             audio = "other.mp3",
             border = {255,165,0,255},
-            name_override = "{rarity}{name}"
+            name_override = "{name}"
         },
     -- 'S' tier coupons
         {
@@ -598,7 +603,7 @@ return {
         {
         code = "c11",
         location = {"onplayer", "atvendor", "equipped", "onground"},
-        prefix_desc = "{purple} To Upgrade: Cube with 7 Rare Charms, Elixir, Maple Leaf, and Ancient Decipherer \n Socket with any Rune, Gem, or Jewel \n"
+        prefix_desc = "{purple} To Upgrade: Cube with 7 Rare Charms, Elixir, Maple Leaf, and Ancient Decipherer \n Socket with any Rune, Gem, or Jewel \n {green}***Browse Akara's items for more tips!***\n"
         },
         
         {
@@ -702,31 +707,34 @@ return {
         },
 
     -- Tooltip information for Body Armor showing available 2 socket Runewords
-            {
+        {
             codes = {"qui", "lea", "hla", "stu", "rng", "scl", "chn", "brs", "spl", "plt", "fld", "gth", "ful", "aar", "ltp", "shl", "elv", "2ui", "2ea", "2la", "2tu", "2ng", "2cl", "2hn", "2rs", "2pl", "2lt", "br2", "xui", "xea", "xla", "xtu", "xng", "xcl", "xhn", "xrs", "xpl", "xlt", "xld", "xth", "xul", "xar", "xtp", "xhh", "xlv", "4ui", "4ea", "4la", "4tu", "4ng", "4cl", "4hn", "4rs", "4pl", "4lt", "4ld", "4th", "4ul", "4ar", "4tp", "yui", "yea", "yla", "ytu", "yng", "ycl", "yhn", "yrs", "ypl", "ylt", "yld", "yth", "yul", "yar", "ytp", "yhh", "ylv", "uui", "uea", "ula", "utu", "ung", "ucl", "uhn", "urs", "upl", "ult", "uld", "uth", "uul", "uar", "utp", "m06"},
             runeword = false,
+            quality = "3-",
             location = {"onplayer", "atvendor", "equipped"},
             suffix_desc = "{purple}Hot: {red}Tsu{white}-{gold}Ne {gray}Lvl: 55 \n{Purple}Prudence: {orange} Mal{white}-Tir {gray}Lvl: 49 \n{purple}Mist: {green}Mo{white}-{red}Ya {gray}Lvl: 47 \n{purple}Deception: {yellow}Sa{white}-{orange}Wa{gray} Lvl: 38\n{purple}Smoke: {white}Nef-{orange}Lem {gray}Lvl: 37 \n{purple}Wealth: {orange}To{white}-{red}Mi {gray}Lvl: 36\n{Purple}Stealth: {white}Tal-Eth {gray}Lvl: 17\n{purple}Darkness: {red}Ki{white}-{red}Ri {gray}Lvl: 15\n{purple}Fog: {red}Ki{white}-{red}Ri {gray}Lvl: 12\n{purple}Gold: {red}Ri{white}-N {gray}Lvl: 10\n {purple}Greed: {white}Yo-Ku {gray}Lvl: 9\n",
             sockets = "2"
-            },
+        },
     -- Tooltip information for Body Armor showing available 3 socket Runewords
-            {
-                codes = {"qui", "lea", "hla", "stu", "rng", "scl", "chn", "brs", "spl", "plt", "fld", "gth", "ful", "aar", "ltp", "shl", "elv", "2ui", "2ea", "2la", "2tu", "2ng", "2cl", "2hn", "2rs", "2pl", "2lt", "br2", "xui", "xea", "xla", "xtu", "xng", "xcl", "xhn", "xrs", "xpl", "xlt", "xld", "xth", "xul", "xar", "xtp", "xhh", "xlv", "4ui", "4ea", "4la", "4tu", "4ng", "4cl", "4hn", "4rs", "4pl", "4lt", "4ld", "4th", "4ul", "4ar", "4tp", "yui", "yea", "yla", "ytu", "yng", "ycl", "yhn", "yrs", "ypl", "ylt", "yld", "yth", "yul", "yar", "ytp", "yhh", "ylv", "uui", "uea", "ula", "utu", "ung", "ucl", "uhn", "urs", "upl", "ult", "uld", "uth", "uul", "uar", "utp", "m06"},
-                runeword = false,
-                pstat = { index = 12, op = "<=", value = 44 }, -- Char Level is <= 44,
-                location = {"onplayer", "atvendor", "equipped"},
-                suffix_desc = "{purple}Abundant: {orange}Ho{white}-U{green}Fu {gray}Lvl: 44\n{purple}Harmony: {orange}Wa{white}-{green}Se{white}-I {gray}Lvl: 43\n{purple}Fossil of the Sun: {white}Ka-{green}Se{white}-{red}Ki {gray}Lvl: 43\n{purple}Lionheart: {orange}Hel{white}-{orange}Lum{white}-{orange}Fal {gray}Lvl: 41\n{purple}Maiden: {yellow}O{white}-{orange}To{white}-{orange}Me {gray}Lvl: 36\n{purple}Impetuous: {red}Mi{white}-{Yellow}Sa{white}-{Orange}To {gray}Lvl: 36\n{purple}Praise: {orange}Ho{white}-{orange}Me{white}-{orange}Ru {gray}Lvl: 34\n{purple}Captive: {orange}Ho{white}-{red}Ri{white}-Yo {gray}Lvl: 31\n{purple}Peace: {orange}Shael{white}-{orange}Thul{white}-{orange}Amn {gray}Lvl: 29\n{purple}Hustle: {white}Shael-Ral-Eld {gray}Lvl: 29\n{purple}Oath: {red}Ki{white}-Ka-I {gray}Lvl: 29\n{purple}Myth: {orange}Hel{white}-Amn-Nef {gray}Lvl: 25\n{purple}Exuberance: {red}A{white}-I-Ka {gray}Lvl: 17\n{Purple}Famine: {red}Ki{white}-{red}Ki{white}-N {gray}Lvl: 10\n{Purple}Forefeel: {white}Yo-Ka-N {gray}Lvl: 9\n{purple}Evolution: {white}Shi-N-Ka {gray}Lvl: 6\n",
-                sockets = "3",
-            },
-            {
-                codes = {"qui", "lea", "hla", "stu", "rng", "scl", "chn", "brs", "spl", "plt", "fld", "gth", "ful", "aar", "ltp", "shl", "elv", "2ui", "2ea", "2la", "2tu", "2ng", "2cl", "2hn", "2rs", "2pl", "2lt", "br2", "xui", "xea", "xla", "xtu", "xng", "xcl", "xhn", "xrs", "xpl", "xlt", "xld", "xth", "xul", "xar", "xtp", "xhh", "xlv", "4ui", "4ea", "4la", "4tu", "4ng", "4cl", "4hn", "4rs", "4pl", "4lt", "4ld", "4th", "4ul", "4ar", "4tp", "yui", "yea", "yla", "ytu", "yng", "ycl", "yhn", "yrs", "ypl", "ylt", "yld", "yth", "yul", "yar", "ytp", "yhh", "ylv", "uui", "uea", "ula", "utu", "ung", "ucl", "uhn", "urs", "upl", "ult", "uld", "uth", "uul", "uar", "utp", "m06"},
-                runeword = false,
-                pstat = { index = 12, op = ">", value = 45 }, -- Char Level is <= 44,
-                location = {"onplayer", "atvendor", "equipped"},
-                suffix_desc = "{Purple}\n{purple}Duress: {orange}Shael{white}-{orange}Um{white}-Thul {gray}Lvl: 47\n{purple}Bone: {white}Sol-{orange}Um{white}-{orange}Um {gray}Lvl: 47\n{purple}Daylight: {green}Hi{white}-{orange}Ru{white}-{green}Ma {gray}Lvl: 46\n{purple}Indominable: {yellow}Ra{white}-N{green}Ma {gray}Lvl: 45\n",
-                sockets = "3",
-            },
-            
+        {
+            codes = {"qui", "lea", "hla", "stu", "rng", "scl", "chn", "brs", "spl", "plt", "fld", "gth", "ful", "aar", "ltp", "shl", "elv", "2ui", "2ea", "2la", "2tu", "2ng", "2cl", "2hn", "2rs", "2pl", "2lt", "br2", "xui", "xea", "xla", "xtu", "xng", "xcl", "xhn", "xrs", "xpl", "xlt", "xld", "xth", "xul", "xar", "xtp", "xhh", "xlv", "4ui", "4ea", "4la", "4tu", "4ng", "4cl", "4hn", "4rs", "4pl", "4lt", "4ld", "4th", "4ul", "4ar", "4tp", "yui", "yea", "yla", "ytu", "yng", "ycl", "yhn", "yrs", "ypl", "ylt", "yld", "yth", "yul", "yar", "ytp", "yhh", "ylv", "uui", "uea", "ula", "utu", "ung", "ucl", "uhn", "urs", "upl", "ult", "uld", "uth", "uul", "uar", "utp", "m06"},
+            runeword = false,
+            quality = "3-",
+            pstat = { index = 12, op = "<=", value = 44 }, -- Char Level is <= 44,
+            location = {"onplayer", "atvendor", "equipped"},
+            suffix_desc = "{purple}Abundant: {orange}Ho{white}-U{green}Fu {gray}Lvl: 44\n{purple}Harmony: {orange}Wa{white}-{green}Se{white}-I {gray}Lvl: 43\n{purple}Fossil of the Sun: {white}Ka-{green}Se{white}-{red}Ki {gray}Lvl: 43\n{purple}Lionheart: {orange}Hel{white}-{orange}Lum{white}-{orange}Fal {gray}Lvl: 41\n{purple}Maiden: {yellow}O{white}-{orange}To{white}-{orange}Me {gray}Lvl: 36\n{purple}Impetuous: {red}Mi{white}-{Yellow}Sa{white}-{Orange}To {gray}Lvl: 36\n{purple}Praise: {orange}Ho{white}-{orange}Me{white}-{orange}Ru {gray}Lvl: 34\n{purple}Captive: {orange}Ho{white}-{red}Ri{white}-Yo {gray}Lvl: 31\n{purple}Peace: {orange}Shael{white}-{orange}Thul{white}-{orange}Amn {gray}Lvl: 29\n{purple}Hustle: {white}Shael-Ral-Eld {gray}Lvl: 29\n{purple}Oath: {red}Ki{white}-Ka-I {gray}Lvl: 29\n{purple}Myth: {orange}Hel{white}-Amn-Nef {gray}Lvl: 25\n{purple}Exuberance: {red}A{white}-I-Ka {gray}Lvl: 17\n{Purple}Famine: {red}Ki{white}-{red}Ki{white}-N {gray}Lvl: 10\n{Purple}Forefeel: {white}Yo-Ka-N {gray}Lvl: 9\n{purple}Evolution: {white}Shi-N-Ka {gray}Lvl: 6\n",
+            sockets = "3",
+        },
+        {
+            codes = {"qui", "lea", "hla", "stu", "rng", "scl", "chn", "brs", "spl", "plt", "fld", "gth", "ful", "aar", "ltp", "shl", "elv", "2ui", "2ea", "2la", "2tu", "2ng", "2cl", "2hn", "2rs", "2pl", "2lt", "br2", "xui", "xea", "xla", "xtu", "xng", "xcl", "xhn", "xrs", "xpl", "xlt", "xld", "xth", "xul", "xar", "xtp", "xhh", "xlv", "4ui", "4ea", "4la", "4tu", "4ng", "4cl", "4hn", "4rs", "4pl", "4lt", "4ld", "4th", "4ul", "4ar", "4tp", "yui", "yea", "yla", "ytu", "yng", "ycl", "yhn", "yrs", "ypl", "ylt", "yld", "yth", "yul", "yar", "ytp", "yhh", "ylv", "uui", "uea", "ula", "utu", "ung", "ucl", "uhn", "urs", "upl", "ult", "uld", "uth", "uul", "uar", "utp", "m06"},
+            runeword = false,
+            quality = "3-",
+            pstat = { index = 12, op = ">", value = 45 }, -- Char Level is <= 44,
+            location = {"onplayer", "atvendor", "equipped"},
+            suffix_desc = "{Purple}\n{purple}Duress: {orange}Shael{white}-{orange}Um{white}-Thul {gray}Lvl: 47\n{purple}Bone: {white}Sol-{orange}Um{white}-{orange}Um {gray}Lvl: 47\n{purple}Daylight: {green}Hi{white}-{orange}Ru{white}-{green}Ma {gray}Lvl: 46\n{purple}Indominable: {yellow}Ra{white}-N{green}Ma {gray}Lvl: 45\n",
+            sockets = "3",
+        },
+        
 
     -- In game notification for all monster parts
         {
