@@ -1169,5 +1169,12 @@ return {
             location ="onground",
             suffix = " {lilac}[{sockets}]"
         },
+        {
+            codes = {"dr1","dr2","dr3","dr4","dr5","dr6","dr7","dr8","dr9","dra","drb","drc","drd","dre","drf"} --Druid pelts for runeword base
+            quality = "3",
+            hide = "false".
+            noitfy = "{Yellow}Druid Pelt Base: {grey}{name}",
+            audio = "gong.mp3"
+        }
     },
 }
