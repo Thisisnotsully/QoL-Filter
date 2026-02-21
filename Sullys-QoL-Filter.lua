@@ -1,7 +1,7 @@
 --- Filter Title: Sully's Quality of Life Filter
 --- Filter Type: MultiStrict
 --- Filter Description: PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
---- Filter Link: 
+--- Filter Link: https://github.com/Thisisnotsully/QoL-Filter/edit/main/Sullys-QoL-Filter.lua
 return {
     reload = "{white}Sully's Quality of Life Filter {purple}v0.1", -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
     language = "enUS",
@@ -396,7 +396,7 @@ return {
             notify = "{Red}Crafting Reagant: {white}Worldstone Shard",
             border = {0, 0, 0, 255},
             background = {200, 150, 0, 255},
-            name_override = "{black} Worldstone Shard",
+            name_override = "{black}Worldstone Shard",
             audio = "mid.mp3"
         },
         {
@@ -414,7 +414,7 @@ return {
         },
         
         {
-            code = "ggg",
+            code = "qqq",
             notify = "{red}*{green}*{blue}* {red}Rare Crafting Reagant: {gold} Anvil Stone {red}*{green}*{blue}*",
             border = {0, 0, 0, 255},
             background = {200, 150, 0, 255},
