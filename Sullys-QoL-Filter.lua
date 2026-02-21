@@ -46,7 +46,7 @@ return {
         
         {
             code = "gld",
-            stat = { index = 14, op = "<=", value = 999 }, --hides gold under 1k
+            stat = { index = 14, op = "<=", value = 749 }, --hides gold under 1k
             pstat = { index = 12, op = ">=", value = 80 }, -- Char Level is >= 80
             hide = true, 
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" }
@@ -378,7 +378,7 @@ return {
     -- D-Stone notifications
         {
             codes = {"ppp","hly","eee","hh2","ggg","sss","ttt"},
-            notify = "{Red}Crafting Reagant: {purple} D-Stone",
+            notify = "{Red}Crafting Reagant:{purple} D-Stone",
             border = {150,0,150,255}
         },  
 
