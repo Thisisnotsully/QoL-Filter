@@ -1,7 +1,7 @@
 --- Filter Title: Sully's Quality of Life Filter
 --- Filter Type: MultiStrict
 --- Filter Description: PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
---- Filter Link: https://github.com/Thisisnotsully/QoL-Filter/
+--- Filter Link: 
 return {
     reload = "{white}Sully's Quality of Life Filter {purple}v0.1", -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
     language = "enUS",
@@ -856,6 +856,186 @@ return {
             audio = "tink.mp3"
         },
 
+    -- Tier 1
+        {   
+            code = "z01",
+            notify = "Tier 1 Map: {white} {name}",
+            name_override = "Cellar of Pain",
+            border = {255,255,255,255},
+            background = {0,0,0,255}
+        },
+      
+        {   
+            code = "z02",
+            notify = "Tier 1 Map: {white} {name}",
+            name_override = "Chasm of Horrors",
+            border = {255,255,255,255},
+            background = {0,0,0,255}
+        },
+       
+        {   
+            code = "z03",
+            notify = "Tier 1 Map: {white} {name}",
+            name_override = "Crypt Of Damnation",
+            border = {255,255,255,255},
+            background = {0,0,0,255}
+        },
+       
+        {   
+            code = "z04",
+            notify = "Tier 1 Map: {white} {name}",
+            name_override = "Necropolis",
+            border = {255,255,255,255},
+            background = {0,0,0,255}
+        },
+
+    -- Tier 2
+        {   
+            code = "z05",
+            notify = "Tier 2 Map: {white} {name}",
+            audio = "map.mp3",
+            name_override = "Ancient Tomb",
+            border = {255,255,255,255},
+            background = {0,0,0,255}
+        },
+       
+        {   
+            code = "z06",
+            notify = "Tier 2 Map: {white} {name}",
+            audio = "map.mp3",
+            name_override = "Chaos Rift",
+            border = {255,255,255,255},
+            background = {0,0,0,255}
+        },
+        
+        {   
+            code = "z07",
+            notify = "Tier 2 Map: {white} {name}",
+            audio = "map.mp3",
+            name_override = "Infested Lair",
+            border = {255,255,255,255},
+            background = {0,0,0,255}
+        },
+       
+        {   
+            code = "z08",
+            notify = "Tier 2 Map: {white} {name}",
+            audio = "map.mp3",
+            name_override = "Labyrinth of Suffering",
+            border = {255,255,255,255},
+            background = {0,0,0,255}
+        },
+        
+    -- Tier 3
+        {   
+            code = "z09",
+            notify = "Tier 3 Map: {white} {name}",
+            audio = "map.mp3",
+            name_override = "Decaying Depths",
+            border = {255,255,255,255},
+            background = {0,0,0,255}
+        },
+
+        {   
+            code = "z10",
+            notify = "Tier 3 Map: {white} {name}",
+            audio = "map.mp3",
+            name_override = "Endless Abyss",
+            border = {255,255,255,255},
+            background = {0,0,0,255}
+        },
+
+        {   
+            code = "z11",
+            notify = "Tier 3 Map: {white} {name}",
+            audio = "map.mp3",
+            name_override = "Frozen Wastes",
+            border = {255,255,255,255},
+            background = {0,0,0,255}
+        },
+       
+        {   
+            code = "z12",
+            notify = "Tier 3 Map: {white} {name}",
+            audio = "map.mp3",
+            name_override = "Twisted Maze",
+            border = {255,255,255,255},
+            background = {0,0,0,255}
+        },
+
+    -- Tier 4
+        {   
+            code = "z13",
+            notify = "Tier 4 Map: {white} {name}",
+            audio = "map.mp3",
+            name_override = "Cursed Ossuary",
+            border = {255,255,255,255},
+            background = {0,0,0,255}
+        },
+
+        {   
+            code = "z14",
+            notify = "Tier 4 Map: {white} {name}",
+            audio = "map.mp3",
+            name_override = "Infernal Nexus",
+            border = {255,255,255,255},
+            background = {0,0,0,255}
+        },
+       
+        {   
+            code = "z15",
+            notify = "Tier 4 Map: {white} {name}",
+            audio = "map.mp3",
+            name_override = "Reliquary of Souls",
+            border = {255,255,255,255},
+            background = {0,0,0,255}
+        },
+       
+        {   
+            code = "z16",
+            notify = "Tier 4 Map: {white} {name}",
+            audio = "map.mp3",
+            name_override = "{white}Shrine of Destruction",
+            border = {255,255,255,255},
+            background = {0,0,0,255}
+        },
+
+    -- Tier 5
+        {   
+            code = "z17",
+            notify = "Tier 5 Map: {white}{name}",
+            audio = "t5_map.mp3",
+            name_override = "{black}Eye of the Storm",
+            border = {0,0,0,255},
+            background = {255,255,255,255}
+        },
+
+        {   
+            code = "z18",
+            notify = "Tier 5 Map: {white}{name}",
+            audio = "t5_map.mp3",
+            name_override = "{black}Ice Crown Citadel",
+            border = {0,0,0,255},
+            background = {255,255,255,255}
+        },
+        
+        {   
+            code = "z19",
+            notify = "Tier 5 Map: {white}{name}",
+            audio = "t5_map.mp3",
+            name_override = "{black}The Sanctum of the Dead",
+            border = {0,0,0,255},
+            background = {255,255,255,255}
+        },
+
+        {   
+        code = "z20",
+        notify = "Tier 5 Map: {white}{name}",
+        audio = "t5_map.mp3",
+        name_override = "{black}The Reliquary of False Light",
+        border = {0,0,0,255},
+        background = {255,255,255,255}
+        },
     -- Tooltips on ESR Runes (Thanks to Quan + Squid)
         {code="r01",location={"onplayer","atvendor"},prefix="{gray}+1 White Rune Points when bagged{orange}\n"}, --I Rune
         {code="r02",location={"onplayer","atvendor"},prefix="{gray}+2 White Rune Points when bagged{orange}\n"}, --U Rune
