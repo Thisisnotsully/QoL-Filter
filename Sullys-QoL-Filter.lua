@@ -1,7 +1,7 @@
 --- Filter Title: Sully's Quality of Life Filter
 --- Filter Type: MultiStrict
 --- Filter Description: PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
---- Filter Link: https://github.com/Thisisnotsully/QoL-Filter/edit/main/Sullys-QoL-Filter.lua
+--- Filter Link: 
 return {
     reload = "{white}Sully's Quality of Life Filter {purple}v0.1", -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
     language = "enUS",
@@ -195,7 +195,8 @@ return {
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
             filter_levels = 3
         },
-    -- Uber Strict: Hiding Green or lower ESR runes, Normal/Exceptional uniques/armor, all Set Items, ALL rares except, charms, jewelry, jewels, all superior's bases except mythical, anyhing gem below perfcet, ancient decipherer
+    -- Uber Strict: Hiding Green or lower ESR runes, Normal/Exceptional uniques/armor, all Set Items, ALL rares except, charms, jewelry, jewels, 
+    -- all superior's bases except mythical, anyhing gem below perfcet, ancient decipherer, and normal coupons
         {
             codes = {"01l","02l","03l","04l","05l","06l","07l","08l","09l","10l","11l","12l","13l","14l","15l","16l","17l","18l","19l","20l","21l","22l"}, -- Hiding Low and Mid Tier LoD Decals
             hide = true,
@@ -269,6 +270,12 @@ return {
         hide = true,
         area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
         filter_levels = 4
+        },
+        {
+            codes = {"01c","02c","03c","04c","05c","06c","07c","08c","09c","10c","11c","12c","13c","14c","15c","16c","17c","18c","19c","20c","21c","22c","23c","24c","25c","26c","27c","28c","29c","30c","31c","32c","33c","34c","35c","36c","37c","38c","39c","40c","41c","42c","43c","44c","45c","46c","01f","02f","03f","04f","05f","06f","07f","08f","09f","10f","11f","12f","13f","14f","15f","16f","17f","18f","19f","20f","21f","22f","23f","24f","25f","26f","27f","28f","29f","30f","31f","32f","33f","34f","35f","36f","37f","38f","39f","40f","41f","42f","43f","44f","45f","46f","47f","48f","49f","50f","51f","52f","53f","54f","55f","56f","57f","58f","59f","60f","61f","62f","63f","64f","65f","66f","67f","68f","69f","70f","71f","01i","02i","03i","01j","02j","03j","04j"},
+            hide = true,
+            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
+            filter_levels = 4
         },
     -- NEVER hide Runeword items (I mean don't drop them outside of town... but just in case)
         {
@@ -558,24 +565,23 @@ return {
     -- Coupon style and notification
         {
             codes = {"01c","02c","03c","04c","05c","06c","07c","08c","09c","10c","11c","12c","13c","14c","15c","16c","17c","18c","19c","20c","21c","22c","23c","24c","25c","26c","27c","28c","29c","30c","31c","32c","33c","34c","35c","36c","37c","38c","39c","40c","41c","42c","43c","44c","45c","46c","01f","02f","03f","04f","05f","06f","07f","08f","09f","10f","11f","12f","13f","14f","15f","16f","17f","18f","19f","20f","21f","22f","23f","24f","25f","26f","27f","28f","29f","30f","31f","32f","33f","34f","35f","36f","37f","38f","39f","40f","41f","42f","43f","44f","45f","46f","47f","48f","49f","50f","51f","52f","53f","54f","55f","56f","57f","58f","59f","60f","61f","62f","63f","64f","65f","66f","67f","68f","69f","70f","71f","01i","02i","03i","01j","02j","03j","04j"},
-            notify = "{gold}Normal Coupon: {white}{name}", 
-            audio = "other.mp3",
+            notify = "{gold}Normal Coupon: {white}{name}",  --- Normal Coupons
             border = {255,165,0,255},
-            name_override = "{name}"
+            name_override = "{gray}Norm:{gold}{name}"
         },
         {
             codes = {"01d","02d","03d","04d","05d","06d","07d","08d","09d","10d","11d","12d","13d","14d","15d","16d","17d","18d","19d","20d","21d","22d","23d","24d","25d","26d","27d","28d","29d","30d","31d","32d","33d","34d","35d","36d","37d","38d","39d","40d","41d","42d","43d","44d","45d","46d","47d","48d","49d","50d","01g","02g","03g","04g","05g","06g","07g","08g","09g","10g","11g","12g","13g","14g","15g","16g","17g","18g","19g","20g","21g","22g","23g","24g","25g","26g","27g","28g","29g","30g","31g","32g","33g","34g","35g","36g","37g","38g","39g","40g","41g","42g","43g","44g","45g","46g","47g","48g","49g","50g","51g","52g","53g","54g","55g","56g","57g","58g","59g","60g","61g","62g","63g","64g","65g","66g","67g","68g","69g","70g","71g","72g","73g","74g","75g","76g","77g","78g","05i","06i","07i","08i","05j","06j","07j","08j","04i"},
-            notify = "{gold}Exceptional Coupon: {white}{name}", 
+            notify = "{gold}Exceptional Coupon: {white}{name}", --- Exceptional Coupons
             audio = "other.mp3",
             border = {255,165,0,255},
-            name_override = "{name}"
+            name_override = "{gray}Exc:{gold}{name}"
         },
         {
             codes = {"01e","02e","03e","04e","05e","06e","07e","08e","09e","10e","11e","12e","13e","14e","15e","16e","17e","18e","19e","20e","21e","22e","23e","24e","25e","26e","27e","28e","29e","30e","31e","32e","33e","34e","35e","36e","37e","38e","39e","40e","41e","01h","02k","03h","04h","05h","06h","07h","08h","09h","10h","11h","12k","13h","14h","15h","16h","17h","18h","19h","20h","21h","22k","23h","24h","25h","26h","27h","28h","29h","30h","31h","32k","33h","34h","35h","36h","37h","38h","39h","40h","41h","42k","43h","44h","45h","46h","47h","48h","49h","50h","51h","52k","53h","54h","55h","56h","57h","58h","59h","60h","61h","62k","09i","10i","11i","12i","09j","10j"},
-            notify = "{gold}Elite Coupon: {white}{name}", 
+            notify = "{gold}Elite Coupon: {white}{name}", --- Elite Coupons
             audio = "other.mp3",
             border = {255,165,0,255},
-            name_override = "{name}"
+            name_override = "{gray}Elt:{gold}{name}"
         },
     -- 'S' tier coupons
         {
@@ -616,79 +622,79 @@ return {
     -- Tooltip description for monster parts showing common drop locations
         {
             code = "hrt",
-            location = {"onplayer", "atvendor", "equipped", "onground"},
+            location = "onplayer",
             prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily in Cow Level and Maps \n Crafting Reagant\n"
         },
         
         {
             code = "brz",
-            location = {"onplayer", "atvendor", "equipped", "onground"},
+            location = "onplayer",
             prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily from Sand Leapers in Act 1, Ratmen in Act 3, and Maps \n Crafting Reagant\n"
         },
         
         {
             code = "jaw",
-            location = {"onplayer", "atvendor", "equipped", "onground"},
+            location = "onplayer",
             prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily from Skeleton Archers/Dark Rangers: Act 1 and Maps \n Crafting Reagant\n"
         },
         
         {
             code = "eyz",
-            location = {"onplayer", "atvendor", "equipped", "onground"},
+            location = "onplayer",
             prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily from Golems in Act 4, Act 5 Nihlathak's Domain, and Maps\n Crafting Reagant\n"
         },
                 
         {
             code = "hrn",
-            location = {"onplayer", "atvendor", "equipped", "onground"},
+            location = "onplayer",
             prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily from Barlog in Act 4 and Maps\n Crafting Reagant\n"
         },
                         
         {
             code = "tal",
-            location = {"onplayer", "atvendor", "equipped", "onground"},
+            location = "onplayer",
             prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily from Huntress' and Slinger's in Act 2 and Maps\n Crafting Reagant\n"
         },
                                 
         {
             code = "flg",
-            location = {"onplayer", "atvendor", "equipped", "onground"},
+            location = "onplayer",
             prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily from Fallen Shamen in Act 1 and Maps\n Crafting Reagant\n"
         },
                                         
         {
             code = "fng",
-            location = {"onplayer", "atvendor", "equipped", "onground"},
+            location = "onplayer",
             prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily from Arachs, Tomb Vipers, and Dune beasts in Act 2 and Maps\n Crafting Reagant\n"
         },
                                                 
         {
             code = "qll",
-            location = {"onplayer", "atvendor", "equipped", "onground"},
+            location = "onplayer",
             prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily from Quill Rats in Act 1, Thorned Hulks in Act 3, and Maps\n Crafting Reagant\n"
         },
                                                         
         {
             code = "sol",
-            location = {"onplayer", "atvendor", "equipped", "onground"},
+            location = "onplayer",
             prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily from Ghosts, Gloams, Goatmen in all Acts and Poppy Farm/Maps\n Crafting Reagant\n"
         },
         
         {
             code = "scz",
-            location = {"onplayer", "atvendor", "equipped", "onground"},
+            location = "onplayer",
             prefix_desc = "{white}Cube with Multi Stocker to store \n {purple} Doom Knights and Abyss Knights in Chaos Sanctuary Act 5, and Maps\n Found primarily from Ghoul Lords in Act 1 and 3,\n Crafting Reagant\n"
         },
                 
         {
             code = "spe",
-            location = {"onplayer", "atvendor", "equipped", "onground"},
+            location = "onplayer",
             prefix_desc = "{white}Cube with Multi Stocker to store \n {purple} Primairly dropped from Zakarumite in Act 3, Over Lords and Coruplent in Act 4, and Maps \n Crafting Reagant\n"
         },
                         
         {
             code = "zzz",
-            location = {"onplayer", "atvendor", "equipped", "onground"},
+            location = "onplayer",
             prefix_desc = "{white}Cube with Multi Stocker to store \n {purple} Exclusively dropped in The Secret Cow Level. For steak recipes please consult Gordon Ramsey \n Crafting Reagant\n"
         },
     -- Tooltip information and filtering for Uber Keys -
@@ -734,21 +740,38 @@ return {
             suffix_desc = "{Purple}\n{purple}Duress: {orange}Shael{white}-{orange}Um{white}-Thul {gray}Lvl: 47\n{purple}Bone: {white}Sol-{orange}Um{white}-{orange}Um {gray}Lvl: 47\n{purple}Daylight: {green}Hi{white}-{orange}Ru{white}-{green}Ma {gray}Lvl: 46\n{purple}Indominable: {yellow}Ra{white}-N{green}Ma {gray}Lvl: 45\n",
             sockets = "3",
         },
-        
-
+    -- Tooltip information for Belts showing available 2 socket Runewords
+        {
+            codes = {"lbl","vbl","mbl","tbl","hbl","msb","3lb","3vb","3mb","3tb","3hb","zlb","zvb","zmb","ztb","zhb","xms","5lb","5vb","5mb","5tb","5hb","alb","avb","bmb","atb","ahb","yms","ulc","uvc","umc","utc","uhc","m10"},
+            runeword = false,
+            quality = "3-",
+            location = {"onplayer","atvendor","equipped"},
+            suffix_desc ="{purple}Navel: He{white}-{gold}So: {gray}: Lvl: 59\n {Purple}Mist: {green}Mo{white}-{red}Ya {gray}Lvl: 47\n{purple}Dance: {green}Ma{white}-I: {gray}Lvl: 45\n{purple}Spring: {orange}Ha{white}-{orange}Ru {gray}Lvl: 39\n{Purple}Wealth: {orange}To{white}-{red}Mi {gray}Lvl: 36\n{Purple}Rain: {red}A{white}-{orange}Me {gray}Lvl: 32\n{purple}Dream: {yellow}Yu{white}-{orange}Me {gray}Lvl: 32\n{purple}Autumn: {red}A{white}-{red}Ki {gray}Lvl: 17\n{Purple}Gold: {red}Ki{white}-N {gray}Lvl: 10\n",
+            sockets = "2"
+        },
+    -- Tooltip information for Boots showing available 2 socket Runewords
+        {
+            codes = {"lbt","vbt","mbt","tbt","hbt","dbt","2lb","2vb","2mb","2tb","2hb","xlb","xvb","xmb","xtb","xhb","xbt","4lb","4vb","4mb","4tb","4hb","ylb","yvb","ymb","ytb","yhb","ybt","ulb","uvb","umb","utb","uhb"},
+            runeword = false,
+            quality = "3-",
+            location = {"onplayer","atvendor","equipped"},
+            suffix_desc = "{purple}Skank: Su{white}-{gold}Ne {gray}Lvl: 57\n{purple}Mist: {green}Mo{white}-{red}Ya {gray}Lvl: 47\n{Purple}Trip: {orange}Ta{white}-{green}Hi {gray}Lvl: 46\n{purple}Dance: {green}Ma{white}-I {gray}Lvl: 45\n{Purple}Summer: {green}Na{white}-{red}Tsu {gray}Lvl: 40\n{purple}Spring: {orange}Ha{white}-{orange}Ru {gray}Lvl: 39\n{purple}Rain: {red}A{white}-{orange}Me {gray}Lvl: 32\n{purple}Kick: {yellow}Ke{white}-{red}Ri {gray}Lvl: 24\n{purple}Autumn: {red}A{white}-{red}Ki {gray}Lvl: 17\n",
+            sockets = "2"
+        },
     -- In game notification for all monster parts
         {
-            codes = {"qll", "hrt", "brz", "jaw", "eyz", "hrn", "tal", "flg", "fng","sol", "scz", "spe"},
-            notify = "{red}Crafting Reagant: {white}{name}"
+            codes = {"qll", "hrt", "brz", "jaw", "eyz", "hrn", "tal", "flg", "fng","sol", "scz", "spe", "zzz"},
+            location = "onground",
+            notify = "{red}Crafting Reagant: {white}{name}",
+            border = {200, 150, 0, 255},
         },
 
     -- In game notification for all perfect gems
         {
             codes = {"gvb", "gyb", "gbb", "ggb", "grb", "gwb", "skb", "gbk"},
-            prefix = "{white}**  ",
             notify = "{name}",
-            suffix = "{white}  **",
-            audio = "mid.mp3"
+            audio = "mid.mp3",
+            border = {200, 150, 0, 255},
         },
     
     -- Notify high LOD rune drops
