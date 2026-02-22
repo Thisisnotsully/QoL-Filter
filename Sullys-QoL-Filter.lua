@@ -17,11 +17,11 @@ return {
     {code = "gvb", location = "atvendor",prefix ="{blue}Non-Barb Weapon:{gray} 25-35 Attack Speed|150-200 Enhanced Damage|15-25 Physical Leech Life|10-15 Physical Leech Mana|1-4 Random\n{blue}Weapon:{gray} +1-2 Barb Skills|25-35 Attack Speed|150-200 Enhanced Damage|1-4 Random\n{blue}Ring:{gray} +1-2 Barb Skills|10-15 Pct Max Life|20-30 Str|+20-30 Max Dmg to Attacks|1-4 Random\n{blue}Amulet:{gray} +1-2 Barb Skills|10-15 Pct Max Life|15-25 All Resists|1-4 Random\n{blue}Chest:{gray} +1-2 Barb Skills|80-100 ED|15-25 all attributes|+10-15 Phys Res|1-4 Random\n{blue}Shield:{gray} +1-2 Barb Skills|20-30 Faster Block|80-100 ED|3-5 Increased Block|1-4 Random\n{blue}Belt:{gray} +1 Barb Skills|20-30 Hit Recovery|80-100 ED|30-45 Str|1-4 Random\n{blue}Gloves:{gray} +1 Barb Skills|20-30 Attack Speed|80-100 ED|30-45 Dex|1-4 Random\n{blue}Boots:{gray} +1 Barb Skills|20-30 Faster Run/Walk|80-100 ED|30-45 Vit|1-4 Random\n{blue}Helm:{gray} +1-2 Barb Skills|ED|30-45 Energy|15-15 All Res|1-4 Random\n{blue}Magic{gray} Gear + Forging Hammer + P.Amethyst + Any Jewel\n"},
     {code = "gyb", location = "atvendor",prefix ="{blue}Non-Druid Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|25-40 Spell Dmg|1-4 Random\n{blue}Druid Wpn: {gray}+1-2 Druid Skill|25-35 IAS|150-200% Enahcned Dmg|1-4 Random\n{blue}Ring: {gray}+1-2 Druid Skill|20-30 Vit|Max Life 10-15 Pct|12-18 Spell Dmg|1-4 Random\n{blue}Amulet: {gray}+1-2 Druid Skill|20-30 Vit|15 Pct Max Life|15-25 All Res|1-4 Random\n{blue}Chest: {gray}+1-2 Druid Skill|80-100 ED|15-25 All Attr|10-15 Phys Res|1-4 Random\n{blue}Shield:{gray} +1-2 Druid Skill|20-30 FBR|3-5 Block|80-100 ED|1-4 Random\n{blue}Belt{gray}+1 Druid Skill|20-30 FHR|80-100 ED|30-45 Str|1-4 Random\n{blue}Gloves:{gray}+1 Druid Skill|20-30 IAS|80-100 ED|30-45 Dex|1-4 Random\n{blue}Boots:{gray}+1 Druid Skill|20-30 FRW|80-100 ED|30-45 Vit|1-4 Random\n{blue}Helm{gray}+1-2 Druid Skills|90-100 ED|30-45 Energy|15-25 All Res|1-4 Random Stats\n{blue}Magic {gray}Gear    + Forging Hammer + Tyranium Ore + P.Topaz + Any Jewel\n"},
     --- Some forging recipes shown on the cube | Disabled until i find a better item
-        {
-        code = "tbk",
-        location = "atvendor",
-        suffix = "{blue}\n+1 Sorc Skills:2 Anvil Stones-Chipped Saphhire\n{white}+1 Paladin Skills:2 Anvil Stones-Chipped Diamond\n{gray}+1 Necromancer Skills: 2 Anvil Stones-Chipped Skull\n{yellow}+1 Druid Skills: 2 Anvil Stones+Chipped Topaz\n{purple}+1 Barbarian Skills: 2 Anvil Stones+Chipped Amethyst\n{red}+1 Assassain Skills: 2 Anvil Stones+Chipped Ruby\n{green}+1 Amazon Skills: 2 Anvil Stones+Chipped Emerald\n+{white}1 All Skills(no jewels or charms):Maple Leaf+Anvil Stone+Chipped Gem\n{red}**Forging Recipes**\b"
-        },
+    --    {
+    --    code = "tbk",
+    --   location = "atvendor",
+    --    suffix = "{blue}\n+1 Sorc Skills:2 Anvil Stones-Chipped Saphhire\n{white}+1 Paladin Skills:2 Anvil Stones-Chipped Diamond\n{gray}+1 Necromancer Skills: 2 Anvil Stones-Chipped Skull\n{yellow}+1 Druid Skills: 2 Anvil Stones+Chipped Topaz\n{purple}+1 Barbarian Skills: 2 Anvil Stones+Chipped Amethyst\n{red}+1 Assassain Skills: 2 Anvil Stones+Chipped Ruby\n{green}+1 Amazon Skills: 2 Anvil Stones+Chipped Emerald\n+{white}1 All Skills(no jewels or charms):Maple Leaf+Anvil Stone+Chipped Gem\n{red}**Forging Recipes**\b"
+     --   },
     -- Hiding small gold piles based on level
         {
             code = "gld",
@@ -1782,17 +1782,10 @@ return {
     -- Item tooltip - Item has maximum sockets for it's ilvl
         {
             codes = "allitems",
-            location = {"onplayer", "atvendor", "equipped", "onground"},
+            location = {"onplayer", "atvendor", "e/quipped", "onground"},
             suffix_desc = "{purple}Max Sockets: {green}{sockets}{white}/{green}{maxsock}\n{blue}",
             sockets = "1+",
             maxsock = true
         },  
-    
-        {
-            codes = "pa1",
-            prefix = "{stat}{code}{itype}{rarity}",
-        }
-
-
-    },
+    }
 }
