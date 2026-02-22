@@ -1188,7 +1188,7 @@ return {
                 runeword = false,
                 quality = "3-",
                 location = {"onplayer", "atvendor", "equipped"},
-                suffix_desc = "{purple}Hot: {red}Tsu {gold}Ne {gray}Lvl: 55{blue} \n{Purple}Prudence: {orange} Mal Tir {gray}Lvl: 49{blue} \n{purple}Mist: {green}Mo {red}Ya {gray}Lvl: 47{blue} \n{purple}Deception: {yellow}Sa {orange}Wa{gray} Lvl: 38\n{purple}Smoke: {white}Nef {orange}Lem {gray}Lvl: 37{blue} \n{purple}Wealth: {orange}To {red}Mi {gray}Lvl: 36{blue}\n{Purple}Stealth: {white}Tal Eth {gray}Lvl: 17{blue}\n{purple}Darkness: {red}Ya {red}Mi {gray}Lvl: 15{blue}\n{purple}Fog: {red}Ki {red}Ri {gray}Lvl: 12{blue}\n{purple}Gold: {red}Ri N {gray}Lvl: 10{blue}\n {purple}Greed: {white}Yo Ku {gray}Lvl: 9{blue}\n",
+                suffix_desc = "{gray}Hot: {red}Tsu {gold}Ne {gray}Lvl: 55{blue} \n{gray}Prudence: {orange} Mal Tir {gray}Lvl: 49{blue} \n{gray}Mist: {green}Mo {red}Ya {gray}Lvl: 47{blue} \n{gray}Deception: {yellow}Sa {orange}Wa{gray} Lvl: 38\n{gray}Smoke: {white}Nef {orange}Lem {gray}Lvl: 37{blue} \n{gray}Wealth: {orange}To {red}Mi {gray}Lvl: 36{blue}\n{gray}Stealth: {white}Tal Eth {gray}Lvl: 17{blue}\n{gray}Darkness: {red}Ya {red}Mi {gray}Lvl: 15{blue}\n{gray}Fog: {red}Ki {red}Ri {gray}Lvl: 12{blue}\n{gray}Gold: {red}Ri N {gray}Lvl: 10{blue}\n {gray}Greed: {white}Yo Ku {gray}Lvl: 9{blue}\n",
                 sockets = "2"
             },
         -- Tooltip information for Body Armor showing available 3 socket Runewords
@@ -1198,7 +1198,7 @@ return {
                 quality = "3-",
                 pstat = { index = 12, op = "<=", value = 40 }, -- Char Level 40 or below
                 location = {"onplayer", "atvendor", "equipped"},
-                suffix_desc = "{purple}Maiden: {yellow}O {orange}To Me {gray}Lvl: 36{blue}\n{purple}Impetuous: {red}Mi {Yellow}Sa {Orange}To {gray}Lvl: 36{blue}\n{purple}Praise: {orange}Ho {orange}Me {orange}Ru {gray}Lvl: 34{blue}\n{purple}Captive: {orange}Ho {red}Ri{white} Yo {gray}Lvl: 31{blue}\n{purple}Peace: {orange}Shael {white}Thul Amn {gray}Lvl: 29{blue}\n{purple}Hustle: {white}Shael Ral Eld {gray}Lvl: 29{blue}\n{purple}Oath: {red}Ki{white} Ka I {gray}Lvl: 29{blue}\n{purple}Myth: {orange}Hel{white} Amn Nef {gray}Lvl: 25{blue}\n{purple}Exuberance: {red}A{white} I Ka {gray}Lvl: 17{blue}\n{Purple}Famine: {red}Ki Ki{white} N {gray}Lvl: 10{blue}\n{Purple}Forefeel: {white}Yo Ka N {gray}Lvl: 9{blue}\n{purple}Evolution: {white}Shi N Ka {gray}Lvl: 6{blue}\n",
+                suffix_desc = "{gray}Maiden: {yellow}O {orange}To Me {gray}Lvl: 36{blue}\n{gray}Impetuous: {red}Mi {Yellow}Sa {Orange}To {gray}Lvl: 36{blue}\n{gray}Praise: {orange}Ho {orange}Me {orange}Ru {gray}Lvl: 34{blue}\n{gray}Captive: {orange}Ho {red}Ri{white} Yo {gray}Lvl: 31{blue}\n{gray}Peace: {orange}Shael {white}Thul Amn {gray}Lvl: 29{blue}\n{gray}Hustle: {white}Shael Ral Eld {gray}Lvl: 29{blue}\n{gray}Oath: {red}Ki{white} Ka I {gray}Lvl: 29{blue}\n{gray}Myth: {orange}Hel{white} Amn Nef {gray}Lvl: 25{blue}\n{gray}Exuberance: {red}A{white} I Ka {gray}Lvl: 17{blue}\n{gray}Famine: {red}Ki Ki{white} N {gray}Lvl: 10{blue}\n{gray}Forefeel: {white}Yo Ka N {gray}Lvl: 9{blue}\n{gray}Evolution: {white}Shi N Ka {gray}Lvl: 6{blue}\n",
                 sockets = "3",
             },
             {
@@ -1207,7 +1207,7 @@ return {
                 quality = "3-",
                 pstat = { index = 12, op = ">=", value = 41 }, -- Char Level 41 or above
                 location = {"onplayer", "atvendor", "equipped"},
-                suffix_desc = "{purple}Enigma: Jah{white} Ith {purple}Ber {gray}Lvl: 65{blue}\n{purple}Dragon: Sur {purple}Lo{orange} Sol {gray}Lvl: 61{blue}\n{purple}Nightgown: {orange}Ne {green}Ma {red}Ki {gray}Lvl: 55{blue}\n{purple}Fox: {red}Ki {red}Tsu {orange}Ne {gray}Lvl: 55{blue}\n{purple}Smoke: {gold}Ke {orange}Mu {red}Ri {gray}Lvl: 54{blue}\n{purple}Principle: {white}Ral {purple}Gul{white} Eld {gray}Lvl: 53{blue}\n{purple}Rain: {white}Ort {purple}Mal{white} Ith {gray}Lvl: 49{blue}\n{purple}Duress: {orange}Shael {orange}Um{white} Thul {gray}Lvl: 47{blue}\n{purple}Bone: {white}Sol {orange}Um {orange}Um {gray}Lvl: 47{blue}\n{purple}Daylight: {green}Hi {orange}Ru {green}Ma {gray}Lvl: 46{blue}\n{purple}Indominable: {yellow}Ra{white} N{green}Ma {gray}Lvl: 45{blue}\n{purple}Abundant: {orange}Ho{white} U{green}Fu {gray}Lvl: 44{blue}\n{purple}Harmony: {orange}Wa {green}Se{white} I {gray}Lvl: 43{blue}\n{purple}Fossil of the Sun: {white}Ka {green}Se {red}Ki {gray}Lvl: 43{blue}\n{purple}Lionheart: {orange}Hel {orange}Lum {orange}Fal {gray}Lvl: 41{blue}",
+                suffix_desc = "{gray}Enigma: Jah{white} Ith {purple}Ber {gray}Lvl: 65{blue}\n{gray}Dragon: Sur {purple}Lo{orange} Sol {gray}Lvl: 61{blue}\n{gray}Nightgown: {orange}Ne {green}Ma {red}Ki {gray}Lvl: 55{blue}\n{gray}Fox: {red}Ki {red}Tsu {orange}Ne {gray}Lvl: 55{blue}\n{gray}Smoke: {gold}Ke {orange}Mu {red}Ri {gray}Lvl: 54{blue}\n{gray}Principle: {white}Ral {purple}Gul{white} Eld {gray}Lvl: 53{blue}\n{purple}Rain: {white}Ort {purple}Mal{white} Ith {gray}Lvl: 49{blue}\n{gray}Duress: {orange}Shael {orange}Um{white} Thul {gray}Lvl: 47{blue}\n{gray}Bone: {white}Sol {orange}Um {orange}Um {gray}Lvl: 47{blue}\n{gray}Daylight: {green}Hi {orange}Ru {green}Ma {gray}Lvl: 46{blue}\n{gray}Indominable: {yellow}Ra{white} N{green}Ma {gray}Lvl: 45{blue}\n{gray}Abundant: {orange}Ho{white} U{green}Fu {gray}Lvl: 44{blue}\n{gray}Harmony: {orange}Wa {green}Se{white} I {gray}Lvl: 43{blue}\n{gray}Fossil of the Sun: {white}Ka {green}Se {red}Ki {gray}Lvl: 43{blue}\n{gray}Lionheart: {orange}Hel {orange}Lum {orange}Fal {gray}Lvl: 41{blue}",
                 sockets = "3",
             },
         -- Tooltip information for Body Armor showing available 4 socket Runewords
@@ -1217,7 +1217,7 @@ return {
                 quality = "3-",
                 pstat = { index = 12, op = "<=", value = 40 }, -- Char Level 40 or below
                 location = {"onplayer", "atvendor", "equipped"},
-                suffix_desc = "{purple}Sorrow: {white}Ka {green}Na{white} Shi {red}Mi {gray}Lvl: 40{blue}\n{Purple}Animal Friend: {green}Na{white} U Shi Ka {gray}Lvl: 40{blue}\n{purple}Journey: {red}Ri{white} Yo {orange}Ko{white} U {gray}Lvl: 39{blue}\n{purple}Healthy: {yellow}Ke{white} N {orange}Ko{white} U {gray}Lvl: 39{blue}\n{purple}Fortune: {orange}Ko{white} U U U {gray}Lvl: 39{blue}\n{purple}Efficiency: {orange}Ko{white} U {red}Ri {red}Tsu {gray}Lvl: 39{blue}\n{purple}Illustrious: {red}A {yellow}Yu{white} Ka {orange}Wa {gray}Lvl: 38{blue}\n{purple}Trust: {white}Shi N Ra I {gray}Lvl: 28{blue}\n{purple}Eneternity: {yellow}E{white} I {yellow}E{white} N {gray}Lvl: 26{blue}\n{purple}Beauty: {white}U {red}Tsu{white} Ku Shi {gray}Lvl: 19{blue}\n{purple}Insanity: {red}Ki{white} Yo U {red}Ki {gray}Lvl: 10{blue}\n",
+                suffix_desc = "{gray}Sorrow: {white}Ka {green}Na{white} Shi {red}Mi {gray}Lvl: 40{blue}\n{gray}Animal Friend: {green}Na{white} U Shi Ka {gray}Lvl: 40{blue}\n{gray}Journey: {red}Ri{white} Yo {orange}Ko{white} U {gray}Lvl: 39{blue}\n{gray}Healthy: {yellow}Ke{white} N {orange}Ko{white} U {gray}Lvl: 39{blue}\n{gray}Fortune: {orange}Ko{white} U U U {gray}Lvl: 39{blue}\n{gray}Efficiency: {orange}Ko{white} U {red}Ri {red}Tsu {gray}Lvl: 39{blue}\n{gray}Illustrious: {red}A {yellow}Yu{white} Ka {orange}Wa {gray}Lvl: 38{blue}\n{gray}Trust: {white}Shi N Ra I {gray}Lvl: 28{blue}\n{gray}Eneternity: {yellow}E{white} I {yellow}E{white} N {gray}Lvl: 26{blue}\n{gray}Beauty: {white}U {red}Tsu{white} Ku Shi {gray}Lvl: 19{blue}\n{gray}Insanity: {red}Ki{white} Yo U {red}Ki {gray}Lvl: 10{blue}\n",
                 sockets = "4",
             },
             {
@@ -1226,7 +1226,7 @@ return {
                 quality = "3-",
                 pstat = { index = 12, op = ">=", value = 41 }, -- Char Level 41 or above
                 location = {"onplayer", "atvendor", "equipped"},
-                suffix_desc = "{purple}Chains of Honor: {orange}Dol {orange}Um {purple}Ber {purple}Ist {gray}Lvl: 63{blue}\n{purple}Bramble: {white}Ral {purple}Ohm {purple}Sur{white} Eth {gray}Lvl: 61{blue}\n{purple}Gold Scarab: {orange}Ko {blue}Metal {gold}Mu{white} Shi {gray}Lvl: 60{blue}\n{purple}Fortitude: {white}El {orange}Sol {orange}Dol {purple}Lo {gray}Lvl: 59{blue}\n{purple}Transformation: He{white} N Shi N {gray}Lvl: 59{blue}\n{purple}Unknown: {red}Mi/Ri/Ki {red}Chi {purple}Su{white} U {gray}Lvl: 57{blue}\n{purple}Lynx: {red}Ya {green}Ma {gold}Ne {orange}Ko {gray}Lvl: 55{blue}\n{purple}Able: {orange}Yu{white} U {gold}No{white} U {gray}Lvl: 48{blue}\n{purple}Question: {white}Shi {red}Tsu {green}Mo{white} N {gray}Lvl: 47{blue}\n{purple}Stone: {orange}Shael {orange}Um {orange}Pul {orange}Lum {gray}Lvl: 47{blue}\n{purple}Stomach Ache: {green}Fu{white} Ku {red}Tsu{white} U {gray}Lvl: 44{blue}\n",
+                suffix_desc = "{gray}Chains of Honor: {orange}Dol {orange}Um {purple}Ber {purple}Ist {gray}Lvl: 63{blue}\n{gray}Bramble: {white}Ral {purple}Ohm {purple}Sur{white} Eth {gray}Lvl: 61{blue}\n{gray}Gold Scarab: {orange}Ko {blue}Metal {gold}Mu{white} Shi {gray}Lvl: 60{blue}\n{gray}Fortitude: {white}El {orange}Sol {orange}Dol {purple}Lo {gray}Lvl: 59{blue}\n{gray}Transformation: He{white} N Shi N {gray}Lvl: 59{blue}\n{gray}Unknown: {red}Mi/Ri/Ki {red}Chi {purple}Su{white} U {gray}Lvl: 57{blue}\n{gray}Lynx: {red}Ya {green}Ma {gold}Ne {orange}Ko {gray}Lvl: 55{blue}\n{gray}Able: {orange}Yu{white} U {gold}No{white} U {gray}Lvl: 48{blue}\n{gray}Question: {white}Shi {red}Tsu {green}Mo{white} N {gray}Lvl: 47{blue}\n{gray}Stone: {orange}Shael {orange}Um {orange}Pul {orange}Lum {gray}Lvl: 47{blue}\n{gray}Stomach Ache: {green}Fu{white} Ku {red}Tsu{white} U {gray}Lvl: 44{blue}\n",
                 sockets = "4",
             },
         -- Tooltip information for Body Armor showing available 5 socket Runewords
@@ -1235,7 +1235,7 @@ return {
                 runeword = false,
                 quality = "3-",
                 location = {"onplayer", "atvendor", "equipped"},
-                suffix_desc = "{purple}Gold Scarab: {blue}Jewel {orange}Ko {blue}Metal {gold}Mu{white} Shi {gray}Lvl: 60{blue}\n{purple}Wooden Colossus: {blue}Wood {orange}Ko {gold}Ro {yellow}Sa {purple}Su {gray}Lvl: 60{blue}\n{purple}Horizon: {red}Chi {purple}He{white} I {green}Se{white} N {gray}Lvl: 59{blue}\n{purple}Jindujun: Su {orange}Ha {yellow}Ra{white} Shi I {gray}Lvl: 57{blue}\n{Purple}Zenith: {gold}Te{white} N {red}Chi{white} Yo U {gray}Lvl: 50{blue}\n{purple}Pear: {green}Hi {orange}To {gold}Te {green}Na{white} Shi {gray}Lvl: 50{blue}\n{purple}Phoenix: {green}Fu{white} Shi {red}Chi{white} Yo U {gray}Lvl: 44{blue}\n{purple}Lionheart: {white}Ka I {yellow}O {green}Na{white} I {gray}Lvl: 40{blue}\n{purple}Pride: {orange}Ho {orange}Ko {yellow}Ra{white} Shi {yellow}Sa {gray}Lvl: 39{blue}\n",
+                suffix_desc = "{gray}Gold Scarab: {blue}Jewel {orange}Ko {blue}Metal {gold}Mu{white} Shi {gray}Lvl: 60{blue}\n{gray}Wooden Colossus: {blue}Wood {orange}Ko {gold}Ro {yellow}Sa {purple}Su {gray}Lvl: 60{blue}\n{gray}Horizon: {red}Chi {purple}He{white} I {green}Se{white} N {gray}Lvl: 59{blue}\n{gray}Jindujun: Su {orange}Ha {yellow}Ra{white} Shi I {gray}Lvl: 57{blue}\n{gray}Zenith: {gold}Te{white} N {red}Chi{white} Yo U {gray}Lvl: 50{blue}\n{gray}Pear: {green}Hi {orange}To {gold}Te {green}Na{white} Shi {gray}Lvl: 50{blue}\n{gray}Phoenix: {green}Fu{white} Shi {red}Chi{white} Yo U {gray}Lvl: 44{blue}\n{gray}Lionheart: {white}Ka I {yellow}O {green}Na{white} I {gray}Lvl: 40{blue}\n{gray}Pride: {orange}Ho {orange}Ko {yellow}Ra{white} Shi {yellow}Sa {gray}Lvl: 39{blue}\n",
                 sockets = "5",
             },
         -- Tooltip information for Body Armor showing available 6 socket Runewords
@@ -1244,7 +1244,7 @@ return {
                 runeword = false,
                 quality = "3-",
                 location = {"onplayer", "atvendor", "equipped"},
-                suffix_desc = "{purple}Gold Scarab: {blue}Jewel Jewel {orange}Ko {blue}Metal {gold}Mu{white} Shi {gray}Lvl: 60{blue}\n{purple}Insight: {red}Mi {purple}Nu{white} Ku {red}Chi{white} Ka {yellow}Ra {gray}Lvl: 60{blue}\n{purple}Eternal Reign: {gold}Te{white} N Ka {purple}Wo {orange}To {orange}Ru {gray}Lvl: 60{blue}\n{purple}Golden Dragon: {red}Ki{white} N {gold}No {red}Ri {yellow}Yu{white} U {gray}Lvl: 48{blue}\n{purple}Dark Star: {green}Hi{white} Ka {red}Ri {gold}No {orange}Ke{white} N {gray}Lvl: 48{blue}\n{purple}Courage: {white}Ka {red}Mi {red}Ya {orange}Ta{white} I {red}Chi {gray}Lvl: 35{blue}\n{purple}Ascend: {white}Shi Yo {red}Ri {yellow}Yu {yellow}Ke{white} N {gray}Lvl: 24{blue}\n",
+                suffix_desc = "{gray}Gold Scarab: {blue}Jewel Jewel {orange}Ko {blue}Metal {gold}Mu{white} Shi {gray}Lvl: 60{blue}\n{gray}Insight: {red}Mi {purple}Nu{white} Ku {red}Chi{white} Ka {yellow}Ra {gray}Lvl: 60{blue}\n{gray}Eternal Reign: {gold}Te{white} N Ka {purple}Wo {orange}To {orange}Ru {gray}Lvl: 60{blue}\n{gray}Golden Dragon: {red}Ki{white} N {gold}No {red}Ri {yellow}Yu{white} U {gray}Lvl: 48{blue}\n{gray}Dark Star: {green}Hi{white} Ka {red}Ri {gold}No {orange}Ke{white} N {gray}Lvl: 48{blue}\n{gray}Courage: {white}Ka {red}Mi {red}Ya {orange}Ta{white} I {red}Chi {gray}Lvl: 35{blue}\n{gray}Ascend: {white}Shi Yo {red}Ri {yellow}Yu {yellow}Ke{white} N {gray}Lvl: 24{blue}\n",
                 sockets = "6",
             },
         -- Tooltip information for Belts showing available 2 socket Runewords
@@ -1253,7 +1253,7 @@ return {
                 runeword = false,
                 quality = "3-",
                 location = {"onplayer","atvendor","equipped"},
-                suffix_desc ="{purple}Navel: He {gold}So: {gray}: Lvl: 59\n {Purple}Mist: {green}Mo {red}Ya {gray}Lvl: 47{blue}\n{purple}Dance: {green}Ma{white} I: {gray}Lvl: 45{blue}\n{purple}Spring: {orange}Ha {orange}Ru {gray}Lvl: 39{blue}\n{Purple}Wealth: {orange}To {red}Mi {gray}Lvl: 36{blue}\n{Purple}Rain: {red}A {orange}Me {gray}Lvl: 32{blue}\n{purple}Dream: {yellow}Yu {orange}Me {gray}Lvl: 32{blue}\n{purple}Autumn: {red}A {red}Ki {gray}Lvl: 17{blue}\n{Purple}Gold: {red}Ki{white} N {gray}Lvl: 10{blue}\n",
+                suffix_desc ="{gray}Navel: He {gold}So: {gray}: Lvl: 59\n {gray}Mist: {green}Mo {red}Ya {gray}Lvl: 47{blue}\n{gray}Dance: {green}Ma{white} I: {gray}Lvl: 45{blue}\n{gray}Spring: {orange}Ha {orange}Ru {gray}Lvl: 39{blue}\n{gray}Wealth: {orange}To {red}Mi {gray}Lvl: 36{blue}\n{gray}Rain: {red}A {orange}Me {gray}Lvl: 32{blue}\n{gray}Dream: {yellow}Yu {orange}Me {gray}Lvl: 32{blue}\n{gray}Autumn: {red}A {red}Ki {gray}Lvl: 17{blue}\n{gray}Gold: {red}Ki{white} N {gray}Lvl: 10{blue}\n",
                 sockets = "2"
             },
         -- Tooltip information for Boots showing available 2 socket Runewords
@@ -1262,7 +1262,7 @@ return {
                 runeword = false,
                 quality = "3-",
                 location = {"onplayer","atvendor","equipped"},
-                suffix_desc = "{purple}Skank: Su {gold}Ne {gray}Lvl: 57{blue}\n{purple}Mist: {green}Mo {red}Ya {gray}Lvl: 47{blue}\n{Purple}Trip: {orange}Ta {green}Hi {gray}Lvl: 46{blue}\n{purple}Dance: {green}Ma{white} I {gray}Lvl: 45{blue}\n{Purple}Summer: {green}Na {red}Tsu {gray}Lvl: 40{blue}\n{purple}Spring: {orange}Ha {orange}Ru {gray}Lvl: 39{blue}\n{purple}Rain: {red}A {orange}Me {gray}Lvl: 32{blue}\n{purple}Kick: {yellow}Ke {red}Ri {gray}Lvl: 24{blue}\n{purple}Autumn: {red}A {red}Ki {gray}Lvl: 17{blue}\n",
+                suffix_desc = "{gray}Skank: Su {gold}Ne {gray}Lvl: 57{blue}\n{gray}Mist: {green}Mo {red}Ya {gray}Lvl: 47{blue}\n{gray}Trip: {orange}Ta {green}Hi {gray}Lvl: 46{blue}\n{gray}Dance: {green}Ma{white} I {gray}Lvl: 45{blue}\n{gray}Summer: {green}Na {red}Tsu {gray}Lvl: 40{blue}\n{gray}Spring: {orange}Ha {orange}Ru {gray}Lvl: 39{blue}\n{gray}Rain: {red}A {orange}Me {gray}Lvl: 32{blue}\n{gray}Kick: {yellow}Ke {red}Ri {gray}Lvl: 24{blue}\n{gray}Autumn: {red}A {red}Ki {gray}Lvl: 17{blue}\n",
                 sockets = "2"
             },
         -- Tooltip information for all Helms showing available 2 socket Runewords
@@ -1271,7 +1271,7 @@ return {
                 runeword = false,
                 quality = "3-",
                 location = {"onplayer","atvendor","equipped"},
-                suffix_desc = "{purple}Hawk: {orange}Ta{white} Ka {gray}Lvl: 35{blue}\n{purple}Dream: {yellow}Yu {red}Me {gray}Lvl: 32{blue}\n{purple}Lore: {white}Ort Sol {gray}Lvl: 27{blue}\n{purple}Wisdom: {red}Chi {yellow}E {gray}Lvl: 26{blue}\n{purple}Nadir: {white}Nef Tir {gray}Lvl: 13{blue}\n{Purple}Hades: {white}Yo {red}Mi {gray}Lvl: 13{blue}\n{purple}Hunt: {white}Ka {red}Ri {gray}Lvl: 12{blue}\n{purple}Fog: {red}Ki {red}Ri {gray}Lvl: 12{blue}\n{purple}Greed: {white}Yo Ku {gray}Lvl: 9{blue}\n{purple}Feel: {white}Ka N {gray}Lvl: 6{blue}\n",
+                suffix_desc = "{gray}Hawk: {orange}Ta{white} Ka {gray}Lvl: 35{blue}\n{gray}Dream: {yellow}Yu {red}Me {gray}Lvl: 32{blue}\n{gray}Lore: {white}Ort Sol {gray}Lvl: 27{blue}\n{gray}Wisdom: {red}Chi {yellow}E {gray}Lvl: 26{blue}\n{gray}Nadir: {white}Nef Tir {gray}Lvl: 13{blue}\n{gray}Hades: {white}Yo {red}Mi {gray}Lvl: 13{blue}\n{gray}Hunt: {white}Ka {red}Ri {gray}Lvl: 12{blue}\n{gray}Fog: {red}Ki {red}Ri {gray}Lvl: 12{blue}\n{gray}Greed: {white}Yo Ku {gray}Lvl: 9{blue}\n{gray}Feel: {white}Ka N {gray}Lvl: 6{blue}\n",
                 sockets = "2"
             },
         -- Tooltip information for all Helms showing available 3 socket Runewords
@@ -1281,7 +1281,7 @@ return {
                 quality = "3-",
                 pstat = { index = 12, op = "<=", value = 44 }, -- Char Level 39 or lower
                 location = {"onplayer","atvendor","equipped"},
-                suffix_desc = "{purple}Maiden: {yellow}O {orange}To {orange}Me {gray}Lvl: 36{blue}\n{purple}Jealousy: {white}Shi {red}Tsu {orange}To {gray}Lvl: 36{blue}\n{Purple}Temper: {orange}Shael{white} Io Ral {gray}Lvl: 35{blue}\n{purple}Ground: {orange}Shael{white} Io Ral {gray}Lvl: 35{blue}\n{purple}Earth: {orange}Shael{white} Io Thul {gray}Lvl: 35{blue}\n{purple}Cure: {orange}Shael{white} Io Tal {gray}Lvl: 35{blue}\n{purple}Bulwark: {orange}Shael{white} Io Sol {gray}Lvl: 35{blue}\n{purple}Richesdotcom: {yellow}P.Topaz {orange}Ru {yellow}P.Topaz {gray}Lvl: 34{blue}\n{purple}Psychic: {red}A {red}Ki {yellow}Ra {gray}Lvl: 28{blue}\n{purple}Cherry Blossom: {yellow}Sa{white} Ku{yellow}Ra {gray}Lvl: 28{blue}\n{purple}Radiance: {white}Nef Sol Ith {gray}Lvl: 27{blue}\n{purple}Royalty: {red}A {yellow}E{white} Ka {gray}Lvl: 26{blue}\n{purple}Reason: {red}Ri {yellow}Yu{white} U {gray}Lvl: 23{blue}\n{purple}Knowledge: {red}Chi{white} Shi {red}Ki {gray}Lvl: 20{blue}\n{purple}Forefeel: {white}Yo Ka N {gray}Lvl: 9{blue}\n",
+                suffix_desc = "{gray}Maiden: {yellow}O {orange}To {orange}Me {gray}Lvl: 36{blue}\n{gray}Jealousy: {white}Shi {red}Tsu {orange}To {gray}Lvl: 36{blue}\n{gray}Temper: {orange}Shael{white} Io Ral {gray}Lvl: 35{blue}\n{gray}Ground: {orange}Shael{white} Io Ral {gray}Lvl: 35{blue}\n{gray}Earth: {orange}Shael{white} Io Thul {gray}Lvl: 35{blue}\n{gray}Cure: {orange}Shael{white} Io Tal {gray}Lvl: 35{blue}\n{gray}Bulwark: {orange}Shael{white} Io Sol {gray}Lvl: 35{blue}\n{gray}Richesdotcom: {yellow}P.Topaz {orange}Ru {yellow}P.Topaz {gray}Lvl: 34{blue}\n{gray}Psychic: {red}A {red}Ki {yellow}Ra {gray}Lvl: 28{blue}\n{gray}Cherry Blossom: {yellow}Sa{white} Ku{yellow}Ra {gray}Lvl: 28{blue}\n{gray}Radiance: {white}Nef Sol Ith {gray}Lvl: 27{blue}\n{gray}Royalty: {red}A {yellow}E{white} Ka {gray}Lvl: 26{blue}\n{gray}Reason: {red}Ri {yellow}Yu{white} U {gray}Lvl: 23{blue}\n{gray}Knowledge: {red}Chi{white} Shi {red}Ki {gray}Lvl: 20{blue}\n{gray}Forefeel: {white}Yo Ka N {gray}Lvl: 9{blue}\n",
                 sockets = "3"
             },
             {
@@ -1290,7 +1290,7 @@ return {
                 quality = "3-",
                 pstat = {index = 12, op = ">=", value = 45}, -- Char Level 40 or higher
                 location = {"onplayer","atvendor","equipped"},
-                suffix_desc = "{purple}Metamorphosis: {orange}Io {purple}Cham {orange}Fal {gray}Lvl: 67{blue}\n{purple}Dream: {orange}Io {purple}Jah {orange}Pul {gray}Lvl: 65{blue}\n{purple}Peace: He{white} I {orange}Wa {gray}Lvl: 59{blue}\n{purple}Discontent: {green}Fu {purple}He{white} I {gray}Lvl: 59{blue}\n{purple}Abandon: Su {gold}Te {orange}Ru {gray}Lvl: 57{blue}\n{purple}Flickering Flame: {white}Nef {orange}Pul {purple}Vex {gray}Lvl: 55{blue}\n{purple}Thought: {white}Shi {gold}So{white} U {gray}Lvl: 52{blue}\n{purple}Spirit: {orange}Ko {orange}Ko {gold}Ro {gray}Lvl: 51{blue}\n{purple}Delirium: {orange}Lem {orange}Ist {orange}Io {gray}Lvl: 51{blue}\n{purple}Radiance: {green}Hi{white} Ka {orange}Ru {gray}Lvl: 46{blue}\n{purple}One: {green}Hi {orange}To {red}Tsu {gray}Lvl: 46{blue}\n{purple}Wisdom: {orange}Pul{white} Ith Eld {gray}Lvl: 45{blue}\n",
+                suffix_desc = "{gray}Metamorphosis: {orange}Io {purple}Cham {orange}Fal {gray}Lvl: 67{blue}\n{gray}Dream: {orange}Io {purple}Jah {orange}Pul {gray}Lvl: 65{blue}\n{gray}Peace: He{white} I {orange}Wa {gray}Lvl: 59{blue}\n{gray}Discontent: {green}Fu {purple}He{white} I {gray}Lvl: 59{blue}\n{gray}Abandon: Su {gold}Te {orange}Ru {gray}Lvl: 57{blue}\n{gray}Flickering Flame: {white}Nef {orange}Pul {purple}Vex {gray}Lvl: 55{blue}\n{gray}Thought: {white}Shi {gold}So{white} U {gray}Lvl: 52{blue}\n{gray}Spirit: {orange}Ko {orange}Ko {gold}Ro {gray}Lvl: 51{blue}\n{gray}Delirium: {orange}Lem {orange}Ist {orange}Io {gray}Lvl: 51{blue}\n{gray}Radiance: {green}Hi{white} Ka {orange}Ru {gray}Lvl: 46{blue}\n{gray}One: {green}Hi {orange}To {red}Tsu {gray}Lvl: 46{blue}\n{gray}Wisdom: {orange}Pul{white} Ith Eld {gray}Lvl: 45{blue}\n",
                 sockets = "3"
             },
         -- Tooltip information for all Shields showing avaiable 2 socket Runewords
@@ -1299,7 +1299,7 @@ return {
                 runeword = false,
                 quality = "3-",
                 location = {"onplayer","atvendor","equipped"},
-                suffix_desc = "{purple}Splendor: {white}Eth {orange}Lum {gray}Lvl: 37{blue}\n{purple}Rhyme: {orange}Shael{white} Eth {gray}Lvl: 29{blue}\n{purple}Rhino: {yellow}Sa{white} I {gray}Lvl: 22{blue}\n{purple}Gold: {red}Ki{white} N {gray}Lvl: 10{blue}\n{purple}Luck: {white}U N {gray}Lvl: 6{blue}\n",
+                suffix_desc = "{gray}Splendor: {white}Eth {orange}Lum {gray}Lvl: 37{blue}\n{gray}Rhyme: {orange}Shael{white} Eth {gray}Lvl: 29{blue}\n{gray}Rhino: {yellow}Sa{white} I {gray}Lvl: 22{blue}\n{gray}Gold: {red}Ki{white} N {gray}Lvl: 10{blue}\n{gray}Luck: {white}U N {gray}Lvl: 6{blue}\n",
                 sockets = "2"
             },
 
@@ -1310,7 +1310,7 @@ return {
                 quality = "3-",
                 pstat = {index = 12, op = "<=", value = 49}, -- Char Level 49 or lower
                 location = {"onplayer","atvendor","equipped"},
-                suffix_desc = "{purple}Sanctuary: {orange}Ko {orange}Ko {purple}Mal {gray}LvL: 49{blue}\n{purple}Woodsman: {red}Ki {orange}Ko {red}Ri {gray}Lvl: 39{blue}\n{purple}Daylight: {green}Hi {orange}Ru {green}Ma {gray}Lvl: 46{blue}\n{Purple}Sunny: {yellow}Sa {green}Ni {white}I {gray}Lvl: 43{blue}\n{purple}Secret: {white}Shi {green}Ni {orange}Ti {gray}Lvl: 42{blue}\n{purple}Pillar of Faith: {orange}Ha {white}Shi {yellow}Ra {gray}Level: 39{blue}\n{purple}Conquest: {white}Shi Shi {yellow}O {gray}Level :30{blue}\n{purple}Ancient's Pledge: {white}Ral Ort Tal {gray}Lvl: 21{blue}\n",
+                suffix_desc = "{gray}Sanctuary: {orange}Ko {orange}Ko {purple}Mal {gray}LvL: 49{blue}\n{gray}Woodsman: {red}Ki {orange}Ko {red}Ri {gray}Lvl: 39{blue}\n{gray}Daylight: {green}Hi {orange}Ru {green}Ma {gray}Lvl: 46{blue}\n{gray}Sunny: {yellow}Sa {green}Ni {white}I {gray}Lvl: 43{blue}\n{gray}Secret: {white}Shi {green}Ni {orange}Ti {gray}Lvl: 42{blue}\n{gray}Pillar of Faith: {orange}Ha {white}Shi {yellow}Ra {gray}Level: 39{blue}\n{gray}Conquest: {white}Shi Shi {yellow}O {gray}Level :30{blue}\n{gray}Ancient's Pledge: {white}Ral Ort Tal {gray}Lvl: 21{blue}\n",
                 sockets = "3"
             },
             {
@@ -1319,7 +1319,7 @@ return {
                 quality = "3-",
                 pstat = {index = 12, op = ">=", value = 50}, -- Char Level 50 or higher
                 location = {"onplayer","atvendor","equipped"},
-                suffix_desc = "{purple}Dream: {orange}Io {purple}Jah {orange}Pul {gray}Lvl: 65{blue}\n{purple}Dragon: Sur Lo {white}Sol {gray}Lvl: 61{blue}\n{purple}Sunlight: {blue}Sun {orange}Ko {white}U {gray}Lvl: 60{blue}\n{purple}Dodge: {white}Ka {orange}Wa {purple}Su {gray}Lvl: 57{blue}\n{purple}Abandon: Su {gold}Te {orange}Ru {gray}Lvl: 57{blue}\n{purple}Rift: {red}Ki {gold}Re {red}Tsu {gray}Lvl: 56{blue}\n{purple}",
+                suffix_desc = "{gray}Dream: {orange}Io {purple}Jah {orange}Pul {gray}Lvl: 65{blue}\n{gray}Dragon: Sur Lo {white}Sol {gray}Lvl: 61{blue}\n{gray}Sunlight: {blue}Sun {orange}Ko {white}U {gray}Lvl: 60{blue}\n{gray}Dodge: {white}Ka {orange}Wa {purple}Su {gray}Lvl: 57{blue}\n{gray}Abandon: Su {gold}Te {orange}Ru {gray}Lvl: 57{blue}\n{gray}Rift: {red}Ki {gold}Re {red}Tsu {gray}Lvl: 56{blue}\n",
                 sockets = "3"
             },
         -- Tooltip information for all Shields showing avaiable 4 socket Runewords
@@ -1328,7 +1328,7 @@ return {
                 runeword = false,
                 quality = "3-",
                 location = {"onplayer","atvendor","equipped"},
-                suffix_desc = "{purple}Phoenix: Vex Vex Lo Jah {gray}Lvl: 65{blue}\n{purple}Dread: {yellow}O {gold}So Re {orange}Ru {gray}Lvl: 56{blue}\n{purple}Dome: {green}Ma {orange}Ru {red}Ya {gold}Ne {gray}Lvl: 55{blue}\n{purple}Medicine: {red}Ya {white}Ku {green}Hi {white}N {gray}Lvl: 46{blue}\n{purple}Glory: {yellow}E {white}I {orange}Ko {white}U {gray}Lvl: 39{blue}\n{purple}Faith: {white}Shi N {orange}Ko {white}U {gray}Lvl: 39{blue}\n{purple}Temptation: {yellow}Wa {white}U {orange}Wa {white}Ku {gray}Lvl: 38{blue}\n{purple}Achieve: {white}Ka {red}Chi {orange}To Ru {gray}Lvl: 36{blue}\n{purple}Spirit: {white}Tal Thul Ort Amn {gray}Lvl: 25{blue}\n{purple}Fortress: {white}Yo U {yellow}Sa {white}I {gray}Lvl: 22{blue}\n{purple}Beauty: {white}U {red}Tsu {white}Ku Shi {gray}Lvl: 19{blue}\n",
+                suffix_desc = "{gray}Phoenix: {purple}Vex Vex Lo Jah {gray}Lvl: 65{blue}\n{gray}Dread: {yellow}O {gold}So Re {orange}Ru {gray}Lvl: 56{blue}\n{gray}Dome: {green}Ma {orange}Ru {red}Ya {gold}Ne {gray}Lvl: 55{blue}\n{gray}Medicine: {red}Ya {white}Ku {green}Hi {white}N {gray}Lvl: 46{blue}\n{gray}Glory: {yellow}E {white}I {orange}Ko {white}U {gray}Lvl: 39{blue}\n{gray}Faith: {white}Shi N {orange}Ko {white}U {gray}Lvl: 39{blue}\n{gray}Temptation: {yellow}Wa {white}U {orange}Wa {white}Ku {gray}Lvl: 38{blue}\n{gray}Achieve: {white}Ka {red}Chi {orange}To Ru {gray}Lvl: 36{blue}\n{gray}Spirit: {white}Tal Thul Ort Amn {gray}Lvl: 25{blue}\n{gray}Fortress: {white}Yo U {yellow}Sa {white}I {gray}Lvl: 22{blue}\n{gray}Beauty: {white}U {red}Tsu {white}Ku Shi {gray}Lvl: 19{blue}\n",
                 sockets = "4"
             },
     
@@ -1345,7 +1345,8 @@ return {
             codes = {"gvb", "gyb", "gbb", "ggb", "grb", "gwb", "skb", "gbk"},
             notify = "{name}",
             audio = "mid.mp3",
-            border = {200, 150, 0, 255},
+            name_override = "{name}",
+            border = {200, 150, 0, 255}
         },
     
     -- In game notification for all high LOD rune drops
