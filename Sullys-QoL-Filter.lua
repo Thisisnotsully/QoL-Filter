@@ -605,34 +605,24 @@ return {
             name_override = "{grey}[{rarity}]{green}{name}"
         },
 
-    -- Mythical Uniques
+    -- Mythical Uniques #69
         {
             codes = {"7wd","m18","m19", "m23","m24","m25","m26","m27","m28","mrn"},
             quality = "7",
-            notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
             name_style = "Rainbow Group",
             background = {0, 0, 0, 255},
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
             audio = "mythical.mp3"
         },
-            {
-                code = "7wd",
-                quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
-                name_style = "Rainbow Group",
-                name_override = "Mythical Sword",
-                background = {0, 0, 0, 255},
-                background = {255, 255, 255, 255 },
-                border = {240, 0, 0, 230, 2},
-                
-                audio = "mythical.mp3"
-            },
+          -- Individual name strucutre for all mythicals to prevent clipping
             {
                 code = "m01",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Marksmen Bow", 
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -642,9 +632,9 @@ return {
             {
                 code = "m02",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
-                name_override = "Odysseus Crosswbow",
+                name_override = "Odysseus Crossbow",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
                 border = {240, 0, 0, 230, 2},
@@ -653,8 +643,9 @@ return {
             {
                 code = "m03",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Titan's Maul",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -664,8 +655,9 @@ return {
             {
                 code = "m04",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Demonic Wand",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -675,8 +667,9 @@ return {
             {
                 code = "m05",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Soul Destroyer",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -686,8 +679,9 @@ return {
             {
                 code = "m06",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Gemstoned Armor",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -697,7 +691,7 @@ return {
             {
                 code = "m07",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
                 name_override = "Dimensional Shard",
                 background = {0, 0, 0, 255},
@@ -708,8 +702,9 @@ return {
             {
                 code = "m08",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Balanced Dagger",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -719,8 +714,9 @@ return {
             {
                 code = "m09",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Magic Blade",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -730,8 +726,9 @@ return {
             {
                 code = "m10",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Hemp Band",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -741,8 +738,9 @@ return {
             {
                 code = "m11",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Arcane Staff",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -752,7 +750,7 @@ return {
             {
                 code = "m12",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
                 name_override = "Seraphic Sceptre",
                 background = {0, 0, 0, 255},
@@ -763,7 +761,7 @@ return {
             {
                 code = "m13",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
                 name_override = "Scissors Suwayyah",
                 background = {0, 0, 0, 255},
@@ -774,7 +772,7 @@ return {
             {
                 code = "m14",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
                 name_override = "Ceremonial Dagger",
                 background = {0, 0, 0, 255},
@@ -785,8 +783,9 @@ return {
             {
                 code = "m15",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Dream Spirit",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -796,8 +795,9 @@ return {
             {
                 code = "m16",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Rapier",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -807,7 +807,7 @@ return {
             {
                 code = "m17",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
                 name_override = "Celestial Sceptre",
                 background = {0, 0, 0, 255},
@@ -818,8 +818,9 @@ return {
             {
                 code = "m18",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Death Blade",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -829,8 +830,9 @@ return {
             {
                 code = "m19",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Death Blade",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -840,8 +842,9 @@ return {
             {
                 code = "dd1",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Death Blade",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -851,8 +854,9 @@ return {
             {
                 code = "m20",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Diadem",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -862,8 +866,9 @@ return {
             {
                 code = "m21",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Razor Axe",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -873,8 +878,9 @@ return {
             {
                 code = "m22",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Hellfire Sword",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -884,8 +890,9 @@ return {
             {
                 code = "m29",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Petrified Staff",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -895,8 +902,9 @@ return {
             {
                 code = "m30",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Ancient Bow",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -906,7 +914,7 @@ return {
             {
                 code = "m31",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
                 name_override = "Matriarchal Javelin",
                 background = {0, 0, 0, 255},
@@ -917,8 +925,9 @@ return {
             {
                 code = "m32",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Whale Hunter",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -928,8 +937,9 @@ return {
             {
                 code = "m33",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Ancient Shards",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -939,8 +949,9 @@ return {
             {
                 code = "m34",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Shillelagh",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -951,8 +962,9 @@ return {
             {
                 code = "m35",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Celestial Sword",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -962,8 +974,9 @@ return {
             {
                 code = "m36",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Mage Staff",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -973,8 +986,9 @@ return {
             {
                 code = "m37",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Katana",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -984,7 +998,7 @@ return {
             {
                 code = "m38",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
                 name_override = "Arreat's Hatchet",
                 background = {0, 0, 0, 255},
@@ -995,8 +1009,9 @@ return {
             {
                 code = "m39",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
+                prefix = "Mythical ",
                 name_override = "Kagekiri",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
@@ -1006,9 +1021,10 @@ return {
             {
                 code = "mam",
                 quality = "7",
-                notify = "{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
                 name_style = "Rainbow Group",
-                name_override = "Mythical Amulet",
+                prefix = "Mythical ",
+                name_override = "Amulet",
                 background = {0, 0, 0, 255},
                 background = {255, 255, 255, 255 },
                 border = {240, 0, 0, 230, 2},
@@ -1165,7 +1181,7 @@ return {
             suffix_desc = "{white} Cube with the other two Uber keys and 1 normal key to create a Pandemonium Key Set: 1x1 inventory space \n",
         },
 
-    -- Runeword Tooltips
+    -- Runeword Tooltips #67
         -- Tooltip information for Body Armor showing available 2 socket Runewords
             {
                 codes = {"qui", "lea", "hla", "stu", "rng", "scl", "chn", "brs", "spl", "plt", "fld", "gth", "ful", "aar", "ltp", "shl", "elv", "2ui", "2ea", "2la", "2tu", "2ng", "2cl", "2hn", "2rs", "2pl", "2lt", "br2", "xui", "xea", "xla", "xtu", "xng", "xcl", "xhn", "xrs", "xpl", "xlt", "xld", "xth", "xul", "xar", "xtp", "xhh", "xlv", "4ui", "4ea", "4la", "4tu", "4ng", "4cl", "4hn", "4rs", "4pl", "4lt", "4ld", "4th", "4ul", "4ar", "4tp", "yui", "yea", "yla", "ytu", "yng", "ycl", "yhn", "yrs", "ypl", "ylt", "yld", "yth", "yul", "yar", "ytp", "yhh", "ylv", "uui", "uea", "ula", "utu", "ung", "ucl", "uhn", "urs", "upl", "ult", "uld", "uth", "uul", "uar", "utp", "m06"},
@@ -1211,6 +1227,34 @@ return {
                 location = {"onplayer","atvendor","equipped"},
                 suffix_desc = "{purple}Skank: Su{white}-{gold}Ne {gray}Lvl: 57\n{purple}Mist: {green}Mo{white}-{red}Ya {gray}Lvl: 47\n{Purple}Trip: {orange}Ta{white}-{green}Hi {gray}Lvl: 46\n{purple}Dance: {green}Ma{white}-I {gray}Lvl: 45\n{Purple}Summer: {green}Na{white}-{red}Tsu {gray}Lvl: 40\n{purple}Spring: {orange}Ha{white}-{orange}Ru {gray}Lvl: 39\n{purple}Rain: {red}A{white}-{orange}Me {gray}Lvl: 32\n{purple}Kick: {yellow}Ke{white}-{red}Ri {gray}Lvl: 24\n{purple}Autumn: {red}A{white}-{red}Ki {gray}Lvl: 17\n",
                 sockets = "2"
+            },
+        -- Tooltip information for all Helms showing available 2 socket Runewords
+            {
+                codes = {"cap", "skp", "hlm", "fhl", "ghm", "crn", "msk", "bhm", "dwc", "2ap", "2kp", "2lm", "2hl", "2hm", "2rn", "2sk", "2h9", "xap", "xkp", "xlm", "xhl", "xhm", "xrn", "xsk", "xh9", "xdw", "4ap", "4kp", "4lm", "4hl", "4hm", "4rn", "4sk", "4h9", "yap", "ykp", "ylm", "yhl", "yhm", "yrn", "ysk", "yh9", "ydw", "uap", "ukp", "ulm", "uhl", "uhm", "urn", "usk", "uh9", "dr3", "dr4", "dr5", "dr1", "dr2", "dr8", "dr9", "dra", "dr6", "dr7", "drd", "dre", "drf", "drb", "drc", "qda", "qdb", "eht", "xht", "yht", "ba3", "ba4", "ba5", "ba1", "ba2", "ba8", "ba9", "baa", "ba6", "ba7", "bad", "bae", "baf", "bab", "bac", "qba", "qbc", "qbd", "qbe", "cix", "ci0", "ci4", "ci1", "ci2", "ci3", "qi2", "qi3", "m20"},
+                runewords = false,
+                quality = "3-",
+                location = {"onplayer","atvendor","equipped"},
+                suffix_desc = "{purple}Hawk: {orange}Ta{white}-Ka {gray}Lvl: 35\n{purple}Dream: {yellow}Yu{white}-{red}Me {gray}Lvl: 32\n{purple}Lore: {white}Ort-Sol {gray}Lvl: 27\n{purple}Wisdom: {red}Chi{white}-{yellow}E {gray}Lvl: 26\n{purple}Nadir: {white}Nef-Tir {gray}Lvl: 13\n{Purple}Hades: {white}Yo-{red}Mi {gray}Lvl: 13\n{purple}Hunt: {white}Ka-{red}Ri {gray}Lvl: 12\n{purple}Fog: {red}Ki{white}-{red}Ri {gray}Lvl: 12\n{purple}Greed: {white}Yo-Ku {gray}Lvl: 9\n{purple}Feel: {white}Ka-N {gray}Lvl: 6\n",
+                sockets = "2"
+            },
+        -- Tooltip information for all Helms showing available 3 socket Runewords
+            {
+                codes = {"cap", "skp", "hlm", "fhl", "ghm", "crn", "msk", "bhm", "dwc", "2ap", "2kp", "2lm", "2hl", "2hm", "2rn", "2sk", "2h9", "xap", "xkp", "xlm", "xhl", "xhm", "xrn", "xsk", "xh9", "xdw", "4ap", "4kp", "4lm", "4hl", "4hm", "4rn", "4sk", "4h9", "yap", "ykp", "ylm", "yhl", "yhm", "yrn", "ysk", "yh9", "ydw", "uap", "ukp", "ulm", "uhl", "uhm", "urn", "usk", "uh9", "dr3", "dr4", "dr5", "dr1", "dr2", "dr8", "dr9", "dra", "dr6", "dr7", "drd", "dre", "drf", "drb", "drc", "qda", "qdb", "eht", "xht", "yht", "ba3", "ba4", "ba5", "ba1", "ba2", "ba8", "ba9", "baa", "ba6", "ba7", "bad", "bae", "baf", "bab", "bac", "qba", "qbc", "qbd", "qbe", "cix", "ci0", "ci4", "ci1", "ci2", "ci3", "qi2", "qi3", "m20"},
+                runewords = false,
+                quality = "3-",
+                pstat = { index = 12, op = "<=", value = 44 }, -- Char Level 39 or lower
+                location = {"onplayer","atvendor","equipped"},
+                suffix_desc = "{purple}Maiden: {yellow}O{white}-{orange}To{white}-{orange}Me {gray}Lvl: 36\n{purple}Jealousy: {white}Shi-{red}Tsu{white}-{orange}To {gray}Lvl: 36\n{Purple}Temper: {orange}Shael{white}-Io-Ral {gray}Lvl: 35\n{purple}Ground: {orange}Shael{white}-Io-Ral {gray}Lvl: 35\n{purple}Earth: {orange}Shael{white}-Io-Thul {gray}Lvl: 35\n{purple}Cure: {orange}Shael{white}-Io-Tal {gray}Lvl: 35\n{purple}Bulwark: {orange}Shael{white}-Io-Sol {gray}Lvl: 35\n{purple}Richesdotcom: {yellow}P.Topaz{white}-{orange}Ru{white}-{yellow}P.Topaz {gray}Lvl: 34\n{purple}Psychic: {red}A{white}-{red}Ki{white}-{yellow}Ra {gray}Lvl: 28\n{purple}Cherry Blossom: {yellow}Sa{white}-Ku{yellow}Ra {gray}Lvl: 28\n{purple}Radiance: {white}Nef-Sol-Ith {gray}Lvl: 27\n{purple}Royalty: {red}A{white}-{yellow}E{white}-Ka {gray}Lvl: 26\n{purple}Reason: {red}Ri{white}-{yellow}Yu{white}-U {gray}Lvl: 23\n{purple}Knowledge: {red}Chi{white}-Shi-{red}Ki {gray}Lvl: 20\n{purple}Forefeel: {white}Yo-Ka-N {gray}Lvl: 9\n",
+                sockets = "3"
+            },
+            {
+                codes = {"cap", "skp", "hlm", "fhl", "ghm", "crn", "msk", "bhm", "dwc", "2ap", "2kp", "2lm", "2hl", "2hm", "2rn", "2sk", "2h9", "xap", "xkp", "xlm", "xhl", "xhm", "xrn", "xsk", "xh9", "xdw", "4ap", "4kp", "4lm", "4hl", "4hm", "4rn", "4sk", "4h9", "yap", "ykp", "ylm", "yhl", "yhm", "yrn", "ysk", "yh9", "ydw", "uap", "ukp", "ulm", "uhl", "uhm", "urn", "usk", "uh9", "dr3", "dr4", "dr5", "dr1", "dr2", "dr8", "dr9", "dra", "dr6", "dr7", "drd", "dre", "drf", "drb", "drc", "qda", "qdb", "eht", "xht", "yht", "ba3", "ba4", "ba5", "ba1", "ba2", "ba8", "ba9", "baa", "ba6", "ba7", "bad", "bae", "baf", "bab", "bac", "qba", "qbc", "qbd", "qbe", "cix", "ci0", "ci4", "ci1", "ci2", "ci3", "qi2", "qi3", "m20"},
+                runewords = false,
+                quality = "3-",
+                pstat = {index = 12, op = ">=", value = 45}, -- Char Level 40 or higher
+                location = {"onplayer","atvendor","equipped"},
+                suffix_desc = "{purple}Metamorphosis: {orange}Lo{white}-{purple}Cham{white}-{orange}Fal {gray}Lvl: 67\n{purple}Dream: {orange}Lo{white}-{purple}Jah{white}-{orange}Pul {gray}Lvl: 65\n{purple}Peace: He{white}-I-{orange}Wa {gray}Lvl: 59\n{purple}Discontent: {green}Fu{white}-{purple}He{white}-I {gray}Lvl: 59\n{purple}Abandon: Su{white}-{gold}Te{white}-{orange}Ru {gray}Lvl: 57\n{purple}Flickering Flame: {white}Nef-{orange}Pul{white}-{purple}Vex {gray}Lvl: 55\n{purple}Thought: {white}Shi-{gold}So{white}-U {gray}Lvl: 52\n{purple}Spirit: {orange}Ko{white}-{orange}Ko{white}-{gold}Ro {gray}Lvl: 51\n{purple}Delirium: {orange}Lem{white}-{orange}Ist{white}-{orange}Lo {gray}Lvl: 51\n{purple}Radiance: {green}Hi{white}-Ka-{orange}Ru {gray}Lvl: 46\n{purple}One: {green}Hi{white}-{orange}To{white}-{red}Tsu {gray}Lvl: 46\n{purple}Wisdom: {orange}Pul{white}-Ith-Eld {gray}Lvl: 45\n",
+                sockets = "3"
             },
     -- In game notification for all monster parts
         {
@@ -1522,7 +1566,8 @@ return {
             border = {0,0,0,255},
             background = {255,255,255,255}
         },
-    -- Tooltips on ESR Runes (Thanks to Quan + Squid)
+    -- Rune Tooltips
+        -- Tooltips on ESR Runes (Thanks to Quan + Squid)
         {code="r01",location={"onplayer","atvendor"},prefix="{gray}+1 White Rune Points when bagged{orange}\n"}, --I Rune
         {code="r02",location={"onplayer","atvendor"},prefix="{gray}+2 White Rune Points when bagged{orange}\n"}, --U Rune
         {code="r03",location={"onplayer","atvendor"},prefix="{gray}+4 White Rune Points when bagged{orange}\n"}, --Shi Rune
@@ -1570,7 +1615,7 @@ return {
         {code="r45",location={"onplayer","atvendor"},prefix="{gray}+4 Purple Rune Points when bagged{orange}\n"}, --Nu Rune
         {code="r46",location={"onplayer","atvendor"},prefix="{gray}+8 Purple Rune Points when bagged{orange}\n"}, --Wo Rune
         {code="r50",location={"onplayer","atvendor"},prefix="{gray}+16 Purple Rune Points when bagged{orange}\n"}, --Null Rune
-    -- Tooltips on LoD Decals (monkey see monkey do)
+        -- Tooltips on LoD Decals (monkey see monkey do)
         {code = "01l",location = {"onplayer","atvendor"},prefix = "{gray}+1 Low Rune Points when bagged{white}\n"},
         {code = "02",location = {"onplayer","atvendor"},prefix = "{gray}+2 Low Rune Points when bagged{white}\n"},
         {code = "03l",location = {"onplayer","atvendor"},prefix = "{gray}+4 Low Rune Points when bagged{white}\n"},
@@ -1610,8 +1655,8 @@ return {
             codes = {"02h", "0ax", "0b0", "0b6", "0b7", "0ba", "0be", "0bk", "0bl", "0br", "0bs", "0bt", "0bw", "0cl", "0cm", "0cr", "0dg", "0di", "0fb", "0fc", "0fl", "0ga", "0gd", "0gi", "0gl", "0gm", "0gp", "0gs", "0gw", "0h0", "0ha", "0ja", "0kl", "0kr", "0la", "0ls", "0m0", "0ma", "0mn", "0mp", "0mt", "0nn", "0ns", "0p0", "0pa", "0pb", "0pi", "0qs", "0rd", "0rm", "0s8", "0s9", "0sb", "0sh", "0sm", "0sp", "0sr", "0ss", "0st", "0sy", "0ta", "0tk", "0tr", "0ts", "0vo", "0wa", "0wc", "0wd", "0wh", "0wn", "0ws", "0xb", "0yw", "1bs", "1cb", "1cs", "1hb", "1hx", "1l8", "1lb", "1ls", "1lw", "1lx", "1mx", "1rx", "1s8", "1sb", "1ss", "1sw", "1ws", "2ap", "2ar", "2ax", "2cl", "2ea", "2h9", "2hb", "2hg", "2hl", "2hm", "2hn", "2hs", "2it", "2kp", "2la", "2lb", "2ld", "2lg", "2lm", "2lt", "2mb", "2mg", "2ml", "2ng", "2ow", "2pk", "2pl", "2rg", "2rn", "2rs", "2sh", "2sk", "2tb", "2tg", "2th", "2tp", "2ts", "2tu", "2uc", "2ui", "2ul", "2vb", "2vg", "3hb", "3lb", "3mb", "3tb", "3vb", "4ap", "4ar", "4cl", "4ea", "4h9", "4hb", "4hg", "4hl", "4hm", "4hn", "4it", "4kp", "4la", "4lb", "4ld", "4lg", "4lm", "4lt", "4mb", "4mg", "4ml", "4ng", "4ow", "4pk", "4pl", "4rg", "4rn", "4rs", "4sh", "4sk", "4tb", "4tg", "4th", "4tp", "4ts", "4tu", "4uc", "4ui", "4ul", "4vb", "4vg", "5hb", "5lb", "5mb", "5sc", "5tb", "5vb", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mp", "7mt", "7o7", "7p7", "7pa", "7pi", "7qr", "7qs", "7s7", "7s8", "7sb", "7sc", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7tw", "7vo", "7wa", "7wb", "7wc", "7wh", "7wn", "7ws", "7xf", "7yw", "82a", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9be", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gp", "9gs", "9gw", "9h9", "9ha", "9ja", "9kl", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mn", "9mp", "9mt", "9nj", "9nn", "9ns", "9p9", "9pa", "9pb", "9pi", "9qr", "9qs", "9rd", "9rm", "9s8", "9s9", "9sb", "9sc", "9sh", "9sm", "9sp", "9sr", "9ss", "9st", "9sy", "9ta", "9tk", "9tr", "9ts", "9tw", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9ws", "9xb", "9xf", "9yw", "aar", "ahb", "alb", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "apb", "arm", "atb", "avb", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "bmb", "br2", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "bts", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "ci4", "cix", "clb", "clk", "clm", "clw", "cr2", "crn", "crs", "cst", "dbt", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "dwc", "eht", "elv", "fhl", "fla", "flb", "flc", "fld", "fts", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsc", "gsd", "gsp", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "irg", "jav", "kit", "kkl", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mnb", "mpi", "msb", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "ned", "nee", "nef", "neg", "nin", "njt", "nrd", "nsy", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pbe", "pik", "pil", "plt", "q00", "q01", "q02", "q03", "q04", "q05", "q06", "q07", "q08", "q09", "q10", "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q28", "q29", "q2a", "q2b", "q2c", "q2d", "q2e", "q2f", "q30", "q31", "q32", "q33", "q34", "q35", "q36", "q37", "q38", "q39", "q3a", "q3b", "q3c", "q3d", "q3e", "q3f", "q40", "q41", "q42", "q43", "q44", "q45", "q46", "q47", "q48", "q49", "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q50", "q51", "q52", "q53", "q54", "q55", "q56", "q57", "q58", "q59", "q60", "q61", "q62", "q63", "q64", "q65", "q66", "q67", "q68", "q69", "q70", "q71", "q72", "q73", "q74", "q75", "q76", "q77", "q78", "q79", "q80", "q81", "q82", "q83", "q84", "q85", "q86", "qba", "qbc", "qbd", "qbe", "qda", "qdb", "qdd", "qde", "qdf", "qi2", "qi3", "qna", "qne", "qnf", "qp9", "qpc", "qpe", "qui", "rng", "rob", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scp", "scy", "shc", "shl", "skp", "skr", "sml", "sp2", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "syn", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wsp", "wst", "xap", "xar", "xbt", "xcl", "xdw", "xea", "xft", "xh9", "xhb", "xhg", "xhh", "xhl", "xhm", "xhn", "xht", "xig", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlk", "xlm", "xlt", "xlv", "xmb", "xmg", "xml", "xms", "xng", "xow", "xpk", "xpl", "xrb", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "yap", "yar", "ybt", "ycl", "ydw", "yea", "yft", "yh9", "yhb", "yhg", "yhh", "yhl", "yhm", "yhn", "yht", "yig", "yit", "ykp", "yla", "ylb", "yld", "ylg", "ylk", "ylm", "ylt", "ylv", "ymb", "ymg", "yml", "yms", "yng", "yow", "ypk", "ypl", "yrb", "yrg", "yrn", "yrs", "ysh", "ysk", "ytb", "ytg", "yth", "ytp", "yts", "ytu", "yuc", "yui", "yul", "yvb", "yvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb"},
             location = {"onground"},
             suffix = " {lilac}[{sockets}]"
-        },    
-    
+        }, 
+
     -- Item tooltip Item shows (available/max) sockets for it's ilvl - Thank you Khaos!
         {
             codes = "allitems",
@@ -1620,6 +1665,7 @@ return {
             sockets = "0+",
             maxsock = false
         },
+
     -- Item tooltip - Item has maximum sockets for it's ilvl
         {
             codes = "allitems",
@@ -1628,14 +1674,5 @@ return {
             sockets = "1+",
             maxsock = true
         },  
-        {
-            codes = {"dr1","dr2","dr3","dr4","dr5","dr6","dr7","dr8","dr9","dra","drb","drc","drd","dre","drf"},
-            quality = "3",
-            notify = "{Yellow}Druid Pelt: {gray}{name}",
-            audio = "other.mp3",
-            border = {255,0,0,255},
-            hide = false
-        },
-    
     },
 }
