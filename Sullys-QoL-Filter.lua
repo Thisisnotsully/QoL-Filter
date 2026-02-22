@@ -9,7 +9,7 @@ return {
     audioPlayback = true,
     debug = false,
     allowOverrides = true,
-    filter_level = 2,
+    filter_level = 4,
     rules = {
     
     -- Vendor item tooltips for some cube recipes
@@ -331,10 +331,11 @@ return {
         },
      -- Highlight Gold ESR Runes   
         {
-            codes = {"36","37","38","39","40","41","42"},
+            codes = {"r36","r37","r38","r39","r40","r41","r42"},
             notify = "{Red}Gold Rune Drop{gold}: {name}",
             border = {255,215,0,255},
-            background = {0,0,0,255}
+            background = {0,0,0,255},
+            audio = "mid.mp3"
         },
 
     -- Rejuvination Potion Style
@@ -1040,9 +1041,13 @@ return {
         {
             codes = {"01d","02d","03d","04d","05d","06d","07d","08d","09d","10d","11d","12d","13d","14d","15d","16d","17d","18d","19d","20d","21d","22d","23d","24d","25d","26d","27d","28d","29d","30d","31d","32d","33d","34d","35d","36d","37d","38d","39d","40d","41d","42d","43d","44d","45d","46d","47d","48d","49d","50d","01g","02g","03g","04g","05g","06g","07g","08g","09g","10g","11g","12g","13g","14g","15g","16g","17g","18g","19g","20g","21g","22g","23g","24g","25g","26g","27g","28g","29g","30g","31g","32g","33g","34g","35g","36g","37g","38g","39g","40g","41g","42g","43g","44g","45g","46g","47g","48g","49g","50g","51g","52g","53g","54g","55g","56g","57g","58g","59g","60g","61g","62g","63g","64g","65g","66g","67g","68g","69g","70g","71g","72g","73g","74g","75g","76g","77g","78g","05i","06i","07i","08i","05j","06j","07j","08j","04i"},
             notify = "{gold}Exceptional Coupon: {white}{name}", --- Exceptional Coupons
-            audio = "other.mp3",
             border = {255,165,0,255},
             name_override = "{gray}Exc:{gold}{name}"
+        },
+        {
+            codes = {"01d","02d","03d","04d","05d","06d","07d","08d","09d","10d","11d","12d","13d","14d","15d","16d","17d","18d","19d","20d","21d","22d","23d","24d","25d","26d","27d","28d","29d","30d","31d","32d","33d","34d","35d","36d","37d","38d","39d","40d","41d","42d","43d","44d","45d","46d","47d","48d","49d","50d","01g","02g","03g","04g","05g","06g","07g","08g","09g","10g","11g","12g","13g","14g","15g","16g","17g","18g","19g","20g","21g","22g","23g","24g","25g","26g","27g","28g","29g","30g","31g","32g","33g","34g","35g","36g","37g","38g","39g","40g","41g","42g","43g","44g","45g","46g","47g","48g","49g","50g","51g","52g","53g","54g","55g","56g","57g","58g","59g","60g","61g","62g","63g","64g","65g","66g","67g","68g","69g","70g","71g","72g","73g","74g","75g","76g","77g","78g","05i","06i","07i","08i","05j","06j","07j","08j","04i"},
+            audio = "other.mp3",
+            filter_levels = "3-"
         },
         {
             codes = {"01e","02e","03e","04e","05e","06e","07e","08e","09e","10e","11e","12e","13e","14e","15e","16e","17e","18e","19e","20e","21e","22e","23e","24e","25e","26e","27e","28e","29e","30e","31e","32e","33e","34e","35e","36e","37e","38e","39e","40e","41e","01h","02k","03h","04h","05h","06h","07h","08h","09h","10h","11h","12k","13h","14h","15h","16h","17h","18h","19h","20h","21h","22k","23h","24h","25h","26h","27h","28h","29h","30h","31h","32k","33h","34h","35h","36h","37h","38h","39h","40h","41h","42k","43h","44h","45h","46h","47h","48h","49h","50h","51h","52k","53h","54h","55h","56h","57h","58h","59h","60h","61h","62k","09i","10i","11i","12i","09j","10j"},
@@ -1290,7 +1295,7 @@ return {
                 quality = "3-",
                 pstat = {index = 12, op = ">=", value = 45}, -- Char Level 40 or higher
                 location = {"onplayer","atvendor","equipped"},
-                suffix_desc = "{gray}Metamorphosis: {orange}Io {purple}Cham {orange}Fal {gray}Lvl: 67{blue}\n{gray}Dream: {orange}Io {purple}Jah {orange}Pul {gray}Lvl: 65{blue}\n{gray}Peace: He{white} I {orange}Wa {gray}Lvl: 59{blue}\n{gray}Discontent: {green}Fu {purple}He{white} I {gray}Lvl: 59{blue}\n{gray}Abandon: Su {gold}Te {orange}Ru {gray}Lvl: 57{blue}\n{gray}Flickering Flame: {white}Nef {orange}Pul {purple}Vex {gray}Lvl: 55{blue}\n{gray}Thought: {white}Shi {gold}So{white} U {gray}Lvl: 52{blue}\n{gray}Spirit: {orange}Ko {orange}Ko {gold}Ro {gray}Lvl: 51{blue}\n{gray}Delirium: {orange}Lem {orange}Ist {orange}Io {gray}Lvl: 51{blue}\n{gray}Radiance: {green}Hi{white} Ka {orange}Ru {gray}Lvl: 46{blue}\n{gray}One: {green}Hi {orange}To {red}Tsu {gray}Lvl: 46{blue}\n{gray}Wisdom: {orange}Pul{white} Ith Eld {gray}Lvl: 45{blue}\n",
+                suffix_desc = "{gray}Metamorphosis: {orange}Io {purple}Cham {orange}Fal {gray}Lvl: 67{blue}\n{gray}Dream: {orange}Io {purple}Jah {orange}Pul {gray}Lvl: 65{blue}\n{gray}Peace: He{white} I {orange}Wa {gray}Lvl: 59{blue}\n{gray}Discontent: {green}Fu {purple}He{white} I {gray}Lvl: 59{blue}\n{gray}Abandon: {purple}Su {gold}Te {orange}Ru {gray}Lvl: 57{blue}\n{gray}Flickering Flame: {white}Nef {orange}Pul {purple}Vex {gray}Lvl: 55{blue}\n{gray}Thought: {white}Shi {gold}So{white} U {gray}Lvl: 52{blue}\n{gray}Spirit: {orange}Ko {orange}Ko {gold}Ro {gray}Lvl: 51{blue}\n{gray}Delirium: {orange}Lem {orange}Ist {orange}Io {gray}Lvl: 51{blue}\n{gray}Radiance: {green}Hi{white} Ka {orange}Ru {gray}Lvl: 46{blue}\n{gray}One: {green}Hi {orange}To {red}Tsu {gray}Lvl: 46{blue}\n{gray}Wisdom: {orange}Pul{white} Ith Eld {gray}Lvl: 45{blue}\n",
                 sockets = "3"
             },
         -- Tooltip information for all Shields showing avaiable 2 socket Runewords
@@ -1319,7 +1324,7 @@ return {
                 quality = "3-",
                 pstat = {index = 12, op = ">=", value = 50}, -- Char Level 50 or higher
                 location = {"onplayer","atvendor","equipped"},
-                suffix_desc = "{gray}Dream: {orange}Io {purple}Jah {orange}Pul {gray}Lvl: 65{blue}\n{gray}Dragon: Sur Lo {white}Sol {gray}Lvl: 61{blue}\n{gray}Sunlight: {blue}Sun {orange}Ko {white}U {gray}Lvl: 60{blue}\n{gray}Dodge: {white}Ka {orange}Wa {purple}Su {gray}Lvl: 57{blue}\n{gray}Abandon: Su {gold}Te {orange}Ru {gray}Lvl: 57{blue}\n{gray}Rift: {red}Ki {gold}Re {red}Tsu {gray}Lvl: 56{blue}\n",
+                suffix_desc = "{gray}Dream: {orange}Io {purple}Jah {orange}Pul {gray}Lvl: 65{blue}\n{gray}Dragon: Sur Lo {white}Sol {gray}Lvl: 61{blue}\n{gray}Sunlight: {blue}Sun {orange}Ko {white}U {gray}Lvl: 60{blue}\n{gray}Dodge: {white}Ka {orange}Wa {purple}Su {gray}Lvl: 57{blue}\n{gray}Abandon: {purple}Su {gold}Te {orange}Ru {gray}Lvl: 57{blue}\n{gray}Rift: {red}Ki {gold}Re {red}Tsu {gray}Lvl: 56{blue}\n",
                 sockets = "3"
             },
         -- Tooltip information for all Shields showing avaiable 4 socket Runewords
@@ -1750,5 +1755,12 @@ return {
             sockets = "1+",
             maxsock = true
         },  
+    
+        {
+            codes = "pa1",
+            prefix = "{stat}{code}{itype}{rarity}",
+        }
+
+
     },
 }
