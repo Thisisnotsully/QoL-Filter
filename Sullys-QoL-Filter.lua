@@ -9,7 +9,7 @@ return {
     audioPlayback = true,
     debug = false,
     allowOverrides = true,
-    filter_level = 1,
+    filter_level = 2,
     rules = {
     
     -- Vendor item tooltips for some cube recipes
@@ -1209,6 +1209,43 @@ return {
                 location = {"onplayer", "atvendor", "equipped"},
                 suffix_desc = "{purple}Enigma: Jah{white}-Ith-{purple}Ber {gray}Lvl: 65\n{purple}Dragon: Sur{white}-{purple}Lo{orange}-Sol {gray}Lvl: 61\n{purple}Nightgown: {orange}Ne{white}-{green}Ma{white}-{red}Ki {gray}Lvl: 55\n{purple}Fox: {red}Ki{white}-{red}Tsu{white}-{orange}Ne {gray}Lvl: 55\n{purple}Smoke: {gold}Ke{white}-{orange}Mu{white}-{red}Ri {gray}Lvl :54\n{purple}Principle: {white}Ral-{purple}Gul{white}-Eld {gray}Lvl: 53\n{purple}Rain: {white}Ort-{purple}Mal{white}-Ith {gray}Lvl: 49\n{purple}Duress: {orange}Shael{white}-{orange}Um{white}-Thul {gray}Lvl: 47\n{purple}Bone: {white}Sol-{orange}Um{white}-{orange}Um {gray}Lvl: 47\n{purple}Daylight: {green}Hi{white}-{orange}Ru{white}-{green}Ma {gray}Lvl: 46\n{purple}Indominable: {yellow}Ra{white}-N{green}Ma {gray}Lvl: 45\n{purple}Abundant: {orange}Ho{white}-U{green}Fu {gray}Lvl: 44\n{purple}Harmony: {orange}Wa{white}-{green}Se{white}-I {gray}Lvl: 43\n{purple}Fossil of the Sun: {white}Ka-{green}Se{white}-{red}Ki {gray}Lvl: 43\n{purple}Lionheart: {orange}Hel{white}-{orange}Lum{white}-{orange}Fal {gray}Lvl: 41",
                 sockets = "3",
+            },
+        -- Tooltip information for Body Armor showing available 4 socket Runewords
+            {
+                codes = {"qui", "lea", "hla", "stu", "rng", "scl", "chn", "brs", "spl", "plt", "fld", "gth", "ful", "aar", "ltp", "shl", "elv", "2ui", "2ea", "2la", "2tu", "2ng", "2cl", "2hn", "2rs", "2pl", "2lt", "br2", "xui", "xea", "xla", "xtu", "xng", "xcl", "xhn", "xrs", "xpl", "xlt", "xld", "xth", "xul", "xar", "xtp", "xhh", "xlv", "4ui", "4ea", "4la", "4tu", "4ng", "4cl", "4hn", "4rs", "4pl", "4lt", "4ld", "4th", "4ul", "4ar", "4tp", "yui", "yea", "yla", "ytu", "yng", "ycl", "yhn", "yrs", "ypl", "ylt", "yld", "yth", "yul", "yar", "ytp", "yhh", "ylv", "uui", "uea", "ula", "utu", "ung", "ucl", "uhn", "urs", "upl", "ult", "uld", "uth", "uul", "uar", "utp", "m06"},
+                runeword = false,
+                quality = "3-",
+                pstat = { index = 12, op = "<=", value = 40 }, -- Char Level 40 or below
+                location = {"onplayer", "atvendor", "equipped"},
+                suffix_desc = "{purple}Sorrow: {white}Ka-{green}Na{white}-Shi-{red}Mi {gray}Lvl: 40\n{Purple}Animal Friend: {green}Na{white}-U-Shi-Ka {gray}Lvl: 40\n{purple}Journey: {red}Ri{white}-Yo-{orange}Ko{white}-U {gray}Lvl: 39\n{purple}Healthy: {yellow}Ke{white}-N-{orange}Ko{white}-U {gray}Lvl: 39\n{purple}Fortune: {orange}Ko{white}-U-U-U {gray}Lvl: 39\n{purple}Efficiency: {orange}Ko{white}-U-{red}Ri{white}-{red}Tsu {gray}Lvl: 39\n{purple}Illustrious: {red}A{white}-{yellow}Yu{white}-Ka-{orange}Wa {gray}Lvl: 38\n{purple}Trust: {white}Shi-N-Ra-I {gray}Lvl: 28\n{purple}Eneternity: {yellow}E{white}-I-{yellow}E{white}-N {gray}Lvl: 26\n{purple}Beauty: {white}U-{red}Tsu{white}-Ku-Shi {gray}Lvl: 19\n{purple}Insanity: {red}Ki{white}-Yo-U-{red}Ki {gray}Lvl: 10\n",
+                sockets = "4",
+            },
+            {
+                codes = {"qui", "lea", "hla", "stu", "rng", "scl", "chn", "brs", "spl", "plt", "fld", "gth", "ful", "aar", "ltp", "shl", "elv", "2ui", "2ea", "2la", "2tu", "2ng", "2cl", "2hn", "2rs", "2pl", "2lt", "br2", "xui", "xea", "xla", "xtu", "xng", "xcl", "xhn", "xrs", "xpl", "xlt", "xld", "xth", "xul", "xar", "xtp", "xhh", "xlv", "4ui", "4ea", "4la", "4tu", "4ng", "4cl", "4hn", "4rs", "4pl", "4lt", "4ld", "4th", "4ul", "4ar", "4tp", "yui", "yea", "yla", "ytu", "yng", "ycl", "yhn", "yrs", "ypl", "ylt", "yld", "yth", "yul", "yar", "ytp", "yhh", "ylv", "uui", "uea", "ula", "utu", "ung", "ucl", "uhn", "urs", "upl", "ult", "uld", "uth", "uul", "uar", "utp", "m06"},
+                runeword = false,
+                quality = "3-",
+                pstat = { index = 12, op = ">=", value = 41 }, -- Char Level 41 or above
+                location = {"onplayer", "atvendor", "equipped"},
+                suffix_desc = "{purple}Chains of Honor: {orange}Dol{white}-{orange}Um{white}-{purple}Ber{white}-{purple}Ist {gray}Lvl: 63\n{purple}Bramble: {white}Ral-{purple}Ohm{white}-{purple}Sur{white}-Eth {gray}Lvl: 61\n{purple}Gold Scarab: {orange}Ko{white}-{blue}Metal{white}-{gold}Mu{white}-Shit {gray}Lvl: 60\n{purple}Fortitude: {white}El-{orange}Sol{white}-{orange}Dol{white}-{purple}Lo {gray}Lvl: 59\n{purple}Transformation: He{white}-N-Shi-N {gray}Lvl: 59\n{purple}Unknown: {red}Mi/Ri/Ki{white}-{red}Chi{white}-{purple}Su{white}-U {gray}Lvl: 57\n{purple}Lynx: {red}Ya{white}-{green}Ma{white}-{gold}Ne{white}-{orange}Ko {gray}Lvl: 55\n{purple}Able: {orange}Yu{white}-U-{gold}No{white}-U {gray}Lvl: 48\n{purple}Question: {white}Shi-{red}Tsu{white}-{green}Mo{white}-N {gray}Lvl: 47\n{purple}Stone: {orange}Shael{white}-{orange}Um{white}-{orange}Pul{white}-{orange}Lum {gray}Lvl: 47\n{purple}Stomach Ache: {green}Fu{white}-Ku-{red}Tsu{white}-U {gray}Lvl: 44\n",
+                sockets = "4",
+            },
+        -- Tooltip information for Body Armor showing available 5 socket Runewords
+            {
+                codes = {"qui", "lea", "hla", "stu", "rng", "scl", "chn", "brs", "spl", "plt", "fld", "gth", "ful", "aar", "ltp", "shl", "elv", "2ui", "2ea", "2la", "2tu", "2ng", "2cl", "2hn", "2rs", "2pl", "2lt", "br2", "xui", "xea", "xla", "xtu", "xng", "xcl", "xhn", "xrs", "xpl", "xlt", "xld", "xth", "xul", "xar", "xtp", "xhh", "xlv", "4ui", "4ea", "4la", "4tu", "4ng", "4cl", "4hn", "4rs", "4pl", "4lt", "4ld", "4th", "4ul", "4ar", "4tp", "yui", "yea", "yla", "ytu", "yng", "ycl", "yhn", "yrs", "ypl", "ylt", "yld", "yth", "yul", "yar", "ytp", "yhh", "ylv", "uui", "uea", "ula", "utu", "ung", "ucl", "uhn", "urs", "upl", "ult", "uld", "uth", "uul", "uar", "utp", "m06"},
+                runeword = false,
+                quality = "3-",
+                location = {"onplayer", "atvendor", "equipped"},
+                suffix_desc = "{purple}Wooden Colossus: {blue}Wood{white}-{orange}Ko{white}-{gold}Ro{white}-{yellow}Sa{white}-{purple}Su {gray}Lvl: 60\n{purple}Horizon: {red}Chi{white}-{purple}He{white}-I-{green}Se{white}-N {gray}Lvl: 59\n{purple}Jindujun: Su{white}-{orange}Ha{white}-{yellow}Ra{white}-Shi-I {gray}Lvl: 57\n{Purple}Zenith: {gold}Te{white}-N-{red}Chi{white}-Yo-U {gray}Lvl: 50\n{purple}Pear: {green}Hi{white}-{orange}To{white}-{gold}Te{white}-{green}Na{white}-Shi {gray}Lvl: 50\n{purple}Phoenix: {green}Fu{white}-Shi-{red}Chi{white}-Yo-U {gray}Lvl: 44\n{purple}Lionheart: {white}Ka-I-{yellow}O{white}-{green}Na{white}-I {gray}Lvl: 40\n{purple}Pride: {orange}Ho{white}-{orange}Ko{white}-{yellow}Ra{white}-Shi-{yellow}Sa {gray}Lvl: 39\n",
+                sockets = "5",
+            },
+        -- Tooltip information for Body Armor showing available 6 socket Runewords
+            {
+                codes = {"qui", "lea", "hla", "stu", "rng", "scl", "chn", "brs", "spl", "plt", "fld", "gth", "ful", "aar", "ltp", "shl", "elv", "2ui", "2ea", "2la", "2tu", "2ng", "2cl", "2hn", "2rs", "2pl", "2lt", "br2", "xui", "xea", "xla", "xtu", "xng", "xcl", "xhn", "xrs", "xpl", "xlt", "xld", "xth", "xul", "xar", "xtp", "xhh", "xlv", "4ui", "4ea", "4la", "4tu", "4ng", "4cl", "4hn", "4rs", "4pl", "4lt", "4ld", "4th", "4ul", "4ar", "4tp", "yui", "yea", "yla", "ytu", "yng", "ycl", "yhn", "yrs", "ypl", "ylt", "yld", "yth", "yul", "yar", "ytp", "yhh", "ylv", "uui", "uea", "ula", "utu", "ung", "ucl", "uhn", "urs", "upl", "ult", "uld", "uth", "uul", "uar", "utp", "m06"},
+                runeword = false,
+                quality = "3-",
+                location = {"onplayer", "atvendor", "equipped"},
+                suffix_desc = "{purple}Insight: {red}Mi{white}-{purple}Nu{white}-Ku-{red}Chi{white}-Ka-{yellow}Ra {gray}Lvl: 60\n{purple}Eternal Reign: {gold}Te{white}-N-Ka-{purple}Wo{white}-{orange}To{white}-{orange}Ru {gray}Lvl: 60\n{purple}Golden Dragon: {red}Ki{white}-N-{gold}No{white}-{red}Ri{white}-{yellow}Yu{white}-U {gray}Lvl: 48\n{purple}Dark Star: {green}Hi{white}-Ka-{red}Ri{white}-{gold}No{white}-{orange}Ke{white}-N {gray}Lvl: 48\n{purple}Courage: {white}Ka-{red}Mi{white}-{red}Ya{white}-{orange}Ta{white}-I-{red}Chi {gray}Lvl: 35\n{purple}Ascend: {white}Shi-Yo-{red}Ri{white}-{yellow}Yu{white}-{yellow}Ke{white}-N {gray}Lvl: 24\n",
+                sockets = "6",
             },
         -- Tooltip information for Belts showing available 2 socket Runewords
             {
