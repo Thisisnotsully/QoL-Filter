@@ -1268,7 +1268,7 @@ return {
         -- Tooltip information for all Helms showing available 2 socket Runewords
             {
                 codes = {"cap", "skp", "hlm", "fhl", "ghm", "crn", "msk", "bhm", "dwc", "2ap", "2kp", "2lm", "2hl", "2hm", "2rn", "2sk", "2h9", "xap", "xkp", "xlm", "xhl", "xhm", "xrn", "xsk", "xh9", "xdw", "4ap", "4kp", "4lm", "4hl", "4hm", "4rn", "4sk", "4h9", "yap", "ykp", "ylm", "yhl", "yhm", "yrn", "ysk", "yh9", "ydw", "uap", "ukp", "ulm", "uhl", "uhm", "urn", "usk", "uh9", "dr3", "dr4", "dr5", "dr1", "dr2", "dr8", "dr9", "dra", "dr6", "dr7", "drd", "dre", "drf", "drb", "drc", "qda", "qdb", "eht", "xht", "yht", "ba3", "ba4", "ba5", "ba1", "ba2", "ba8", "ba9", "baa", "ba6", "ba7", "bad", "bae", "baf", "bab", "bac", "qba", "qbc", "qbd", "qbe", "cix", "ci0", "ci4", "ci1", "ci2", "ci3", "qi2", "qi3", "m20"},
-                runewords = false,
+                runeword = false,
                 quality = "3-",
                 location = {"onplayer","atvendor","equipped"},
                 suffix_desc = "{purple}Hawk: {orange}Ta{white} Ka {gray}Lvl: 35{blue}\n{purple}Dream: {yellow}Yu {red}Me {gray}Lvl: 32{blue}\n{purple}Lore: {white}Ort Sol {gray}Lvl: 27{blue}\n{purple}Wisdom: {red}Chi {yellow}E {gray}Lvl: 26{blue}\n{purple}Nadir: {white}Nef Tir {gray}Lvl: 13{blue}\n{Purple}Hades: {white}Yo {red}Mi {gray}Lvl: 13{blue}\n{purple}Hunt: {white}Ka {red}Ri {gray}Lvl: 12{blue}\n{purple}Fog: {red}Ki {red}Ri {gray}Lvl: 12{blue}\n{purple}Greed: {white}Yo Ku {gray}Lvl: 9{blue}\n{purple}Feel: {white}Ka N {gray}Lvl: 6{blue}\n",
