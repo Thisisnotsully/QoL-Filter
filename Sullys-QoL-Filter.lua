@@ -1277,7 +1277,7 @@ return {
         -- Tooltip information for all Helms showing available 3 socket Runewords
             {
                 codes = {"cap", "skp", "hlm", "fhl", "ghm", "crn", "msk", "bhm", "dwc", "2ap", "2kp", "2lm", "2hl", "2hm", "2rn", "2sk", "2h9", "xap", "xkp", "xlm", "xhl", "xhm", "xrn", "xsk", "xh9", "xdw", "4ap", "4kp", "4lm", "4hl", "4hm", "4rn", "4sk", "4h9", "yap", "ykp", "ylm", "yhl", "yhm", "yrn", "ysk", "yh9", "ydw", "uap", "ukp", "ulm", "uhl", "uhm", "urn", "usk", "uh9", "dr3", "dr4", "dr5", "dr1", "dr2", "dr8", "dr9", "dra", "dr6", "dr7", "drd", "dre", "drf", "drb", "drc", "qda", "qdb", "eht", "xht", "yht", "ba3", "ba4", "ba5", "ba1", "ba2", "ba8", "ba9", "baa", "ba6", "ba7", "bad", "bae", "baf", "bab", "bac", "qba", "qbc", "qbd", "qbe", "cix", "ci0", "ci4", "ci1", "ci2", "ci3", "qi2", "qi3", "m20"},
-                runewords = false,
+                runeword = false,
                 quality = "3-",
                 pstat = { index = 12, op = "<=", value = 44 }, -- Char Level 39 or lower
                 location = {"onplayer","atvendor","equipped"},
@@ -1286,7 +1286,7 @@ return {
             },
             {
                 codes = {"cap", "skp", "hlm", "fhl", "ghm", "crn", "msk", "bhm", "dwc", "2ap", "2kp", "2lm", "2hl", "2hm", "2rn", "2sk", "2h9", "xap", "xkp", "xlm", "xhl", "xhm", "xrn", "xsk", "xh9", "xdw", "4ap", "4kp", "4lm", "4hl", "4hm", "4rn", "4sk", "4h9", "yap", "ykp", "ylm", "yhl", "yhm", "yrn", "ysk", "yh9", "ydw", "uap", "ukp", "ulm", "uhl", "uhm", "urn", "usk", "uh9", "dr3", "dr4", "dr5", "dr1", "dr2", "dr8", "dr9", "dra", "dr6", "dr7", "drd", "dre", "drf", "drb", "drc", "qda", "qdb", "eht", "xht", "yht", "ba3", "ba4", "ba5", "ba1", "ba2", "ba8", "ba9", "baa", "ba6", "ba7", "bad", "bae", "baf", "bab", "bac", "qba", "qbc", "qbd", "qbe", "cix", "ci0", "ci4", "ci1", "ci2", "ci3", "qi2", "qi3", "m20"},
-                runewords = false,
+                runeword = false,
                 quality = "3-",
                 pstat = {index = 12, op = ">=", value = 45}, -- Char Level 40 or higher
                 location = {"onplayer","atvendor","equipped"},
@@ -1296,7 +1296,7 @@ return {
         -- Tooltip information for all Shields showing avaiable 2 socket Runewords
             {
                 codes = {"buc", "sml", "lrg", "kit", "tow", "gts", "bsh", "spk", "fts", "2uc", "2ml", "2rg", "2it", "2ow", "2ts", "2sh", "2pk", "sp2", "xuc", "xml", "xrg", "xit", "xow", "xts", "xsh", "xpk", "xft", "4uc", "4ml", "4rg", "4it", "4ow", "4ts", "4sh", "4pk", "yuc", "yml", "yrg", "yit", "yow", "yts", "ysh", "ypk", "yft", "uuc", "uml", "urg", "uit", "uow", "uts", "ush", "upk", "pa1", "pa3", "pa4", "pa5", "pa2", "pa6", "pa8", "pa9", "paa", "pa7", "pab", "pad", "pae", "pae", "paf", "qp9", "qpc", "qpc", "qpe", "ne1", "ne2", "ne3"},
-                runewords = false,
+                runeword = false,
                 quality = "3-",
                 location = {"onplayer","atvendor","equipped"},
                 suffix_desc = "{purple}Splendor: {white}Eth {orange}Lum {gray}Lvl: 37{blue}\n{purple}Rhyme: {orange}Shael{white} Eth {gray}Lvl: 29{blue}\n{purple}Rhino: {yellow}Sa{white} I {gray}Lvl: 22{blue}\n{purple}Gold: {red}Ki{white} N {gray}Lvl: 10{blue}\n{purple}Luck: {white}U N {gray}Lvl: 6{blue}\n",
@@ -1306,12 +1306,30 @@ return {
         -- Tooltip information for all Shields showing avaiable 3 socket Runewords
             {
                 codes = {"buc", "sml", "lrg", "kit", "tow", "gts", "bsh", "spk", "fts", "2uc", "2ml", "2rg", "2it", "2ow", "2ts", "2sh", "2pk", "sp2", "xuc", "xml", "xrg", "xit", "xow", "xts", "xsh", "xpk", "xft", "4uc", "4ml", "4rg", "4it", "4ow", "4ts", "4sh", "4pk", "yuc", "yml", "yrg", "yit", "yow", "yts", "ysh", "ypk", "yft", "uuc", "uml", "urg", "uit", "uow", "uts", "ush", "upk", "pa1", "pa3", "pa4", "pa5", "pa2", "pa6", "pa8", "pa9", "paa", "pa7", "pab", "pad", "pae", "pae", "paf", "qp9", "qpc", "qpc", "qpe", "ne1", "ne2", "ne3"},
-                runewords = false,
+                runeword = false,
                 quality = "3-",
-                pstat = {index = 12, op = "<=", value = 45}, -- Char Level 49 or lower
+                pstat = {index = 12, op = "<=", value = 49}, -- Char Level 49 or lower
                 location = {"onplayer","atvendor","equipped"},
-                suffix_desc = "{purple}Sanctuary: {orange}Ko {orange}Ko {purple}Mal {gray}LvL: 49{blue}\n{purple}Woodsman: {red}Ki {orange}Ko {red}Ri {gray}Lvl: 39{blue}\n{purple}Daylight: {green}Hi {orange}Ru {green}Ma {gray}Lvl: 46{blue}\n{Purple}Sunny: {yellow}Sa{white}-",
+                suffix_desc = "{purple}Sanctuary: {orange}Ko {orange}Ko {purple}Mal {gray}LvL: 49{blue}\n{purple}Woodsman: {red}Ki {orange}Ko {red}Ri {gray}Lvl: 39{blue}\n{purple}Daylight: {green}Hi {orange}Ru {green}Ma {gray}Lvl: 46{blue}\n{Purple}Sunny: {yellow}Sa {green}Ni {white}I {gray}Lvl: 43{blue}\n{purple}Secret: {white}Shi {green}Ni {orange}Ti {gray}Lvl: 42{blue}\n{purple}Pillar of Faith: {orange}Ha {white}Shi {yellow}Ra {gray}Level: 39{blue}\n{purple}Conquest: {white}Shi Shi {yellow}O {gray}Level :30{blue}\n{purple}Ancient's Pledge: {white}Ral Ort Tal {gray}Lvl: 21{blue}\n",
                 sockets = "3"
+            },
+            {
+                codes = {"buc", "sml", "lrg", "kit", "tow", "gts", "bsh", "spk", "fts", "2uc", "2ml", "2rg", "2it", "2ow", "2ts", "2sh", "2pk", "sp2", "xuc", "xml", "xrg", "xit", "xow", "xts", "xsh", "xpk", "xft", "4uc", "4ml", "4rg", "4it", "4ow", "4ts", "4sh", "4pk", "yuc", "yml", "yrg", "yit", "yow", "yts", "ysh", "ypk", "yft", "uuc", "uml", "urg", "uit", "uow", "uts", "ush", "upk", "pa1", "pa3", "pa4", "pa5", "pa2", "pa6", "pa8", "pa9", "paa", "pa7", "pab", "pad", "pae", "pae", "paf", "qp9", "qpc", "qpc", "qpe", "ne1", "ne2", "ne3"},
+                runeword = false,
+                quality = "3-",
+                pstat = {index = 12, op = ">=", value = 50}, -- Char Level 50 or higher
+                location = {"onplayer","atvendor","equipped"},
+                suffix_desc = "{purple}Dream: {orange}Io {purple}Jah {orange}Pul {gray}Lvl: 65{blue}\n{purple}Dragon: Sur Lo {white}Sol {gray}Lvl: 61{blue}\n{purple}Sunlight: {blue}Sun {orange}Ko {white}U {gray}Lvl: 60{blue}\n{purple}Dodge: {white}Ka {orange}Wa {purple}Su {gray}Lvl: 57{blue}\n{purple}Abandon: Su {gold}Te {orange}Ru {gray}Lvl: 57{blue}\n{purple}Rift: {red}Ki {gold}Re {red}Tsu {gray}Lvl: 56{blue}\n{purple}",
+                sockets = "3"
+            },
+        -- Tooltip information for all Shields showing avaiable 4 socket Runewords
+            {
+                codes = {"buc", "sml", "lrg", "kit", "tow", "gts", "bsh", "spk", "fts", "2uc", "2ml", "2rg", "2it", "2ow", "2ts", "2sh", "2pk", "sp2", "xuc", "xml", "xrg", "xit", "xow", "xts", "xsh", "xpk", "xft", "4uc", "4ml", "4rg", "4it", "4ow", "4ts", "4sh", "4pk", "yuc", "yml", "yrg", "yit", "yow", "yts", "ysh", "ypk", "yft", "uuc", "uml", "urg", "uit", "uow", "uts", "ush", "upk", "pa1", "pa3", "pa4", "pa5", "pa2", "pa6", "pa8", "pa9", "paa", "pa7", "pab", "pad", "pae", "pae", "paf", "qp9", "qpc", "qpc", "qpe", "ne1", "ne2", "ne3"},
+                runeword = false,
+                quality = "3-",
+                location = {"onplayer","atvendor","equipped"},
+                suffix_desc = "{purple}Phoenix: Vex Vex Lo Jah {gray}Lvl: 65{blue}\n{purple}Dread: {yellow}O {gold}So Re {orange}Ru {gray}Lvl: 56{blue}\n{purple}Dome: {green}Ma {orange}Ru {red}Ya {gold}Ne {gray}Lvl: 55{blue}\n{purple}Medicine: {red}Ya {white}Ku {green}Hi {white}N {gray}Lvl: 46{blue}\n{purple}Glory: {yellow}E {white}I {orange}Ko {white}U {gray}Lvl: 39{blue}\n{purple}Faith: {white}Shi N {orange}Ko {white}U {gray}Lvl: 39{blue}\n{purple}Temptation: {yellow}Wa {white}U {orange}Wa {white}Ku {gray}Lvl: 38{blue}\n{purple}Achieve: {white}Ka {red}Chi {orange}To Ru {gray}Lvl: 36{blue}\n{purple}Spirit: {white}Tal Thul Ort Amn {gray}Lvl: 25{blue}\n{purple}Fortress: {white}Yo U {yellow}Sa {white}I {gray}Lvl: 22{blue}\n{purple}Beauty: {white}U {red}Tsu {white}Ku Shi {gray}Lvl: 19{blue}\n",
+                sockets = "4"
             },
     
     -- In game notification for all monster parts
