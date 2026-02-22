@@ -17,11 +17,11 @@ return {
     {code = "gvb", location = "atvendor",prefix ="{blue}Non-Barb Weapon:{gray} 25-35 Attack Speed|150-200 Enhanced Damage|15-25 Physical Leech Life|10-15 Physical Leech Mana|1-4 Random\n{blue}Weapon:{gray} +1-2 Barb Skills|25-35 Attack Speed|150-200 Enhanced Damage|1-4 Random\n{blue}Ring:{gray} +1-2 Barb Skills|10-15 Pct Max Life|20-30 Str|+20-30 Max Dmg to Attacks|1-4 Random\n{blue}Amulet:{gray} +1-2 Barb Skills|10-15 Pct Max Life|15-25 All Resists|1-4 Random\n{blue}Chest:{gray} +1-2 Barb Skills|80-100 ED|15-25 all attributes|+10-15 Phys Res|1-4 Random\n{blue}Shield:{gray} +1-2 Barb Skills|20-30 Faster Block|80-100 ED|3-5 Increased Block|1-4 Random\n{blue}Belt:{gray} +1 Barb Skills|20-30 Hit Recovery|80-100 ED|30-45 Str|1-4 Random\n{blue}Gloves:{gray} +1 Barb Skills|20-30 Attack Speed|80-100 ED|30-45 Dex|1-4 Random\n{blue}Boots:{gray} +1 Barb Skills|20-30 Faster Run/Walk|80-100 ED|30-45 Vit|1-4 Random\n{blue}Helm:{gray} +1-2 Barb Skills|ED|30-45 Energy|15-15 All Res|1-4 Random\n{blue}Magic{gray} Gear + Forging Hammer + P.Amethyst + Any Jewel\n"},
     {code = "gyb", location = "atvendor",prefix ="{blue}Non-Druid Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|25-40 Spell Dmg|1-4 Random\n{blue}Druid Wpn: {gray}+1-2 Druid Skill|25-35 IAS|150-200% Enahcned Dmg|1-4 Random\n{blue}Ring: {gray}+1-2 Druid Skill|20-30 Vit|Max Life 10-15 Pct|12-18 Spell Dmg|1-4 Random\n{blue}Amulet: {gray}+1-2 Druid Skill|20-30 Vit|15 Pct Max Life|15-25 All Res|1-4 Random\n{blue}Chest: {gray}+1-2 Druid Skill|80-100 ED|15-25 All Attr|10-15 Phys Res|1-4 Random\n{blue}Shield:{gray} +1-2 Druid Skill|20-30 FBR|3-5 Block|80-100 ED|1-4 Random\n{blue}Belt{gray}+1 Druid Skill|20-30 FHR|80-100 ED|30-45 Str|1-4 Random\n{blue}Gloves:{gray}+1 Druid Skill|20-30 IAS|80-100 ED|30-45 Dex|1-4 Random\n{blue}Boots:{gray}+1 Druid Skill|20-30 FRW|80-100 ED|30-45 Vit|1-4 Random\n{blue}Helm{gray}+1-2 Druid Skills|90-100 ED|30-45 Energy|15-25 All Res|1-4 Random Stats\n{blue}Magic {gray}Gear    + Forging Hammer + Tyranium Ore + P.Topaz + Any Jewel\n"},
     --- Some forging recipes shown on the cube | Disabled until i find a better item
-   -- {
-   --     code = "tbk",
-   --     location = "onplayer",
-   --     suffix = "{blue}\n+1 Sorc Skills:2 Anvil Stones-Chipped Saphhire\n{white}+1 Paladin Skills:2 Anvil Stones-Chipped Diamond\n{gray}+1 Necromancer Skills: 2 Anvil Stones-Chipped Skull\n{yellow}+1 Druid Skills: 2 Anvil Stones+Chipped Topaz\n{purple}+1 Barbarian Skills: 2 Anvil Stones+Chipped Amethyst\n{red}+1 Assassain Skills: 2 Anvil Stones+Chipped Ruby\n{green}+1 Amazon Skills: 2 Anvil Stones+Chipped Emerald\n+{white}1 All Skills(no jewels or charms):Maple Leaf+Anvil Stone+Chipped Gem\n{red}**Forging Recipes**\b"
-   --     },
+        {
+        code = "tbk",
+        location = "atvendor",
+        suffix = "{blue}\n+1 Sorc Skills:2 Anvil Stones-Chipped Saphhire\n{white}+1 Paladin Skills:2 Anvil Stones-Chipped Diamond\n{gray}+1 Necromancer Skills: 2 Anvil Stones-Chipped Skull\n{yellow}+1 Druid Skills: 2 Anvil Stones+Chipped Topaz\n{purple}+1 Barbarian Skills: 2 Anvil Stones+Chipped Amethyst\n{red}+1 Assassain Skills: 2 Anvil Stones+Chipped Ruby\n{green}+1 Amazon Skills: 2 Anvil Stones+Chipped Emerald\n+{white}1 All Skills(no jewels or charms):Maple Leaf+Anvil Stone+Chipped Gem\n{red}**Forging Recipes**\b"
+        },
     -- Hiding small gold piles based on level
         {
             code = "gld",
@@ -230,7 +230,7 @@ return {
             },
         -- Hiding any ESR runes below Gold
             {
-                codes = {"r01","r02","r03","r04","r05","r06","r07","r08","r09","r10","r11","r12","r13","r14","r15","r16","r17","r18","r19","r20","r21","r22","r23","r24","r25","r26","r27","r28", "r29", "r30", "r31","r32","r33","r34","r35"}, -- Hiding White, Yellow, Orange, and Green ESR runes
+                codes = {"r01","r02","r03","r04","r05","r06","r07","r08","r09","r10","r11","r12","r13","r14","r15","r16","r17","r18","r19","r20","r21","r22","r23","r24","r25","r26","r27","r28", "r29", "r30", "r31","r32","r33","r34","r35"},
                 hide = true,
                 area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
                 filter_levels = 4
@@ -494,14 +494,15 @@ return {
             name_override = "{black}Cookbook",
             audio = "gong.mp3"
         },
-        --
+        --Tooltip for the above
         {
             codes = {"map", "ggg", "elx", "yyy","ddd"},
             location = {"onplayer","atvendor"},
             prefix = "{white}Cube with Multi-Stocker to store\n{red} Rare Crafting Reagant \n"
         },
+         -- Aura Stones notification
         {
-            codes = {"an3", "an4", "an5", "an6", "an7", "an8", "an9"}, -- Aura Stones
+            codes = {"an3", "an4", "an5", "an6", "an7", "an8", "an9"},
             notify = "{red}*{blue}*{green}*  {orange}Aura Stone {red}*{blue}*{green}*",
             border = {255,0,0,255},
             background = {255,255,255,255},
@@ -509,7 +510,7 @@ return {
             audio = "tink.mp3"
         },
         
-    -- Aura Stone Tooltips
+        -- Aura Stone Tooltips
         {
             code = "an3",
             location = {"onplayer","atvendor"},
@@ -1457,11 +1458,42 @@ return {
 
 
     -- In game notification for all high ES rune drop
-    
         {   
-            codes = {"r43", "r44", "r45", "r46", "r50" },
-            notify = "{orange}Ultra Rune Nearby: {name}",
-            name_override = "{red}{name}{red}",
+            code = "r43",
+            notify = "{orange}Purple ESR Rune: {name}",
+            name_override = "{purple}Su",
+            background = {255, 255, 255, 255 },
+            border = {240, 0, 0, 230, 2},
+            audio = "tink.mp3"
+        },
+        {   
+            code = "r44",
+            notify = "{orange}Purple ESR Rune: {name}",
+            name_override = "{purple}He",
+            background = {255, 255, 255, 255 },
+            border = {240, 0, 0, 230, 2},
+            audio = "tink.mp3"
+        },
+        {   
+            code = "r45",
+            notify = "{orange}Purple ESR Rune: {name}",
+            name_override = "{purple}Nu",
+            background = {255, 255, 255, 255 },
+            border = {240, 0, 0, 230, 2},
+            audio = "tink.mp3"
+        },
+        {   
+            code = "r46",
+            notify = "{orange}Purple ESR Rune: {name}",
+            name_override = "{purple}Wo",
+            background = {255, 255, 255, 255 },
+            border = {240, 0, 0, 230, 2},
+            audio = "tink.mp3"
+        },
+        {   
+            code = "r50",
+            notify = "{orange}Purple ESR Rune: {name}",
+            name_override = "{purple}Null",
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
             audio = "tink.mp3"
