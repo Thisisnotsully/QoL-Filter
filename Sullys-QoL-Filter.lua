@@ -608,18 +608,34 @@ return {
         },
 
     -- Mythical Uniques #69
-        {
-            codes = {"7wd","m18","m19", "m23","m24","m25","m26","m27","m28","mrn"},
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
-            name_style = "Rainbow Group",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-          -- Individual name strucutre for all mythicals to prevent clipping
+  
+        
+        -- Individual name strucutre for all mythicals to prevent clipping
             {
+                code = "mrn", --- Disabled on LAN
+                quality = "7",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+                name_style = "Rainbow Group",
+                prefix = "Mythical ",
+                name_override = "Marksmen Bow", 
+                background = {0, 0, 0, 255},
+                background = {255, 255, 255, 255 },
+                border = {240, 0, 0, 230, 2},
+                audio = "mythical.mp3"
+            },
+            {
+                code = "au9", --- Disabled on LAN
+                quality = "7",
+                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+                name_style = "Rainbow Group",
+                prefix = "Mythical ",
+                name_override = "Amulet", 
+                background = {0, 0, 0, 255},
+                background = {255, 255, 255, 255 },
+                border = {240, 0, 0, 230, 2},
+                audio = "mythical.mp3"
+            },
+              {
                 code = "m01",
                 quality = "7",
                 notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
@@ -1787,5 +1803,5 @@ return {
             sockets = "1+",
             maxsock = true
         },  
-    }
+    },
 }
