@@ -9,7 +9,7 @@ return {
     audioPlayback = true,
     debug = false,
     allowOverrides = true,
-    filter_level = 4,
+    filter_level = 2,
     rules = {
     
     -- Vendor item tooltips for some cube recipes
@@ -17,11 +17,11 @@ return {
     {code = "gvb", location = "atvendor",prefix ="{blue}Non-Barb Weapon:{gray} 25-35 Attack Speed|150-200 Enhanced Damage|15-25 Physical Leech Life|10-15 Physical Leech Mana|1-4 Random\n{blue}Weapon:{gray} +1-2 Barb Skills|25-35 Attack Speed|150-200 Enhanced Damage|1-4 Random\n{blue}Ring:{gray} +1-2 Barb Skills|10-15 Pct Max Life|20-30 Str|+20-30 Max Dmg to Attacks|1-4 Random\n{blue}Amulet:{gray} +1-2 Barb Skills|10-15 Pct Max Life|15-25 All Resists|1-4 Random\n{blue}Chest:{gray} +1-2 Barb Skills|80-100 ED|15-25 all attributes|+10-15 Phys Res|1-4 Random\n{blue}Shield:{gray} +1-2 Barb Skills|20-30 Faster Block|80-100 ED|3-5 Increased Block|1-4 Random\n{blue}Belt:{gray} +1 Barb Skills|20-30 Hit Recovery|80-100 ED|30-45 Str|1-4 Random\n{blue}Gloves:{gray} +1 Barb Skills|20-30 Attack Speed|80-100 ED|30-45 Dex|1-4 Random\n{blue}Boots:{gray} +1 Barb Skills|20-30 Faster Run/Walk|80-100 ED|30-45 Vit|1-4 Random\n{blue}Helm:{gray} +1-2 Barb Skills|ED|30-45 Energy|15-15 All Res|1-4 Random\n{blue}Magic{gray} Gear + Forging Hammer + P.Amethyst + Any Jewel\n"},
     {code = "gyb", location = "atvendor",prefix ="{blue}Non-Druid Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|25-40 Spell Dmg|1-4 Random\n{blue}Druid Wpn: {gray}+1-2 Druid Skill|25-35 IAS|150-200% Enahcned Dmg|1-4 Random\n{blue}Ring: {gray}+1-2 Druid Skill|20-30 Vit|Max Life 10-15 Pct|12-18 Spell Dmg|1-4 Random\n{blue}Amulet: {gray}+1-2 Druid Skill|20-30 Vit|15 Pct Max Life|15-25 All Res|1-4 Random\n{blue}Chest: {gray}+1-2 Druid Skill|80-100 ED|15-25 All Attr|10-15 Phys Res|1-4 Random\n{blue}Shield:{gray} +1-2 Druid Skill|20-30 FBR|3-5 Block|80-100 ED|1-4 Random\n{blue}Belt{gray}+1 Druid Skill|20-30 FHR|80-100 ED|30-45 Str|1-4 Random\n{blue}Gloves:{gray}+1 Druid Skill|20-30 IAS|80-100 ED|30-45 Dex|1-4 Random\n{blue}Boots:{gray}+1 Druid Skill|20-30 FRW|80-100 ED|30-45 Vit|1-4 Random\n{blue}Helm{gray}+1-2 Druid Skills|90-100 ED|30-45 Energy|15-25 All Res|1-4 Random Stats\n{blue}Magic {gray}Gear    + Forging Hammer + Tyranium Ore + P.Topaz + Any Jewel\n"},
     --- Some forging recipes shown on the cube | Disabled until i find a better item
-    --    {
-    --    code = "tbk",
-    --   location = "atvendor",
-    --    suffix = "{blue}\n+1 Sorc Skills:2 Anvil Stones-Chipped Saphhire\n{white}+1 Paladin Skills:2 Anvil Stones-Chipped Diamond\n{gray}+1 Necromancer Skills: 2 Anvil Stones-Chipped Skull\n{yellow}+1 Druid Skills: 2 Anvil Stones+Chipped Topaz\n{purple}+1 Barbarian Skills: 2 Anvil Stones+Chipped Amethyst\n{red}+1 Assassain Skills: 2 Anvil Stones+Chipped Ruby\n{green}+1 Amazon Skills: 2 Anvil Stones+Chipped Emerald\n+{white}1 All Skills(no jewels or charms):Maple Leaf+Anvil Stone+Chipped Gem\n{red}**Forging Recipes**\b"
-     --   },
+   -- {
+   --     code = "tbk",
+   --     location = "onplayer",
+   --     suffix = "{blue}\n+1 Sorc Skills:2 Anvil Stones-Chipped Saphhire\n{white}+1 Paladin Skills:2 Anvil Stones-Chipped Diamond\n{gray}+1 Necromancer Skills: 2 Anvil Stones-Chipped Skull\n{yellow}+1 Druid Skills: 2 Anvil Stones+Chipped Topaz\n{purple}+1 Barbarian Skills: 2 Anvil Stones+Chipped Amethyst\n{red}+1 Assassain Skills: 2 Anvil Stones+Chipped Ruby\n{green}+1 Amazon Skills: 2 Anvil Stones+Chipped Emerald\n+{white}1 All Skills(no jewels or charms):Maple Leaf+Anvil Stone+Chipped Gem\n{red}**Forging Recipes**\b"
+   --     },
     -- Hiding small gold piles based on level
         {
             code = "gld",
@@ -230,7 +230,7 @@ return {
             },
         -- Hiding any ESR runes below Gold
             {
-                codes = {"r01","r02","r03","r04","r05","r06","r07","r08","r09","r10","r11","r12","r13","r14","r15","r16","r17","r18","r19","r20","r21","r22","r23","r24","r25","r26","r27","r28", "r29", "r30", "r31","r32","r33","r34","r35"},
+                codes = {"r01","r02","r03","r04","r05","r06","r07","r08","r09","r10","r11","r12","r13","r14","r15","r16","r17","r18","r19","r20","r21","r22","r23","r24","r25","r26","r27","r28", "r29", "r30", "r31","r32","r33","r34","r35"}, -- Hiding White, Yellow, Orange, and Green ESR runes
                 hide = true,
                 area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
                 filter_levels = 4
@@ -308,7 +308,7 @@ return {
             },
         -- Hiding all normal coupons
         {
-            codes = {"01c","02c","03c","04c","05c","06c","07c","08c","09c","10c","11c","12c","13c","14c","15c","16c","17c","18c","19c","20c","21c","22c","23c","24c","25c","26c","27c","28c","29c","30c","31c","32c","33c","34c","35c","36c","37c","38c","39c","40c","41c","42c","43c","44c","45c","46c","01f","02f","03f","04f","05f","06f","07f","08f","09f","10f","11f","12f","13f","14f","15f","16f","17f","18f","19f","20f","21f","22f","23f","24f","25f","26f","27f","28f","29f","30f","31f","32f","33f","34f","35f","36f","37f","38f","39f","40f","41f","42f","43f","44f","45f","46f","47f","48f","49f","50f","51f","52f","53f","54f","55f","56f","57f","58f","59f","60f","61f","62f","63f","64f","65f","66f","67f","68f","69f","70f","71f","01i","02i","03i","01j","02j","04j"},
+            codes = {"01c","02c","03c","04c","05c","06c","07c","08c","09c","10c","11c","12c","13c","14c","15c","16c","17c","18c","19c","20c","21c","22c","23c","24c","25c","26c","27c","28c","29c","30c","31c","32c","33c","34c","35c","36c","37c","38c","39c","40c","41c","42c","43c","44c","45c","46c","01f","02f","03f","04f","05f","06f","07f","08f","09f","10f","11f","12f","13f","14f","15f","16f","17f","18f","19f","20f","21f","22f","23f","24f","25f","26f","27f","28f","29f","30f","31f","32f","33f","34f","35f","36f","37f","38f","39f","40f","41f","42f","43f","44f","45f","46f","47f","48f","49f","50f","51f","52f","53f","54f","55f","56f","57f","58f","59f","60f","61f","62f","63f","64f","65f","66f","67f","68f","69f","70f","71f","01i","02i","03i","01j","02j","03j","04j"},
             hide = true,
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
             filter_levels = 4
@@ -331,11 +331,10 @@ return {
         },
      -- Highlight Gold ESR Runes   
         {
-            codes = {"r36","r37","r38","r39","r40","r41","r42"},
+            codes = {"36","37","38","39","40","41","42"},
             notify = "{Red}Gold Rune Drop{gold}: {name}",
             border = {255,215,0,255},
-            background = {0,0,0,255},
-            audio = "mid.mp3"
+            background = {0,0,0,255}
         },
 
     -- Rejuvination Potion Style
@@ -494,15 +493,14 @@ return {
             name_override = "{black}Cookbook",
             audio = "gong.mp3"
         },
-        --Tooltip for the above
+        --
         {
             codes = {"map", "ggg", "elx", "yyy","ddd"},
             location = {"onplayer","atvendor"},
             prefix = "{white}Cube with Multi-Stocker to store\n{red} Rare Crafting Reagant \n"
         },
-         -- Aura Stones notification
         {
-            codes = {"an3", "an4", "an5", "an6", "an7", "an8", "an9"},
+            codes = {"an3", "an4", "an5", "an6", "an7", "an8", "an9"}, -- Aura Stones
             notify = "{red}*{blue}*{green}*  {orange}Aura Stone {red}*{blue}*{green}*",
             border = {255,0,0,255},
             background = {255,255,255,255},
@@ -510,7 +508,7 @@ return {
             audio = "tink.mp3"
         },
         
-        -- Aura Stone Tooltips
+    -- Aura Stone Tooltips
         {
             code = "an3",
             location = {"onplayer","atvendor"},
@@ -608,34 +606,18 @@ return {
         },
 
     -- Mythical Uniques #69
-  
-        
-        -- Individual name strucutre for all mythicals to prevent clipping
+        {
+            codes = {"7wd","m18","m19", "m23","m24","m25","m26","m27","m28","mrn"},
+            quality = "7",
+            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            name_style = "Rainbow Group",
+            background = {0, 0, 0, 255},
+            background = {255, 255, 255, 255 },
+            border = {240, 0, 0, 230, 2},
+            audio = "mythical.mp3"
+        },
+          -- Individual name strucutre for all mythicals to prevent clipping
             {
-                code = "mrn", --- Disabled on LAN
-                quality = "7",
-                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
-                name_style = "Rainbow Group",
-                prefix = "Mythical ",
-                name_override = "Marksmen Bow", 
-                background = {0, 0, 0, 255},
-                background = {255, 255, 255, 255 },
-                border = {240, 0, 0, 230, 2},
-                audio = "mythical.mp3"
-            },
-            {
-                code = "au9", --- Disabled on LAN
-                quality = "7",
-                notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
-                name_style = "Rainbow Group",
-                prefix = "Mythical ",
-                name_override = "Amulet", 
-                background = {0, 0, 0, 255},
-                background = {255, 255, 255, 255 },
-                border = {240, 0, 0, 230, 2},
-                audio = "mythical.mp3"
-            },
-              {
                 code = "m01",
                 quality = "7",
                 notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
@@ -1058,13 +1040,9 @@ return {
         {
             codes = {"01d","02d","03d","04d","05d","06d","07d","08d","09d","10d","11d","12d","13d","14d","15d","16d","17d","18d","19d","20d","21d","22d","23d","24d","25d","26d","27d","28d","29d","30d","31d","32d","33d","34d","35d","36d","37d","38d","39d","40d","41d","42d","43d","44d","45d","46d","47d","48d","49d","50d","01g","02g","03g","04g","05g","06g","07g","08g","09g","10g","11g","12g","13g","14g","15g","16g","17g","18g","19g","20g","21g","22g","23g","24g","25g","26g","27g","28g","29g","30g","31g","32g","33g","34g","35g","36g","37g","38g","39g","40g","41g","42g","43g","44g","45g","46g","47g","48g","49g","50g","51g","52g","53g","54g","55g","56g","57g","58g","59g","60g","61g","62g","63g","64g","65g","66g","67g","68g","69g","70g","71g","72g","73g","74g","75g","76g","77g","78g","05i","06i","07i","08i","05j","06j","07j","08j","04i"},
             notify = "{gold}Exceptional Coupon: {white}{name}", --- Exceptional Coupons
+            audio = "other.mp3",
             border = {255,165,0,255},
             name_override = "{gray}Exc:{gold}{name}"
-        },
-        {
-            codes = {"01d","02d","03d","04d","05d","06d","07d","08d","09d","10d","11d","12d","13d","14d","15d","16d","17d","18d","19d","20d","21d","22d","23d","24d","25d","26d","27d","28d","29d","30d","31d","32d","33d","34d","35d","36d","37d","38d","39d","40d","41d","42d","43d","44d","45d","46d","47d","48d","49d","50d","01g","02g","03g","04g","05g","06g","07g","08g","09g","10g","11g","12g","13g","14g","15g","16g","17g","18g","19g","20g","21g","22g","23g","24g","25g","26g","27g","28g","29g","30g","31g","32g","33g","34g","35g","36g","37g","38g","39g","40g","41g","42g","43g","44g","45g","46g","47g","48g","49g","50g","51g","52g","53g","54g","55g","56g","57g","58g","59g","60g","61g","62g","63g","64g","65g","66g","67g","68g","69g","70g","71g","72g","73g","74g","75g","76g","77g","78g","05i","06i","07i","08i","05j","06j","07j","08j","04i"},
-            audio = "other.mp3",
-            filter_levels = "3-"
         },
         {
             codes = {"01e","02e","03e","04e","05e","06e","07e","08e","09e","10e","11e","12e","13e","14e","15e","16e","17e","18e","19e","20e","21e","22e","23e","24e","25e","26e","27e","28e","29e","30e","31e","32e","33e","34e","35e","36e","37e","38e","39e","40e","41e","01h","02k","03h","04h","05h","06h","07h","08h","09h","10h","11h","12k","13h","14h","15h","16h","17h","18h","19h","20h","21h","22k","23h","24h","25h","26h","27h","28h","29h","30h","31h","32k","33h","34h","35h","36h","37h","38h","39h","40h","41h","42k","43h","44h","45h","46h","47h","48h","49h","50h","51h","52k","53h","54h","55h","56h","57h","58h","59h","60h","61h","62k","09i","10i","11i","12i","09j","10j"},
@@ -1076,13 +1054,11 @@ return {
         -- 'S' tier coupons
             -- SOJ
                 {
-                    code = "03j",
+                    codes = {"03j"},
                     audio = "tink.mp3",
                     border = {255,0,0,255},
                     background = {255,255,255,255}, 
-                    name_override = "{name}",
-                    hide = false,
-                    filter_levels = "4-"
+                    name_override = "{name}"
                 },
         -- Highlight Class specific Magic/Rare Jewellery
         {
@@ -1206,13 +1182,23 @@ return {
         },
 
     -- Runeword Tooltips #67
+        -- Tooltip information for Gloves showing available 2 socket Runewords
+            {
+                codes = {"2hg","2lg","2mg","2tg","4hg","4lg","4mg","4tg","hgl","irg","lgl","mgl","tgl","ulg","umg","utg","vhg","vgl","xhg","xig","xlg","xmg","xtg","ylg","yhg","yig","ymg","ytg","uvg","vg1"},
+                runeword = false,
+                quality = "3-",
+                location = {"onplayer", "atvendor", "equipped"},
+                suffix_desc ="{gray}Swamp: {purple}Nu {green}Ma {gray}Lvl: 60{blue}\n{gray}Mist: {green}Mo {red}Ya {gray}Lvl: 47{blue}\n{gray}Dance: {green}Ma {white}I {gray}Lvl: 45{blue}\n{gray}Authority: {yellow}Ke {green}Ni {gray}Lvl: 42{blue}\n{gray}Spring: {orange}Ha Ru {gray}Lvl: 39{blue}\n{gray}Deception: {yellow}Sa {orange}Wa {gray}Lvl: 38{blue}\n{gray}Wealth: {orange}To {red}Mi {gray}Lvl: 36{blue}\n{gray}Rain: {red}A {orange}Me {gray}Lvl: 32{blue}\n{gray}Dream: {yellow}Yu {orange}Me {gray}Lvl: 32{blue}\n",
+                sockets = "2"
+            },
+    
         -- Tooltip information for Body Armor showing available 2 socket Runewords
             {
                 codes = {"qui", "lea", "hla", "stu", "rng", "scl", "chn", "brs", "spl", "plt", "fld", "gth", "ful", "aar", "ltp", "shl", "elv", "2ui", "2ea", "2la", "2tu", "2ng", "2cl", "2hn", "2rs", "2pl", "2lt", "br2", "xui", "xea", "xla", "xtu", "xng", "xcl", "xhn", "xrs", "xpl", "xlt", "xld", "xth", "xul", "xar", "xtp", "xhh", "xlv", "4ui", "4ea", "4la", "4tu", "4ng", "4cl", "4hn", "4rs", "4pl", "4lt", "4ld", "4th", "4ul", "4ar", "4tp", "yui", "yea", "yla", "ytu", "yng", "ycl", "yhn", "yrs", "ypl", "ylt", "yld", "yth", "yul", "yar", "ytp", "yhh", "ylv", "uui", "uea", "ula", "utu", "ung", "ucl", "uhn", "urs", "upl", "ult", "uld", "uth", "uul", "uar", "utp", "m06"},
                 runeword = false,
                 quality = "3-",
                 location = {"onplayer", "atvendor", "equipped"},
-                suffix_desc = "{gray}Hot: {red}Tsu {gold}Ne {gray}Lvl: 55{blue} \n{gray}Prudence: {orange} Mal Tir {gray}Lvl: 49{blue} \n{gray}Mist: {green}Mo {red}Ya {gray}Lvl: 47{blue} \n{gray}Deception: {yellow}Sa {orange}Wa{gray} Lvl: 38\n{gray}Smoke: {white}Nef {orange}Lem {gray}Lvl: 37{blue} \n{gray}Wealth: {orange}To {red}Mi {gray}Lvl: 36{blue}\n{gray}Stealth: {white}Tal Eth {gray}Lvl: 17{blue}\n{gray}Darkness: {red}Ya {red}Mi {gray}Lvl: 15{blue}\n{gray}Fog: {red}Ki {red}Ri {gray}Lvl: 12{blue}\n{gray}Gold: {red}Ri N {gray}Lvl: 10{blue}\n {gray}Greed: {white}Yo Ku {gray}Lvl: 9{blue}\n",
+                suffix_desc = "{purple}Hot: {red}Tsu{white}-{gold}Ne {gray}Lvl: 55 \n{Purple}Prudence: {orange} Mal{white}-Tir {gray}Lvl: 49 \n{purple}Mist: {green}Mo{white}-{red}Ya {gray}Lvl: 47 \n{purple}Deception: {yellow}Sa{white}-{orange}Wa{gray} Lvl: 38\n{purple}Smoke: {white}Nef-{orange}Lem {gray}Lvl: 37 \n{purple}Wealth: {orange}To{white}-{red}Mi {gray}Lvl: 36\n{Purple}Stealth: {white}Tal-Eth {gray}Lvl: 17\n{purple}Darkness: {red}Ya{white}-{red}Mi {gray}Lvl: 15\n{purple}Fog: {red}Ki{white}-{red}Ri {gray}Lvl: 12\n{purple}Gold: {red}Ri{white}-N {gray}Lvl: 10\n {purple}Greed: {white}Yo-Ku {gray}Lvl: 9\n",
                 sockets = "2"
             },
         -- Tooltip information for Body Armor showing available 3 socket Runewords
@@ -1222,7 +1208,7 @@ return {
                 quality = "3-",
                 pstat = { index = 12, op = "<=", value = 40 }, -- Char Level 40 or below
                 location = {"onplayer", "atvendor", "equipped"},
-                suffix_desc = "{gray}Maiden: {yellow}O {orange}To Me {gray}Lvl: 36{blue}\n{gray}Impetuous: {red}Mi {Yellow}Sa {Orange}To {gray}Lvl: 36{blue}\n{gray}Praise: {orange}Ho {orange}Me {orange}Ru {gray}Lvl: 34{blue}\n{gray}Captive: {orange}Ho {red}Ri{white} Yo {gray}Lvl: 31{blue}\n{gray}Peace: {orange}Shael {white}Thul Amn {gray}Lvl: 29{blue}\n{gray}Hustle: {white}Shael Ral Eld {gray}Lvl: 29{blue}\n{gray}Oath: {red}Ki{white} Ka I {gray}Lvl: 29{blue}\n{gray}Myth: {orange}Hel{white} Amn Nef {gray}Lvl: 25{blue}\n{gray}Exuberance: {red}A{white} I Ka {gray}Lvl: 17{blue}\n{gray}Famine: {red}Ki Ki{white} N {gray}Lvl: 10{blue}\n{gray}Forefeel: {white}Yo Ka N {gray}Lvl: 9{blue}\n{gray}Evolution: {white}Shi N Ka {gray}Lvl: 6{blue}\n",
+                suffix_desc = "{purple}Maiden: {yellow}O{white}-{orange}To{white}-{orange}Me {gray}Lvl: 36\n{purple}Impetuous: {red}Mi{white}-{Yellow}Sa{white}-{Orange}To {gray}Lvl: 36\n{purple}Praise: {orange}Ho{white}-{orange}Me{white}-{orange}Ru {gray}Lvl: 34\n{purple}Captive: {orange}Ho{white}-{red}Ri{white}-Yo {gray}Lvl: 31\n{purple}Peace: {orange}Shael{white}-{orange}Thul{white}-{orange}Amn {gray}Lvl: 29\n{purple}Hustle: {white}Shael-Ral-Eld {gray}Lvl: 29\n{purple}Oath: {red}Ki{white}-Ka-I {gray}Lvl: 29\n{purple}Myth: {orange}Hel{white}-Amn-Nef {gray}Lvl: 25\n{purple}Exuberance: {red}A{white}-I-Ka {gray}Lvl: 17\n{Purple}Famine: {red}Ki{white}-{red}Ki{white}-N {gray}Lvl: 10\n{Purple}Forefeel: {white}Yo-Ka-N {gray}Lvl: 9\n{purple}Evolution: {white}Shi-N-Ka {gray}Lvl: 6\n",
                 sockets = "3",
             },
             {
@@ -1231,7 +1217,7 @@ return {
                 quality = "3-",
                 pstat = { index = 12, op = ">=", value = 41 }, -- Char Level 41 or above
                 location = {"onplayer", "atvendor", "equipped"},
-                suffix_desc = "{gray}Enigma: Jah{white} Ith {purple}Ber {gray}Lvl: 65{blue}\n{gray}Dragon: Sur {purple}Lo{orange} Sol {gray}Lvl: 61{blue}\n{gray}Nightgown: {orange}Ne {green}Ma {red}Ki {gray}Lvl: 55{blue}\n{gray}Fox: {red}Ki {red}Tsu {orange}Ne {gray}Lvl: 55{blue}\n{gray}Smoke: {gold}Ke {orange}Mu {red}Ri {gray}Lvl: 54{blue}\n{gray}Principle: {white}Ral {purple}Gul{white} Eld {gray}Lvl: 53{blue}\n{purple}Rain: {white}Ort {purple}Mal{white} Ith {gray}Lvl: 49{blue}\n{gray}Duress: {orange}Shael {orange}Um{white} Thul {gray}Lvl: 47{blue}\n{gray}Bone: {white}Sol {orange}Um {orange}Um {gray}Lvl: 47{blue}\n{gray}Daylight: {green}Hi {orange}Ru {green}Ma {gray}Lvl: 46{blue}\n{gray}Indominable: {yellow}Ra{white} N{green}Ma {gray}Lvl: 45{blue}\n{gray}Abundant: {orange}Ho{white} U{green}Fu {gray}Lvl: 44{blue}\n{gray}Harmony: {orange}Wa {green}Se{white} I {gray}Lvl: 43{blue}\n{gray}Fossil of the Sun: {white}Ka {green}Se {red}Ki {gray}Lvl: 43{blue}\n{gray}Lionheart: {orange}Hel {orange}Lum {orange}Fal {gray}Lvl: 41{blue}",
+                suffix_desc = "{purple}Enigma: Jah{white}-Ith-{purple}Ber {gray}Lvl: 65\n{purple}Dragon: Sur{white}-{purple}Lo{orange}-Sol {gray}Lvl: 61\n{purple}Nightgown: {orange}Ne{white}-{green}Ma{white}-{red}Ki {gray}Lvl: 55\n{purple}Fox: {red}Ki{white}-{red}Tsu{white}-{orange}Ne {gray}Lvl: 55\n{purple}Smoke: {gold}Ke{white}-{orange}Mu{white}-{red}Ri {gray}Lvl :54\n{purple}Principle: {white}Ral-{purple}Gul{white}-Eld {gray}Lvl: 53\n{purple}Rain: {white}Ort-{purple}Mal{white}-Ith {gray}Lvl: 49\n{purple}Duress: {orange}Shael{white}-{orange}Um{white}-Thul {gray}Lvl: 47\n{purple}Bone: {white}Sol-{orange}Um{white}-{orange}Um {gray}Lvl: 47\n{purple}Daylight: {green}Hi{white}-{orange}Ru{white}-{green}Ma {gray}Lvl: 46\n{purple}Indominable: {yellow}Ra{white}-N{green}Ma {gray}Lvl: 45\n{purple}Abundant: {orange}Ho{white}-U{green}Fu {gray}Lvl: 44\n{purple}Harmony: {orange}Wa{white}-{green}Se{white}-I {gray}Lvl: 43\n{purple}Fossil of the Sun: {white}Ka-{green}Se{white}-{red}Ki {gray}Lvl: 43\n{purple}Lionheart: {orange}Hel{white}-{orange}Lum{white}-{orange}Fal {gray}Lvl: 41",
                 sockets = "3",
             },
         -- Tooltip information for Body Armor showing available 4 socket Runewords
@@ -1241,7 +1227,7 @@ return {
                 quality = "3-",
                 pstat = { index = 12, op = "<=", value = 40 }, -- Char Level 40 or below
                 location = {"onplayer", "atvendor", "equipped"},
-                suffix_desc = "{gray}Sorrow: {white}Ka {green}Na{white} Shi {red}Mi {gray}Lvl: 40{blue}\n{gray}Animal Friend: {green}Na{white} U Shi Ka {gray}Lvl: 40{blue}\n{gray}Journey: {red}Ri{white} Yo {orange}Ko{white} U {gray}Lvl: 39{blue}\n{gray}Healthy: {yellow}Ke{white} N {orange}Ko{white} U {gray}Lvl: 39{blue}\n{gray}Fortune: {orange}Ko{white} U U U {gray}Lvl: 39{blue}\n{gray}Efficiency: {orange}Ko{white} U {red}Ri {red}Tsu {gray}Lvl: 39{blue}\n{gray}Illustrious: {red}A {yellow}Yu{white} Ka {orange}Wa {gray}Lvl: 38{blue}\n{gray}Trust: {white}Shi N Ra I {gray}Lvl: 28{blue}\n{gray}Eneternity: {yellow}E{white} I {yellow}E{white} N {gray}Lvl: 26{blue}\n{gray}Beauty: {white}U {red}Tsu{white} Ku Shi {gray}Lvl: 19{blue}\n{gray}Insanity: {red}Ki{white} Yo U {red}Ki {gray}Lvl: 10{blue}\n",
+                suffix_desc = "{purple}Sorrow: {white}Ka-{green}Na{white}-Shi-{red}Mi {gray}Lvl: 40\n{Purple}Animal Friend: {green}Na{white}-U-Shi-Ka {gray}Lvl: 40\n{purple}Journey: {red}Ri{white}-Yo-{orange}Ko{white}-U {gray}Lvl: 39\n{purple}Healthy: {yellow}Ke{white}-N-{orange}Ko{white}-U {gray}Lvl: 39\n{purple}Fortune: {orange}Ko{white}-U-U-U {gray}Lvl: 39\n{purple}Efficiency: {orange}Ko{white}-U-{red}Ri{white}-{red}Tsu {gray}Lvl: 39\n{purple}Illustrious: {red}A{white}-{yellow}Yu{white}-Ka-{orange}Wa {gray}Lvl: 38\n{purple}Trust: {white}Shi-N-Ra-I {gray}Lvl: 28\n{purple}Eneternity: {yellow}E{white}-I-{yellow}E{white}-N {gray}Lvl: 26\n{purple}Beauty: {white}U-{red}Tsu{white}-Ku-Shi {gray}Lvl: 19\n{purple}Insanity: {red}Ki{white}-Yo-U-{red}Ki {gray}Lvl: 10\n",
                 sockets = "4",
             },
             {
@@ -1250,7 +1236,7 @@ return {
                 quality = "3-",
                 pstat = { index = 12, op = ">=", value = 41 }, -- Char Level 41 or above
                 location = {"onplayer", "atvendor", "equipped"},
-                suffix_desc = "{gray}Chains of Honor: {orange}Dol {orange}Um {purple}Ber {purple}Ist {gray}Lvl: 63{blue}\n{gray}Bramble: {white}Ral {purple}Ohm {purple}Sur{white} Eth {gray}Lvl: 61{blue}\n{gray}Gold Scarab: {orange}Ko {blue}Metal {gold}Mu{white} Shi {gray}Lvl: 60{blue}\n{gray}Fortitude: {white}El {orange}Sol {orange}Dol {purple}Lo {gray}Lvl: 59{blue}\n{gray}Transformation: He{white} N Shi N {gray}Lvl: 59{blue}\n{gray}Unknown: {red}Mi/Ri/Ki {red}Chi {purple}Su{white} U {gray}Lvl: 57{blue}\n{gray}Lynx: {red}Ya {green}Ma {gold}Ne {orange}Ko {gray}Lvl: 55{blue}\n{gray}Able: {orange}Yu{white} U {gold}No{white} U {gray}Lvl: 48{blue}\n{gray}Question: {white}Shi {red}Tsu {green}Mo{white} N {gray}Lvl: 47{blue}\n{gray}Stone: {orange}Shael {orange}Um {orange}Pul {orange}Lum {gray}Lvl: 47{blue}\n{gray}Stomach Ache: {green}Fu{white} Ku {red}Tsu{white} U {gray}Lvl: 44{blue}\n",
+                suffix_desc = "{purple}Chains of Honor: {orange}Dol{white}-{orange}Um{white}-{purple}Ber{white}-{purple}Ist {gray}Lvl: 63\n{purple}Bramble: {white}Ral-{purple}Ohm{white}-{purple}Sur{white}-Eth {gray}Lvl: 61\n{purple}Gold Scarab: {orange}Ko{white}-{blue}Metal{white}-{gold}Mu{white}-Shit {gray}Lvl: 60\n{purple}Fortitude: {white}El-{orange}Sol{white}-{orange}Dol{white}-{purple}Lo {gray}Lvl: 59\n{purple}Transformation: He{white}-N-Shi-N {gray}Lvl: 59\n{purple}Unknown: {red}Mi/Ri/Ki{white}-{red}Chi{white}-{purple}Su{white}-U {gray}Lvl: 57\n{purple}Lynx: {red}Ya{white}-{green}Ma{white}-{gold}Ne{white}-{orange}Ko {gray}Lvl: 55\n{purple}Able: {orange}Yu{white}-U-{gold}No{white}-U {gray}Lvl: 48\n{purple}Question: {white}Shi-{red}Tsu{white}-{green}Mo{white}-N {gray}Lvl: 47\n{purple}Stone: {orange}Shael{white}-{orange}Um{white}-{orange}Pul{white}-{orange}Lum {gray}Lvl: 47\n{purple}Stomach Ache: {green}Fu{white}-Ku-{red}Tsu{white}-U {gray}Lvl: 44\n",
                 sockets = "4",
             },
         -- Tooltip information for Body Armor showing available 5 socket Runewords
@@ -1259,7 +1245,7 @@ return {
                 runeword = false,
                 quality = "3-",
                 location = {"onplayer", "atvendor", "equipped"},
-                suffix_desc = "{gray}Gold Scarab: {blue}Jewel {orange}Ko {blue}Metal {gold}Mu{white} Shi {gray}Lvl: 60{blue}\n{gray}Wooden Colossus: {blue}Wood {orange}Ko {gold}Ro {yellow}Sa {purple}Su {gray}Lvl: 60{blue}\n{gray}Horizon: {red}Chi {purple}He{white} I {green}Se{white} N {gray}Lvl: 59{blue}\n{gray}Jindujun: Su {orange}Ha {yellow}Ra{white} Shi I {gray}Lvl: 57{blue}\n{gray}Zenith: {gold}Te{white} N {red}Chi{white} Yo U {gray}Lvl: 50{blue}\n{gray}Pear: {green}Hi {orange}To {gold}Te {green}Na{white} Shi {gray}Lvl: 50{blue}\n{gray}Phoenix: {green}Fu{white} Shi {red}Chi{white} Yo U {gray}Lvl: 44{blue}\n{gray}Lionheart: {white}Ka I {yellow}O {green}Na{white} I {gray}Lvl: 40{blue}\n{gray}Pride: {orange}Ho {orange}Ko {yellow}Ra{white} Shi {yellow}Sa {gray}Lvl: 39{blue}\n",
+                suffix_desc = "{purple}Wooden Colossus: {blue}Wood{white}-{orange}Ko{white}-{gold}Ro{white}-{yellow}Sa{white}-{purple}Su {gray}Lvl: 60\n{purple}Horizon: {red}Chi{white}-{purple}He{white}-I-{green}Se{white}-N {gray}Lvl: 59\n{purple}Jindujun: Su{white}-{orange}Ha{white}-{yellow}Ra{white}-Shi-I {gray}Lvl: 57\n{Purple}Zenith: {gold}Te{white}-N-{red}Chi{white}-Yo-U {gray}Lvl: 50\n{purple}Pear: {green}Hi{white}-{orange}To{white}-{gold}Te{white}-{green}Na{white}-Shi {gray}Lvl: 50\n{purple}Phoenix: {green}Fu{white}-Shi-{red}Chi{white}-Yo-U {gray}Lvl: 44\n{purple}Lionheart: {white}Ka-I-{yellow}O{white}-{green}Na{white}-I {gray}Lvl: 40\n{purple}Pride: {orange}Ho{white}-{orange}Ko{white}-{yellow}Ra{white}-Shi-{yellow}Sa {gray}Lvl: 39\n",
                 sockets = "5",
             },
         -- Tooltip information for Body Armor showing available 6 socket Runewords
@@ -1268,7 +1254,7 @@ return {
                 runeword = false,
                 quality = "3-",
                 location = {"onplayer", "atvendor", "equipped"},
-                suffix_desc = "{gray}Gold Scarab: {blue}Jewel Jewel {orange}Ko {blue}Metal {gold}Mu{white} Shi {gray}Lvl: 60{blue}\n{gray}Insight: {red}Mi {purple}Nu{white} Ku {red}Chi{white} Ka {yellow}Ra {gray}Lvl: 60{blue}\n{gray}Eternal Reign: {gold}Te{white} N Ka {purple}Wo {orange}To {orange}Ru {gray}Lvl: 60{blue}\n{gray}Golden Dragon: {red}Ki{white} N {gold}No {red}Ri {yellow}Yu{white} U {gray}Lvl: 48{blue}\n{gray}Dark Star: {green}Hi{white} Ka {red}Ri {gold}No {orange}Ke{white} N {gray}Lvl: 48{blue}\n{gray}Courage: {white}Ka {red}Mi {red}Ya {orange}Ta{white} I {red}Chi {gray}Lvl: 35{blue}\n{gray}Ascend: {white}Shi Yo {red}Ri {yellow}Yu {yellow}Ke{white} N {gray}Lvl: 24{blue}\n",
+                suffix_desc = "{purple}Insight: {red}Mi{white}-{purple}Nu{white}-Ku-{red}Chi{white}-Ka-{yellow}Ra {gray}Lvl: 60\n{purple}Eternal Reign: {gold}Te{white}-N-Ka-{purple}Wo{white}-{orange}To{white}-{orange}Ru {gray}Lvl: 60\n{purple}Golden Dragon: {red}Ki{white}-N-{gold}No{white}-{red}Ri{white}-{yellow}Yu{white}-U {gray}Lvl: 48\n{purple}Dark Star: {green}Hi{white}-Ka-{red}Ri{white}-{gold}No{white}-{orange}Ke{white}-N {gray}Lvl: 48\n{purple}Courage: {white}Ka-{red}Mi{white}-{red}Ya{white}-{orange}Ta{white}-I-{red}Chi {gray}Lvl: 35\n{purple}Ascend: {white}Shi-Yo-{red}Ri{white}-{yellow}Yu{white}-{yellow}Ke{white}-N {gray}Lvl: 24\n",
                 sockets = "6",
             },
         -- Tooltip information for Belts showing available 2 socket Runewords
@@ -1276,8 +1262,8 @@ return {
                 codes = {"lbl","vbl","mbl","tbl","hbl","msb","3lb","3vb","3mb","3tb","3hb","zlb","zvb","zmb","ztb","zhb","xms","5lb","5vb","5mb","5tb","5hb","alb","avb","bmb","atb","ahb","yms","ulc","uvc","umc","utc","uhc","m10"},
                 runeword = false,
                 quality = "3-",
-                location = {"onplayer","atvendor","equipped"},
-                suffix_desc ="{gray}Navel: He {gold}So: {gray}: Lvl: 59\n {gray}Mist: {green}Mo {red}Ya {gray}Lvl: 47{blue}\n{gray}Dance: {green}Ma{white} I: {gray}Lvl: 45{blue}\n{gray}Spring: {orange}Ha {orange}Ru {gray}Lvl: 39{blue}\n{gray}Wealth: {orange}To {red}Mi {gray}Lvl: 36{blue}\n{gray}Rain: {red}A {orange}Me {gray}Lvl: 32{blue}\n{gray}Dream: {yellow}Yu {orange}Me {gray}Lvl: 32{blue}\n{gray}Autumn: {red}A {red}Ki {gray}Lvl: 17{blue}\n{gray}Gold: {red}Ki{white} N {gray}Lvl: 10{blue}\n",
+                location = {"onplayer","atvendor","equipped"},  
+                suffix_desc ="{purple}Navel: He{white}-{gold}So: {gray}: Lvl: 59\n {Purple}Mist: {green}Mo{white}-{red}Ya {gray}Lvl: 47\n{purple}Dance: {green}Ma{white}-I: {gray}Lvl: 45\n{purple}Spring: {orange}Ha{white}-{orange}Ru {gray}Lvl: 39\n{Purple}Wealth: {orange}To{white}-{red}Mi {gray}Lvl: 36\n{Purple}Rain: {red}A{white}-{orange}Me {gray}Lvl: 32\n{purple}Dream: {yellow}Yu{white}-{orange}Me {gray}Lvl: 32\n{purple}Autumn: {red}A{white}-{red}Ki {gray}Lvl: 17\n{Purple}Gold: {red}Ki{white}-N {gray}Lvl: 10\n",
                 sockets = "2"
             },
         -- Tooltip information for Boots showing available 2 socket Runewords
@@ -1286,76 +1272,46 @@ return {
                 runeword = false,
                 quality = "3-",
                 location = {"onplayer","atvendor","equipped"},
-                suffix_desc = "{gray}Skank: Su {gold}Ne {gray}Lvl: 57{blue}\n{gray}Mist: {green}Mo {red}Ya {gray}Lvl: 47{blue}\n{gray}Trip: {orange}Ta {green}Hi {gray}Lvl: 46{blue}\n{gray}Dance: {green}Ma{white} I {gray}Lvl: 45{blue}\n{gray}Summer: {green}Na {red}Tsu {gray}Lvl: 40{blue}\n{gray}Spring: {orange}Ha {orange}Ru {gray}Lvl: 39{blue}\n{gray}Rain: {red}A {orange}Me {gray}Lvl: 32{blue}\n{gray}Kick: {yellow}Ke {red}Ri {gray}Lvl: 24{blue}\n{gray}Autumn: {red}A {red}Ki {gray}Lvl: 17{blue}\n",
+                suffix_desc = "{purple}Skank: Su{white}-{gold}Ne {gray}Lvl: 57\n{purple}Mist: {green}Mo{white}-{red}Ya {gray}Lvl: 47\n{Purple}Trip: {orange}Ta{white}-{green}Hi {gray}Lvl: 46\n{purple}Dance: {green}Ma{white}-I {gray}Lvl: 45\n{Purple}Summer: {green}Na{white}-{red}Tsu {gray}Lvl: 40\n{purple}Spring: {orange}Ha{white}-{orange}Ru {gray}Lvl: 39\n{purple}Rain: {red}A{white}-{orange}Me {gray}Lvl: 32\n{purple}Kick: {yellow}Ke{white}-{red}Ri {gray}Lvl: 24\n{purple}Autumn: {red}A{white}-{red}Ki {gray}Lvl: 17\n",
                 sockets = "2"
             },
         -- Tooltip information for all Helms showing available 2 socket Runewords
             {
                 codes = {"cap", "skp", "hlm", "fhl", "ghm", "crn", "msk", "bhm", "dwc", "2ap", "2kp", "2lm", "2hl", "2hm", "2rn", "2sk", "2h9", "xap", "xkp", "xlm", "xhl", "xhm", "xrn", "xsk", "xh9", "xdw", "4ap", "4kp", "4lm", "4hl", "4hm", "4rn", "4sk", "4h9", "yap", "ykp", "ylm", "yhl", "yhm", "yrn", "ysk", "yh9", "ydw", "uap", "ukp", "ulm", "uhl", "uhm", "urn", "usk", "uh9", "dr3", "dr4", "dr5", "dr1", "dr2", "dr8", "dr9", "dra", "dr6", "dr7", "drd", "dre", "drf", "drb", "drc", "qda", "qdb", "eht", "xht", "yht", "ba3", "ba4", "ba5", "ba1", "ba2", "ba8", "ba9", "baa", "ba6", "ba7", "bad", "bae", "baf", "bab", "bac", "qba", "qbc", "qbd", "qbe", "cix", "ci0", "ci4", "ci1", "ci2", "ci3", "qi2", "qi3", "m20"},
-                runeword = false,
+                runewords = false,
                 quality = "3-",
                 location = {"onplayer","atvendor","equipped"},
-                suffix_desc = "{gray}Hawk: {orange}Ta{white} Ka {gray}Lvl: 35{blue}\n{gray}Dream: {yellow}Yu {red}Me {gray}Lvl: 32{blue}\n{gray}Lore: {white}Ort Sol {gray}Lvl: 27{blue}\n{gray}Wisdom: {red}Chi {yellow}E {gray}Lvl: 26{blue}\n{gray}Nadir: {white}Nef Tir {gray}Lvl: 13{blue}\n{gray}Hades: {white}Yo {red}Mi {gray}Lvl: 13{blue}\n{gray}Hunt: {white}Ka {red}Ri {gray}Lvl: 12{blue}\n{gray}Fog: {red}Ki {red}Ri {gray}Lvl: 12{blue}\n{gray}Greed: {white}Yo Ku {gray}Lvl: 9{blue}\n{gray}Feel: {white}Ka N {gray}Lvl: 6{blue}\n",
+                suffix_desc = "{purple}Hawk: {orange}Ta{white}-Ka {gray}Lvl: 35\n{purple}Dream: {yellow}Yu{white}-{red}Me {gray}Lvl: 32\n{purple}Lore: {white}Ort-Sol {gray}Lvl: 27\n{purple}Wisdom: {red}Chi{white}-{yellow}E {gray}Lvl: 26\n{purple}Nadir: {white}Nef-Tir {gray}Lvl: 13\n{Purple}Hades: {white}Yo-{red}Mi {gray}Lvl: 13\n{purple}Hunt: {white}Ka-{red}Ri {gray}Lvl: 12\n{purple}Fog: {red}Ki{white}-{red}Ri {gray}Lvl: 12\n{purple}Greed: {white}Yo-Ku {gray}Lvl: 9\n{purple}Feel: {white}Ka-N {gray}Lvl: 6\n",
                 sockets = "2"
             },
         -- Tooltip information for all Helms showing available 3 socket Runewords
             {
                 codes = {"cap", "skp", "hlm", "fhl", "ghm", "crn", "msk", "bhm", "dwc", "2ap", "2kp", "2lm", "2hl", "2hm", "2rn", "2sk", "2h9", "xap", "xkp", "xlm", "xhl", "xhm", "xrn", "xsk", "xh9", "xdw", "4ap", "4kp", "4lm", "4hl", "4hm", "4rn", "4sk", "4h9", "yap", "ykp", "ylm", "yhl", "yhm", "yrn", "ysk", "yh9", "ydw", "uap", "ukp", "ulm", "uhl", "uhm", "urn", "usk", "uh9", "dr3", "dr4", "dr5", "dr1", "dr2", "dr8", "dr9", "dra", "dr6", "dr7", "drd", "dre", "drf", "drb", "drc", "qda", "qdb", "eht", "xht", "yht", "ba3", "ba4", "ba5", "ba1", "ba2", "ba8", "ba9", "baa", "ba6", "ba7", "bad", "bae", "baf", "bab", "bac", "qba", "qbc", "qbd", "qbe", "cix", "ci0", "ci4", "ci1", "ci2", "ci3", "qi2", "qi3", "m20"},
-                runeword = false,
+                runewords = false,
                 quality = "3-",
                 pstat = { index = 12, op = "<=", value = 44 }, -- Char Level 39 or lower
                 location = {"onplayer","atvendor","equipped"},
-                suffix_desc = "{gray}Maiden: {yellow}O {orange}To {orange}Me {gray}Lvl: 36{blue}\n{gray}Jealousy: {white}Shi {red}Tsu {orange}To {gray}Lvl: 36{blue}\n{gray}Temper: {orange}Shael{white} Io Ral {gray}Lvl: 35{blue}\n{gray}Ground: {orange}Shael{white} Io Ral {gray}Lvl: 35{blue}\n{gray}Earth: {orange}Shael{white} Io Thul {gray}Lvl: 35{blue}\n{gray}Cure: {orange}Shael{white} Io Tal {gray}Lvl: 35{blue}\n{gray}Bulwark: {orange}Shael{white} Io Sol {gray}Lvl: 35{blue}\n{gray}Richesdotcom: {yellow}P.Topaz {orange}Ru {yellow}P.Topaz {gray}Lvl: 34{blue}\n{gray}Psychic: {red}A {red}Ki {yellow}Ra {gray}Lvl: 28{blue}\n{gray}Cherry Blossom: {yellow}Sa{white} Ku{yellow}Ra {gray}Lvl: 28{blue}\n{gray}Radiance: {white}Nef Sol Ith {gray}Lvl: 27{blue}\n{gray}Royalty: {red}A {yellow}E{white} Ka {gray}Lvl: 26{blue}\n{gray}Reason: {red}Ri {yellow}Yu{white} U {gray}Lvl: 23{blue}\n{gray}Knowledge: {red}Chi{white} Shi {red}Ki {gray}Lvl: 20{blue}\n{gray}Forefeel: {white}Yo Ka N {gray}Lvl: 9{blue}\n",
+                suffix_desc = "{purple}Maiden: {yellow}O{white}-{orange}To{white}-{orange}Me {gray}Lvl: 36\n{purple}Jealousy: {white}Shi-{red}Tsu{white}-{orange}To {gray}Lvl: 36\n{Purple}Temper: {orange}Shael{white}-Io-Ral {gray}Lvl: 35\n{purple}Ground: {orange}Shael{white}-Io-Ral {gray}Lvl: 35\n{purple}Earth: {orange}Shael{white}-Io-Thul {gray}Lvl: 35\n{purple}Cure: {orange}Shael{white}-Io-Tal {gray}Lvl: 35\n{purple}Bulwark: {orange}Shael{white}-Io-Sol {gray}Lvl: 35\n{purple}Richesdotcom: {yellow}P.Topaz{white}-{orange}Ru{white}-{yellow}P.Topaz {gray}Lvl: 34\n{purple}Psychic: {red}A{white}-{red}Ki{white}-{yellow}Ra {gray}Lvl: 28\n{purple}Cherry Blossom: {yellow}Sa{white}-Ku{yellow}Ra {gray}Lvl: 28\n{purple}Radiance: {white}Nef-Sol-Ith {gray}Lvl: 27\n{purple}Royalty: {red}A{white}-{yellow}E{white}-Ka {gray}Lvl: 26\n{purple}Reason: {red}Ri{white}-{yellow}Yu{white}-U {gray}Lvl: 23\n{purple}Knowledge: {red}Chi{white}-Shi-{red}Ki {gray}Lvl: 20\n{purple}Forefeel: {white}Yo-Ka-N {gray}Lvl: 9\n",
                 sockets = "3"
             },
             {
                 codes = {"cap", "skp", "hlm", "fhl", "ghm", "crn", "msk", "bhm", "dwc", "2ap", "2kp", "2lm", "2hl", "2hm", "2rn", "2sk", "2h9", "xap", "xkp", "xlm", "xhl", "xhm", "xrn", "xsk", "xh9", "xdw", "4ap", "4kp", "4lm", "4hl", "4hm", "4rn", "4sk", "4h9", "yap", "ykp", "ylm", "yhl", "yhm", "yrn", "ysk", "yh9", "ydw", "uap", "ukp", "ulm", "uhl", "uhm", "urn", "usk", "uh9", "dr3", "dr4", "dr5", "dr1", "dr2", "dr8", "dr9", "dra", "dr6", "dr7", "drd", "dre", "drf", "drb", "drc", "qda", "qdb", "eht", "xht", "yht", "ba3", "ba4", "ba5", "ba1", "ba2", "ba8", "ba9", "baa", "ba6", "ba7", "bad", "bae", "baf", "bab", "bac", "qba", "qbc", "qbd", "qbe", "cix", "ci0", "ci4", "ci1", "ci2", "ci3", "qi2", "qi3", "m20"},
-                runeword = false,
+                runewords = false,
                 quality = "3-",
                 pstat = {index = 12, op = ">=", value = 45}, -- Char Level 40 or higher
                 location = {"onplayer","atvendor","equipped"},
-                suffix_desc = "{gray}Metamorphosis: {orange}Io {purple}Cham {orange}Fal {gray}Lvl: 67{blue}\n{gray}Dream: {orange}Io {purple}Jah {orange}Pul {gray}Lvl: 65{blue}\n{gray}Peace: He{white} I {orange}Wa {gray}Lvl: 59{blue}\n{gray}Discontent: {green}Fu {purple}He{white} I {gray}Lvl: 59{blue}\n{gray}Abandon: {purple}Su {gold}Te {orange}Ru {gray}Lvl: 57{blue}\n{gray}Flickering Flame: {white}Nef {orange}Pul {purple}Vex {gray}Lvl: 55{blue}\n{gray}Thought: {white}Shi {gold}So{white} U {gray}Lvl: 52{blue}\n{gray}Spirit: {orange}Ko {orange}Ko {gold}Ro {gray}Lvl: 51{blue}\n{gray}Delirium: {orange}Lem {orange}Ist {orange}Io {gray}Lvl: 51{blue}\n{gray}Radiance: {green}Hi{white} Ka {orange}Ru {gray}Lvl: 46{blue}\n{gray}One: {green}Hi {orange}To {red}Tsu {gray}Lvl: 46{blue}\n{gray}Wisdom: {orange}Pul{white} Ith Eld {gray}Lvl: 45{blue}\n",
+                suffix_desc = "{purple}Metamorphosis: {orange}Io{white}-{purple}Cham{white}-{orange}Fal {gray}Lvl: 67\n{purple}Dream: {orange}Io{white}-{purple}Jah{white}-{orange}Pul {gray}Lvl: 65\n{purple}Peace: He{white}-I-{orange}Wa {gray}Lvl: 59\n{purple}Discontent: {green}Fu{white}-{purple}He{white}-I {gray}Lvl: 59\n{purple}Abandon: Su{white}-{gold}Te{white}-{orange}Ru {gray}Lvl: 57\n{purple}Flickering Flame: {white}Nef-{orange}Pul{white}-{purple}Vex {gray}Lvl: 55\n{purple}Thought: {white}Shi-{gold}So{white}-U {gray}Lvl: 52\n{purple}Spirit: {orange}Ko{white}-{orange}Ko{white}-{gold}Ro {gray}Lvl: 51\n{purple}Delirium: {orange}Lem{white}-{orange}Ist{white}-{orange}Io {gray}Lvl: 51\n{purple}Radiance: {green}Hi{white}-Ka-{orange}Ru {gray}Lvl: 46\n{purple}One: {green}Hi{white}-{orange}To{white}-{red}Tsu {gray}Lvl: 46\n{purple}Wisdom: {orange}Pul{white}-Ith-Eld {gray}Lvl: 45\n",
                 sockets = "3"
             },
         -- Tooltip information for all Shields showing avaiable 2 socket Runewords
             {
                 codes = {"buc", "sml", "lrg", "kit", "tow", "gts", "bsh", "spk", "fts", "2uc", "2ml", "2rg", "2it", "2ow", "2ts", "2sh", "2pk", "sp2", "xuc", "xml", "xrg", "xit", "xow", "xts", "xsh", "xpk", "xft", "4uc", "4ml", "4rg", "4it", "4ow", "4ts", "4sh", "4pk", "yuc", "yml", "yrg", "yit", "yow", "yts", "ysh", "ypk", "yft", "uuc", "uml", "urg", "uit", "uow", "uts", "ush", "upk", "pa1", "pa3", "pa4", "pa5", "pa2", "pa6", "pa8", "pa9", "paa", "pa7", "pab", "pad", "pae", "pae", "paf", "qp9", "qpc", "qpc", "qpe", "ne1", "ne2", "ne3"},
-                runeword = false,
+                runewords = false,
                 quality = "3-",
                 location = {"onplayer","atvendor","equipped"},
-                suffix_desc = "{gray}Splendor: {white}Eth {orange}Lum {gray}Lvl: 37{blue}\n{gray}Rhyme: {orange}Shael{white} Eth {gray}Lvl: 29{blue}\n{gray}Rhino: {yellow}Sa{white} I {gray}Lvl: 22{blue}\n{gray}Gold: {red}Ki{white} N {gray}Lvl: 10{blue}\n{gray}Luck: {white}U N {gray}Lvl: 6{blue}\n",
+                suffix_desc = "{purple}Splendor: {white}Eth-{orange}Lum {gray}Lvl: 37\n{purple}Rhyme: {orange}Shael{white}-Eth {gray}Lvl: 29\n{purple}Rhino: {yellow}Sa{white}-I {gray}Lvl: 22\n{purple}Gold: {red}Ki{white}-N {gray}Lvl: 10\n{purple}Luck: {white}U-N {gray}Lvl: 6\n",
                 sockets = "2"
             },
-
-        -- Tooltip information for all Shields showing avaiable 3 socket Runewords
-            {
-                codes = {"buc", "sml", "lrg", "kit", "tow", "gts", "bsh", "spk", "fts", "2uc", "2ml", "2rg", "2it", "2ow", "2ts", "2sh", "2pk", "sp2", "xuc", "xml", "xrg", "xit", "xow", "xts", "xsh", "xpk", "xft", "4uc", "4ml", "4rg", "4it", "4ow", "4ts", "4sh", "4pk", "yuc", "yml", "yrg", "yit", "yow", "yts", "ysh", "ypk", "yft", "uuc", "uml", "urg", "uit", "uow", "uts", "ush", "upk", "pa1", "pa3", "pa4", "pa5", "pa2", "pa6", "pa8", "pa9", "paa", "pa7", "pab", "pad", "pae", "pae", "paf", "qp9", "qpc", "qpc", "qpe", "ne1", "ne2", "ne3"},
-                runeword = false,
-                quality = "3-",
-                pstat = {index = 12, op = "<=", value = 49}, -- Char Level 49 or lower
-                location = {"onplayer","atvendor","equipped"},
-                suffix_desc = "{gray}Sanctuary: {orange}Ko {orange}Ko {purple}Mal {gray}LvL: 49{blue}\n{gray}Woodsman: {red}Ki {orange}Ko {red}Ri {gray}Lvl: 39{blue}\n{gray}Daylight: {green}Hi {orange}Ru {green}Ma {gray}Lvl: 46{blue}\n{gray}Sunny: {yellow}Sa {green}Ni {white}I {gray}Lvl: 43{blue}\n{gray}Secret: {white}Shi {green}Ni {orange}Ti {gray}Lvl: 42{blue}\n{gray}Pillar of Faith: {orange}Ha {white}Shi {yellow}Ra {gray}Level: 39{blue}\n{gray}Conquest: {white}Shi Shi {yellow}O {gray}Level :30{blue}\n{gray}Ancient's Pledge: {white}Ral Ort Tal {gray}Lvl: 21{blue}\n",
-                sockets = "3"
-            },
-            {
-                codes = {"buc", "sml", "lrg", "kit", "tow", "gts", "bsh", "spk", "fts", "2uc", "2ml", "2rg", "2it", "2ow", "2ts", "2sh", "2pk", "sp2", "xuc", "xml", "xrg", "xit", "xow", "xts", "xsh", "xpk", "xft", "4uc", "4ml", "4rg", "4it", "4ow", "4ts", "4sh", "4pk", "yuc", "yml", "yrg", "yit", "yow", "yts", "ysh", "ypk", "yft", "uuc", "uml", "urg", "uit", "uow", "uts", "ush", "upk", "pa1", "pa3", "pa4", "pa5", "pa2", "pa6", "pa8", "pa9", "paa", "pa7", "pab", "pad", "pae", "pae", "paf", "qp9", "qpc", "qpc", "qpe", "ne1", "ne2", "ne3"},
-                runeword = false,
-                quality = "3-",
-                pstat = {index = 12, op = ">=", value = 50}, -- Char Level 50 or higher
-                location = {"onplayer","atvendor","equipped"},
-                suffix_desc = "{gray}Dream: {orange}Io {purple}Jah {orange}Pul {gray}Lvl: 65{blue}\n{gray}Dragon: Sur Lo {white}Sol {gray}Lvl: 61{blue}\n{gray}Sunlight: {blue}Sun {orange}Ko {white}U {gray}Lvl: 60{blue}\n{gray}Dodge: {white}Ka {orange}Wa {purple}Su {gray}Lvl: 57{blue}\n{gray}Abandon: {purple}Su {gold}Te {orange}Ru {gray}Lvl: 57{blue}\n{gray}Rift: {red}Ki {gold}Re {red}Tsu {gray}Lvl: 56{blue}\n",
-                sockets = "3"
-            },
-        -- Tooltip information for all Shields showing avaiable 4 socket Runewords
-            {
-                codes = {"buc", "sml", "lrg", "kit", "tow", "gts", "bsh", "spk", "fts", "2uc", "2ml", "2rg", "2it", "2ow", "2ts", "2sh", "2pk", "sp2", "xuc", "xml", "xrg", "xit", "xow", "xts", "xsh", "xpk", "xft", "4uc", "4ml", "4rg", "4it", "4ow", "4ts", "4sh", "4pk", "yuc", "yml", "yrg", "yit", "yow", "yts", "ysh", "ypk", "yft", "uuc", "uml", "urg", "uit", "uow", "uts", "ush", "upk", "pa1", "pa3", "pa4", "pa5", "pa2", "pa6", "pa8", "pa9", "paa", "pa7", "pab", "pad", "pae", "pae", "paf", "qp9", "qpc", "qpc", "qpe", "ne1", "ne2", "ne3"},
-                runeword = false,
-                quality = "3-",
-                location = {"onplayer","atvendor","equipped"},
-                suffix_desc = "{gray}Phoenix: {purple}Vex Vex Lo Jah {gray}Lvl: 65{blue}\n{gray}Dread: {yellow}O {gold}So Re {orange}Ru {gray}Lvl: 56{blue}\n{gray}Dome: {green}Ma {orange}Ru {red}Ya {gold}Ne {gray}Lvl: 55{blue}\n{gray}Medicine: {red}Ya {white}Ku {green}Hi {white}N {gray}Lvl: 46{blue}\n{gray}Glory: {yellow}E {white}I {orange}Ko {white}U {gray}Lvl: 39{blue}\n{gray}Faith: {white}Shi N {orange}Ko {white}U {gray}Lvl: 39{blue}\n{gray}Temptation: {yellow}Wa {white}U {orange}Wa {white}Ku {gray}Lvl: 38{blue}\n{gray}Achieve: {white}Ka {red}Chi {orange}To Ru {gray}Lvl: 36{blue}\n{gray}Spirit: {white}Tal Thul Ort Amn {gray}Lvl: 25{blue}\n{gray}Fortress: {white}Yo U {yellow}Sa {white}I {gray}Lvl: 22{blue}\n{gray}Beauty: {white}U {red}Tsu {white}Ku Shi {gray}Lvl: 19{blue}\n",
-                sockets = "4"
-            },
-    
     -- In game notification for all monster parts
         {
             codes = {"qll", "hrt", "brz", "jaw", "eyz", "hrn", "tal", "flg", "fng","sol", "scz", "spe", "zzz"},
@@ -1369,8 +1325,7 @@ return {
             codes = {"gvb", "gyb", "gbb", "ggb", "grb", "gwb", "skb", "gbk"},
             notify = "{name}",
             audio = "mid.mp3",
-            name_override = "{name}",
-            border = {200, 150, 0, 255}
+            border = {200, 150, 0, 255},
         },
     
     -- In game notification for all high LOD rune drops
@@ -1476,42 +1431,11 @@ return {
 
 
     -- In game notification for all high ES rune drop
+    
         {   
-            code = "r43",
-            notify = "{orange}Purple ESR Rune: {name}",
-            name_override = "{purple}Su",
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "tink.mp3"
-        },
-        {   
-            code = "r44",
-            notify = "{orange}Purple ESR Rune: {name}",
-            name_override = "{purple}He",
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "tink.mp3"
-        },
-        {   
-            code = "r45",
-            notify = "{orange}Purple ESR Rune: {name}",
-            name_override = "{purple}Nu",
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "tink.mp3"
-        },
-        {   
-            code = "r46",
-            notify = "{orange}Purple ESR Rune: {name}",
-            name_override = "{purple}Wo",
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "tink.mp3"
-        },
-        {   
-            code = "r50",
-            notify = "{orange}Purple ESR Rune: {name}",
-            name_override = "{purple}Null",
+            codes = {"r43", "r44", "r45", "r46", "r50" },
+            notify = "{orange}Ultra Rune Nearby: {name}",
+            name_override = "{red}{name}{red}",
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
             audio = "tink.mp3"
@@ -1746,8 +1670,8 @@ return {
         {code="r44",location={"onplayer","atvendor"},prefix="{gray}+2 Purple Rune Points when bagged{orange}\n"}, --He Rune
         {code="r45",location={"onplayer","atvendor"},prefix="{gray}+4 Purple Rune Points when bagged{orange}\n"}, --Nu Rune
         {code="r46",location={"onplayer","atvendor"},prefix="{gray}+8 Purple Rune Points when bagged{orange}\n"}, --Wo Rune
-        {code="r50",location={"onplayer","atvendor"},prefix="{gray}+8 Purple Rune Points when bagged{orange}\n"}, --Null Rune
-         -- Tooltips on LoD Decals (monkey see monkey do)
+        {code="r50",location={"onplayer","atvendor"},prefix="{gray}+16 Purple Rune Points when bagged{orange}\n"}, --Null Rune
+        -- Tooltips on LoD Decals (monkey see monkey do)
         {code = "01l",location = {"onplayer","atvendor"},prefix = "{gray}+1 Low Rune Points when bagged{white}\n"},
         {code = "02",location = {"onplayer","atvendor"},prefix = "{gray}+2 Low Rune Points when bagged{white}\n"},
         {code = "03l",location = {"onplayer","atvendor"},prefix = "{gray}+4 Low Rune Points when bagged{white}\n"},
@@ -1781,6 +1705,7 @@ return {
         {code = "31l",location = {"onplayer","atvendor"},prefix = "{gray}+256 High Rune Points when bagged{white}\n"},    
         {code = "32l",location = {"onplayer","atvendor"},prefix = "{gray}+512 High Rune Points when bagged{white}\n"},
         {code = "33l",location = {"onplayer","atvendor"},prefix = "{gray}+1024 High Rune Points when bagged{white}\n"},
+    
     -- Socket info for ground items
         {   
             codes = {"02h", "0ax", "0b0", "0b6", "0b7", "0ba", "0be", "0bk", "0bl", "0br", "0bs", "0bt", "0bw", "0cl", "0cm", "0cr", "0dg", "0di", "0fb", "0fc", "0fl", "0ga", "0gd", "0gi", "0gl", "0gm", "0gp", "0gs", "0gw", "0h0", "0ha", "0ja", "0kl", "0kr", "0la", "0ls", "0m0", "0ma", "0mn", "0mp", "0mt", "0nn", "0ns", "0p0", "0pa", "0pb", "0pi", "0qs", "0rd", "0rm", "0s8", "0s9", "0sb", "0sh", "0sm", "0sp", "0sr", "0ss", "0st", "0sy", "0ta", "0tk", "0tr", "0ts", "0vo", "0wa", "0wc", "0wd", "0wh", "0wn", "0ws", "0xb", "0yw", "1bs", "1cb", "1cs", "1hb", "1hx", "1l8", "1lb", "1ls", "1lw", "1lx", "1mx", "1rx", "1s8", "1sb", "1ss", "1sw", "1ws", "2ap", "2ar", "2ax", "2cl", "2ea", "2h9", "2hb", "2hg", "2hl", "2hm", "2hn", "2hs", "2it", "2kp", "2la", "2lb", "2ld", "2lg", "2lm", "2lt", "2mb", "2mg", "2ml", "2ng", "2ow", "2pk", "2pl", "2rg", "2rn", "2rs", "2sh", "2sk", "2tb", "2tg", "2th", "2tp", "2ts", "2tu", "2uc", "2ui", "2ul", "2vb", "2vg", "3hb", "3lb", "3mb", "3tb", "3vb", "4ap", "4ar", "4cl", "4ea", "4h9", "4hb", "4hg", "4hl", "4hm", "4hn", "4it", "4kp", "4la", "4lb", "4ld", "4lg", "4lm", "4lt", "4mb", "4mg", "4ml", "4ng", "4ow", "4pk", "4pl", "4rg", "4rn", "4rs", "4sh", "4sk", "4tb", "4tg", "4th", "4tp", "4ts", "4tu", "4uc", "4ui", "4ul", "4vb", "4vg", "5hb", "5lb", "5mb", "5sc", "5tb", "5vb", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mp", "7mt", "7o7", "7p7", "7pa", "7pi", "7qr", "7qs", "7s7", "7s8", "7sb", "7sc", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7tw", "7vo", "7wa", "7wb", "7wc", "7wh", "7wn", "7ws", "7xf", "7yw", "82a", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9be", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gp", "9gs", "9gw", "9h9", "9ha", "9ja", "9kl", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mn", "9mp", "9mt", "9nj", "9nn", "9ns", "9p9", "9pa", "9pb", "9pi", "9qr", "9qs", "9rd", "9rm", "9s8", "9s9", "9sb", "9sc", "9sh", "9sm", "9sp", "9sr", "9ss", "9st", "9sy", "9ta", "9tk", "9tr", "9ts", "9tw", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9ws", "9xb", "9xf", "9yw", "aar", "ahb", "alb", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "apb", "arm", "atb", "avb", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "bmb", "br2", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "bts", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "ci4", "cix", "clb", "clk", "clm", "clw", "cr2", "crn", "crs", "cst", "dbt", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "dwc", "eht", "elv", "fhl", "fla", "flb", "flc", "fld", "fts", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsc", "gsd", "gsp", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "irg", "jav", "kit", "kkl", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mnb", "mpi", "msb", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "ned", "nee", "nef", "neg", "nin", "njt", "nrd", "nsy", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pbe", "pik", "pil", "plt", "q00", "q01", "q02", "q03", "q04", "q05", "q06", "q07", "q08", "q09", "q10", "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q28", "q29", "q2a", "q2b", "q2c", "q2d", "q2e", "q2f", "q30", "q31", "q32", "q33", "q34", "q35", "q36", "q37", "q38", "q39", "q3a", "q3b", "q3c", "q3d", "q3e", "q3f", "q40", "q41", "q42", "q43", "q44", "q45", "q46", "q47", "q48", "q49", "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q50", "q51", "q52", "q53", "q54", "q55", "q56", "q57", "q58", "q59", "q60", "q61", "q62", "q63", "q64", "q65", "q66", "q67", "q68", "q69", "q70", "q71", "q72", "q73", "q74", "q75", "q76", "q77", "q78", "q79", "q80", "q81", "q82", "q83", "q84", "q85", "q86", "qba", "qbc", "qbd", "qbe", "qda", "qdb", "qdd", "qde", "qdf", "qi2", "qi3", "qna", "qne", "qnf", "qp9", "qpc", "qpe", "qui", "rng", "rob", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scp", "scy", "shc", "shl", "skp", "skr", "sml", "sp2", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "syn", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wsp", "wst", "xap", "xar", "xbt", "xcl", "xdw", "xea", "xft", "xh9", "xhb", "xhg", "xhh", "xhl", "xhm", "xhn", "xht", "xig", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlk", "xlm", "xlt", "xlv", "xmb", "xmg", "xml", "xms", "xng", "xow", "xpk", "xpl", "xrb", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "yap", "yar", "ybt", "ycl", "ydw", "yea", "yft", "yh9", "yhb", "yhg", "yhh", "yhl", "yhm", "yhn", "yht", "yig", "yit", "ykp", "yla", "ylb", "yld", "ylg", "ylk", "ylm", "ylt", "ylv", "ymb", "ymg", "yml", "yms", "yng", "yow", "ypk", "ypl", "yrb", "yrg", "yrn", "yrs", "ysh", "ysk", "ytb", "ytg", "yth", "ytp", "yts", "ytu", "yuc", "yui", "yul", "yvb", "yvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb"},
@@ -1800,7 +1725,7 @@ return {
     -- Item tooltip - Item has maximum sockets for it's ilvl
         {
             codes = "allitems",
-            location = {"onplayer", "atvendor", "e/quipped", "onground"},
+            location = {"onplayer", "atvendor", "equipped", "onground"},
             suffix_desc = "{purple}Max Sockets: {green}{sockets}{white}/{green}{maxsock}\n{blue}",
             sockets = "1+",
             maxsock = true
