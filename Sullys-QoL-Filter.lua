@@ -1381,7 +1381,7 @@ return {
         {   
             code = "23l",
             notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Mal  {red}*{blue}*{green}*",
-            name_override = "{black}Mal",
+            name_override = "{black}Mal Rune",
             border = {0, 0, 0, 255},
             background = {200, 150, 0, 255},
             audio = "mid.mp3"
@@ -1390,7 +1390,7 @@ return {
         {   
             code = "24l",
             notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Ist   {red}*{blue}*{green}*",
-            name_override = "{black}Ist",
+            name_override = "{black}Ist Rune",
             border = {0, 0, 0, 255},
             background = {200, 150, 0, 255},
             audio = "mid.mp3"
@@ -1399,7 +1399,7 @@ return {
         {   
             code = "25l",
             notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Gul   {red}*{blue}*{green}*",
-            name_override = "{black}Gul",
+            name_override = "{black}Gul Rune",
             border = {0, 0, 0, 255},
             background = {200, 150, 0, 255},
             audio = "mid.mp3"
@@ -1408,7 +1408,7 @@ return {
         {   
             code = "26l",
             notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Vex   {red}*{blue}*{green}*",
-            name_override = "{red}Vex",
+            name_override = "{red}Vex Rune",
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
             audio = "tink.mp3"
@@ -1417,7 +1417,7 @@ return {
         {   
             code = "27l",
             notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Ohm  {red}*{blue}*{green}*",
-            name_override = "{red}Ohm",
+            name_override = "{red}Ohm Rune",
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
             audio = "tink.mp3"
@@ -1426,7 +1426,7 @@ return {
         {   
             code = "28l",
             notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Lo   {red}*{blue}*{green}*",
-            name_override = "{red}Lo",
+            name_override = "{red}Lo Rune",
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
             audio = "tink.mp3"
@@ -1435,7 +1435,7 @@ return {
         {   
             code = "29l",
             notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Sur   {red}*{blue}*{green}*",
-            name_override = "{red}Sur",
+            name_override = "{red}Sur Rune",
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
             audio = "tink.mp3"
@@ -1444,7 +1444,7 @@ return {
         {   
             code = "30l",
             notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Ber  {red}*{blue}*{green}*",
-            name_override = "{red}Ber",
+            name_override = "{red}Ber Rune",
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
             audio = "tink.mp3"
@@ -1453,7 +1453,7 @@ return {
         {   
             code = "31l",
             notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Jah   {red}*{blue}*{green}*",
-            name_override = "{red}Jah",
+            name_override = "{red}Jah Rune",
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
             audio = "tink.mp3"
@@ -1462,7 +1462,7 @@ return {
         {   
             code = "32l",
             notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Cham   {red}*{blue}*{green}*",
-            name_override = "{red}Cham",
+            name_override = "{red}Cham Rune",
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
             audio = "tink.mp3"
@@ -1471,7 +1471,7 @@ return {
         {   
             code = "33l",
             notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Zod   {red}*{blue}*{green}*",
-            name_override = "{red}Zod",
+            name_override = "{red}Zod Rune",
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
             audio = "mythical.mp3"
@@ -1489,7 +1489,7 @@ return {
         {   
             code = "r43",
             notify = "{orange}Purple ESR Rune: {name}",
-            name_override = "{purple}Su",
+            name_override = "{purple}Su Rune",
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
             audio = "tink.mp3"
@@ -1497,7 +1497,7 @@ return {
         {   
             code = "r44",
             notify = "{orange}Purple ESR Rune: {name}",
-            name_override = "{purple}He",
+            name_override = "{purple}He Rune",
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
             audio = "tink.mp3"
@@ -1505,7 +1505,7 @@ return {
         {   
             code = "r45",
             notify = "{orange}Purple ESR Rune: {name}",
-            name_override = "{purple}Nu",
+            name_override = "{purple}Nu Rune",
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
             audio = "tink.mp3"
@@ -1513,7 +1513,7 @@ return {
         {   
             code = "r46",
             notify = "{orange}Purple ESR Rune: {name}",
-            name_override = "{purple}Wo",
+            name_override = "{purple}Wo Rune",
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
             audio = "tink.mp3"
@@ -1521,7 +1521,7 @@ return {
         {   
             code = "r50",
             notify = "{orange}Purple ESR Rune: {name}",
-            name_override = "{purple}Null",
+            name_override = "{purple}Null Rune",
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
             audio = "tink.mp3"
