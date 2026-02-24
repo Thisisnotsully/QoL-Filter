@@ -73,7 +73,7 @@ return {
         {
             code = "tbk", 
             location = "atvendor", 
-            suffix = "\n{blue}15 Magic Find: {green}Chipped Emerald {gray}+ Anvil Stone\n{blue}15Increased Attack Speed: {red}Chipped Ruby {gray}+ Anvil Stone\n{blue}9 Percent Chance of Crushing Blow: {purple}Chipped Amethyst {gray}+ Anvil Stone\n{blue}12 Percent Max life: {yellow}Chipped Topaz {gray}+ Anvil Stone\n{blue}15 Faster Cast Rate: Chipped Skull {gray}+ Anvil Stone\n{blue}All Resistances +12: {white}Chipped Diamond {gray}+ Anvil Stone\n{blue}12 Percent Max Mana: {blue}Chipped Sapphire {gray}+ Anvil Stone\n{gray}{blue}Add Weapon Mods of the Rune: {gray}2 of the same Rune (Up to {orange}O Rune{gray}) + Chipped Gem + TP Scroll\n{blue}Add Helm Mods of the Rune: {gray}2 of the same Rune (Up to {orange}O Rune{gray}) + Chipped Gem + ID Scroll\nCombine {blue}Magic{gray}/{yellow}Rare {gray}Jewel and:\n{lilac}**Jewel Forging**{white}"
+            suffix = "\n{blue}15 Magic Find: {green}Chipped Emerald {gray}+ Anvil Stone\n{blue}15Increased Attack Speed: {red}Chipped Ruby {gray}+ Anvil Stone\n{blue}9 Percent Chance of Crushing Blow: {purple}Chipped Amethyst {gray}+ Anvil Stone\n{blue}12 Percent Max life: {yellow}Chipped Topaz {gray}+ Anvil Stone\n{blue}15 Faster Cast Rate: Chipped Skull {gray}+ Anvil Stone\n{blue}All Resistances +12: {white}Chipped Diamond {gray}+ Anvil Stone\n{blue}12 Percent Max Mana: {blue}Chipped Sapphire {gray}+ Anvil Stone\n{gray}{blue}Add Weapon Mods of the Rune: {gray}2 of the same Rune (Up to {yellow}O Rune{gray}) + Chipped Gem + TP Scroll\n{blue}Add Helm Mods of the Rune: {gray}2 of the same Rune (Up to {yellow}O Rune{gray}) + Chipped Gem + ID Scroll\nCombine {blue}Magic{gray}/{yellow}Rare {gray}Jewel and:\n{lilac}**Jewel Forging**{white}"
         },
         -- Hiding small gold piles based on level
         {
@@ -1115,6 +1115,13 @@ return {
             quality = "4",
             notify = "Class Jewellery: {blue}{name}",
             border = {0,0,255,230}
+        },
+        {
+            codes = {"zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"},
+            quality = "4",
+            location = {"onplayer","atvendor"},
+            suffix_desc = "{gray}Crafting Available: Check Akara's perfect gems for recipes{blue}\n"
+
         },
         {
             codes = {"zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"},
