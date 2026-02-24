@@ -1537,7 +1537,7 @@ return {
             {   
                 code = "z01",
                 notify = "Tier 1 Map: {white}Cellars of Pain",
-                name_override = "Cellar of Pain",
+                name_override = "Cellar of Pain (Tier 1)",
                 border = {255,255,255,255},
                 background = {0,0,0,255}
             },
@@ -1545,7 +1545,7 @@ return {
             {   
                 code = "z02",
                 notify = "Tier 1 Map: {white}Chasm of Horrors",
-                name_override = "Chasm of Horrors",
+                name_override = "Chasm of Horrors (Tier 1)",
                 border = {255,255,255,255},
                 background = {0,0,0,255}
             },
@@ -1553,7 +1553,7 @@ return {
             {   
                 code = "z03",
                 notify = "Tier 1 Map: {white}Crypt of Damnation",
-                name_override = "Crypt Of Damnation",
+                name_override = "Crypt Of Damnation (Tier 1)",
                 border = {255,255,255,255},
                 background = {0,0,0,255}
             },
@@ -1561,7 +1561,7 @@ return {
             {   
                 code = "z04",
                 notify = "Tier 1 Map: {white}Necropolis",
-                name_override = "Necropolis",
+                name_override = "Necropolis (Tier 1)",
                 border = {255,255,255,255},
                 background = {0,0,0,255}
             },
@@ -1571,7 +1571,7 @@ return {
                 code = "z05",
                 notify = "Tier 2 Map: {white}Ancient Tomb",
                 audio = "map.mp3",
-                name_override = "Ancient Tomb",
+                name_override = "Ancient Tomb (Tier 2)",
                 border = {255,255,255,255},
                 background = {0,0,0,255}
             },
@@ -1580,7 +1580,7 @@ return {
                 code = "z06",
                 notify = "Tier 2 Map: {white}Chaos Rift",
                 audio = "map.mp3",
-                name_override = "Chaos Rift",
+                name_override = "Chaos Rift (Tier 2)",
                 border = {255,255,255,255},
                 background = {0,0,0,255}
             },
@@ -1589,7 +1589,7 @@ return {
                 code = "z07",
                 notify = "Tier 2 Map: {white}Infested Lair",
                 audio = "map.mp3",
-                name_override = "Infested Lair",
+                name_override = "Infested Lair (Tier 2)",
                 border = {255,255,255,255},
                 background = {0,0,0,255}
             },
@@ -1598,7 +1598,7 @@ return {
                 code = "z08",
                 notify = "Tier 2 Map: {white}Labyrinth of Suffering",
                 audio = "map.mp3",
-                name_override = "Labyrinth of Suffering",
+                name_override = "Labyrinth of Suffering (Tier 2)",
                 border = {255,255,255,255},
                 background = {0,0,0,255}
             },
@@ -1608,7 +1608,7 @@ return {
                 code = "z09",
                 notify = "Tier 3 Map: {white}Decaying Depths",
                 audio = "map.mp3",
-                name_override = "Decaying Depths",
+                name_override = "Decaying Depths (Tier 3)",
                 border = {255,255,255,255},
                 background = {0,0,0,255}
             },
@@ -1617,7 +1617,7 @@ return {
                 code = "z10",
                 notify = "Tier 3 Map: {white}Endless Abyss",
                 audio = "map.mp3",
-                name_override = "Endless Abyss",
+                name_override = "Endless Abyss (Tier 3)",
                 border = {255,255,255,255},
                 background = {0,0,0,255}
             },
@@ -1626,7 +1626,7 @@ return {
                 code = "z11",
                 notify = "Tier 3 Map: {white}Frozen Wastes",
                 audio = "map.mp3",
-                name_override = "Frozen Wastes",
+                name_override = "Frozen Wastes (Tier 3)",
                 border = {255,255,255,255},
                 background = {0,0,0,255}
             },
@@ -1635,7 +1635,7 @@ return {
                 code = "z12",
                 notify = "Tier 3 Map: {white}Twisted Maze",
                 audio = "map.mp3",
-                name_override = "Twisted Maze",
+                name_override = "Twisted Maze (Tier 3)",
                 border = {255,255,255,255},
                 background = {0,0,0,255}
             },
@@ -1645,7 +1645,7 @@ return {
                 code = "z13",
                 notify = "Tier 4 Map: {white}Cursed Ossuary",
                 audio = "map.mp3",
-                name_override = "Cursed Ossuary",
+                name_override = "Cursed Ossuary (Tier 4)",
                 border = {255,255,255,255},
                 background = {0,0,0,255}
             },
@@ -1654,7 +1654,7 @@ return {
                 code = "z14",
                 notify = "Tier 4 Map: {white}Infernal Nexus",
                 audio = "map.mp3",
-                name_override = "Infernal Nexus",
+                name_override = "Infernal Nexus (Tier 4)",
                 border = {255,255,255,255},
                 background = {0,0,0,255}
             },
@@ -1663,7 +1663,7 @@ return {
                 code = "z15",
                 notify = "Tier 4 Map: {white}Reliquary of Souls",
                 audio = "map.mp3",
-                name_override = "Reliquary of Souls",
+                name_override = "Reliquary of Souls (Tier 4)",
                 border = {255,255,255,255},
                 background = {0,0,0,255}
             },
@@ -1672,7 +1672,7 @@ return {
                 code = "z16",
                 notify = "Tier 4 Map: {white}Shrine of Destruction",
                 audio = "map.mp3",
-                name_override = "{white}Shrine of Destruction",
+                name_override = "{white}Shrine of Destruction (Tier 4)",
                 border = {255,255,255,255},
                 background = {0,0,0,255}
             },
