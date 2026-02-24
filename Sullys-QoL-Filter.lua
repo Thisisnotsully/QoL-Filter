@@ -12,27 +12,24 @@ return {
     filter_level = 4,
     rules = {
     
-    -- Tooltip descriptions for noob and veteran charms
+    -- Tooltip descriptions for noob charm
         {
-        code = "c11",
-        location = {"onplayer", "atvendor", "equipped", "onground"},
-        prefix_desc = "{purple} To Upgrade: Cube with 7 Rare Charms, Elixir, Maple Leaf, and Ancient Decipherer \n Socket with any Rune, Gem, or Jewel \n {green}***Browse Akara's items for more tips!***\n"
+            code = "c11",
+            location = {"onplayer", "atvendor", "equipped", "onground"},
+            prefix_desc = "{purple} To Upgrade: Cube with 7 Rare Charms, Elixir, Maple Leaf, and Ancient Decipherer \n Socket with any Rune, Gem, or Jewel \n {green}***Browse Akara's items for more tips!***\n"
         },
+    -- Tooltip descriptions for veteran charm
         {
-        code = "c12",
-        location = {"onplayer", "atvendor", "equipped", "onground"},
-        prefix_desc = " {purple}To add a socket cube with 1 Perfect gem and Socket Donut \n ** Supports Charm Runewords ** \n "
+            code = "c12",
+            location = {"onplayer", "atvendor", "equipped", "onground"},
+            prefix_desc = " {purple}To add a socket cube with 1 Perfect gem and Socket Donut \n ** Supports Charm Runewords ** \n "
         },
     -- Vendor item tooltips for some cube recipes
-    {code = "vps", location = "atvendor",suffix_desc = "{green}Hover Perfect Gems to see class crafting recipes\n"},
-    {code = "gvb", location = "atvendor",prefix ="{blue}Non-Barb Weapon:{gray} 25-35 Attack Speed|150-200 Enhanced Damage|15-25 Physical Leech Life|10-15 Physical Leech Mana|1-4 Random\n{blue}Weapon:{gray} +1-2 Barb Skills|25-35 Attack Speed|150-200 Enhanced Damage|1-4 Random\n{blue}Ring:{gray} +1-2 Barb Skills|10-15 Pct Max Life|20-30 Str|+20-30 Max Dmg to Attacks|1-4 Random\n{blue}Amulet:{gray} +1-2 Barb Skills|10-15 Pct Max Life|15-25 All Resists|1-4 Random\n{blue}Chest:{gray} +1-2 Barb Skills|80-100 ED|15-25 all attributes|+10-15 Phys Res|1-4 Random\n{blue}Shield:{gray} +1-2 Barb Skills|20-30 Faster Block|80-100 ED|3-5 Increased Block|1-4 Random\n{blue}Belt:{gray} +1 Barb Skills|20-30 Hit Recovery|80-100 ED|30-45 Str|1-4 Random\n{blue}Gloves:{gray} +1 Barb Skills|20-30 Attack Speed|80-100 ED|30-45 Dex|1-4 Random\n{blue}Boots:{gray} +1 Barb Skills|20-30 Faster Run/Walk|80-100 ED|30-45 Vit|1-4 Random\n{blue}Helm:{gray} +1-2 Barb Skills|ED|30-45 Energy|15-15 All Res|1-4 Random\n{blue}Magic{gray} Gear + Forging Hammer + P.Amethyst + Any Jewel\n"},
-    {code = "gyb", location = "atvendor",prefix ="{blue}Non-Druid Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|25-40 Spell Dmg|1-4 Random\n{blue}Druid Wpn: {gray}+1-2 Druid Skill|25-35 IAS|150-200% Enahcned Dmg|1-4 Random\n{blue}Ring: {gray}+1-2 Druid Skill|20-30 Vit|Max Life 10-15 Pct|12-18 Spell Dmg|1-4 Random\n{blue}Amulet: {gray}+1-2 Druid Skill|20-30 Vit|15 Pct Max Life|15-25 All Res|1-4 Random\n{blue}Chest: {gray}+1-2 Druid Skill|80-100 ED|15-25 All Attr|10-15 Phys Res|1-4 Random\n{blue}Shield:{gray} +1-2 Druid Skill|20-30 FBR|3-5 Block|80-100 ED|1-4 Random\n{blue}Belt{gray}+1 Druid Skill|20-30 FHR|80-100 ED|30-45 Str|1-4 Random\n{blue}Gloves:{gray}+1 Druid Skill|20-30 IAS|80-100 ED|30-45 Dex|1-4 Random\n{blue}Boots:{gray}+1 Druid Skill|20-30 FRW|80-100 ED|30-45 Vit|1-4 Random\n{blue}Helm{gray}+1-2 Druid Skills|90-100 ED|30-45 Energy|15-25 All Res|1-4 Random Stats\n{blue}Magic {gray}Gear    + Forging Hammer + Tyranium Ore + P.Topaz + Any Jewel\n"},
-    --- Some forging recipes shown on the cube | Disabled until i find a better item
-    --    {
-    --    code = "tbk",
-    --   location = "atvendor",
-    --    suffix = "{blue}\n+1 Sorc Skills:2 Anvil Stones-Chipped Saphhire\n{white}+1 Paladin Skills:2 Anvil Stones-Chipped Diamond\n{gray}+1 Necromancer Skills: 2 Anvil Stones-Chipped Skull\n{yellow}+1 Druid Skills: 2 Anvil Stones+Chipped Topaz\n{purple}+1 Barbarian Skills: 2 Anvil Stones+Chipped Amethyst\n{red}+1 Assassain Skills: 2 Anvil Stones+Chipped Ruby\n{green}+1 Amazon Skills: 2 Anvil Stones+Chipped Emerald\n+{white}1 All Skills(no jewels or charms):Maple Leaf+Anvil Stone+Chipped Gem\n{red}**Forging Recipes**\b"
-    --   },
+        {code = "vps", location = "atvendor",suffix_desc = "\nTome of ID: Jewel Forging Recipes\nToken of Absolution: Gear Forging Recipes\n{green}Hover Perfect Gems to see class crafting recipes\n"},
+        {code = "gvb", location = "atvendor",prefix ="{blue}Non-Barb Weapon:{gray} 25-35 Attack Speed|150-200 Enhanced Damage|15-25 Life Leech|10-15 Mana Leech\n{blue}Weapon:{gray} +1-2 Barb Skills|25-35 Attack Speed|150-200 Enhanced Damage\n{blue}Ring:{gray} +1-2 Barb Skills|10-15 Pct Max Life|20-30 Str|+20-30 Max Dmg to Attacks\n{blue}Amulet:{gray} +1-2 Barb Skills|10-15 Pct Max Life|15-25 All Resists\n{blue}Chest:{gray} +1-2 Barb Skills|80-100 ED|15-25 all attributes|+10-15 Phys Res\n{blue}Shield:{gray} +1-2 Barb Skills|20-30 Faster Block|80-100 ED|3-5 Increased Block\n{blue}Belt:{gray} +1 Barb Skills|20-30 Hit Recovery|80-100 ED|30-45 Str\n{blue}Gloves:{gray} +1 Barb Skills|20-30 Attack Speed|80-100 ED|30-45 Dex\n{blue}Boots:{gray} +1 Barb Skills|20-30 Faster Run/Walk|80-100 ED|30-45 Vit\n{blue}Helm:{gray} +1-2 Barb Skills|80-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic{gray} Gear + Forging Hammer + P.Amethyst + Any Jewel\n"},
+        {code = "gyb", location = "atvendor",prefix ="{blue}Non-Druid Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|25-40 Spell Dmg\n{blue}Druid Wpn: {gray}+1-2 Druid Skill|25-35 IAS|150-200 Enahcned Dmg\n{blue}Ring: {gray}+1-2 Druid Skill|20-30 Vit|Max Life 10-15 Pct|12-18 Spell Dmg\n{blue}Amulet: {gray}+1-2 Druid Skill|20-30 Vit|15 Pct Max Life|15-25 All Res\n{blue}Chest: {gray}+1-2 Druid Skill|80-100 ED|15-25 All Attr|10-15 Phys Res\n{blue}Shield:{gray} +1-2 Druid Skill|20-30 FBR|3-5 Block|80-100 ED\n{blue}Belt{gray}+1 Druid Skill|20-30 FHR|80-100 ED|30-45 Str\n{blue}Gloves:{gray}+1 Druid Skill|20-30 IAS|80-100 ED|30-45 Dex\n{blue}Boots:{gray}+1 Druid Skill|20-30 FRW|80-100 ED|30-45 Vit\n{blue}Helm{gray}+1-2 Druid Skills|90-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic {gray}Gear + Forging Hammer + Tyranium Ore + P.Topaz + Any Jewel\n"},
+        {code = "toa", location = "atvendor",suffix_desc = "\n{blue}\n+1 Sorc Skills: 2 Anvil Stones + Chipped Saphhire\n{white}+1 Paladin Skills: 2 Anvil Stones + Chipped Diamond\n{gray}+1 Necromancer Skills: 2 Anvil Stones + Chipped Skull\n{yellow}+1 Druid Skills: 2 Anvil Stones + Chipped Topaz\n{purple}+1 Barbarian Skills: 2 Anvil Stones + Chipped Amethyst\n{red}+1 Assassain Skills: 2 Anvil Stones + Chipped Ruby\n{green}+1 Amazon Skills: 2 Anvil Stones + Chipped Emerald\n+{white}1 All Skills(no jewels or charms): Maple Leaf + Anvil Stone + Chipped Gem\n{gray}Runeforging (no jewels or charms): 2 of the same Rune + Chipped Gem - Adds bonus of the Rune\n{lilac}**Gear Forging**\n",},
+        {code = "tbk",location = "atvendor",suffix = "\n{blue}15 Magic Find: {green}Chipped Emerald {gray}+ Anvil Stone\n{blue}15Increased Attack Speed: {red}Chipped Ruby {gray}+ Anvil Stone\n{blue}9 Percent Chance of Crushing Blow: {purple}Chipped Amethyst {gray}+ Anvil Stone\n{blue}12 Percent Max life: {yellow}Chipped Topaz {gray}+ Anvil Stone\n{blue}15 Faster Cast Rate: Chipped Skull {gray}+ Anvil Stone\n{blue}All Resistances +12: {white}Chipped Diamond {gray}+ Anvil Stone\n{blue}12 Percent Max Mana: {blue}Chipped Sapphire {gray}+ Anivl Stone\n{gray}{blue}Add Weapon Mods of the Rune: {gray}2 of the same Rune + Chipped Gem + TP Scroll\n{blue}Add Helm Mods of the Rune: {gray}2 of the same Rune + Chipped Gem + ID Scroll\nCombine {blue}Magic{gray}/{yellow}Rare {gray}Jewel and:\n{lilac}**Jewel Forging**{white}",},
     -- Hiding small gold piles based on level
         {
             code = "gld",
@@ -340,7 +337,13 @@ return {
             name_override = "{yellow}{name}",
             audio = "other.mp3"
         },
-
+    -- Tooltip for Jewel crfating options
+        {
+            code = "jew",
+            location = {"onplayer","atvendor"},
+            quality = "6-",
+            suffix_desc = "{gray}Can be forged. Check Akara's inventory for recipes{blue}\n"
+        },
     -- Rejuvination Potion Style
         {
             codes = {"rvs","rvl"},
