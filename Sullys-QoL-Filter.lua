@@ -768,7 +768,7 @@ return {
         {
             code = "mrn",
             quality = "7",
-            notify = "\n\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Marksmen Bow", 
@@ -780,7 +780,7 @@ return {
         {
             code = "au9",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Amulet", 
@@ -792,7 +792,7 @@ return {
         {
             code = "m01",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Marksmen Bow", 
@@ -804,7 +804,7 @@ return {
         {
             code = "m02",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             name_override = "Odysseus Crossbow",
             background = {0, 0, 0, 255},
@@ -815,7 +815,7 @@ return {
         {
             code = "m03",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Titan's Maul",
@@ -827,7 +827,7 @@ return {
         {
             code = "m04",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Demonic Wand",
@@ -839,7 +839,7 @@ return {
         {
             code = "m05",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Soul Destroyer",
@@ -851,7 +851,7 @@ return {
         {
             code = "m06",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Gemstoned Armor",
@@ -863,7 +863,7 @@ return {
         {
             code = "m07",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             name_override = "Dimensional Shard",
             background = {0, 0, 0, 255},
@@ -874,7 +874,7 @@ return {
         {
             code = "m08",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Balanced Dagger",
@@ -886,7 +886,7 @@ return {
         {
             code = "m09",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Magic Blade",
@@ -898,7 +898,7 @@ return {
         {
             code = "m10",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Hemp Band",
@@ -910,7 +910,7 @@ return {
         {
             code = "m11",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Arcane Staff",
@@ -922,7 +922,7 @@ return {
         {
             code = "m12",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             name_override = "Seraphic Sceptre",
             background = {0, 0, 0, 255},
@@ -933,7 +933,7 @@ return {
         {
             code = "m13",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             name_override = "Scissors Suwayyah",
             background = {0, 0, 0, 255},
@@ -944,7 +944,7 @@ return {
         {
             code = "m14",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             name_override = "Ceremonial Dagger",
             background = {0, 0, 0, 255},
@@ -955,7 +955,7 @@ return {
         {
             code = "m15",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Dream Spirit",
@@ -967,7 +967,7 @@ return {
         {
             code = "m16",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Rapier",
@@ -979,7 +979,7 @@ return {
         {
             code = "m17",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             name_override = "Celestial Sceptre",
             background = {0, 0, 0, 255},
@@ -990,7 +990,7 @@ return {
         {
             code = "m18",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Death Blade",
@@ -1002,7 +1002,7 @@ return {
         {
             code = "m19",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Death Blade",
@@ -1014,7 +1014,7 @@ return {
         {
             code = "dd1",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Death Blade",
@@ -1026,7 +1026,7 @@ return {
         {
             code = "m20",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Diadem",
@@ -1038,7 +1038,7 @@ return {
         {
             code = "m21",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Razor Axe",
@@ -1050,7 +1050,7 @@ return {
         {
             code = "m22",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Hellfire Sword",
@@ -1062,7 +1062,7 @@ return {
         {
             code = "m29",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Petrified Staff",
@@ -1074,7 +1074,7 @@ return {
         {
             code = "m30",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Ancient Bow",
@@ -1086,7 +1086,7 @@ return {
         {
             code = "m31",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             name_override = "Matriarchal Javelin",
             background = {0, 0, 0, 255},
@@ -1097,7 +1097,7 @@ return {
         {
             code = "m32",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Whale Hunter",
@@ -1109,7 +1109,7 @@ return {
         {
             code = "m33",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Ancient Shards",
@@ -1121,20 +1121,20 @@ return {
         {
             code = "m34",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Shillelagh",
             background = {0, 0, 0, 255},
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
-                                                                            
+                                                                                        
             audio = "mythical.mp3"
         },
         {
             code = "m35",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Celestial Sword",
@@ -1146,7 +1146,7 @@ return {
         {
             code = "m36",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Mage Staff",
@@ -1158,7 +1158,7 @@ return {
         {
             code = "m37",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Katana",
@@ -1170,7 +1170,7 @@ return {
         {
             code = "m38",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             name_override = "Arreat's Hatchet",
             background = {0, 0, 0, 255},
@@ -1181,7 +1181,7 @@ return {
         {
             code = "m39",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Kagekiri",
@@ -1193,7 +1193,7 @@ return {
         {
             code = "mam",
             quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}* {white}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n",
+            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
             name_style = "Rainbow Group",
             prefix = "Mythical ",
             name_override = "Amulet",
@@ -1246,7 +1246,7 @@ return {
             quality = "4",
             location = {"onplayer","atvendor"},
             suffix_desc = "{gray}Crafting Available: Check Akara's perfect gems for recipes{blue}\n"
-                                                
+                                                            
         },
         {
             codes = {"zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"},
@@ -2224,5 +2224,5 @@ return {
             sockets = "1+",
             maxsock = true
         },
-    },
+    }
 }
