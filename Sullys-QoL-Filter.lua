@@ -1,4 +1,4 @@
---- Filter Title: Sully's Quality of Life Filter
+--- Filter Title: Sully's Quality of Life Filter v0.2.2
 --- Filter Type: MultiStrict
 --- Filter Description: PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
 --- Filter Link: https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.lua
