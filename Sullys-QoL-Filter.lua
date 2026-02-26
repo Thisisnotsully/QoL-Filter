@@ -10,7 +10,7 @@ return {
     audioVoice = 0,
     debug = false,
     allowOverrides = true,
-    filter_level = 3,
+    filter_level = 2,
     rules = {
         -- Chat notifications - enable/disable what you want (primarily for Uber Strict)
         {
@@ -1656,6 +1656,12 @@ return {
             border = {240, 0, 0, 230, 2},
             audio = "tink.mp3"
         },
+    -- Tooltip for Kanji runes on Null rune - Ty boggins and Kitzun
+        {   
+            code = "r50",
+            location = {"onplayer","atvendor"},
+            prefix = "\nGod Rune: {blue}Frozen Soul {red}Enigmatic Cinnabar {gold}Pulsing Opal {gray}Shadow Quartz\n{orange}Heaven Rune: {red}Bleeding Stone {blue}Dark Azurite {dark green}Bitter Peridot {purple}Tainted Tourmarine{white}\n{orange}Death Rune: {gray}Shadow Quartz{white}\n{orange}Life Rune: {gold}Pulsing Opal\n{orange}Dragon Rune: Storm Amber\nWind Rune: {purple}Tainted Tourmaline\n{orange}Thudner Rune: {yellow}Burning Sulphur\n{orange}Sun Rune: {red}Enigmatic Cinnabar\n{orange}Earth Rune: {dark green}Bitter Peridot\n{orange}Metal Rune: {white}Solid Mercury\n{orange}Wood Rune: {green}Tomb Jade\n{orange}Water Rune: {blue}Dark Azurite\n{orange}Fire Rune: {red}Bleeding Stone\n{orange}Moon Rune: {blue}Frozen Soul\n{white}** Combine this rune with the below crystals to obtain Kanji Runes **{purple}\n"
+        },
         -- Maps Tier 1
             {   
             code = "z01",
@@ -2048,11 +2054,7 @@ return {
             location={"onplayer","atvendor"},
             prefix="{gray}+8 Purple Rune Points when bagged{orange}\n"
         },
-        {
-            code="r50",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+8 Purple Rune Points when bagged{orange}\n"
-        },
+--
         -- Tooltips on LoD Decals
         {
             code="01l",
