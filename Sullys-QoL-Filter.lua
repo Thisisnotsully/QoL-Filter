@@ -418,7 +418,7 @@ return {
         },
         -- Uber Strict: Hiding magic rings, amulets, charms, and jewels
         {
-            codes = {"mrn","mam","rin","amu","zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam","cm1","cm2","cm3","cx1","cx2","cx3","jew"},
+            codes = {"mrn","mam","rin","amu","zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam","cm1","cm2","cm3","cx1","cx2","cx3"},
             quality = "4",
             hide = true,
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
