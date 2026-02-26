@@ -10,7 +10,7 @@ return {
     audioVoice = 0,
     debug = false,
     allowOverrides = true,
-    filter_level = 4,
+    filter_level = 1,
     rules = {
         -- Chat notifications - enable/disable what you want (primarily for Uber Strict)
         {
@@ -366,7 +366,7 @@ return {
             sockets = "0",
             hide = true, 
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 4
+            filter_levels = 3
         },
         -- Uber Strict: Hiding low Low/Mid LoD Decals
         {
