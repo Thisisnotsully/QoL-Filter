@@ -1,9 +1,9 @@
---- Filter Title: Sully's Quality of Life Filter v0.2.2
+--- Filter Title: Sully's Quality of Life Filter v0.2.3
 --- Filter Type: MultiStrict
---- Filter Description: v0.2.2 - PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
+--- Filter Description: v0.2.3 - PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
 --- Filter Link: https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.lua
 return {
-    reload = "{white}Sully's Quality of Life Filter {purple}v0.2.2",  -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
+    reload = "{white}Sully's Quality of Life Filter {purple}v0.2.3",  -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
     language = "enUS",
     filter_titles = { "Leveling", "Strict", "Very-Strict", "Uber-Strict" },
     audioPlayback = true,
@@ -2219,7 +2219,7 @@ return {
         -- Item tooltip - Item has maximum sockets for it's ilvl
         {
             codes = "allitems",
-            location = {"onplayer", "atvendor", "e/quipped", "onground"},
+            location = {"onplayer", "atvendor", "equipped", "onground"},
             suffix_desc = "{purple}Max Sockets: {green}{sockets}{white}/{green}{maxsock}\n{blue}",
             sockets = "1+",
             maxsock = true
