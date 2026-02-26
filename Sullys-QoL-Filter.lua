@@ -769,9 +769,29 @@ return {
         {
             codes = "allitems", -- Set Items
             quality = "5",
+            rarity = "0",
             notify = "{white} ** {gray}{green}{name}{white} **",
             audio = "unique.mp3",
-            border = {0,255,0,255}
+            border = {0,255,0,255},
+            filter_levels = 1
+        },
+                {
+            codes = "allitems", -- Set Items
+            quality = "5",
+            rarity = "1",
+            notify = "{white} ** {gray}{green}{name}{white} **",
+            audio = "unique.mp3",
+            border = {0,255,0,255},
+            filter_levels = "1,2"
+        },
+        {
+            codes = "allitems", -- Set Items
+            quality = "5",
+            rarity = "2",
+            notify = "{white} ** {gray}{green}{name}{white} **",
+            audio = "unique.mp3",
+            border = {0,255,0,255},
+            filter_levels = "1,2,3"
         },
         -- Display Base type for Uniques and Sets on the ground
         {
