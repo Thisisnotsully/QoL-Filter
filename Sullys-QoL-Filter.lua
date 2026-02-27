@@ -1,9 +1,9 @@
---- Filter Title: Sully's Quality of Life Filter v0.2.12
+--- Filter Title: Sully's Quality of Life Filter v0.2.13
 --- Filter Type: MultiStrict
---- Filter Description: v0.2.12 - PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
+--- Filter Description: v0.2.13 - PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
 --- Filter Link: https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.lua
 return {
-    reload = "{white}Sully's Quality of Life Filter {purple}v0.2.12",  -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
+    reload = "{white}Sully's Quality of Life Filter {purple}v0.2.13",  -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
     language = "enUS",
     filter_titles = { "Leveling", "Strict", "Very-Strict", "Uber-Strict" },
     audioPlayback = true,
@@ -1416,7 +1416,7 @@ return {
             runeword = false,
             quality = "3-",
             location = {"onplayer", "atvendor", "equipped"},
-            suffix_desc = "{gray}Hot: {red}Tsu {gold}Ne {gray}Lvl: 55{blue} \n{gray}Prudence: {orange} Mal Tir {gray}Lvl: 49{blue} \n{gray}Mist: {green}Mo {red}Ya {gray}Lvl: 47{blue} \n{gray}Deception: {yellow}Sa {orange}Wa{gray} Lvl: 38\n{gray}Smoke: {white}Nef {orange}Lem {gray}Lvl: 37{blue} \n{gray}Wealth: {orange}To {red}Mi {gray}Lvl: 36{blue}\n{gray}Stealth: {white}Tal Eth {gray}Lvl: 17{blue}\n{gray}Darkness: {red}Ya {red}Mi {gray}Lvl: 15{blue}\n{gray}Fog: {red}Ki {red}Ri {gray}Lvl: 12{blue}\n{gray}Gold: {red}Ri N {gray}Lvl: 10{blue}\n {gray}Greed: {white}Yo Ku {gray}Lvl: 9{blue}\n",
+            suffix_desc = "{gray}Hot: {red}Tsu {gold}Ne {gray}Lvl: 55{blue} \n{gray}Prudence: {orange} Mal Tir {gray}Lvl: 49{blue} \n{gray}Mist: {green}Mo {red}Ya {gray}Lvl: 47{blue} \n{gray}Deception: {yellow}Sa {orange}Wa{gray} Lvl: 38\n{gray}Smoke: {white}Nef {orange}Lem {gray}Lvl: 37{blue} \n{gray}Wealth: {orange}To {red}Mi {gray}Lvl: 36{blue}\n{gray}Stealth: {white}Tal Eth {gray}Lvl: 17{blue}\n{gray}Darkness: {red}Ya {red}Mi {gray}Lvl: 15{blue}\n{gray}Fog: {red}Ki {red}Ri {gray}Lvl: 12{blue}\n{gray}Gold: {red}Ki N {gray}Lvl: 10{blue}\n {gray}Greed: {white}Yo Ku {gray}Lvl: 9{blue}\n",
             sockets = "2"
         },
         -- Tooltip information for Body Armor showing available 3 socket Runewords
