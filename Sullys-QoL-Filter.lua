@@ -1,9 +1,9 @@
---- Filter Title: Sully's Quality of Life Filter v0.2.13
+--- Filter Title: Sully's Quality of Life Filter v0.2.12
 --- Filter Type: MultiStrict
---- Filter Description: v0.2.13 - PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
+--- Filter Description: v0.2.12 - PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
 --- Filter Link: https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.lua
 return {
-    reload = "{white}Sully's Quality of Life Filter {purple}v0.2.13",  -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
+    reload = "{white}Sully's Quality of Life Filter {purple}v0.2.12",  -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
     language = "enUS",
     filter_titles = { "Leveling", "Strict", "Very-Strict", "Uber-Strict" },
     audioPlayback = true,
@@ -95,7 +95,7 @@ return {
         },
         -- Elite Coupons Notification
         {
-            codes = {"01e","02e","04e","05e","06e","07e","08e","09e","10e","11e","12e","13e","14e","15e","16e","17e","18e","19e","20e","21e","22e","23e","24e","25e","26e","27e","28e","29e","30e","31e","32e","33e","34e","35e","36e","37e","38e","39e","40e","01h","02k","03h","04h","05h","06h","07h","08h","09h","10h","11h","12k","13h","14h","15h","16h","17h","18h","19h","20h","21h","22k","23h","24h","25h","26h","27h","28h","29h","30h","31h","32k","33h","34h","35h","36h","37h","38h","39h","40h","41h","42k","43h","44h","45h","47h","48h","49h","50h","51h","52k","53h","54h","55h","56h","57h","58h","59h","60h","61h","62k","09i","10i","11i","12i","09j","10j"},
+            codes = {"01e","02e","04e","05e","06e","07e","08e","09e","10e","11e","12e","13e","14e","15e","16e","18e","19e","20e","21e","22e","23e","24e","25e","26e","27e","28e","29e","30e","31e","32e","33e","34e","35e","36e","37e","38e","39e","01h","02k","03h","04h","05h","06h","07h","08h","09h","10h","11h","12k","13h","14h","15h","16h","17h","18h","19h","20h","21h","22k","23h","24h","25h","26h","27h","28h","29h","30h","31h","32k","33h","34h","35h","36h","37h","38h","39h","40h","41h","42k","43h","44h","45h","47h","48h","49h","50h","51h","52k","53h","54h","55h","56h","57h","58h","59h","60h","61h","62k","09i","10i","11i","12i","09j","10j"},
             notify = "{gold}Elite Coupon: {white}{name}" 
         },
         -- Rare class jewelry Notification
@@ -1296,15 +1296,15 @@ return {
             filter_levels = "3-"
         },
         {
-            codes = {"01e","02e","04e","05e","06e","07e","08e","09e","10e","11e","12e","13e","14e","15e","16e","17e","18e","19e","20e","21e","22e","23e","24e","25e","26e","27e","28e","29e","30e","31e","32e","33e","34e","35e","36e","37e","38e","39e","40e","01h","02k","03h","04h","05h","06h","07h","08h","09h","10h","11h","12k","13h","14h","15h","16h","17h","18h","19h","20h","21h","22k","23h","24h","25h","26h","27h","28h","29h","30h","31h","32k","33h","34h","35h","36h","37h","38h","39h","40h","41h","42k","43h","44h","45h","47h","48h","49h","50h","51h","52k","53h","54h","55h","56h","57h","58h","59h","60h","61h","62k","09i","10i","11i","12i","09j","10j"},
+            codes = {"01e","02e","04e","05e","06e","07e","08e","09e","10e","11e","12e","13e","14e","15e","16e","18e","19e","20e","21e","22e","23e","24e","25e","26e","27e","28e","29e","30e","31e","32e","33e","34e","35e","36e","37e","38e","39e","01h","02k","03h","04h","05h","06h","07h","08h","09h","10h","11h","12k","13h","14h","15h","16h","17h","18h","19h","20h","21h","22k","23h","24h","25h","26h","27h","28h","29h","30h","31h","32k","33h","34h","35h","36h","37h","38h","39h","40h","41h","42k","43h","44h","45h","47h","48h","49h","50h","51h","52k","53h","54h","55h","56h","57h","58h","59h","60h","61h","62k","09i","10i","11i","12i","09j","10j"},
             audio = "other.mp3", -- Elite Coupons
             border = {255,165,0,255},
             name_override = "{gray}Elt:{gold}{name}",
             filter_levels = "1,2,3"
         },
-        -- S-Tier Coupons: SOJ, Death Fathom, Arachnid Mesh
+        -- S-Tier Coupons: SOJ, Death Fathom, Arachnid Mesh, Veil of Steel, Shako, Tyrael's Might
         {
-            codes = {"03j", "46h", "41e", "03e"},
+            codes = {"03j", "46h", "41e", "03e", "17e", "40e"},
             audio = "tink.mp3",
             border = {255,0,0,255},
             background = {255,255,255,255}, 
