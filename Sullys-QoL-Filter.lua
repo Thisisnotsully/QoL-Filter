@@ -1,9 +1,9 @@
---- Filter Title: Sully's Quality of Life Filter v0.2.12
+--- Filter Title: Sully's Quality of Life Filter v0.2.13
 --- Filter Type: MultiStrict
---- Filter Description: v0.2.12 - PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
+--- Filter Description: v0.2.13 - PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
 --- Filter Link: https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.lua
 return {
-    reload = "{white}Sully's Quality of Life Filter {purple}v0.2.12",  -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
+    reload = "{white}Sully's Quality of Life Filter {purple}v0.2.13",  -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
     language = "enUS",
     filter_titles = { "Leveling", "Strict", "Very-Strict", "Uber-Strict" },
     audioPlayback = true,
@@ -34,7 +34,7 @@ return {
             notify = "{Red}Crafting Reagant: {white}Worldstone Shard"
         },
         -- Normal Uniques Notification
-        {   
+            {   
             codes = {"kgk","srk","fsk","kgl","02h", "0ax", "0b0", "0b6", "0b7", "0ba", "0be", "0bk", "0bl", "0br", "0bs", "0bt", "0bw", "0cl", "0cm", "0cr", "0dg", "0di", "0fb", "0fc", "0fl", "0ga", "0gd", "0gi", "0gl", "0gm", "0gp", "0gs", "0gw", "0h0", "0ha", "0ja", "0kl", "0kr", "0la", "0ls", "0m0", "0ma", "0mn", "0mp", "0mt", "0nn", "0ns", "0p0", "0pa", "0pb", "0pi", "0qs", "0rd", "0rm", "0s8", "0s9", "0sb", "0sh", "0sm", "0sp", "0sr", "0ss", "0st", "0sy", "0ta", "0tk", "0tr", "0ts", "0vo", "0wa", "0wc", "0wd", "0wh", "0wn", "0ws", "0xb", "0yw", "1bs", "1cb", "1cs", "1hb", "1hx", "1l8", "1lb", "1ls", "1lw", "1lx", "1mx", "1rx", "1s8", "1sb", "1ss", "1sw", "1ws", "2ap", "2ar", "2ax", "2cl", "2ea", "2h9", "2hb", "2hg", "2hl", "2hm", "2hn", "2hs", "2it", "2kp", "2la", "2lb", "2ld", "2lg", "2lm", "2lt", "2mb", "2mg", "2ml", "2ng", "2ow", "2pk", "2pl", "2rg", "2rn", "2rs", "2sh", "2sk", "2tb", "2tg", "2th", "2tp", "2ts", "2tu", "2uc", "2ui", "2ul", "2vb", "2vg", "3hb", "3lb", "3mb", "3tb", "3vb", "4ap", "4ar", "4cl", "4ea", "4h9", "4hb", "4hg", "4hl", "4hm", "4hn", "4it", "4kp", "4la", "4lb", "4ld", "4lg", "4lm", "4lt", "4mb", "4mg", "4ml", "4ng", "4ow", "4pk", "4pl", "4rg", "4rn", "4rs", "4sh", "4sk", "4tb", "4tg", "4th", "4tp", "4ts", "4tu", "4uc", "4ui", "4ul", "4vb", "4vg", "5hb", "5lb", "5mb", "5sc", "5tb", "5vb", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mp", "7mt", "7o7", "7p7", "7pa", "7pi", "7qr", "7qs", "7s7", "7s8", "7sb", "7sc", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7tw", "7vo", "7wa", "7wb", "7wc", "7wh", "7wn", "7ws", "7xf", "7yw", "82a", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9be", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gp", "9gs", "9gw", "9h9", "9ha", "9ja", "9kl", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mn", "9mp", "9mt", "9nj", "9nn", "9ns", "9p9", "9pa", "9pb", "9pi", "9qr", "9qs", "9rd", "9rm", "9s8", "9s9", "9sb", "9sc", "9sh", "9sm", "9sp", "9sr", "9ss", "9st", "9sy", "9ta", "9tk", "9tr", "9ts", "9tw", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9ws", "9xb", "9xf", "9yw", "aar", "ahb", "alb", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "apb", "arm", "atb", "avb", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "bmb", "br2", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "bts", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "ci4", "cix", "clb", "clk", "clm", "clw", "cr2", "crn", "crs", "cst", "dbt", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "dwc", "eht", "elv", "fhl", "fla", "flb", "flc", "fld", "fts", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsc", "gsd", "gsp", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "irg", "jav", "kit", "kkl", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mnb", "mpi", "msb", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "ned", "nee", "nef", "neg", "nin", "njt", "nrd", "nsy", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pbe", "pik", "pil", "plt", "q00", "q01", "q02", "q03", "q04", "q05", "q06", "q07", "q08", "q09", "q10", "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q28", "q29", "q2a", "q2b", "q2c", "q2d", "q2e", "q2f", "q30", "q31", "q32", "q33", "q34", "q35", "q36", "q37", "q38", "q39", "q3a", "q3b", "q3c", "q3d", "q3e", "q3f", "q40", "q41", "q42", "q43", "q44", "q45", "q46", "q47", "q48", "q49", "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q50", "q51", "q52", "q53", "q54", "q55", "q56", "q57", "q58", "q59", "q60", "q61", "q62", "q63", "q64", "q65", "q66", "q67", "q68", "q69", "q70", "q71", "q72", "q73", "q74", "q75", "q76", "q77", "q78", "q79", "q80", "q81", "q82", "q83", "q84", "q85", "q86", "qba", "qbc", "qbd", "qbe", "qda", "qdb", "qdd", "qde", "qdf", "qi2", "qi3", "qna", "qne", "qnf", "qp9", "qpc", "qpe", "qui", "rng", "rob", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scp", "scy", "shc", "shl", "skp", "skr", "sml", "sp2", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "syn", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wsp", "wst", "xap", "xar", "xbt", "xcl", "xdw", "xea", "xft", "xh9", "xhb", "xhg", "xhh", "xhl", "xhm", "xhn", "xht", "xig", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlk", "xlm", "xlt", "xlv", "xmb", "xmg", "xml", "xms", "xng", "xow", "xpk", "xpl", "xrb", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "yap", "yar", "ybt", "ycl", "ydw", "yea", "yft", "yh9", "yhb", "yhg", "yhh", "yhl", "yhm", "yhn", "yht", "yig", "yit", "ykp", "yla", "ylb", "yld", "ylg", "ylk", "ylm", "ylt", "ylv", "ymb", "ymg", "yml", "yms", "yng", "yow", "ypk", "ypl", "yrb", "yrg", "yrn", "yrs", "ysh", "ysk", "ytb", "ytg", "yth", "ytp", "yts", "ytu", "yuc", "yui", "yul", "yvb", "yvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb"},
             quality = "7", 
             rarity = "0",
@@ -83,7 +83,7 @@ return {
         },
         -- Normal Coupons Notification 
         {
-            codes = {"01c","02c","03c","04c","05c","06c","07c","08c","09c","10c","11c","12c","13c","14c","15c","16c","17c","18c","19c","20c","21c","22c","23c","24c","25c","26c","27c","28c","29c","30c","31c","32c","33c","34c","35c","36c","37c","38c","39c","40c","41c","42c","43c","44c","45c","46c","01f","02f","03f","04f","05f","06f","07f","08f","09f","10f","11f","12f","13f","14f","15f","16f","17f","18f","19f","20f","21f","22f","23f","24f","25f","26f","27f","28f","29f","30f","31f","32f","33f","34f","35f","36f","37f","38f","39f","40f","41f","42f","43f","44f","45f","46f","47f","48f","49f","50f","51f","52f","53f","54f","55f","56f","57f","58f","59f","60f","61f","62f","63f","64f","65f","66f","67f","68f","69f","70f","71f","01i","02i","03i","01j","02j","03j","04j"},
+            codes = {"01c","02c","03c","04c","05c","06c","07c","08c","09c","10c","11c","12c","13c","14c","15c","16c","17c","18c","19c","20c","21c","22c","23c","24c","25c","26c","27c","28c","29c","30c","31c","32c","33c","34c","35c","36c","37c","38c","39c","40c","41c","42c","43c","44c","45c","46c","01f","02f","03f","04f","05f","06f","07f","08f","09f","10f","11f","12f","13f","14f","15f","16f","17f","18f","19f","20f","21f","22f","23f","24f","25f","26f","27f","28f","29f","30f","31f","32f","33f","34f","35f","36f","37f","38f","39f","40f","41f","42f","43f","44f","45f","46f","47f","48f","49f","50f","51f","52f","53f","54f","55f","56f","57f","58f","59f","60f","61f","62f","63f","64f","65f","66f","67f","68f","69f","70f","71f","01i","02i","03i","01j","02j","04j"},
             notify = "{gold}Normal Coupon: {white}{name}",
             filter_levels = "1,2,3"
         },
@@ -95,8 +95,9 @@ return {
         },
         -- Elite Coupons Notification
         {
-            codes = {"01e","02e","04e","05e","06e","07e","08e","09e","10e","11e","12e","13e","14e","15e","16e","18e","19e","20e","21e","22e","23e","24e","25e","26e","27e","28e","29e","30e","31e","32e","33e","34e","35e","36e","37e","38e","39e","01h","02k","03h","04h","05h","06h","07h","08h","09h","10h","11h","12k","13h","14h","15h","16h","17h","18h","19h","20h","21h","22k","23h","24h","25h","26h","27h","28h","29h","30h","31h","32k","33h","34h","35h","36h","37h","38h","39h","40h","41h","42k","43h","44h","45h","47h","48h","49h","50h","51h","52k","53h","54h","55h","56h","57h","58h","59h","60h","61h","62k","09i","10i","11i","12i","09j","10j"},
-            notify = "{gold}Elite Coupon: {white}{name}" 
+            codes = {"01e","02e","04e","05e","07e","08e","09e","10e","11e","12e","13e","14e","15e","16e","18e","19e","20e","21e","22e","23e","24e","25e","26e","27e","28e","29e","30e","31e","32e","33e","34e","35e","36e","37e","38e","39e","01h","02k","03h","04h","05h","06h","07h","08h","09h","10h","11h","12k","13h","14h","15h","16h","17h","18h","19h","20h","21h","22k","23h","24h","25h","26h","27h","28h","29h","30h","31h","32k","33h","34h","35h","36h","37h","38h","39h","40h","41h","42k","43h","44h","45h","47h","48h","49h","50h","51h","52k","53h","54h","55h","56h","57h","58h","59h","60h","61h","62k","09i","10i","11i","12i","09j","10j"},
+            notify = "{gold}Elite Coupon: {white}{name}",
+            filter_levels = "1,2,3"
         },
         -- Rare class jewelry Notification
         {
@@ -406,7 +407,7 @@ return {
             hide = true,
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
             filter_levels = 4
-
+            
         },
         -- Uber Strict: Hiding any ESR runes below Gold
         {
@@ -1203,7 +1204,7 @@ return {
             background = {0, 0, 0, 255},
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
-                                                                                        
+                                                                                                    
             audio = "mythical.mp3"
         },
         {
@@ -1279,7 +1280,7 @@ return {
         },
         -- Coupon style and notification
         {
-            codes = {"01c","02c","03c","04c","05c","06c","07c","08c","09c","10c","11c","12c","13c","14c","15c","16c","17c","18c","19c","20c","21c","22c","23c","24c","25c","26c","27c","28c","29c","30c","31c","32c","33c","34c","35c","36c","37c","38c","39c","40c","41c","42c","43c","44c","45c","46c","01f","02f","03f","04f","05f","06f","07f","08f","09f","10f","11f","12f","13f","14f","15f","16f","17f","18f","19f","20f","21f","22f","23f","24f","25f","26f","27f","28f","29f","30f","31f","32f","33f","34f","35f","36f","37f","38f","39f","40f","41f","42f","43f","44f","45f","46f","47f","48f","49f","50f","51f","52f","53f","54f","55f","56f","57f","58f","59f","60f","61f","62f","63f","64f","65f","66f","67f","68f","69f","70f","71f","01i","02i","03i","01j","02j","03j","04j"},
+            codes = {"01c","02c","03c","04c","05c","06c","07c","08c","09c","10c","11c","12c","13c","14c","15c","16c","17c","18c","19c","20c","21c","22c","23c","24c","25c","26c","27c","28c","29c","30c","31c","32c","33c","34c","35c","36c","37c","38c","39c","40c","41c","42c","43c","44c","45c","46c","01f","02f","03f","04f","05f","06f","07f","08f","09f","10f","11f","12f","13f","14f","15f","16f","17f","18f","19f","20f","21f","22f","23f","24f","25f","26f","27f","28f","29f","30f","31f","32f","33f","34f","35f","36f","37f","38f","39f","40f","41f","42f","43f","44f","45f","46f","47f","48f","49f","50f","51f","52f","53f","54f","55f","56f","57f","58f","59f","60f","61f","62f","63f","64f","65f","66f","67f","68f","69f","70f","71f","01i","02i","03i","01j","02j","04j"},
             border = {255,165,0,255}, -- Normal Coupons
             name_override = "{gray}Norm:{gold}{name}",
             filter_levels = "1,2,3"
@@ -1296,19 +1297,19 @@ return {
             filter_levels = "3-"
         },
         {
-            codes = {"01e","02e","04e","05e","06e","07e","08e","09e","10e","11e","12e","13e","14e","15e","16e","18e","19e","20e","21e","22e","23e","24e","25e","26e","27e","28e","29e","30e","31e","32e","33e","34e","35e","36e","37e","38e","39e","01h","02k","03h","04h","05h","06h","07h","08h","09h","10h","11h","12k","13h","14h","15h","16h","17h","18h","19h","20h","21h","22k","23h","24h","25h","26h","27h","28h","29h","30h","31h","32k","33h","34h","35h","36h","37h","38h","39h","40h","41h","42k","43h","44h","45h","47h","48h","49h","50h","51h","52k","53h","54h","55h","56h","57h","58h","59h","60h","61h","62k","09i","10i","11i","12i","09j","10j"},
+            codes = {"01e","02e","04e","05e","07e","08e","09e","10e","11e","12e","13e","14e","15e","16e","18e","19e","20e","21e","22e","23e","24e","25e","26e","27e","28e","29e","30e","31e","32e","33e","34e","35e","36e","37e","38e","39e","01h","02k","03h","04h","05h","06h","07h","08h","09h","10h","11h","12k","13h","14h","15h","16h","17h","18h","19h","20h","21h","22k","23h","24h","25h","26h","27h","28h","29h","30h","31h","32k","33h","34h","35h","36h","37h","38h","39h","40h","41h","42k","43h","44h","45h","47h","48h","49h","50h","51h","52k","53h","54h","55h","56h","57h","58h","59h","60h","61h","62k","09i","10i","11i","12i","09j","10j"},
             audio = "other.mp3", -- Elite Coupons
             border = {255,165,0,255},
             name_override = "{gray}Elt:{gold}{name}",
             filter_levels = "1,2,3"
         },
-        -- S-Tier Coupons: SOJ, Death Fathom, Arachnid Mesh, Veil of Steel, Shako, Tyrael's Might
+        -- S-Tier Coupons: SOJ, Death Fathom, Arachnid Mesh, Veil of Steel, Shako, Tyrael's Might, Verdungo's
         {
-            codes = {"03j", "46h", "41e", "03e", "17e", "40e"},
+            codes = {"03j", "46h", "41e", "03e", "17e", "40e","06e"},
             audio = "tink.mp3",
             border = {255,0,0,255},
             background = {255,255,255,255}, 
-            name_override = "{name}",
+            notify = "{red}High Tier Unique Coupon: {name}",
             hide = false,
             filter_levels = "4-"
         },
@@ -1324,7 +1325,7 @@ return {
             quality = "4",
             location = {"onplayer","atvendor"},
             suffix_desc = "{gray}Crafting Available: Check Akara's perfect gems for recipes{blue}\n"
-                                                            
+                                                                        
         },
         {
             codes = {"zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"},
@@ -1567,6 +1568,79 @@ return {
             suffix_desc = "{gray}Phoenix: {purple}Vex Vex Lo Jah {gray}Lvl: 65{blue}\n{gray}Dread: {yellow}O {gold}So Re {orange}Ru {gray}Lvl: 56{blue}\n{gray}Dome: {green}Ma {orange}Ru {red}Ya {gold}Ne {gray}Lvl: 55{blue}\n{gray}Medicine: {red}Ya {white}Ku {green}Hi {white}N {gray}Lvl: 46{blue}\n{gray}Glory: {yellow}E {white}I {orange}Ko {white}U {gray}Lvl: 39{blue}\n{gray}Faith: {white}Shi N {orange}Ko {white}U {gray}Lvl: 39{blue}\n{gray}Temptation: {yellow}Wa {white}U {orange}Wa {white}Ku {gray}Lvl: 38{blue}\n{gray}Achieve: {white}Ka {red}Chi {orange}To Ru {gray}Lvl: 36{blue}\n{gray}Spirit: {white}Tal Thul Ort Amn {gray}Lvl: 25{blue}\n{gray}Fortress: {white}Yo U {yellow}Sa {white}I {gray}Lvl: 22{blue}\n{gray}Beauty: {white}U {red}Tsu {white}Ku Shi {gray}Lvl: 19{blue}\n",
             sockets = "4"
         },
+        
+        -- Tooltip information for all 2H Swinging Weapon 2 socket Runewords
+        {
+            codes = {"lax","bax","btx","gax","gix","p06","p07","p08","p09","p10","9la","9ba","9bt","9ga","9gi","q05","q06","q07","q08","q09","0la","0ba","0bt","0ga","0gi","7la","7ba","7bt","7ga","7gi","njt","9nj","0nn","m37","arm","9rm","0rm","pbe","9be","0be","m35","mnb","9mn","0mn","m09","sst","lst","cst","bst","wst","p55","p56","p57","p58","p59","8ss","8ls","8cs","8bs","8ws","q54","q55","q56","q57","q58","1ss","1ls","1cs","1bs","1ws","6ss","6ls","6cs","6bs","6ws","m29","m36","m11","2hs","clm","gls","bsw","flb","gsd","p34","p35","p36","p37","p38","p39","q1a","q1b","q1c","q1d","q1e","q1f","9cm","9gs","9b9","9fb","9gd","q33","q34","q35","q36","q37","q38","a2a","q2b","q2c","q2d","q2e","a2f","0cm","0gs","0b0","0fb","0gd","72h","7cm","7gs","7b7","7fb","7gd","q3a","q3b","q3c","q3d","q3e","q3f","q4a","q4b","q4c","q4d","q4e","q4f","m16","m22","m22","m18","dd1"},
+            runeword = false,
+            quality = "3-",
+            location = {"onplayer","atvendor","equipped"},
+            sockets = "2",
+            suffix_desc = "{gray}Shinigami: {blue}Death God {gray}Lvl: 60{blue}\n"
+        },
+        -- Tooltip information for all 2H Swinging Weapon 4 socket Runewords
+        {
+            codes = {"lax","bax","btx","gax","gix","p06","p07","p08","p09","p10","9la","9ba","9bt","9ga","9gi","q05","q06","q07","q08","q09","0la","0ba","0bt","0ga","0gi","7la","7ba","7bt","7ga","7gi","njt","9nj","0nn","m37","arm","9rm","0rm","pbe","9be","0be","m35","mnb","9mn","0mn","m09","sst","lst","cst","bst","wst","p55","p56","p57","p58","p59","8ss","8ls","8cs","8bs","8ws","q54","q55","q56","q57","q58","1ss","1ls","1cs","1bs","1ws","6ss","6ls","6cs","6bs","6ws","m29","m36","m11","2hs","clm","gls","bsw","flb","gsd","p34","p35","p36","p37","p38","p39","q1a","q1b","q1c","q1d","q1e","q1f","9cm","9gs","9b9","9fb","9gd","q33","q34","q35","q36","q37","q38","a2a","q2b","q2c","q2d","q2e","a2f","0cm","0gs","0b0","0fb","0gd","72h","7cm","7gs","7b7","7fb","7gd","q3a","q3b","q3c","q3d","q3e","q3f","q4a","q4b","q4c","q4d","q4e","q4f","m16","m22","m22","m18","dd1"},
+            runeword = false,
+            quality = "3-",
+            location = {"onplayer","atvendor","equipped"},
+            sockets = "4",
+            suffix_desc = "{gray}Tourbillion: {red}Tsu {gold}Mu {white}Shi {blue}Wind {gray}Lvl: 60\n{gray}Nature's Kingdom: {green}Mo {gold}No No {yellow}Ke {gray}Lvl: 48{blue}\n"
+        },
+        -- Tooltip information for all 2H Swinging Weapon 5 socket Runewords
+        {
+            codes = {"lax","bax","btx","gax","gix","p06","p07","p08","p09","p10","9la","9ba","9bt","9ga","9gi","q05","q06","q07","q08","q09","0la","0ba","0bt","0ga","0gi","7la","7ba","7bt","7ga","7gi","njt","9nj","0nn","m37","arm","9rm","0rm","pbe","9be","0be","m35","mnb","9mn","0mn","m09","sst","lst","cst","bst","wst","p55","p56","p57","p58","p59","8ss","8ls","8cs","8bs","8ws","q54","q55","q56","q57","q58","1ss","1ls","1cs","1bs","1ws","6ss","6ls","6cs","6bs","6ws","m29","m36","m11","2hs","clm","gls","bsw","flb","gsd","p34","p35","p36","p37","p38","p39","q1a","q1b","q1c","q1d","q1e","q1f","9cm","9gs","9b9","9fb","9gd","q33","q34","q35","q36","q37","q38","a2a","q2b","q2c","q2d","q2e","a2f","0cm","0gs","0b0","0fb","0gd","72h","7cm","7gs","7b7","7fb","7gd","q3a","q3b","q3c","q3d","q3e","q3f","q4a","q4b","q4c","q4d","q4e","q4f","m16","m22","m22","m18","dd1"},
+            runeword = false,
+            quality = "3-",
+            location = {"onplayer","atvendor","equipped"},
+            sockets = "5",
+            suffix_desc = "{gray}Work of God {blue}God {gold}No {red}Mi {orange}Wa {yellow}Sa {gray}Lvl: 60\nMight of the Earth: {red}Chi {white}Ka {yellow}Ra {gold}No {blue}Earth {gray}Lvl: 60\nGrief: {white}Eth Tir {purple}Lo Mal {white}Ral {gray}Lvl: 59\nManiac: {green}Ma Ni {red}A Tsu {white}Ku {gray}Lvl: 45{blue}\n"
+        },
+        -- Tooltip information for all 2h Axe 6 socket Runewords
+        {
+            codes = {"lax","bax","btx","gax","gix","p06","p07","p08","p09","p10","9la","9ba","9bt","9ga","9gi","q05","q06","q07","q08","q09","0la","0ba","0bt","0ga","0gi","7la","7ba","7bt","7ga","7gi"},
+            runeword = false,
+            quality = "3-",
+            location = {"onplayer","atvendor","equipped"},
+            sockets = "6",
+            suffix_desc = "{gray}Last Wish: {purple}Jah Mal Jah Sur Jah Ber {gray}Lvl: 65{blue}\n"
+        },
+        -- Tooltip information for all 2h Axe 5 socket Runewords
+        {
+            codes = {"lax","bax","btx","gax","gix","p06","p07","p08","p09","p10","9la","9ba","9bt","9ga","9gi","q05","q06","q07","q08","q09","0la","0ba","0bt","0ga","0gi","7la","7ba","7bt","7ga","7gi"},
+            runeword = false,
+            quality = "3-",
+            location = {"onplayer","atvendor","equipped"},
+            sockets = "5",
+            suffix_desc = "{gray}Doom: {orange}Hel {purple}Ohm {orange}Um {purple}Lo Cham {gray}Lvl: 67\n{gray}Beast: {purple}Ber {white}Tir {orange}Um {purple}Mal {orange}Lum {gray}Lvl: "
+        },
+        -- Tooltip information for all Axe 4 socket Runewords
+        {
+            codes = {"lax","bax","btx","gax","gix","p06","p07","p08","p09","p10","9la","9ba","9bt","9ga","9gi","q05","q06","q07","q08","q09","0la","0ba","0bt","0ga","0gi","7la","7ba","7bt","7ga","7gi","hax","axe","2ax","mpi","wax","p01","p02","p03","p04","po5","p06","po7","po8","po9","p10","9ha","9ax","92a","9mp","9wa","qoo","q01","q02","q03","q04","0ha","0ax","82a","0mp","0wa","7ha","7ax","72a","7mp","7wa","m21"},
+            runeword = false,
+            quality = "3-",
+            location = {"onplayer","atvendor","equipped"},
+            sockets = "4",
+            suffix_desc = "{gray}Famine: {orange}Fal {purple}Ohm {white}Ort {purple}Jah {gray}Lvl: 65\nKingslayer: {purple}Mal {orange}Um {purple}Gul {orange}Fal {gray}Lvl: 53\nOath: {orange}Shael Pul {purple}Mal {orange}Lum {gray}Level: 49\nFrostbite: {white}Shi {green}Mo {red}Ya {yellow}Ke {gray}Lvl: 47\nHunger: {white}Ku U {green}Fu {white}Ku {gray}Lvl: 44\nAcid {yellow}Sa {white}N {green}Se {white}I {gray}Lvl: 43\nLaw: {orange}Ho {white}U {red}Ri Tsu {gray}Lvl: 31\nBlood {yellow}Ke {red}Tsu {yellow}E {red}Ki {gray}Lvl: 26{blue}\n"
+        },
+        -- Tooltip information for all Axe 3 socket Runewords
+        {
+            codes = {"lax","bax","btx","gax","gix","p06","p07","p08","p09","p10","9la","9ba","9bt","9ga","9gi","q05","q06","q07","q08","q09","0la","0ba","0bt","0ga","0gi","7la","7ba","7bt","7ga","7gi","hax","axe","2ax","mpi","wax","p01","p02","p03","p04","po5","p06","po7","po8","po9","p10","9ha","9ax","92a","9mp","9wa","qoo","q01","q02","q03","q04","0ha","0ax","82a","0mp","0wa","7ha","7ax","72a","7mp","7wa","m21"},
+            runeword = false,
+            quality = "3-",
+            location = {"onplayer","atvendor","equipped"},
+            sockets = "3",
+            suffix_desc = "{gray}Crescent Moon: {orange}Shael Um {white}Tir {gray}Lvl: 47\nButcher {green}Ni {white}Ku {red}Ya {gray}Lvl: 42\nLight: {red}A {white}Ka {red}Ri {gray}Lvl: 17{blue}\n"
+        },
+        -- Tooltip information for all Axe 2 socket Runewords
+        {
+            codes = {"lax","bax","btx","gax","gix","p06","p07","p08","p09","p10","9la","9ba","9bt","9ga","9gi","q05","q06","q07","q08","q09","0la","0ba","0bt","0ga","0gi","7la","7ba","7bt","7ga","7gi","hax","axe","2ax","mpi","wax","p01","p02","p03","p04","po5","p06","po7","po8","po9","p10","9ha","9ax","92a","9mp","9wa","qoo","q01","q02","q03","q04","0ha","0ax","82a","0mp","0wa","7ha","7ax","72a","7mp","7wa","m21"},
+            runeword = false,
+            quality = "3-",
+            location = {"onplayer","atvendor","equipped"},
+            sockets = "2",
+            suffix_desc = "Edge {green}Fu {red}Chi {gray}Lvl: 44\nSteel: {white}Tir El {gray}Lvl: 13{blue}\n"
+        },
         -- Monster Part Styling
         {
             codes = {"qll", "hrt", "brz", "jaw", "eyz", "hrn", "tal", "flg", "fng","sol", "scz", "spe", "zzz"},
@@ -1717,11 +1791,11 @@ return {
             border = {240, 0, 0, 230, 2},
             audio = "tink.mp3"
         },
-    -- Tooltip for Kanji runes on Null rune - Ty boggins and Kitzun
-        {   
+        -- Tooltip for Kanji runes on Null rune - Ty boggins and Kitzun
+            {   
             code = "r50",
             location = {"onplayer","atvendor"},
-            prefix = "\nGod Rune: {blue}Frozen Soul {red}Enigmatic Cinnabar {gold}Pulsing Opal {gray}Shadow Quartz\n{orange}Heaven Rune: {red}Bleeding Stone {blue}Dark Azurite {dark green}Bitter Peridot {purple}Tainted Tourmarine{white}\n{orange}Death Rune: {gray}Shadow Quartz{white}\n{orange}Life Rune: {gold}Pulsing Opal\n{orange}Dragon Rune: Storm Amber\nWind Rune: {purple}Tainted Tourmaline\n{orange}Thudner Rune: {yellow}Burning Sulphur\n{orange}Sun Rune: {red}Enigmatic Cinnabar\n{orange}Earth Rune: {dark green}Bitter Peridot\n{orange}Metal Rune: {white}Solid Mercury\n{orange}Wood Rune: {green}Tomb Jade\n{orange}Water Rune: {blue}Dark Azurite\n{orange}Fire Rune: {red}Bleeding Stone\n{orange}Moon Rune: {blue}Frozen Soul\n{white}** Combine this rune with the below crystals to obtain Kanji Runes **{purple}\n"
+            prefix = "\nGod Rune: {blue}Frozen Soul {red}Enigmatic Cinnabar {gold}Pulsing Opal {gray}Shadow Quartz\n{orange}Heaven Rune: {red}Bleeding Stone {blue}Dark Azurite {dark green}Bitter Peridot {purple}Tainted Tourmarine{white}\n{orange}Death Rune: {gray}Shadow Quartz{white}\n{orange}Life Rune: {gold}Pulsing Opal\n{orange}Dragon Rune: Storm Amber\nWind Rune: {purple}Tainted Tourmaline\n{orange}Thunder Rune: {yellow}Burning Sulphur\n{orange}Sun Rune: {red}Enigmatic Cinnabar\n{orange}Earth Rune: {dark green}Bitter Peridot\n{orange}Metal Rune: {white}Solid Mercury\n{orange}Wood Rune: {green}Tomb Jade\n{orange}Water Rune: {blue}Dark Azurite\n{orange}Fire Rune: {red}Bleeding Stone\n{orange}Moon Rune: {blue}Frozen Soul\n{white}** Combine this rune with the below crystals to obtain Kanji Runes **{purple}\n"
         },
         -- Maps Tier 1
             {   
@@ -2115,7 +2189,6 @@ return {
             location={"onplayer","atvendor"},
             prefix="{gray}+8 Purple Rune Points when bagged{orange}\n"
         },
---
         -- Tooltips on LoD Decals
         {
             code="01l",
@@ -2283,7 +2356,7 @@ return {
             prefix="{gray}+1024 High Rune Points when bagged{white}\n"
         },
         -- Socket info for ground items
-        {   
+            {   
             codes = "allitems",
             location = {"onground"},
             suffix = " {lilac}[{sockets}]",
@@ -2305,5 +2378,14 @@ return {
             sockets = "1+",
             maxsock = true
         },
+        {
+            codes = {"clk","ylk","xlk"},
+            quality = "3",
+            notify = "Assassin Cloak Base",
+            audio = "gong.mp3",
+            border = {0,0,0,255},
+            background = {0,50,50,255}
+        },
     },
 }
+
