@@ -2378,14 +2378,6 @@ return {
             sockets = "1+",
             maxsock = true
         },
-        {
-            codes = {"clk","ylk","xlk"},
-            quality = "3",
-            notify = "Assassin Cloak Base",
-            audio = "gong.mp3",
-            border = {0,0,0,255},
-            background = {0,50,50,255}
-        },
     },
 }
 
