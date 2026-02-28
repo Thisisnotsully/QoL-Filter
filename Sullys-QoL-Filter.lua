@@ -1,9 +1,9 @@
---- Filter Title: Sully's Quality of Life Filter v0.2.13
+--- Filter Title: Sully's Quality of Life Filter v0.3
 --- Filter Type: MultiStrict
---- Filter Description: v0.2.13 - PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
+--- Filter Description: v0.3 - PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
 --- Filter Link: https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.lua
 return {
-    reload = "{white}Sully's Quality of Life Filter {purple}v0.2.13",  -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
+    reload = "{white}Sully's Quality of Life Filter {purple}v0.3",  -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
     language = "enUS",
     filter_titles = { "Leveling", "Strict", "Very-Strict", "Uber-Strict" },
     audioPlayback = true,
@@ -12,10 +12,9 @@ return {
     allowOverrides = true,
     filter_level = 4,
     rules = {
-        -- Chat notifications - enable/disable what you want (primarily for Uber Strict)
+        -- Chat notifications enable/disable what you want (primarily for Uber Strict) 
         {
-            codes = {"ppp","hly","eee","hh2","ggg","sss","ttt"}, -- D-Stones
-            notify = "{Red}Crafting Reagant:{purple} D-Stone"
+            -- Left blank intentionally, only for annotation
         },
         -- Ancient Decipherer Notification
         {
@@ -123,8 +122,8 @@ return {
         -- Perfect Gems Notification
         {
             codes = {"gvb", "gyb", "gbb", "ggb", "grb", "gwb", "skb", "gbk"}, 
-            notify = "{name}",
-            filter_levels = "1,2,3"
+            filter_levels = "1,2,3",
+            notify = "{name}"
         },
         -- Tooltip descriptions for noob charm
         {
@@ -227,7 +226,7 @@ return {
         },
         -- Hiding items after level 10 (Tomes, Scrolls, Elixirs, Lowest potions)
         {
-            codes = {"vps","yps","gpm","wms","tbk","ibk","tsc","isc","hp1","mp1"},
+            codes = {"vps","yps","gpm","opm","wms","tbk","ibk","tsc","isc","hp1","mp1"},
             hide = true,
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" }
         },
@@ -407,7 +406,7 @@ return {
             hide = true,
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
             filter_levels = 4
-            
+                        
         },
         -- Uber Strict: Hiding any ESR runes below Gold
         {
@@ -533,8 +532,14 @@ return {
         },
         -- Rejuvination Potion Style
         {
-            codes = {"rvs","rvl"},
-            border = {128, 0, 128, 255}
+            code = "rvs",
+            border = {128, 0, 128, 255},
+            name_override = "{purple}25"
+        },
+        {
+            code = "rvl",
+            border = {128, 0, 128, 255},
+            name_override = "{purple}50"
         },
         {
             code = "po3",
@@ -567,8 +572,10 @@ return {
         -- Tooltip description for D-Stones
         {
             code = "ppp",
-            location = {"onplayer","atvendor"},
+            location = {"onplayer","atvendor","onground"},
             suffix_desc = "{red}Assassin Crafting Material\n",
+            name_override = "{purple}D-Stone",
+            border = {128, 0, 128, 255},
         },
         {
             code = "hly",
@@ -666,7 +673,7 @@ return {
         },
         -- Tooltips for Maple Leaf, Anvil Stone, Elixir, Cookbook
         {
-            codes = {"map", "ggg", "elx", "yyy","ddd"},
+            codes = {"map", "elx", "yyy","ddd"},
             location = {"onplayer","atvendor"},
             prefix = "{white}Cube with Multi-Stocker to store\n{red} Rare Crafting Reagant \n"
         },
@@ -1204,7 +1211,7 @@ return {
             background = {0, 0, 0, 255},
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
-                                                                                                    
+                                                                                                                
             audio = "mythical.mp3"
         },
         {
@@ -1282,26 +1289,25 @@ return {
         {
             codes = {"01c","02c","03c","04c","05c","06c","07c","08c","09c","10c","11c","12c","13c","14c","15c","16c","17c","18c","19c","20c","21c","22c","23c","24c","25c","26c","27c","28c","29c","30c","31c","32c","33c","34c","35c","36c","37c","38c","39c","40c","41c","42c","43c","44c","45c","46c","01f","02f","03f","04f","05f","06f","07f","08f","09f","10f","11f","12f","13f","14f","15f","16f","17f","18f","19f","20f","21f","22f","23f","24f","25f","26f","27f","28f","29f","30f","31f","32f","33f","34f","35f","36f","37f","38f","39f","40f","41f","42f","43f","44f","45f","46f","47f","48f","49f","50f","51f","52f","53f","54f","55f","56f","57f","58f","59f","60f","61f","62f","63f","64f","65f","66f","67f","68f","69f","70f","71f","01i","02i","03i","01j","02j","04j"},
             border = {255,165,0,255}, -- Normal Coupons
-            name_override = "{gray}Norm:{gold}{name}",
-            filter_levels = "1,2,3"
+            name_override = "{gray}Norm:{gold}{name}"
         },
         {
             codes = {"01d","02d","03d","04d","05d","06d","07d","08d","09d","10d","11d","12d","13d","14d","15d","16d","17d","18d","19d","20d","21d","22d","23d","24d","25d","26d","27d","28d","29d","30d","31d","32d","33d","34d","35d","36d","37d","38d","39d","40d","41d","42d","43d","44d","45d","46d","47d","48d","49d","50d","01g","02g","03g","04g","05g","06g","07g","08g","09g","10g","11g","12g","13g","14g","15g","16g","17g","18g","19g","20g","21g","22g","23g","24g","25g","26g","27g","28g","29g","30g","31g","32g","33g","34g","35g","36g","37g","38g","39g","40g","41g","42g","43g","44g","45g","46g","47g","48g","49g","50g","51g","52g","53g","54g","55g","56g","57g","58g","59g","60g","61g","62g","63g","64g","65g","66g","67g","68g","69g","70g","71g","72g","73g","74g","75g","76g","77g","78g","05i","06i","07i","08i","05j","06j","07j","08j","04i"},
             border = {255,165,0,255}, -- Exceptional Coupons
-            name_override = "{gray}Exc:{gold}{name}",
-            filter_levels = "1,2,3"
-        },
-        {
-            codes = {"01d","02d","03d","04d","05d","06d","07d","08d","09d","10d","11d","12d","13d","14d","15d","16d","17d","18d","19d","20d","21d","22d","23d","24d","25d","26d","27d","28d","29d","30d","31d","32d","33d","34d","35d","36d","37d","38d","39d","40d","41d","42d","43d","44d","45d","46d","47d","48d","49d","50d","01g","02g","03g","04g","05g","06g","07g","08g","09g","10g","11g","12g","13g","14g","15g","16g","17g","18g","19g","20g","21g","22g","23g","24g","25g","26g","27g","28g","29g","30g","31g","32g","33g","34g","35g","36g","37g","38g","39g","40g","41g","42g","43g","44g","45g","46g","47g","48g","49g","50g","51g","52g","53g","54g","55g","56g","57g","58g","59g","60g","61g","62g","63g","64g","65g","66g","67g","68g","69g","70g","71g","72g","73g","74g","75g","76g","77g","78g","05i","06i","07i","08i","05j","06j","07j","08j","04i"},
-            audio = "other.mp3",
-            filter_levels = "3-"
+            name_override = "{gray}Exc:{gold}{name}"
         },
         {
             codes = {"01e","02e","04e","05e","07e","08e","09e","10e","11e","12e","13e","14e","15e","16e","18e","19e","20e","21e","22e","23e","24e","25e","26e","27e","28e","29e","30e","31e","32e","33e","34e","35e","36e","37e","38e","39e","01h","02k","03h","04h","05h","06h","07h","08h","09h","10h","11h","12k","13h","14h","15h","16h","17h","18h","19h","20h","21h","22k","23h","24h","25h","26h","27h","28h","29h","30h","31h","32k","33h","34h","35h","36h","37h","38h","39h","40h","41h","42k","43h","44h","45h","47h","48h","49h","50h","51h","52k","53h","54h","55h","56h","57h","58h","59h","60h","61h","62k","09i","10i","11i","12i","09j","10j"},
             audio = "other.mp3", -- Elite Coupons
             border = {255,165,0,255},
             name_override = "{gray}Elt:{gold}{name}",
-            filter_levels = "1,2,3"
+            filter_levels = "3-"
+        },
+        {
+            codes = {"01e","02e","04e","05e","07e","08e","09e","10e","11e","12e","13e","14e","15e","16e","18e","19e","20e","21e","22e","23e","24e","25e","26e","27e","28e","29e","30e","31e","32e","33e","34e","35e","36e","37e","38e","39e","01h","02k","03h","04h","05h","06h","07h","08h","09h","10h","11h","12k","13h","14h","15h","16h","17h","18h","19h","20h","21h","22k","23h","24h","25h","26h","27h","28h","29h","30h","31h","32k","33h","34h","35h","36h","37h","38h","39h","40h","41h","42k","43h","44h","45h","47h","48h","49h","50h","51h","52k","53h","54h","55h","56h","57h","58h","59h","60h","61h","62k","09i","10i","11i","12i","09j","10j"},
+            border = {255,165,0,255}, -- Elite coupons for uber-strict without sound
+            name_override = "{gray}Elt:{gold}{name}",
+            filter_lvels = 4
         },
         -- S-Tier Coupons: SOJ, Death Fathom, Arachnid Mesh, Veil of Steel, Shako, Tyrael's Might, Verdungo's
         {
@@ -1325,7 +1331,7 @@ return {
             quality = "4",
             location = {"onplayer","atvendor"},
             suffix_desc = "{gray}Crafting Available: Check Akara's perfect gems for recipes{blue}\n"
-                                                                        
+                                                                                    
         },
         {
             codes = {"zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"},
@@ -1568,7 +1574,6 @@ return {
             suffix_desc = "{gray}Phoenix: {purple}Vex Vex Lo Jah {gray}Lvl: 65{blue}\n{gray}Dread: {yellow}O {gold}So Re {orange}Ru {gray}Lvl: 56{blue}\n{gray}Dome: {green}Ma {orange}Ru {red}Ya {gold}Ne {gray}Lvl: 55{blue}\n{gray}Medicine: {red}Ya {white}Ku {green}Hi {white}N {gray}Lvl: 46{blue}\n{gray}Glory: {yellow}E {white}I {orange}Ko {white}U {gray}Lvl: 39{blue}\n{gray}Faith: {white}Shi N {orange}Ko {white}U {gray}Lvl: 39{blue}\n{gray}Temptation: {yellow}Wa {white}U {orange}Wa {white}Ku {gray}Lvl: 38{blue}\n{gray}Achieve: {white}Ka {red}Chi {orange}To Ru {gray}Lvl: 36{blue}\n{gray}Spirit: {white}Tal Thul Ort Amn {gray}Lvl: 25{blue}\n{gray}Fortress: {white}Yo U {yellow}Sa {white}I {gray}Lvl: 22{blue}\n{gray}Beauty: {white}U {red}Tsu {white}Ku Shi {gray}Lvl: 19{blue}\n",
             sockets = "4"
         },
-        
         -- Tooltip information for all 2H Swinging Weapon 2 socket Runewords
         {
             codes = {"lax","bax","btx","gax","gix","p06","p07","p08","p09","p10","9la","9ba","9bt","9ga","9gi","q05","q06","q07","q08","q09","0la","0ba","0bt","0ga","0gi","7la","7ba","7bt","7ga","7gi","njt","9nj","0nn","m37","arm","9rm","0rm","pbe","9be","0be","m35","mnb","9mn","0mn","m09","sst","lst","cst","bst","wst","p55","p56","p57","p58","p59","8ss","8ls","8cs","8bs","8ws","q54","q55","q56","q57","q58","1ss","1ls","1cs","1bs","1ws","6ss","6ls","6cs","6bs","6ws","m29","m36","m11","2hs","clm","gls","bsw","flb","gsd","p34","p35","p36","p37","p38","p39","q1a","q1b","q1c","q1d","q1e","q1f","9cm","9gs","9b9","9fb","9gd","q33","q34","q35","q36","q37","q38","a2a","q2b","q2c","q2d","q2e","a2f","0cm","0gs","0b0","0fb","0gd","72h","7cm","7gs","7b7","7fb","7gd","q3a","q3b","q3c","q3d","q3e","q3f","q4a","q4b","q4c","q4d","q4e","q4f","m16","m22","m22","m18","dd1"},
@@ -1649,10 +1654,52 @@ return {
         },
         -- Perfect Gem Styling
         {
-            codes = {"gvb", "gyb", "gbb", "ggb", "grb", "gwb", "skb", "gbk"},
-            audio = "mid.mp3",
-            name_override = "{name}",
-            border = {200, 150, 0, 255}
+            code = "gvb",
+            border = {200, 150, 0, 255},
+            name_override = "{purple}P.Gem",
+            filterlevels = "4"
+        },
+        {
+            code = "gyb",
+            border = {200, 150, 0, 255},
+            name_override = "{yellow}P.Gem",
+            filterlevels = "4"
+        },
+        {
+            code = "gbb",
+            border = {200, 150, 0, 255},
+            name_override = "{blue}P.Gem",
+            filterlevels = "4"
+        },
+        {
+            code = "ggb",
+            border = {200, 150, 0, 255},
+            name_override = "{green}P.Gem",
+            filterlevels = "4"
+        },
+        {
+            code = "grb",
+            border = {200, 150, 0, 255},
+            name_override = "{red}P.Gem",
+            filterlevels = "4"
+        },
+        {
+            code = "gwb",
+            border = {200, 150, 0, 255},
+            name_override = "{white}P.Gem",
+            filterlevels = "4"
+        },
+        {
+            code = "skb",
+            border = {200, 150, 0, 255},
+            name_override = "{gray}P.Gem",
+            filterlevels = "4"
+        },
+        {
+            code = "gbk",
+            border = {200, 150, 0, 255},
+            name_override = "{black}P.Gem",
+            filterlevels = "4"
         },
         -- In game notification for all high LOD rune drops
             {   
@@ -2378,6 +2425,5 @@ return {
             sockets = "1+",
             maxsock = true
         },
-    },
+    }
 }
-
