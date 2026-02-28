@@ -1,11 +1,11 @@
---- Filter Title: Sully's Quality of Life Filter v0.3
+--- Filter Title: Sully's Quality of Life Filter v0.3.1
 --- Filter Type: MultiStrict
---- Filter Description: v0.3 - PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
+--- Filter Description: v0.3.1 - PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
 --- Filter Link: https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.lua
 return {
-    reload = "{white}Sully's Quality of Life Filter {purple}v0.3",  -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
+    reload = "{white}Sully's Quality of Life Filter {purple}v0.3.1",  -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
     language = "enUS",
-    filter_titles = { "Leveling", "Strict", "Very-Strict", "Uber-Strict" },
+    filter_titles = { "Leveling", "Strict - Nightmare", "Very-Strict - Hell (pre-maps)", "Uber-Strict - Maps+" },
     audioPlayback = true,
     audioVoice = 0,
     debug = false,
@@ -147,43 +147,43 @@ return {
         {
             code = "gvb",
             location = "atvendor",
-            prefix = "{blue}Non-Barb Weapon:{gray} 25-35 Attack Speed|150-200 Enhanced Damage|15-25 Life Leech|10-15 Mana Leech\n{blue}Weapon:{gray} +1-2 Barb Skills|25-35 Attack Speed|150-200 Enhanced Damage\n{blue}Ring:{gray} +1-2 Barb Skills|10-15 Pct Max Life|20-30 Str|+20-30 Max Dmg to Attacks\n{blue}Amulet:{gray} +1-2 Barb Skills|10-15 Pct Max Life|15-25 All Resists\n{blue}Chest:{gray} +1-2 Barb Skills|80-100 ED|15-25 all attributes|+10-15 Phys Res\n{blue}Shield:{gray} +1-2 Barb Skills|20-30 Faster Block|80-100 ED|3-5 Increased Block\n{blue}Belt:{gray} +1 Barb Skills|20-30 Hit Recovery|80-100 ED|30-45 Str\n{blue}Gloves:{gray} +1 Barb Skills|20-30 Attack Speed|80-100 ED|30-45 Dex\n{blue}Boots:{gray} +1 Barb Skills|20-30 Faster Run/Walk|80-100 ED|30-45 Vit\n{blue}Helm:{gray} +1-2 Barb Skills|80-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic{gray} Gear + Forging Hammer + P.Amethyst + Any Jewel\n"
+            prefix = "{blue}Non-Barb Weapon:{gray} 25-35 Attack Speed|150-200 Enhanced Damage|15-25 Life Leech|10-15 Mana Leech\n{blue}Weapon:{gray} +1-2 Barb Skills|25-35 Attack Speed|150-200 Enhanced Damage\n{blue}Ring:{gray} +1-2 Barb Skills|10-15%% Max Life|20-30 Str|+20-30 Max Dmg to Attacks\n{blue}Amulet:{gray} +1-2 Barb Skills|10-15%% Max Life|15-25 All Resists\n{blue}Chest:{gray} +1-2 Barb Skills|80-100 ED|15-25 all attributes|+10-15 Phys Res\n{blue}Shield:{gray} +1-2 Barb Skills|20-30 Faster Block|80-100 ED|3-5 Increased Block\n{blue}Belt:{gray} +1 Barb Skills|20-30 Hit Recovery|80-100 ED|30-45 Str\n{blue}Gloves:{gray} +1 Barb Skills|20-30 Attack Speed|80-100 ED|30-45 Dex\n{blue}Boots:{gray} +1 Barb Skills|20-30 Faster Run/Walk|80-100 ED|30-45 Vit\n{blue}Helm:{gray} +1-2 Barb Skills|80-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic{gray} Gear + Forging Hammer + P.Amethyst + Any Jewel\n"
         },
         -- Vendor tip
         {
             code = "gyb",
             location = "atvendor",
-            prefix = "{blue}Non-Druid Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|25-40 Spell Dmg\n{blue}Druid Wpn: {gray}+1-2 Druid Skill|25-35 IAS|150-200 Enahcned Dmg\n{blue}Ring: {gray}+1-2 Druid Skill|20-30 Vit|Max Life 10-15 Pct|12-18 Spell Dmg\n{blue}Amulet: {gray}+1-2 Druid Skill|20-30 Vit|15 Pct Max Life|15-25 All Res\n{blue}Chest: {gray}+1-2 Druid Skill|80-100 ED|15-25 All Attr|10-15 Phys Res\n{blue}Shield:{gray} +1-2 Druid Skill|20-30 FBR|3-5 Block|80-100 ED\n{blue}Belt{gray}+1 Druid Skill|20-30 FHR|80-100 ED|30-45 Str\n{blue}Gloves:{gray}+1 Druid Skill|20-30 IAS|80-100 ED|30-45 Dex\n{blue}Boots:{gray}+1 Druid Skill|20-30 FRW|80-100 ED|30-45 Vit\n{blue}Helm{gray}+1-2 Druid Skills|90-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic {gray}Gear + Tyranium Ore + P.Topaz + Any Jewel\n"
+            prefix = "{blue}Non-Druid Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|25-40 Spell Dmg\n{blue}Druid Wpn: {gray}+1-2 Druid Skill|25-35 IAS|150-200 Enahcned Dmg\n{blue}Ring: {gray}+1-2 Druid Skill|20-30 Vit|Max Life 10-15%%|12-18 Spell Dmg\n{blue}Amulet: {gray}+1-2 Druid Skill|20-30 Vit|15%% Max Life|15-25 All Res\n{blue}Chest: {gray}+1-2 Druid Skill|80-100 ED|15-25 All Attr|10-15 Phys Res\n{blue}Shield:{gray} +1-2 Druid Skill|20-30 FBR|3-5 Block|80-100 ED\n{blue}Belt{gray}+1 Druid Skill|20-30 FHR|80-100 ED|30-45 Str\n{blue}Gloves:{gray}+1 Druid Skill|20-30 IAS|80-100 ED|30-45 Dex\n{blue}Boots:{gray}+1 Druid Skill|20-30 FRW|80-100 ED|30-45 Vit\n{blue}Helm{gray}+1-2 Druid Skills|90-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic {gray}Gear + Tyranium Ore + P.Topaz + Any Jewel\n"
         },
         -- Vendor tip
         {
             code = "ggb",
             location = "atvendor", 
-            prefix = "{blue}Non-Amazon Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|50-100 Bonus Attack Rating\n{blue}Amazon Wpn: {gray}+1-2 Amazon Skill|25-35 IAS|150-200 Enahcned Dmg\n{blue}Ring: {gray}+1-2 Amazon Skill|30-45 Dex|Max Life 10-15 Pct|15-25 Min Atk Dmg\n{blue}Amulet: {gray}+1-2 Amazon Skill|20-30 Dex|15 Pct Max Life|15-25 All Res\n{blue}Chest: {gray}+1-2 Amazon Skill|80-100 ED|15-25 All Attr|10-15 Phys Res\n{blue}Shield:{gray} +1-2 Amazon Skill|20-30 Faster Block|3-5 Block|80-100 ED\n{blue}Belt{gray}+1 Amazon Skill|20-30 FHR|80-100 ED|30-45 Str\n{blue}Gloves:{gray}+1 Amazon Skill|20-30 IAS|80-100 ED|30-45 Dex\n{blue}Boots:{gray}+1 Amazon Skill|20-30 FRW|80-100 ED|30-45 Vit\n{blue}Helm{gray}+1-2 Amazon Skills|90-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic {gray}Gear + Spider's Silk + P.Emerald + Any Jewel\n"
+            prefix = "{blue}Non-Amazon Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|50-100 Bonus Attack Rating\n{blue}Amazon Wpn: {gray}+1-2 Amazon Skill|25-35 IAS|150-200 Enahcned Dmg\n{blue}Ring: {gray}+1-2 Amazon Skill|30-45 Dex|Max Life 10-15%%|15-25 Min Atk Dmg\n{blue}Amulet: {gray}+1-2 Amazon Skill|20-30 Dex|15%% Max Life|15-25 All Res\n{blue}Chest: {gray}+1-2 Amazon Skill|80-100 ED|15-25 All Attr|10-15 Phys Res\n{blue}Shield:{gray} +1-2 Amazon Skill|20-30 Faster Block|3-5 Block|80-100 ED\n{blue}Belt{gray}+1 Amazon Skill|20-30 FHR|80-100 ED|30-45 Str\n{blue}Gloves:{gray}+1 Amazon Skill|20-30 IAS|80-100 ED|30-45 Dex\n{blue}Boots:{gray}+1 Amazon Skill|20-30 FRW|80-100 ED|30-45 Vit\n{blue}Helm{gray}+1-2 Amazon Skills|90-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic {gray}Gear + Spider's Silk + P.Emerald + Any Jewel\n"
         },
         -- Vendor tip
         {
             code = "grb", 
             location = "atvendor", 
-            prefix = "{blue}Non-Assassin Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|20-30 Deadly Strike\n{blue}Assassin Wpn: {gray}+1-2 Assassin Skill|25-35 IAS|150-200 Enahcned Dmg\n{blue}Ring: {gray}+1-2 Assassin Skill|30-45 Dex|Max Life 10-15 Pct|20-30 Life After Kill|10-20 Mana After Kill\n{blue}Amulet: {gray}+1-2 Assassin Skill|20-30 Dex|15 Pct Max Life|15-25 All Res\n{blue}Chest: {gray}+1-2 Assassin Skill|80-100 ED|15-25 All Attr|10-15 Phys Res\n{blue}Shield:{gray} +1-2 Assassin Skill|20-30 Faster Block|3-5 Block|80-100 ED\n{blue}Belt{gray}+1 Assassin Skill|20-30 FHR|80-100 ED|30-45 Str\n{blue}Gloves:{gray}+1 Assassin Skill|20-30 IAS|80-100 ED|30-45 Dex\n{blue}Boots:{gray}+1 Assassin Skill|20-30 FRW|80-100 ED|30-45 Vit\n{blue}Helm{gray}+1-2 Assassin Skills|90-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic {gray}Gear + Dragon Stone + P.Ruby + Any Jewel\n"
+            prefix = "{blue}Non-Assassin Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|20-30 Deadly Strike\n{blue}Assassin Wpn: {gray}+1-2 Assassin Skill|25-35 IAS|150-200 Enahcned Dmg\n{blue}Ring: {gray}+1-2 Assassin Skill|30-45 Dex|Max Life 10-15%%|20-30 Life After Kill|10-20 Mana After Kill\n{blue}Amulet: {gray}+1-2 Assassin Skill|20-30 Dex|15%% Max Life|15-25 All Res\n{blue}Chest: {gray}+1-2 Assassin Skill|80-100 ED|15-25 All Attr|10-15 Phys Res\n{blue}Shield:{gray} +1-2 Assassin Skill|20-30 Faster Block|3-5 Block|80-100 ED\n{blue}Belt{gray}+1 Assassin Skill|20-30 FHR|80-100 ED|30-45 Str\n{blue}Gloves:{gray}+1 Assassin Skill|20-30 IAS|80-100 ED|30-45 Dex\n{blue}Boots:{gray}+1 Assassin Skill|20-30 FRW|80-100 ED|30-45 Vit\n{blue}Helm{gray}+1-2 Assassin Skills|90-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic {gray}Gear + Dragon Stone + P.Ruby + Any Jewel\n"
         },
         -- Vendor tip
         {
             code = "skb", 
             location = "atvendor", 
-            prefix = "{blue}Non-Necromancer Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|20-30 Crushing Blow\n{blue}Necromancer Wpn: {gray}+1-2 Necromancer Skill|25-35 IAS|150-200 Enahcned Dmg\n{blue}Ring: {gray}+1-2 Necromancer Skill|30-45 Energy|Max Life 10-15 Pct|15-25 Faster Caste Rate\n{blue}Amulet: {gray}+1-2 Necromancer Skill|20-30 Dex|15 Pct Max Life|15-25 All Res\n{blue}Chest: {gray}+1-2 Necromancer Skill|80-100 ED|15-25 All Attr|10-15 Phys Res\n{blue}Shield:{gray} +1-2 Necromancer Skill|20-30 Faster Block|3-5 Block|80-100 ED\n{blue}Belt{gray}+1 Necromancer Skill|20-30 FHR|80-100 ED|30-45 Str\n{blue}Gloves:{gray}+1 Necromancer Skill|20-30 IAS|80-100 ED|30-45 Dex\n{blue}Boots:{gray}+1 Necromancer Skill|20-30 FRW|80-100 ED|30-45 Vit\n{blue}Helm{gray}+1-2 Necromancer Skills|90-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic {gray}Gear + Dragon Stone + P.Ruby + Any Jewel\n"
+            prefix = "{blue}Non-Necromancer Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|20-30 Crushing Blow\n{blue}Necromancer Wpn: {gray}+1-2 Necromancer Skill|25-35 IAS|150-200 Enahcned Dmg\n{blue}Ring: {gray}+1-2 Necromancer Skill|30-45 Energy|Max Life 10-15%%|15-25 Faster Caste Rate\n{blue}Amulet: {gray}+1-2 Necromancer Skill|20-30 Dex|15%% Max Life|15-25 All Res\n{blue}Chest: {gray}+1-2 Necromancer Skill|80-100 ED|15-25 All Attr|10-15 Phys Res\n{blue}Shield:{gray} +1-2 Necromancer Skill|20-30 Faster Block|3-5 Block|80-100 ED\n{blue}Belt{gray}+1 Necromancer Skill|20-30 FHR|80-100 ED|30-45 Str\n{blue}Gloves:{gray}+1 Necromancer Skill|20-30 IAS|80-100 ED|30-45 Dex\n{blue}Boots:{gray}+1 Necromancer Skill|20-30 FRW|80-100 ED|30-45 Vit\n{blue}Helm{gray}+1-2 Necromancer Skills|90-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic {gray}Gear + Dragon Stone + P.Ruby + Any Jewel\n"
         },
         -- Vendor tip
         {
             code = "gwb", 
             location = "atvendor", 
-            prefix = "{blue}Non-Paladin Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|200-300 Dmg to Demons|200-300 Dmg to Undead\n{blue}Paladin Wpn: {gray}+1-2 Paladin Skill|25-35 IAS|150-200 Enahcned Dmg\n{blue}Ring: {gray}+1-2 Paladin Skill|20-30 Str|Max Life 10-15 Pct|15-25 All Res\n{blue}Amulet: {gray}+1-2 Paladin Skill|20-30 Dex|15 Pct Max Life|15-25 All Res\n{blue}Chest: {gray}+1-2 Paladin Skill|80-100 ED|15-25 All Attr|10-15 Phys Res\n{blue}Shield:{gray} +1-2 Paladin Skill|20-30 Faster Block|3-5 Block|80-100 ED\n{blue}Belt{gray}+1 Paladin Skill|20-30 FHR|80-100 ED|30-45 Str\n{blue}Gloves:{gray}+1 Paladin Skill|20-30 IAS|80-100 ED|30-45 Dex\n{blue}Boots:{gray}+1 Paladin Skill|20-30 FRW|80-100 ED|30-45 Vit\n{blue}Helm{gray}+1-2 Paladin Skills|90-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic {gray}Gear + Dragon Stone + P.Ruby + Any Jewel\n"
+            prefix = "{blue}Non-Paladin Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|200-300 Dmg to Demons|200-300 Dmg to Undead\n{blue}Paladin Wpn: {gray}+1-2 Paladin Skill|25-35 IAS|150-200 Enahcned Dmg\n{blue}Ring: {gray}+1-2 Paladin Skill|20-30 Str|Max Life 10-15%%|15-25 All Res\n{blue}Amulet: {gray}+1-2 Paladin Skill|20-30 Dex|15%% Max Life|15-25 All Res\n{blue}Chest: {gray}+1-2 Paladin Skill|80-100 ED|15-25 All Attr|10-15 Phys Res\n{blue}Shield:{gray} +1-2 Paladin Skill|20-30 Faster Block|3-5 Block|80-100 ED\n{blue}Belt{gray}+1 Paladin Skill|20-30 FHR|80-100 ED|30-45 Str\n{blue}Gloves:{gray}+1 Paladin Skill|20-30 IAS|80-100 ED|30-45 Dex\n{blue}Boots:{gray}+1 Paladin Skill|20-30 FRW|80-100 ED|30-45 Vit\n{blue}Helm{gray}+1-2 Paladin Skills|90-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic {gray}Gear + Dragon Stone + P.Ruby + Any Jewel\n"
         },
         -- Vendor tip
         {
             code = "gbb", 
             location = "atvendor", 
-            prefix = "{blue}Non-Sorceress Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|-15-25 Enemy Ele and Psn Resist\n{blue}Sorceress Wpn: {gray}+1-2 Sorceress Skill|25-35 IAS|150-200 Enahcned Dmg\n{blue}Ring: {gray}+1-2 Sorceress Skill|20-30 Energy|Max Life 10-15 Pct|-8-12 Enemy Ele and Psn Res\n{blue}Amulet: {gray}+1-2 Sorceress Skill|20-30 Dex|15 Pct Max Life|15-25 All Res\n{blue}Chest: {gray}+1-2 Sorceress Skill|80-100 ED|15-25 All Attr|10-15 Phys Res\n{blue}Shield:{gray} +1-2 Sorceress Skill|20-30 Faster Block|3-5 Block|80-100 ED\n{blue}Belt{gray}+1 Sorceress Skill|20-30 FHR|80-100 ED|30-45 Str\n{blue}Gloves:{gray}+1 Sorceress Skill|20-30 IAS|80-100 ED|30-45 Dex\n{blue}Boots:{gray}+1 Sorceress Skill|20-30 FRW|80-100 ED|30-45 Vit\n{blue}Helm{gray}+1-2 Sorceress Skills|90-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic {gray}Gear + Dragon Stone + P.Ruby + Any Jewel\n"
+            prefix = "{blue}Non-Sorceress Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|-15-25 Enemy Ele and Psn Resist\n{blue}Sorceress Wpn: {gray}+1-2 Sorceress Skill|25-35 IAS|150-200 Enahcned Dmg\n{blue}Ring: {gray}+1-2 Sorceress Skill|20-30 Energy|Max Life 10-15%%|-8-12 Enemy Ele and Psn Res\n{blue}Amulet: {gray}+1-2 Sorceress Skill|20-30 Dex|15%% Max Life|15-25 All Res\n{blue}Chest: {gray}+1-2 Sorceress Skill|80-100 ED|15-25 All Attr|10-15 Phys Res\n{blue}Shield:{gray} +1-2 Sorceress Skill|20-30 Faster Block|3-5 Block|80-100 ED\n{blue}Belt{gray}+1 Sorceress Skill|20-30 FHR|80-100 ED|30-45 Str\n{blue}Gloves:{gray}+1 Sorceress Skill|20-30 IAS|80-100 ED|30-45 Dex\n{blue}Boots:{gray}+1 Sorceress Skill|20-30 FRW|80-100 ED|30-45 Vit\n{blue}Helm{gray}+1-2 Sorceress Skills|90-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic {gray}Gear + Dragon Stone + P.Ruby + Any Jewel\n"
         },
         -- Vendor tip
         {
@@ -223,6 +223,17 @@ return {
             pstat = { index = 12, op = ">=", value = 80 }, -- Char Level is >= 80
             hide = true, 
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" }
+        },
+        {
+            code = "gld",
+            stat = { index = 14, op = "<=", value = 4500 }, --hides gold under 5k
+            pstat = { index = 12, op = ">=", value = 100 }, -- Char Level is >= 100
+            hide = true, 
+            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" }
+        },
+        {
+            code = "gld",
+            name_override = "{white}$$",
         },
         -- Hiding items after level 10 (Tomes, Scrolls, Elixirs, Lowest potions)
         {
@@ -408,6 +419,12 @@ return {
             filter_levels = 4
                         
         },
+        -- Uber Strict: Hiding T1 Maps
+        {
+            codes = {"z01","z02","z03","z04"},
+            hide = true,
+            filter_levels = 4
+        },
         -- Uber Strict: Hiding any ESR runes below Gold
         {
             codes = {"r01","r02","r03","r04","r05","r06","r07","r08","r09","r10","r11","r12","r13","r14","r15","r16","r17","r18","r19","r20","r21","r22","r23","r24","r25","r26","r27","r28", "r29", "r30", "r31","r32","r33","r34","r35"},
@@ -470,10 +487,10 @@ return {
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
             filter_levels = 4
         },
-        -- Uber Strict: Hide magic arrows/bolts
+        -- Uber Strict: Hide all arrows/bolts
         {
             codes = {"cqv","cq2","cq0","aq0","aq2","aqv"}, 
-            quality = "4-",
+            quality = "7-",
             hide = true,
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
             filter_levels = 4
@@ -534,12 +551,12 @@ return {
         {
             code = "rvs",
             border = {128, 0, 128, 255},
-            name_override = "{purple}25"
+            name_override = "{white}*{purple}25%%{white}*"
         },
         {
             code = "rvl",
             border = {128, 0, 128, 255},
-            name_override = "{purple}50"
+            name_override = "{white}*{purple}50%%{white}*"
         },
         {
             code = "po3",
@@ -1319,6 +1336,15 @@ return {
             hide = false,
             filter_levels = "4-"
         },
+        -- S-Tier Uniques
+        {
+            code = "ci3",
+            quality = "7",
+            audio = "tink.mp3",
+            notify = "{orange}High Tier Unique: {name}",
+            background = {255,255,255,255},
+            border = {255,0,0,255}
+        },
         -- Highlight Class specific Magic/Rare Jewellery
         {
             codes = {"zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"},
@@ -1656,49 +1682,49 @@ return {
         {
             code = "gvb",
             border = {200, 150, 0, 255},
-            name_override = "{purple}P.Gem",
+            name_override = "{purple}*P.Gem*",
             filterlevels = "4"
         },
         {
             code = "gyb",
             border = {200, 150, 0, 255},
-            name_override = "{yellow}P.Gem",
+            name_override = "{yellow}*P.Gem*",
             filterlevels = "4"
         },
         {
             code = "gbb",
             border = {200, 150, 0, 255},
-            name_override = "{blue}P.Gem",
+            name_override = "{blue}*P.Gem*",
             filterlevels = "4"
         },
         {
             code = "ggb",
             border = {200, 150, 0, 255},
-            name_override = "{green}P.Gem",
+            name_override = "{green}*P.Gem*",
             filterlevels = "4"
         },
         {
             code = "grb",
             border = {200, 150, 0, 255},
-            name_override = "{red}P.Gem",
+            name_override = "{red}*P.Gem*",
             filterlevels = "4"
         },
         {
             code = "gwb",
             border = {200, 150, 0, 255},
-            name_override = "{white}P.Gem",
+            name_override = "{white}*P.Gem*",
             filterlevels = "4"
         },
         {
             code = "skb",
             border = {200, 150, 0, 255},
-            name_override = "{gray}P.Gem",
+            name_override = "{gray}*P.Gem*",
             filterlevels = "4"
         },
         {
             code = "gbk",
             border = {200, 150, 0, 255},
-            name_override = "{black}P.Gem",
+            name_override = "{black}*P.Gem*",
             filterlevels = "4"
         },
         -- In game notification for all high LOD rune drops
@@ -2425,5 +2451,5 @@ return {
             sockets = "1+",
             maxsock = true
         },
-    }
+    },
 }
