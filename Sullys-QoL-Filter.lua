@@ -1,18 +1,18 @@
---- Filter Title: Sully's Quality of Life Filter v0.3.2
+--- Filter Title: Sully's Quality of Life Filter v0.3.3
 --- Filter Type: MultiStrict
---- Filter Description: v0.3.2 - PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
+--- Filter Description: v0.3.3 - PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
 --- Filter Link: https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.lua
 return {
-    reload = "{white}Sully's Quality of Life Filter {purple}v0.3.2",  -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
+    reload = "{white}Sully's Quality of Life Filter {purple}v0.3.3",  -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
     language = "enUS",
     filter_titles = { "Leveling", "Strict - Nightmare", "Very-Strict - Hell (pre-maps)", "Uber-Strict - Maps+" },
     audioPlayback = true,
     audioVoice = 0,
     debug = false,
     allowOverrides = true,
-    filter_level = 4,
+    filter_level = 3,
     rules = {
-        -- Chat notifications enable/disable what you want (primarily for Uber Strict) 
+        --                                                       Chat notifications enable/disable what you want (primarily for Uber Strict) 
         {
             -- Left blank intentionally, only for annotation
         },
@@ -88,7 +88,7 @@ return {
         },
         -- Exceptional Coupons Notification
         {
-            codes = {"01d","02d","03d","04d","05d","06d","07d","08d","09d","10d","11d","12d","13d","14d","15d","16d","17d","18d","19d","20d","21d","22d","23d","24d","25d","26d","27d","28d","29d","30d","31d","32d","33d","34d","35d","36d","37d","38d","39d","40d","41d","42d","43d","44d","45d","46d","47d","48d","49d","50d","01g","02g","03g","04g","05g","06g","07g","08g","09g","10g","11g","12g","13g","14g","15g","16g","17g","18g","19g","20g","21g","22g","23g","24g","25g","26g","27g","28g","29g","30g","31g","32g","33g","34g","35g","36g","37g","38g","39g","40g","41g","42g","43g","44g","45g","46g","47g","48g","49g","50g","51g","52g","53g","54g","55g","56g","57g","58g","59g","60g","61g","62g","63g","64g","65g","66g","67g","68g","69g","70g","71g","72g","73g","74g","75g","76g","77g","78g","05i","06i","07i","08i","05j","06j","07j","08j","04i"},
+            codes = {"01d","02d","03d","04d","05d","06d","07d","08d","09d","10d","11d","12d","14d","15d","16d","17d","18d","19d","20d","21d","22d","23d","24d","25d","26d","27d","28d","29d","30d","31d","32d","33d","34d","35d","36d","37d","38d","39d","40d","41d","42d","43d","44d","45d","46d","47d","48d","49d","50d","01g","02g","03g","04g","05g","06g","07g","08g","09g","10g","11g","12g","13g","14g","15g","16g","17g","18g","19g","20g","21g","22g","23g","24g","25g","26g","27g","28g","29g","30g","31g","32g","33g","34g","35g","36g","37g","38g","39g","40g","41g","42g","43g","44g","45g","46g","47g","48g","49g","50g","51g","52g","53g","54g","55g","56g","57g","58g","59g","60g","61g","62g","63g","64g","65g","66g","67g","68g","69g","70g","71g","72g","73g","74g","75g","76g","77g","78g","05i","06i","07i","08i","05j","06j","07j","08j","04i"},
             notify = "{gold}Exceptional Coupon: {white}{name}",
             filter_levels = "1,2,3"
         },
@@ -124,6 +124,84 @@ return {
             codes = {"gvb", "gyb", "gbb", "ggb", "grb", "gwb", "skb", "gbk"}, 
             filter_levels = "1,2,3",
             notify = "{name}"
+        },
+        --                                                       Superior Item Highlighting (Elite) 
+        {
+            -- Left blank intentionally, only for annotation
+        },
+        -- Elite Boots with 20+ Faster Run/Walk
+        {
+            codes = {"ylb","yvb","ymb","ytb","yhb","ybt","ulb","uvb","umb","utb","uhb"},
+            stat = {index = 96, op = ">=", value = 20},
+            suffix = "{red}[{stat=(96)}%%FRW]"
+        },
+        -- Elite Boots with -8 Enemy Resist
+        {
+            codes = {"ylb","yvb","ymb","ytb","yhb","ybt","ulb","uvb","umb","utb","uhb"},
+            stat = {index = 333, op = ">=", value = 8},
+            stat = {index = 334, op = ">=", value = 8},
+            stat = {index = 335, op = ">=", value = 8},
+            stat = {index = 336, op = ">=", value = 8},
+            suffix = "{red}[-{stat=(333)}%% Res Pierce]"
+        },
+        -- Elite Belts with -8 Enemy Resist
+        {
+            codes = {"alb","avb","bmb","atb","ahb","yms","ulc","uvc","umc","utc","uhc","m10"},
+            stat = {index = 333, op = ">=", value = 8},
+            stat = {index = 334, op = ">=", value = 8},
+            stat = {index = 335, op = ">=", value = 8},
+            stat = {index = 336, op = ">=", value = 8},
+            suffix = "{red}[-{stat=(333)}%% Res Pierce]"
+        },
+        -- Elite Belts with 8+ Phys Resist
+        {
+            codes = {"alb","avb","bmb","atb","ahb","yms","ulc","uvc","umc","utc","uhc","m10"},
+            stat = {index = 36, op = ">=", value = 8},
+            suffix = "{red}[{stat=(36)}%% Phys Res]"
+        },
+        -- Elite Bows/Javelins with +3 Bow or +3 Jav skills
+        {
+            codes = {"0pb","amb","amc","q80","amf","q82","m31","amd","ame","q81"},
+            stat = OR {{index = 188, op = ">=", param = 0, value = 3},{index = 188, op = ">=", param = 1, value = 3}, {index = 188, op = ">=", param = 2, value = 3}, {index = 188, op = ">=", param = 3, value = 3}, {index = 188, op = ">=", param = 4, value = 3}, {index = 188, op = ">=", param = 5, value = 3}, {index = 188, op = ">=", param = 6, value = 3}, {index = 188, op = ">=", param = 7, value = 3}, {index = 188, op = ">=", param = 8, value = 3}, {index = 188, op = ">=", param = 9, value = 3}, {index = 188, op = ">=", param = 10, value = 3}, {index = 188, op = ">=", param = 11, value = 3}, {index = 188, op = ">=", param = 12, value = 3}, {index = 188, op = ">=", param = 13, value = 3}, {index = 188, op = ">=", param = 14, value = 3}, {index = 188, op = ">=", param = 15, value = 3}, {index = 188, op = ">=", param = 16, value = 3}, {index = 188, op = ">=", param = 17, value = 3}, {index = 188, op = ">=", param = 18, value = 3}, {index = 188, op = ">=", param = 19, value = 3}, {index = 188, op = ">=", param = 20, value = 3}, {index = 188, op = ">=", param = 21, value = 3}},
+            suffix = "{red}[+3]",
+            quality = "3"
+        },
+        -- Staffs with +4 Sorc Tab
+        {
+            codes = {"1ss","1ls","1cs","1bs","1ws","6ss","6ls","6cs","6bs","6ws","m29","m36","m11"},
+            stat = OR {{index = 188, op = "==", param = 0, value = 4},{index = 188, op = "==", param = 1, value = 4}, {index = 188, op = "==", param = 2, value = 4}, {index = 188, op = "==", param = 3, value = 4}, {index = 188, op = "==", param = 4, value = 4}, {index = 188, op = "==", param = 5, value = 4}, {index = 188, op = "==", param = 6, value = 4}, {index = 188, op = "==", param = 7, value = 4}, {index = 188, op = "==", param = 8, value = 4}, {index = 188, op = "==", param = 9, value = 4}, {index = 188, op = "==", param = 10, value = 4}, {index = 188, op = "==", param = 11, value = 4}, {index = 188, op = "==", param = 12, value = 4}, {index = 188, op = "==", param = 13, value = 4}, {index = 188, op = "==", param = 14, value = 4}, {index = 188, op = "==", param = 15, value = 4}, {index = 188, op = "==", param = 16, value = 4}, {index = 188, op = "==", param = 17, value = 4}, {index = 188, op = "==", param = 18, value = 4}, {index = 188, op = "==", param = 19, value = 4}, {index = 188, op = "==", param = 20, value = 4}, {index = 188, op = ">=", param = 21, value = 4}},
+            suffix = "{red}[+4]",
+            quality = "3"
+        },
+        -- Staffs with +5 Sorc Tab
+        {
+            codes = {"1ss","1ls","1cs","1bs","1ws","6ss","6ls","6cs","6bs","6ws","m29","m36","m11"},
+            stat = OR {{index = 188, op = "==", param = 0, value = 5},{index = 188, op = "==", param = 1, value = 5}, {index = 188, op = "==", param = 2, value = 5}, {index = 188, op = "==", param = 3, value = 5}, {index = 188, op = "==", param = 4, value = 5}, {index = 188, op = "==", param = 5, value = 5}, {index = 188, op = "==", param = 6, value = 5}, {index = 188, op = "==", param = 7, value = 5}, {index = 188, op = "==", param = 8, value = 5}, {index = 188, op = "==", param = 9, value = 5}, {index = 188, op = "==", param = 10, value = 5}, {index = 188, op = "==", param = 11, value = 5}, {index = 188, op = "==", param = 12, value = 5}, {index = 188, op = "==", param = 13, value = 5}, {index = 188, op = "==", param = 14, value = 5}, {index = 188, op = "==", param = 15, value = 5}, {index = 188, op = "==", param = 16, value = 5}, {index = 188, op = "==", param = 17, value = 5}, {index = 188, op = "==", param = 18, value = 5}, {index = 188, op = "==", param = 19, value = 5}, {index = 188, op = "==", param = 20, value = 5}, {index = 188, op = "==", param = 21, value = 5}},
+            suffix = "{red}[+5]",
+            quality = "3"
+        },
+        -- Elite Gloves with 20+ IAS
+        {
+            codes = {"ylg","yvg","ymg","ytg","yhg","yig","ulg","uvg","umg","utg","uhg"},
+            stat = {index = 93, op = ">=", value = 20},
+            quality = "3",
+            suffix = "{red}[{stat=(93)}%% IAS]"
+        },
+        -- Elite Gloves with 20+ FCR
+        {
+            codes = {"ylg","yvg","ymg","ytg","yhg","yig","ulg","uvg","umg","utg","uhg"},
+            stat = {index = 105, op = ">=", value = 20},
+            quality = "3",
+            suffix = "{red}[{stat=(105)}%% FCR]"
+        },
+        -- Elite Gloves with -Enemy Resists
+        {
+            codes = {"ylg","yvg","ymg","ytg","yhg","yig","ulg","uvg","umg","utg","uhg"},
+            stat = {index = 333, op = ">=", value = 8},
+            stat = {index = 334, op = ">=", value = 8},
+            stat = {index = 335, op = ">=", value = 8},
+            stat = {index = 336, op = ">=", value = 8},
+            suffix = "{red}-{stat=(333)}%% Enemy Res"
         },
         -- Tooltip descriptions for noob charm
         {
@@ -380,6 +458,15 @@ return {
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
             filter_levels = 3,
         },
+        -- Hide Normal/Exceptional Superior items
+        {
+            codes = "allitems",
+            quality = "3",
+            rarity = "1-",
+            hide = true, 
+            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
+            filter_levels = 3
+        },
         -- Very Strict: Hiding flawless gems
         {
             codes = {"gzv", "gly", "glb", "glg", "glr", "glw", "skl", "gzk"}, 
@@ -417,7 +504,7 @@ return {
             hide = true,
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
             filter_levels = 4
-                        
+                                                
         },
         -- Uber Strict: Hiding T1 Maps
         {
@@ -511,7 +598,7 @@ return {
         },
         -- Uber Strict: Hiding all exceptional coupons
         {
-            codes = {"01d","02d","03d","04d","05d","06d","07d","08d","09d","10d","11d","12d","13d","14d","15d","16d","17d","18d","19d","20d","21d","22d","23d","24d","25d","26d","27d","28d","29d","30d","31d","32d","33d","34d","35d","36d","37d","38d","39d","40d","41d","42d","43d","44d","45d","46d","47d","48d","49d","50d","01g","02g","03g","04g","05g","06g","07g","08g","09g","10g","11g","12g","13g","14g","15g","16g","17g","18g","19g","20g","21g","22g","23g","24g","25g","26g","27g","28g","29g","30g","31g","32g","33g","34g","35g","36g","37g","38g","39g","40g","41g","42g","43g","44g","45g","46g","47g","48g","49g","50g","51g","52g","53g","54g","55g","56g","57g","58g","59g","60g","61g","62g","63g","64g","65g","66g","67g","68g","69g","70g","71g","72g","73g","74g","75g","76g","77g","78g","05i","06i","07i","08i","05j","06j","07j","08j","04i"},
+            codes = {"01d","02d","03d","04d","05d","06d","07d","08d","09d","10d","11d","12d","14d","15d","16d","17d","18d","19d","20d","21d","22d","23d","24d","25d","26d","27d","28d","29d","30d","31d","32d","33d","34d","35d","36d","37d","38d","39d","40d","41d","42d","43d","44d","45d","46d","47d","48d","49d","50d","01g","02g","03g","04g","05g","06g","07g","08g","09g","10g","11g","12g","13g","14g","15g","16g","17g","18g","19g","20g","21g","22g","23g","24g","25g","26g","27g","28g","29g","30g","31g","32g","33g","34g","35g","36g","37g","38g","39g","40g","41g","42g","43g","44g","45g","46g","47g","48g","49g","50g","51g","52g","53g","54g","55g","56g","57g","58g","59g","60g","61g","62g","63g","64g","65g","66g","67g","68g","69g","70g","71g","72g","73g","74g","75g","76g","77g","78g","05i","06i","07i","08i","05j","06j","07j","08j","04i"},
             hide = true,
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
             filter_levels = 4 
@@ -1228,7 +1315,7 @@ return {
             background = {0, 0, 0, 255},
             background = {255, 255, 255, 255 },
             border = {240, 0, 0, 230, 2},
-                                                                                                                
+                                                                                                                                        
             audio = "mythical.mp3"
         },
         {
@@ -1309,7 +1396,7 @@ return {
             name_override = "{gray}Norm:{gold}{name}"
         },
         {
-            codes = {"01d","02d","03d","04d","05d","06d","07d","08d","09d","10d","11d","12d","13d","14d","15d","16d","17d","18d","19d","20d","21d","22d","23d","24d","25d","26d","27d","28d","29d","30d","31d","32d","33d","34d","35d","36d","37d","38d","39d","40d","41d","42d","43d","44d","45d","46d","47d","48d","49d","50d","01g","02g","03g","04g","05g","06g","07g","08g","09g","10g","11g","12g","13g","14g","15g","16g","17g","18g","19g","20g","21g","22g","23g","24g","25g","26g","27g","28g","29g","30g","31g","32g","33g","34g","35g","36g","37g","38g","39g","40g","41g","42g","43g","44g","45g","46g","47g","48g","49g","50g","51g","52g","53g","54g","55g","56g","57g","58g","59g","60g","61g","62g","63g","64g","65g","66g","67g","68g","69g","70g","71g","72g","73g","74g","75g","76g","77g","78g","05i","06i","07i","08i","05j","06j","07j","08j","04i"},
+            codes = {"01d","02d","03d","04d","05d","06d","07d","08d","09d","10d","11d","12d","14d","15d","16d","17d","18d","19d","20d","21d","22d","23d","24d","25d","26d","27d","28d","29d","30d","31d","32d","33d","34d","35d","36d","37d","38d","39d","40d","41d","42d","43d","44d","45d","46d","47d","48d","49d","50d","01g","02g","03g","04g","05g","06g","07g","08g","09g","10g","11g","12g","13g","14g","15g","16g","17g","18g","19g","20g","21g","22g","23g","24g","25g","26g","27g","28g","29g","30g","31g","32g","33g","34g","35g","36g","37g","38g","39g","40g","41g","42g","43g","44g","45g","46g","47g","48g","49g","50g","51g","52g","53g","54g","55g","56g","57g","58g","59g","60g","61g","62g","63g","64g","65g","66g","67g","68g","69g","70g","71g","72g","73g","74g","75g","76g","77g","78g","05i","06i","07i","08i","05j","06j","07j","08j","04i"},
             border = {255,165,0,255}, -- Exceptional Coupons
             name_override = "{gray}Exc:{gold}{name}"
         },
@@ -1326,9 +1413,9 @@ return {
             name_override = "{gray}Elt:{gold}{name}",
             filter_lvels = 4
         },
-        -- S-Tier Coupons: SOJ, Death Fathom, Arachnid Mesh, Veil of Steel, Shako, Tyrael's Might, Verdungo's
+        -- S-Tier Coupons: SOJ, Death Fathom, Arachnid Mesh, Veil of Steel, Shako, Tyrael's Might, Verdungo's, Waterwalk
         {
-            codes = {"03j", "46h", "41e", "03e", "17e", "40e","06e"},
+            codes = {"03j", "46h", "41e", "03e", "17e", "40e","06e","13d"},
             audio = "tink.mp3",
             border = {255,0,0,255},
             background = {255,255,255,255}, 
@@ -1357,7 +1444,7 @@ return {
             quality = "4",
             location = {"onplayer","atvendor"},
             suffix_desc = "{gray}Crafting Available: Check Akara's perfect gems for recipes{blue}\n"
-                                                                                    
+                                                                                                            
         },
         {
             codes = {"zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"},
@@ -1468,7 +1555,7 @@ return {
             quality = "3-",
             pstat = { index = 12, op = ">=", value = 41 }, -- Char Level 41 or above
             location = {"onplayer", "atvendor", "equipped"},
-            suffix_desc = "{gray}Enigma:{purple} Jah{white} Ith {purple}Ber {gray}Lvl: 65{blue}\n{gray}Dragon:{purple}Sur Lo{orange} Sol {gray}Lvl: 61{blue}\n{gray}Nightgown: {orange}Ne {green}Ma {red}Ki {gray}Lvl: 55{blue}\n{gray}Fox: {red}Ki {red}Tsu {orange}Ne {gray}Lvl: 55{blue}\n{gray}Smoke: {gold}Ke {orange}Mu {red}Ri {gray}Lvl: 54{blue}\n{gray}Principle: {white}Ral {purple}Gul{white} Eld {gray}Lvl: 53{blue}\n{purple}Rain: {white}Ort {purple}Mal{white} Ith {gray}Lvl: 49{blue}\n{gray}Duress: {orange}Shael {orange}Um{white} Thul {gray}Lvl: 47{blue}\n{gray}Bone: {white}Sol {orange}Um {orange}Um {gray}Lvl: 47{blue}\n{gray}Daylight: {green}Hi {orange}Ru {green}Ma {gray}Lvl: 46{blue}\n{gray}Indominable: {yellow}Ra{white} N{green}Ma {gray}Lvl: 45{blue}\n{gray}Abundant: {orange}Ho{white} U{green}Fu {gray}Lvl: 44{blue}\n{gray}Harmony: {orange}Wa {green}Se{white} I {gray}Lvl: 43{blue}\n{gray}Fossil of the Sun: {white}Ka {green}Se {red}Ki {gray}Lvl: 43{blue}\n{gray}Lionheart: {orange}Hel {orange}Lum {orange}Fal {gray}Lvl: 41{blue}",
+            suffix_desc = "{gray}Enigma:{purple} Jah{white} Ith {purple}Ber {gray}Lvl: 65{blue}\n{gray}Dragon:{purple}Sur Lo{orange} Sol {gray}Lvl: 61{blue}\n{gray}Nightgown: {orange}Ne {green}Ma {red}Ki {gray}Lvl: 55{blue}\n{gray}Fox: {red}Ki {red}Tsu {orange}Ne {gray}Lvl: 55{blue}\n{gray}Smoke: {gold}Ke {orange}Mu {red}Ri {gray}Lvl: 54{blue}\n{gray}Principle: {white}Ral {purple}Gul{white} Eld {gray}Lvl: 53{blue}\n{purple}Rain: {white}Ort {purple}Mal{white} Ith {gray}Lvl: 49{blue}\n{gray}Duress: {orange}Shael {orange}Um{white} Thul {gray}Lvl: 47{blue}\n{gray}Bone: {white}Sol {orange}Um {orange}Um {gray}Lvl: 47{blue}\n{gray}Daylight: {green}Hi {orange}Ru {green}Ma {gray}Lvl: 46{blue}\n{gray}Indominable: {yellow}Ra{white} N{green}Ma {gray}Lvl: 45{blue}\n{gray}Abundant: {orange}Ho{white} U{green}Fu {gray}Lvl: 44{blue}\n{gray}Harmony: {orange}Wa {green}Se{white} I {gray}Lvl: 43{blue}\n{gray}Fossil of the Sun: {white}Ka {green}Se {red}Ki {gray}Lvl: 43{blue}\n{gray}Lionheart: {orange}Hel {orange}Lum {orange}Fal {gray}Lvl: 41{blue}\n",
             sockets = "3",
         },
         -- Tooltip information for Body Armor showing available 4 socket Runewords
@@ -2457,5 +2544,5 @@ return {
             sockets = "1+",
             maxsock = true
         },
-    },
+    }
 }
