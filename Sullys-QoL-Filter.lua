@@ -797,7 +797,7 @@ return {
         },
         -- Tooltips for Maple Leaf, Anvil Stone, Elixir, Cookbook
         {
-            codes = {"map", "elx", "yyy","ddd"},
+            codes = {"map", "elx", "yyy","qqq"},
             location = {"onplayer","atvendor"},
             prefix = "{white}Cube with Multi-Stocker to store\n{red} Rare Crafting Reagant \n"
         },
