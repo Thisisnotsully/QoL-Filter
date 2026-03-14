@@ -1,9 +1,9 @@
---- Filter Title: Sully's Quality of Life Filter v0.3.5
+--- Filter Title: Sully's Quality of Life Filter v0.3.6
 --- Filter Type: MultiStrict
---- Filter Description: v0.3.5 - PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
+--- Filter Description: v0.3.6 - PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
 --- Filter Link: https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.lua
 return {
-    reload = "{white}Sully's Quality of Life Filter {purple}v0.3.5",  -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
+    reload = "{white}Sully's Quality of Life Filter {purple}v0.3.6",  -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
     language = "enUS",
     filter_titles = { "Leveling", "Strict - Nightmare", "Very-Strict - Hell (pre-maps)", "Uber-Strict - Maps+" },
     audioPlayback = true,
@@ -309,8 +309,8 @@ return {
         },
         {
             code = "gld",
-            stat = { index = 14, op = "<=", value = 4500 }, --hides gold under 5k
-            pstat = { index = 12, op = ">=", value = 100 }, -- Char Level is >= 100
+            stat = { index = 14, op = "<=", value = 1999 }, --hides gold under 2k
+            pstat = { index = 12, op = ">=", value = 90 }, -- Char Level is >= 90
             hide = true, 
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" }
         },
@@ -510,7 +510,7 @@ return {
             area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
             filter_levels = 4
         },
-        -- Uber Strcit: Hiding all magic and normal Mythical items
+        -- Uber Strict: Hiding all magic and normal Mythical items
         {
             codes = {"m01","m02","m03","m04","m05","m06","m07","m08","m09","m10","m11","m12","m13","m14","m15","m16","m17","m18","m19","m20","m21","m22","m23","m24","m25","m26","m27","m28","m29","m30","m31","m32","m33","m34","m35","m36","m37","m38","m39"},
             quality = 4,
