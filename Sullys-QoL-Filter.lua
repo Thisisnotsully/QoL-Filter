@@ -1,2573 +1,1115 @@
---- Filter Title: Sully's Quality of Life Filter v0.3.6
---- Filter Type: MultiStrict
---- Filter Description: v0.3.6 - PoE Themed with custom drop sounds, automatic filtering as you level, adjustable strictness, and many QoL Feautres
---- Filter Link: https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.lua
-return {
-    reload = "{white}Sully's Quality of Life Filter {purple}v0.3.6",  -- **********   Big shout out to Squid and PlausibleSheep because this filter wouldn't exist without me plagiarizing their filters, features, and logic. They put in the hard work, I'm a hack.   ****************
-    language = "enUS",
-    filter_titles = { "Leveling", "Strict - Nightmare", "Very-Strict - Hell (pre-maps)", "Uber-Strict - Maps+" },
-    audioPlayback = true,
-    audioVoice = 0,
-    debug = false,
-    allowOverrides = true,
-    filter_level = 3,
-    rules = {
-        --                                                       Chat notifications enable/disable what you want (primarily for Uber Strict) 
-        {
-            -- Left blank intentionally, only for annotation
-        },
-        -- Ancient Decipherer Notification
-        {
-            code = "ddd",
-            notify = "{red}Crafting Reagant: {gold}Ancient Decipherer",
-            filter_levels = "1,2,3"
-        },
-        -- Socket Donut Notification
-            {   
-            code = "sdo",
-            notify = "{red}Crafting Material: {name}"
-        },
-        -- Worldstone Shard Notification
-        {
-            code = "wss", 
-            notify = "{Red}Crafting Reagant: {white}Worldstone Shard"
-        },
-        {
-            codes = {"xl1","xl2","xl3","xl4","xl5","xl6","xl7","xl8","xl9","xlx","xly"},
-            notify = "{red}Crafting Reagant: {name}",
-            filter_levels = "1,2,3"
-        },
-        -- Normal Uniques Notification
-        {   
-            codes = {"kgk","srk","fsk","kgl","02h", "0ax", "0b0", "0b6", "0b7", "0ba", "0be", "0bk", "0bl", "0br", "0bs", "0bt", "0bw", "0cl", "0cm", "0cr", "0dg", "0di", "0fb", "0fc", "0fl", "0ga", "0gd", "0gi", "0gl", "0gm", "0gp", "0gs", "0gw", "0h0", "0ha", "0ja", "0kl", "0kr", "0la", "0ls", "0m0", "0ma", "0mn", "0mp", "0mt", "0nn", "0ns", "0p0", "0pa", "0pb", "0pi", "0qs", "0rd", "0rm", "0s8", "0s9", "0sb", "0sh", "0sm", "0sp", "0sr", "0ss", "0st", "0sy", "0ta", "0tk", "0tr", "0ts", "0vo", "0wa", "0wc", "0wd", "0wh", "0wn", "0ws", "0xb", "0yw", "1bs", "1cb", "1cs", "1hb", "1hx", "1l8", "1lb", "1ls", "1lw", "1lx", "1mx", "1rx", "1s8", "1sb", "1ss", "1sw", "1ws", "2ap", "2ar", "2ax", "2cl", "2ea", "2h9", "2hb", "2hg", "2hl", "2hm", "2hn", "2hs", "2it", "2kp", "2la", "2lb", "2ld", "2lg", "2lm", "2lt", "2mb", "2mg", "2ml", "2ng", "2ow", "2pk", "2pl", "2rg", "2rn", "2rs", "2sh", "2sk", "2tb", "2tg", "2th", "2tp", "2ts", "2tu", "2uc", "2ui", "2ul", "2vb", "2vg", "3hb", "3lb", "3mb", "3tb", "3vb", "4ap", "4ar", "4cl", "4ea", "4h9", "4hb", "4hg", "4hl", "4hm", "4hn", "4it", "4kp", "4la", "4lb", "4ld", "4lg", "4lm", "4lt", "4mb", "4mg", "4ml", "4ng", "4ow", "4pk", "4pl", "4rg", "4rn", "4rs", "4sh", "4sk", "4tb", "4tg", "4th", "4tp", "4ts", "4tu", "4uc", "4ui", "4ul", "4vb", "4vg", "5hb", "5lb", "5mb", "5sc", "5tb", "5vb", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mp", "7mt", "7o7", "7p7", "7pa", "7pi", "7qr", "7qs", "7s7", "7s8", "7sb", "7sc", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7tw", "7vo", "7wa", "7wb", "7wc", "7wh", "7wn", "7ws", "7xf", "7yw", "82a", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9be", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gp", "9gs", "9gw", "9h9", "9ha", "9ja", "9kl", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mn", "9mp", "9mt", "9nj", "9nn", "9ns", "9p9", "9pa", "9pb", "9pi", "9qr", "9qs", "9rd", "9rm", "9s8", "9s9", "9sb", "9sc", "9sh", "9sm", "9sp", "9sr", "9ss", "9st", "9sy", "9ta", "9tk", "9tr", "9ts", "9tw", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9ws", "9xb", "9xf", "9yw", "aar", "ahb", "alb", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "apb", "arm", "atb", "avb", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "bmb", "br2", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "bts", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "ci4", "cix", "clb", "clk", "clm", "clw", "cr2", "crn", "crs", "cst", "dbt", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "dwc", "eht", "elv", "fhl", "fla", "flb", "flc", "fld", "fts", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsc", "gsd", "gsp", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "irg", "jav", "kit", "kkl", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mnb", "mpi", "msb", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "ned", "nee", "nef", "neg", "nin", "njt", "nrd", "nsy", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pbe", "pik", "pil", "plt", "q00", "q01", "q02", "q03", "q04", "q05", "q06", "q07", "q08", "q09", "q10", "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q28", "q29", "q2a", "q2b", "q2c", "q2d", "q2e", "q2f", "q30", "q31", "q32", "q33", "q34", "q35", "q36", "q37", "q38", "q39", "q3a", "q3b", "q3c", "q3d", "q3e", "q3f", "q40", "q41", "q42", "q43", "q44", "q45", "q46", "q47", "q48", "q49", "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q50", "q51", "q52", "q53", "q54", "q55", "q56", "q57", "q58", "q59", "q60", "q61", "q62", "q63", "q64", "q65", "q66", "q67", "q68", "q69", "q70", "q71", "q72", "q73", "q74", "q75", "q76", "q77", "q78", "q79", "q80", "q81", "q82", "q83", "q84", "q85", "q86", "qba", "qbc", "qbd", "qbe", "qda", "qdb", "qdd", "qde", "qdf", "qi2", "qi3", "qna", "qne", "qnf", "qp9", "qpc", "qpe", "qui", "rng", "rob", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scp", "scy", "shc", "shl", "skp", "skr", "sml", "sp2", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "syn", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wsp", "wst", "xap", "xar", "xbt", "xcl", "xdw", "xea", "xft", "xh9", "xhb", "xhg", "xhh", "xhl", "xhm", "xhn", "xht", "xig", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlk", "xlm", "xlt", "xlv", "xmb", "xmg", "xml", "xms", "xng", "xow", "xpk", "xpl", "xrb", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "yap", "yar", "ybt", "ycl", "ydw", "yea", "yft", "yh9", "yhb", "yhg", "yhh", "yhl", "yhm", "yhn", "yht", "yig", "yit", "ykp", "yla", "ylb", "yld", "ylg", "ylk", "ylm", "ylt", "ylv", "ymb", "ymg", "yml", "yms", "yng", "yow", "ypk", "ypl", "yrb", "yrg", "yrn", "yrs", "ysh", "ysk", "ytb", "ytg", "yth", "ytp", "yts", "ytu", "yuc", "yui", "yul", "yvb", "yvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb"},
-            quality = "7", 
-            rarity = "0",
-            notify = "{white} ** {gray}Normal: {gold}{name} {white}**",
-            filter_levels = "1, 2"
-        },
-        -- Exceptional Uniques Notification
-        {
-            codes = {"kgk","srk","fsk","kgl","02h", "0ax", "0b0", "0b6", "0b7", "0ba", "0be", "0bk", "0bl", "0br", "0bs", "0bt", "0bw", "0cl", "0cm", "0cr", "0dg", "0di", "0fb", "0fc", "0fl", "0ga", "0gd", "0gi", "0gl", "0gm", "0gp", "0gs", "0gw", "0h0", "0ha", "0ja", "0kl", "0kr", "0la", "0ls", "0m0", "0ma", "0mn", "0mp", "0mt", "0nn", "0ns", "0p0", "0pa", "0pb", "0pi", "0qs", "0rd", "0rm", "0s8", "0s9", "0sb", "0sh", "0sm", "0sp", "0sr", "0ss", "0st", "0sy", "0ta", "0tk", "0tr", "0ts", "0vo", "0wa", "0wc", "0wd", "0wh", "0wn", "0ws", "0xb", "0yw", "1bs", "1cb", "1cs", "1hb", "1hx", "1l8", "1lb", "1ls", "1lw", "1lx", "1mx", "1rx", "1s8", "1sb", "1ss", "1sw", "1ws", "2ap", "2ar", "2ax", "2cl", "2ea", "2h9", "2hb", "2hg", "2hl", "2hm", "2hn", "2hs", "2it", "2kp", "2la", "2lb", "2ld", "2lg", "2lm", "2lt", "2mb", "2mg", "2ml", "2ng", "2ow", "2pk", "2pl", "2rg", "2rn", "2rs", "2sh", "2sk", "2tb", "2tg", "2th", "2tp", "2ts", "2tu", "2uc", "2ui", "2ul", "2vb", "2vg", "3hb", "3lb", "3mb", "3tb", "3vb", "4ap", "4ar", "4cl", "4ea", "4h9", "4hb", "4hg", "4hl", "4hm", "4hn", "4it", "4kp", "4la", "4lb", "4ld", "4lg", "4lm", "4lt", "4mb", "4mg", "4ml", "4ng", "4ow", "4pk", "4pl", "4rg", "4rn", "4rs", "4sh", "4sk", "4tb", "4tg", "4th", "4tp", "4ts", "4tu", "4uc", "4ui", "4ul", "4vb", "4vg", "5hb", "5lb", "5mb", "5sc", "5tb", "5vb", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mp", "7mt", "7o7", "7p7", "7pa", "7pi", "7qr", "7qs", "7s7", "7s8", "7sb", "7sc", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7tw", "7vo", "7wa", "7wb", "7wc", "7wh", "7wn", "7ws", "7xf", "7yw", "82a", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9be", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gp", "9gs", "9gw", "9h9", "9ha", "9ja", "9kl", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mn", "9mp", "9mt", "9nj", "9nn", "9ns", "9p9", "9pa", "9pb", "9pi", "9qr", "9qs", "9rd", "9rm", "9s8", "9s9", "9sb", "9sc", "9sh", "9sm", "9sp", "9sr", "9ss", "9st", "9sy", "9ta", "9tk", "9tr", "9ts", "9tw", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9ws", "9xb", "9xf", "9yw", "aar", "ahb", "alb", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "apb", "arm", "atb", "avb", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "bmb", "br2", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "bts", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "ci4", "cix", "clb", "clk", "clm", "clw", "cr2", "crn", "crs", "cst", "dbt", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "dwc", "eht", "elv", "fhl", "fla", "flb", "flc", "fld", "fts", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsc", "gsd", "gsp", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "irg", "jav", "kit", "kkl", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mnb", "mpi", "msb", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "ned", "nee", "nef", "neg", "nin", "njt", "nrd", "nsy", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pbe", "pik", "pil", "plt", "q00", "q01", "q02", "q03", "q04", "q05", "q06", "q07", "q08", "q09", "q10", "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q28", "q29", "q2a", "q2b", "q2c", "q2d", "q2e", "q2f", "q30", "q31", "q32", "q33", "q34", "q35", "q36", "q37", "q38", "q39", "q3a", "q3b", "q3c", "q3d", "q3e", "q3f", "q40", "q41", "q42", "q43", "q44", "q45", "q46", "q47", "q48", "q49", "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q50", "q51", "q52", "q53", "q54", "q55", "q56", "q57", "q58", "q59", "q60", "q61", "q62", "q63", "q64", "q65", "q66", "q67", "q68", "q69", "q70", "q71", "q72", "q73", "q74", "q75", "q76", "q77", "q78", "q79", "q80", "q81", "q82", "q83", "q84", "q85", "q86", "qba", "qbc", "qbd", "qbe", "qda", "qdb", "qdd", "qde", "qdf", "qi2", "qi3", "qna", "qne", "qnf", "qp9", "qpc", "qpe", "qui", "rng", "rob", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scp", "scy", "shc", "shl", "skp", "skr", "sml", "sp2", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "syn", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wsp", "wst", "xap", "xar", "xbt", "xcl", "xdw", "xea", "xft", "xh9", "xhb", "xhg", "xhh", "xhl", "xhm", "xhn", "xht", "xig", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlk", "xlm", "xlt", "xlv", "xmb", "xmg", "xml", "xms", "xng", "xow", "xpk", "xpl", "xrb", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "yap", "yar", "ybt", "ycl", "ydw", "yea", "yft", "yh9", "yhb", "yhg", "yhh", "yhl", "yhm", "yhn", "yht", "yig", "yit", "ykp", "yla", "ylb", "yld", "ylg", "ylk", "ylm", "ylt", "ylv", "ymb", "ymg", "yml", "yms", "yng", "yow", "ypk", "ypl", "yrb", "yrg", "yrn", "yrs", "ysh", "ysk", "ytb", "ytg", "yth", "ytp", "yts", "ytu", "yuc", "yui", "yul", "yvb", "yvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb"},
-            quality = "7",
-            rarity = "1",
-            notify = "{white} ** {gray}Exceptional: {gold}{name} {white}**",
-            filter_levels = "1, 2"
-        },
-        -- Elite Uniques Notification
-        {
-            codes = {"kgk","srk","fsk","kgl","02h", "0ax", "0b0", "0b6", "0b7", "0ba", "0be", "0bk", "0bl", "0br", "0bs", "0bt", "0bw", "0cl", "0cm", "0cr", "0dg", "0di", "0fb", "0fc", "0fl", "0ga", "0gd", "0gi", "0gl", "0gm", "0gp", "0gs", "0gw", "0h0", "0ha", "0ja", "0kl", "0kr", "0la", "0ls", "0m0", "0ma", "0mn", "0mp", "0mt", "0nn", "0ns", "0p0", "0pa", "0pb", "0pi", "0qs", "0rd", "0rm", "0s8", "0s9", "0sb", "0sh", "0sm", "0sp", "0sr", "0ss", "0st", "0sy", "0ta", "0tk", "0tr", "0ts", "0vo", "0wa", "0wc", "0wd", "0wh", "0wn", "0ws", "0xb", "0yw", "1bs", "1cb", "1cs", "1hb", "1hx", "1l8", "1lb", "1ls", "1lw", "1lx", "1mx", "1rx", "1s8", "1sb", "1ss", "1sw", "1ws", "2ap", "2ar", "2ax", "2cl", "2ea", "2h9", "2hb", "2hg", "2hl", "2hm", "2hn", "2hs", "2it", "2kp", "2la", "2lb", "2ld", "2lg", "2lm", "2lt", "2mb", "2mg", "2ml", "2ng", "2ow", "2pk", "2pl", "2rg", "2rn", "2rs", "2sh", "2sk", "2tb", "2tg", "2th", "2tp", "2ts", "2tu", "2uc", "2ui", "2ul", "2vb", "2vg", "3hb", "3lb", "3mb", "3tb", "3vb", "4ap", "4ar", "4cl", "4ea", "4h9", "4hb", "4hg", "4hl", "4hm", "4hn", "4it", "4kp", "4la", "4lb", "4ld", "4lg", "4lm", "4lt", "4mb", "4mg", "4ml", "4ng", "4ow", "4pk", "4pl", "4rg", "4rn", "4rs", "4sh", "4sk", "4tb", "4tg", "4th", "4tp", "4ts", "4tu", "4uc", "4ui", "4ul", "4vb", "4vg", "5hb", "5lb", "5mb", "5sc", "5tb", "5vb", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mp", "7mt", "7o7", "7p7", "7pa", "7pi", "7qr", "7qs", "7s7", "7s8", "7sb", "7sc", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7tw", "7vo", "7wa", "7wb", "7wc", "7wh", "7wn", "7ws", "7xf", "7yw", "82a", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9be", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gp", "9gs", "9gw", "9h9", "9ha", "9ja", "9kl", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mn", "9mp", "9mt", "9nj", "9nn", "9ns", "9p9", "9pa", "9pb", "9pi", "9qr", "9qs", "9rd", "9rm", "9s8", "9s9", "9sb", "9sc", "9sh", "9sm", "9sp", "9sr", "9ss", "9st", "9sy", "9ta", "9tk", "9tr", "9ts", "9tw", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9ws", "9xb", "9xf", "9yw", "aar", "ahb", "alb", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "apb", "arm", "atb", "avb", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "bmb", "br2", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "bts", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "ci4", "cix", "clb", "clk", "clm", "clw", "cr2", "crn", "crs", "cst", "dbt", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "dwc", "eht", "elv", "fhl", "fla", "flb", "flc", "fld", "fts", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsc", "gsd", "gsp", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "irg", "jav", "kit", "kkl", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mnb", "mpi", "msb", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "ned", "nee", "nef", "neg", "nin", "njt", "nrd", "nsy", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pbe", "pik", "pil", "plt", "q00", "q01", "q02", "q03", "q04", "q05", "q06", "q07", "q08", "q09", "q10", "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q28", "q29", "q2a", "q2b", "q2c", "q2d", "q2e", "q2f", "q30", "q31", "q32", "q33", "q34", "q35", "q36", "q37", "q38", "q39", "q3a", "q3b", "q3c", "q3d", "q3e", "q3f", "q40", "q41", "q42", "q43", "q44", "q45", "q46", "q47", "q48", "q49", "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q50", "q51", "q52", "q53", "q54", "q55", "q56", "q57", "q58", "q59", "q60", "q61", "q62", "q63", "q64", "q65", "q66", "q67", "q68", "q69", "q70", "q71", "q72", "q73", "q74", "q75", "q76", "q77", "q78", "q79", "q80", "q81", "q82", "q83", "q84", "q85", "q86", "qba", "qbc", "qbd", "qbe", "qda", "qdb", "qdd", "qde", "qdf", "qi2", "qi3", "qna", "qne", "qnf", "qp9", "qpc", "qpe", "qui", "rng", "rob", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scp", "scy", "shc", "shl", "skp", "skr", "sml", "sp2", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "syn", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wsp", "wst", "xap", "xar", "xbt", "xcl", "xdw", "xea", "xft", "xh9", "xhb", "xhg", "xhh", "xhl", "xhm", "xhn", "xht", "xig", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlk", "xlm", "xlt", "xlv", "xmb", "xmg", "xml", "xms", "xng", "xow", "xpk", "xpl", "xrb", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "yap", "yar", "ybt", "ycl", "ydw", "yea", "yft", "yh9", "yhb", "yhg", "yhh", "yhl", "yhm", "yhn", "yht", "yig", "yit", "ykp", "yla", "ylb", "yld", "ylg", "ylk", "ylm", "ylt", "ylv", "ymb", "ymg", "yml", "yms", "yng", "yow", "ypk", "ypl", "yrb", "yrg", "yrn", "yrs", "ysh", "ysk", "ytb", "ytg", "yth", "ytp", "yts", "ytu", "yuc", "yui", "yul", "yvb", "yvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb"},
-            quality = "7",
-            rarity = "2",
-            notify = "{white} ** {gray}Elite: {gold}{name} {white}**",
-            filter_levels = "1, 2, 3"
-        },
-        -- Normal Set Items Notification
-        {
-            codes = "allitems",
-            quality = "5",
-            notify = "{white} ** {gray}{green}{name}{white} **",
-            rarity = "0",
-            filter_levels = "1,2"
-        },
-        -- Elite Set Items Notification
-        {
-            codes = "allitems",
-            quality = "5",
-            rarity = "1",
-            notify = "{white} ** {gray}{green}{name}{white} **",
-            filter_levels = "1,2"
-        },
-        -- Elite Set Items Notification
-        {
-            codes = "allitems",
-            quality = "5",
-            rarity = "2",
-            notify = "{white} ** {gray}{green}{name}{white} **",
-            filter_levels = "1,2,3"
-        },
-        -- Normal Coupons Notification 
-        {
-            codes = {"01c","02c","03c","04c","05c","06c","07c","08c","09c","10c","11c","12c","13c","14c","15c","16c","17c","18c","19c","20c","21c","22c","23c","24c","25c","26c","27c","28c","29c","30c","31c","32c","33c","34c","35c","36c","37c","38c","39c","40c","41c","42c","43c","44c","45c","46c","01f","02f","03f","04f","05f","06f","07f","08f","09f","10f","11f","12f","13f","14f","15f","16f","17f","18f","19f","20f","21f","22f","23f","24f","25f","26f","27f","28f","29f","30f","31f","32f","33f","34f","35f","36f","37f","38f","39f","40f","41f","42f","43f","44f","45f","46f","47f","48f","49f","50f","51f","52f","53f","54f","55f","56f","57f","58f","59f","60f","61f","62f","63f","64f","65f","66f","67f","68f","69f","70f","71f","01i","02i","03i","01j","02j","04j"},
-            notify = "{gold}Normal Coupon: {white}{name}",
-            filter_levels = "1,2"
-        },
-        -- Exceptional Coupons Notification
-        {
-            codes = {"01d","02d","03d","04d","05d","06d","07d","08d","09d","10d","11d","12d","14d","15d","16d","17d","18d","19d","20d","21d","22d","23d","24d","25d","26d","27d","28d","29d","30d","31d","32d","33d","34d","35d","36d","37d","38d","39d","40d","41d","42d","43d","44d","45d","46d","47d","48d","49d","50d","01g","02g","03g","04g","05g","06g","07g","08g","09g","10g","11g","12g","13g","14g","15g","16g","17g","18g","19g","20g","21g","22g","23g","24g","25g","26g","27g","28g","29g","30g","31g","32g","33g","34g","35g","36g","37g","38g","39g","40g","41g","42g","43g","44g","45g","46g","47g","48g","49g","50g","51g","52g","53g","54g","55g","56g","57g","58g","59g","60g","61g","62g","63g","64g","65g","66g","67g","68g","69g","70g","71g","72g","73g","74g","75g","76g","77g","78g","05i","06i","07i","08i","05j","06j","07j","08j","04i"},
-            notify = "{gold}Exceptional Coupon: {white}{name}",
-            filter_levels = "1,2,3"
-        },
-        -- Elite Coupons Notification
-        {
-            codes = {"01e","02e","04e","05e","07e","08e","09e","10e","11e","12e","13e","14e","15e","16e","18e","19e","20e","21e","22e","23e","24e","25e","26e","27e","28e","29e","30e","31e","32e","33e","34e","35e","36e","37e","38e","39e","01h","02k","03h","04h","05h","06h","07h","08h","09h","10h","11h","12k","13h","14h","15h","16h","17h","18h","19h","20h","21h","22k","23h","24h","25h","26h","27h","28h","29h","30h","31h","32k","33h","34h","35h","36h","37h","38h","39h","40h","41h","42k","43h","44h","45h","47h","48h","49h","50h","51h","52k","53h","54h","55h","56h","57h","58h","59h","60h","61h","62k","09i","10i","11i","12i","09j","10j"},
-            notify = "{gold}Elite Coupon: {white}{name}",
-            filter_levels = "1,2,3"
-        },
-        -- Rare class jewelry Notification
-        {
-            codes = {"zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"}, 
-            quality = "6",
-            notify = "Class Jewellery: {yellow}{name}",
-            filter_levels = "1,2,3"
-        },
-        -- Monster Parts Notification
-        {
-            codes = {"qll", "hrt", "brz", "jaw", "eyz", "hrn", "tal", "flg", "fng","sol", "scz", "spe", "zzz"}, 
-            location = "onground",
-            notify = "{red}Crafting Reagant: {white}{name}",
-            filter_levels = "1,2,3"
-        },
-        -- Monster Parts notification for Uber-Strict alerting Hearts and Souls, everything else still shows, just no chat alert
-        {
-            codes = {"hrt","sol"}, 
-            location = "onground",
-            notify = "{red}Crafting Reagant: {white}{name}",
-            filter_levels = 4
-        },
-        -- Perfect Gems Notification
-        {
-            codes = {"gvb", "gyb", "gbb", "ggb", "grb", "gwb", "skb", "gbk"}, 
-            filter_levels = "1,2,3",
-            notify = "{name}"
-        },
-        --                                                       Superior Item Highlighting (Elite) 
-        {
-            -- Left blank intentionally, only for annotation
-        },
-        -- Elite Boots with 20+ Faster Run/Walk
-        {
-            codes = {"ylb","yvb","ymb","ytb","yhb","ybt","ulb","uvb","umb","utb","uhb"},
-            stat = {index = 96, op = ">=", value = 20},
-            suffix = "{red}[{stat=(96)}%%FRW]"
-        },
-        -- Elite Boots with -8 Enemy Resist
-        {
-            codes = {"ylb","yvb","ymb","ytb","yhb","ybt","ulb","uvb","umb","utb","uhb"},
-            stat = {index = 333, op = ">=", value = 8},
-            stat = {index = 334, op = ">=", value = 8},
-            stat = {index = 335, op = ">=", value = 8},
-            stat = {index = 336, op = ">=", value = 8},
-            suffix = "{red}[-{stat=(333)}%% Res Pierce]"
-        },
-        -- Elite Belts with -8 Enemy Resist
-        {
-            codes = {"alb","avb","bmb","atb","ahb","yms","ulc","uvc","umc","utc","uhc","m10"},
-            stat = {index = 333, op = ">=", value = 8},
-            stat = {index = 334, op = ">=", value = 8},
-            stat = {index = 335, op = ">=", value = 8},
-            stat = {index = 336, op = ">=", value = 8},
-            suffix = "{red}[-{stat=(333)}%% Res Pierce]"
-        },
-        -- Elite Belts with 8+ Phys Resist
-        {
-            codes = {"alb","avb","bmb","atb","ahb","yms","ulc","uvc","umc","utc","uhc","m10"},
-            stat = {index = 36, op = ">=", value = 8},
-            suffix = "{red}[{stat=(36)}%% Phys Res]"
-        },
-        -- Elite Bows/Javelins with +3 Bow or +3 Jav skills
-        {
-            codes = {"0pb","amb","amc","q80","amf","q82","m31","amd","ame","q81"},
-            stat = OR {{index = 188, op = ">=", param = 0, value = 3},{index = 188, op = ">=", param = 1, value = 3}, {index = 188, op = ">=", param = 2, value = 3}, {index = 188, op = ">=", param = 3, value = 3}, {index = 188, op = ">=", param = 4, value = 3}, {index = 188, op = ">=", param = 5, value = 3}, {index = 188, op = ">=", param = 6, value = 3}, {index = 188, op = ">=", param = 7, value = 3}, {index = 188, op = ">=", param = 8, value = 3}, {index = 188, op = ">=", param = 9, value = 3}, {index = 188, op = ">=", param = 10, value = 3}, {index = 188, op = ">=", param = 11, value = 3}, {index = 188, op = ">=", param = 12, value = 3}, {index = 188, op = ">=", param = 13, value = 3}, {index = 188, op = ">=", param = 14, value = 3}, {index = 188, op = ">=", param = 15, value = 3}, {index = 188, op = ">=", param = 16, value = 3}, {index = 188, op = ">=", param = 17, value = 3}, {index = 188, op = ">=", param = 18, value = 3}, {index = 188, op = ">=", param = 19, value = 3}, {index = 188, op = ">=", param = 20, value = 3}, {index = 188, op = ">=", param = 21, value = 3}},
-            suffix = "{red}[+3]",
-            quality = "3"
-        },
-        -- Staffs with +4 Sorc Tab
-        {
-            codes = {"1ss","1ls","1cs","1bs","1ws","6ss","6ls","6cs","6bs","6ws","m29","m36","m11"},
-            stat = OR {{index = 188, op = "==", param = 0, value = 4},{index = 188, op = "==", param = 1, value = 4}, {index = 188, op = "==", param = 2, value = 4}, {index = 188, op = "==", param = 3, value = 4}, {index = 188, op = "==", param = 4, value = 4}, {index = 188, op = "==", param = 5, value = 4}, {index = 188, op = "==", param = 6, value = 4}, {index = 188, op = "==", param = 7, value = 4}, {index = 188, op = "==", param = 8, value = 4}, {index = 188, op = "==", param = 9, value = 4}, {index = 188, op = "==", param = 10, value = 4}, {index = 188, op = "==", param = 11, value = 4}, {index = 188, op = "==", param = 12, value = 4}, {index = 188, op = "==", param = 13, value = 4}, {index = 188, op = "==", param = 14, value = 4}, {index = 188, op = "==", param = 15, value = 4}, {index = 188, op = "==", param = 16, value = 4}, {index = 188, op = "==", param = 17, value = 4}, {index = 188, op = "==", param = 18, value = 4}, {index = 188, op = "==", param = 19, value = 4}, {index = 188, op = "==", param = 20, value = 4}, {index = 188, op = ">=", param = 21, value = 4}},
-            suffix = "{red}[+4]",
-            quality = "3"
-        },
-        -- Staffs with +5 Sorc Tab
-        {
-            codes = {"1ss","1ls","1cs","1bs","1ws","6ss","6ls","6cs","6bs","6ws","m29","m36","m11"},
-            stat = OR {{index = 188, op = "==", param = 0, value = 5},{index = 188, op = "==", param = 1, value = 5}, {index = 188, op = "==", param = 2, value = 5}, {index = 188, op = "==", param = 3, value = 5}, {index = 188, op = "==", param = 4, value = 5}, {index = 188, op = "==", param = 5, value = 5}, {index = 188, op = "==", param = 6, value = 5}, {index = 188, op = "==", param = 7, value = 5}, {index = 188, op = "==", param = 8, value = 5}, {index = 188, op = "==", param = 9, value = 5}, {index = 188, op = "==", param = 10, value = 5}, {index = 188, op = "==", param = 11, value = 5}, {index = 188, op = "==", param = 12, value = 5}, {index = 188, op = "==", param = 13, value = 5}, {index = 188, op = "==", param = 14, value = 5}, {index = 188, op = "==", param = 15, value = 5}, {index = 188, op = "==", param = 16, value = 5}, {index = 188, op = "==", param = 17, value = 5}, {index = 188, op = "==", param = 18, value = 5}, {index = 188, op = "==", param = 19, value = 5}, {index = 188, op = "==", param = 20, value = 5}, {index = 188, op = "==", param = 21, value = 5}},
-            suffix = "{red}[+5]",
-            quality = "3"
-        },
-        -- Elite Gloves with 20+ IAS
-        {
-            codes = {"ylg","yvg","ymg","ytg","yhg","yig","ulg","uvg","umg","utg","uhg"},
-            stat = {index = 93, op = ">=", value = 20},
-            quality = "3",
-            suffix = "{red}[{stat=(93)}%% IAS]"
-        },
-        -- Elite Gloves with 20+ FCR
-        {
-            codes = {"ylg","yvg","ymg","ytg","yhg","yig","ulg","uvg","umg","utg","uhg"},
-            stat = {index = 105, op = ">=", value = 20},
-            quality = "3",
-            suffix = "{red}[{stat=(105)}%% FCR]"
-        },
-        -- Elite Gloves with -Enemy Resists
-        {
-            codes = {"ylg","yvg","ymg","ytg","yhg","yig","ulg","uvg","umg","utg","uhg"},
-            stat = {index = 333, op = ">=", value = 8},
-            stat = {index = 334, op = ">=", value = 8},
-            stat = {index = 335, op = ">=", value = 8},
-            stat = {index = 336, op = ">=", value = 8},
-            suffix = "{red}-{stat=(333)}%% Enemy Res"
-        },
-        -- Tooltip descriptions for noob charm
-        {
-            code = "c11",
-            location = {"onplayer", "atvendor", "equipped", "onground"},
-            prefix_desc = "{purple} To Upgrade: Cube with 7 Rare Charms, Elixir, Maple Leaf, and Ancient Decipherer \n Socket with any Rune, Gem, or Jewel \n {green}***Browse Akara's items for more tips!***\n"
-        },
-        -- Tooltip descriptions for veteran charm
-        {
-            code = "c12",
-            location = {"onplayer", "atvendor", "equipped", "onground"},
-            prefix_desc = " {purple}To add a socket cube with 1 Perfect gem and Socket Donut \n ** Supports Charm Runewords ** \n"
-        },
-        -- Vendor item tooltips for some crafting recipes
-        {
-            code = "vps",
-            location = "atvendor", 
-            suffix_desc = "\nTome of ID: Jewel Forging Recipes\nToken of Absolution: Gear Forging Recipes\n{green}Hover Perfect Gems to see class crafting recipes\n"
-        },
-        -- Vendor tip
-        {
-            code = "gvb",
-            location = "atvendor",
-            prefix = "{blue}Non-Barb Weapon:{gray} 25-35 Attack Speed|150-200 Enhanced Damage|15-25 Life Leech|10-15 Mana Leech\n{blue}Weapon:{gray} +1-2 Barb Skills|25-35 Attack Speed|150-200 Enhanced Damage\n{blue}Ring:{gray} +1-2 Barb Skills|10-15%% Max Life|20-30 Str|+20-30 Max Dmg to Attacks\n{blue}Amulet:{gray} +1-2 Barb Skills|10-15%% Max Life|15-25 All Resists\n{blue}Chest:{gray} +1-2 Barb Skills|80-100 ED|15-25 all attributes|+10-15 Phys Res\n{blue}Shield:{gray} +1-2 Barb Skills|20-30 Faster Block|80-100 ED|3-5 Increased Block\n{blue}Belt:{gray} +1 Barb Skills|20-30 Hit Recovery|80-100 ED|30-45 Str\n{blue}Gloves:{gray} +1 Barb Skills|20-30 Attack Speed|80-100 ED|30-45 Dex\n{blue}Boots:{gray} +1 Barb Skills|20-30 Faster Run/Walk|80-100 ED|30-45 Vit\n{blue}Helm:{gray} +1-2 Barb Skills|80-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic{gray} Gear + Forging Hammer + P.Amethyst + Any Jewel\n"
-        },
-        -- Vendor tip
-        {
-            code = "gyb",
-            location = "atvendor",
-            prefix = "{blue}Non-Druid Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|25-40 Spell Dmg\n{blue}Druid Wpn: {gray}+1-2 Druid Skill|25-35 IAS|150-200 Enahcned Dmg\n{blue}Ring: {gray}+1-2 Druid Skill|20-30 Vit|Max Life 10-15%%|12-18 Spell Dmg\n{blue}Amulet: {gray}+1-2 Druid Skill|20-30 Vit|15%% Max Life|15-25 All Res\n{blue}Chest: {gray}+1-2 Druid Skill|80-100 ED|15-25 All Attr|10-15 Phys Res\n{blue}Shield:{gray} +1-2 Druid Skill|20-30 FBR|3-5 Block|80-100 ED\n{blue}Belt{gray}+1 Druid Skill|20-30 FHR|80-100 ED|30-45 Str\n{blue}Gloves:{gray}+1 Druid Skill|20-30 IAS|80-100 ED|30-45 Dex\n{blue}Boots:{gray}+1 Druid Skill|20-30 FRW|80-100 ED|30-45 Vit\n{blue}Helm{gray}+1-2 Druid Skills|90-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic {gray}Gear + Tyranium Ore + P.Topaz + Any Jewel\n"
-        },
-        -- Vendor tip
-        {
-            code = "ggb",
-            location = "atvendor", 
-            prefix = "{blue}Non-Amazon Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|50-100 Bonus Attack Rating\n{blue}Amazon Wpn: {gray}+1-2 Amazon Skill|25-35 IAS|150-200 Enahcned Dmg\n{blue}Ring: {gray}+1-2 Amazon Skill|30-45 Dex|Max Life 10-15%%|15-25 Min Atk Dmg\n{blue}Amulet: {gray}+1-2 Amazon Skill|20-30 Dex|15%% Max Life|15-25 All Res\n{blue}Chest: {gray}+1-2 Amazon Skill|80-100 ED|15-25 All Attr|10-15 Phys Res\n{blue}Shield:{gray} +1-2 Amazon Skill|20-30 Faster Block|3-5 Block|80-100 ED\n{blue}Belt{gray}+1 Amazon Skill|20-30 FHR|80-100 ED|30-45 Str\n{blue}Gloves:{gray}+1 Amazon Skill|20-30 IAS|80-100 ED|30-45 Dex\n{blue}Boots:{gray}+1 Amazon Skill|20-30 FRW|80-100 ED|30-45 Vit\n{blue}Helm{gray}+1-2 Amazon Skills|90-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic {gray}Gear + Spider's Silk + P.Emerald + Any Jewel\n"
-        },
-        -- Vendor tip
-        {
-            code = "grb", 
-            location = "atvendor", 
-            prefix = "{blue}Non-Assassin Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|20-30 Deadly Strike\n{blue}Assassin Wpn: {gray}+1-2 Assassin Skill|25-35 IAS|150-200 Enahcned Dmg\n{blue}Ring: {gray}+1-2 Assassin Skill|30-45 Dex|Max Life 10-15%%|20-30 Life After Kill|10-20 Mana After Kill\n{blue}Amulet: {gray}+1-2 Assassin Skill|20-30 Dex|15%% Max Life|15-25 All Res\n{blue}Chest: {gray}+1-2 Assassin Skill|80-100 ED|15-25 All Attr|10-15 Phys Res\n{blue}Shield:{gray} +1-2 Assassin Skill|20-30 Faster Block|3-5 Block|80-100 ED\n{blue}Belt{gray}+1 Assassin Skill|20-30 FHR|80-100 ED|30-45 Str\n{blue}Gloves:{gray}+1 Assassin Skill|20-30 IAS|80-100 ED|30-45 Dex\n{blue}Boots:{gray}+1 Assassin Skill|20-30 FRW|80-100 ED|30-45 Vit\n{blue}Helm{gray}+1-2 Assassin Skills|90-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic {gray}Gear + Dragon Stone + P.Ruby + Any Jewel\n"
-        },
-        -- Vendor tip
-        {
-            code = "skb", 
-            location = "atvendor", 
-            prefix = "{blue}Non-Necromancer Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|20-30 Crushing Blow\n{blue}Necromancer Wpn: {gray}+1-2 Necromancer Skill|25-35 IAS|150-200 Enahcned Dmg\n{blue}Ring: {gray}+1-2 Necromancer Skill|30-45 Energy|Max Life 10-15%%|15-25 Faster Caste Rate\n{blue}Amulet: {gray}+1-2 Necromancer Skill|20-30 Dex|15%% Max Life|15-25 All Res\n{blue}Chest: {gray}+1-2 Necromancer Skill|80-100 ED|15-25 All Attr|10-15 Phys Res\n{blue}Shield:{gray} +1-2 Necromancer Skill|20-30 Faster Block|3-5 Block|80-100 ED\n{blue}Belt{gray}+1 Necromancer Skill|20-30 FHR|80-100 ED|30-45 Str\n{blue}Gloves:{gray}+1 Necromancer Skill|20-30 IAS|80-100 ED|30-45 Dex\n{blue}Boots:{gray}+1 Necromancer Skill|20-30 FRW|80-100 ED|30-45 Vit\n{blue}Helm{gray}+1-2 Necromancer Skills|90-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic {gray}Gear + Dragon Stone + P.Ruby + Any Jewel\n"
-        },
-        -- Vendor tip
-        {
-            code = "gwb", 
-            location = "atvendor", 
-            prefix = "{blue}Non-Paladin Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|200-300 Dmg to Demons|200-300 Dmg to Undead\n{blue}Paladin Wpn: {gray}+1-2 Paladin Skill|25-35 IAS|150-200 Enahcned Dmg\n{blue}Ring: {gray}+1-2 Paladin Skill|20-30 Str|Max Life 10-15%%|15-25 All Res\n{blue}Amulet: {gray}+1-2 Paladin Skill|20-30 Dex|15%% Max Life|15-25 All Res\n{blue}Chest: {gray}+1-2 Paladin Skill|80-100 ED|15-25 All Attr|10-15 Phys Res\n{blue}Shield:{gray} +1-2 Paladin Skill|20-30 Faster Block|3-5 Block|80-100 ED\n{blue}Belt{gray}+1 Paladin Skill|20-30 FHR|80-100 ED|30-45 Str\n{blue}Gloves:{gray}+1 Paladin Skill|20-30 IAS|80-100 ED|30-45 Dex\n{blue}Boots:{gray}+1 Paladin Skill|20-30 FRW|80-100 ED|30-45 Vit\n{blue}Helm{gray}+1-2 Paladin Skills|90-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic {gray}Gear + Dragon Stone + P.Ruby + Any Jewel\n"
-        },
-        -- Vendor tip
-        {
-            code = "gbb", 
-            location = "atvendor", 
-            prefix = "{blue}Non-Sorceress Wpn: {gray}25-35 IAS|150-200 Enhanced Dmg|-15-25 Enemy Ele and Psn Resist\n{blue}Sorceress Wpn: {gray}+1-2 Sorceress Skill|25-35 IAS|150-200 Enahcned Dmg\n{blue}Ring: {gray}+1-2 Sorceress Skill|20-30 Energy|Max Life 10-15%%|-8-12 Enemy Ele and Psn Res\n{blue}Amulet: {gray}+1-2 Sorceress Skill|20-30 Dex|15%% Max Life|15-25 All Res\n{blue}Chest: {gray}+1-2 Sorceress Skill|80-100 ED|15-25 All Attr|10-15 Phys Res\n{blue}Shield:{gray} +1-2 Sorceress Skill|20-30 Faster Block|3-5 Block|80-100 ED\n{blue}Belt{gray}+1 Sorceress Skill|20-30 FHR|80-100 ED|30-45 Str\n{blue}Gloves:{gray}+1 Sorceress Skill|20-30 IAS|80-100 ED|30-45 Dex\n{blue}Boots:{gray}+1 Sorceress Skill|20-30 FRW|80-100 ED|30-45 Vit\n{blue}Helm{gray}+1-2 Sorceress Skills|90-100 ED|30-45 Energy|15-25 All Res\n{white}**Each recipe adds the below stats and an additional 1-4 random affixes***\n{blue}Magic {gray}Gear + Dragon Stone + P.Ruby + Any Jewel\n"
-        },
-        -- Vendor tip
-        {
-            code = "toa", 
-            location = "atvendor", 
-            suffix_desc = "\n{blue}\n+1 Sorc Skills: 2 Anvil Stones + Chipped Saphhire\n{white}+1 Paladin Skills: 2 Anvil Stones + Chipped Diamond\n{gray}+1 Necromancer Skills: 2 Anvil Stones + Chipped Skull\n{yellow}+1 Druid Skills: 2 Anvil Stones + Chipped Topaz\n{purple}+1 Barbarian Skills: 2 Anvil Stones + Chipped Amethyst\n{red}+1 Assassain Skills: 2 Anvil Stones + Chipped Ruby\n{green}+1 Amazon Skills: 2 Anvil Stones + Chipped Emerald\n+{white}1 All Skills(no jewels or charms): Maple Leaf + Anvil Stone + Chipped Gem\n{gray}Runeforging (no jewels or charms): 2 of the same Rune + Chipped Gem - Adds bonus of the Rune\n{lilac}**Gear Forging**\n"
-        },
-        -- Vendor tip
-        {
-            code = "tbk", 
-            location = "atvendor", 
-            suffix = "\n{blue}15 Magic Find: {green}Chipped Emerald {gray}+ Anvil Stone\n{blue}15Increased Attack Speed: {red}Chipped Ruby {gray}+ Anvil Stone\n{blue}9 Percent Chance of Crushing Blow: {purple}Chipped Amethyst {gray}+ Anvil Stone\n{blue}12 Percent Max life: {yellow}Chipped Topaz {gray}+ Anvil Stone\n{blue}15 Faster Cast Rate: Chipped Skull {gray}+ Anvil Stone\n{blue}All Resistances +12: {white}Chipped Diamond {gray}+ Anvil Stone\n{blue}12 Percent Max Mana: {blue}Chipped Sapphire {gray}+ Anvil Stone\n{gray}{blue}Add Weapon Mods of the Rune: {gray}2 of the same Rune (Up to {yellow}O Rune{gray}) + Chipped Gem + TP Scroll\n{blue}Add Helm Mods of the Rune: {gray}2 of the same Rune (Up to {yellow}O Rune{gray}) + Chipped Gem + ID Scroll\nCombine {blue}Magic{gray}/{yellow}Rare {gray}Jewel and:\n{lilac}**Jewel Forging**{white}"
-        },
-        -- Hiding small gold piles based on level
-        {
-            code = "gld",
-            stat = { index = 14, op = "<=", value = 1 },  --hides gold values of 1
-            hide = true, 
-        },
-        {
-            code = "gld",
-            stat = { index = 14, op = "<=", value = 99 },  --hides gold under 100
-            pstat = { index = 12, op = ">=", value = 20 }, -- Char Level is >= 20
-            hide = true, 
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" }
-        },
-        {
-            code = "gld",
-            stat = { index = 14, op = "<=", value = 499 }, --hides gold under 500
-            pstat = { index = 12, op = ">=", value = 60 }, -- Char Level is >= 60
-            hide = true, 
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" }
-        },
-        {
-            code = "gld",
-            stat = { index = 14, op = "<=", value = 749 }, --hides gold under 1k
-            pstat = { index = 12, op = ">=", value = 80 }, -- Char Level is >= 80
-            hide = true, 
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" }
-        },
-        {
-            code = "gld",
-            stat = { index = 14, op = "<=", value = 1999 }, --hides gold under 2k
-            pstat = { index = 12, op = ">=", value = 90 }, -- Char Level is >= 90
-            hide = true, 
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" }
-        },
-        {
-            code = "gld",
-            name_override = "{white}$$",
-        },
-        -- Hiding items after level 10 (Tomes, Scrolls, Elixirs, Lowest potions)
-        {
-            codes = {"vps","yps","gpm","opm","wms","tbk","ibk","tsc","isc","hp1","mp1"},
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" }
-        },
-        -- Hiding items after level 10 (Low quality gear, Normal items with less than 2 sockets)
-        {
-            codes = "allitems",
-            quality = "1",
-            pstat = { index = 12, op = ">=", value = 10 },
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" }
-        },
-        {
-            codes = {"cqv","cq2","cq0","aq0","aq2","aqv","kgk","cqv","aqv","srk","fsk","kgl","02h", "0ax", "0b0", "0b6", "0b7", "0ba", "0be", "0bk", "0bl", "0br", "0bs", "0bt", "0bw", "0cl", "0cm", "0cr", "0dg", "0di", "0fb", "0fc", "0fl", "0ga", "0gd", "0gi", "0gl", "0gm", "0gp", "0gs", "0gw", "0h0", "0ha", "0ja", "0kl", "0kr", "0la", "0ls", "0m0", "0ma", "0mn", "0mp", "0mt", "0nn", "0ns", "0p0", "0pa", "0pb", "0pi", "0qs", "0rd", "0rm", "0s8", "0s9", "0sb", "0sh", "0sm", "0sp", "0sr", "0ss", "0st", "0sy", "0ta", "0tk", "0tr", "0ts", "0vo", "0wa", "0wc", "0wd", "0wh", "0wn", "0ws", "0xb", "0yw", "1bs", "1cb", "1cs", "1hb", "1hx", "1l8", "1lb", "1ls", "1lw", "1lx", "1mx", "1rx", "1s8", "1sb", "1ss", "1sw", "1ws", "2ap", "2ar", "2ax", "2cl", "2ea", "2h9", "2hb", "2hg", "2hl", "2hm", "2hn", "2hs", "2it", "2kp", "2la", "2lb", "2ld", "2lg", "2lm", "2lt", "2mb", "2mg", "2ml", "2ng", "2ow", "2pk", "2pl", "2rg", "2rn", "2rs", "2sh", "2sk", "2tb", "2tg", "2th", "2tp", "2ts", "2tu", "2uc", "2ui", "2ul", "2vb", "2vg", "3hb", "3lb", "3mb", "3tb", "3vb", "4ap", "4ar", "4cl", "4ea", "4h9", "4hb", "4hg", "4hl", "4hm", "4hn", "4it", "4kp", "4la", "4lb", "4ld", "4lg", "4lm", "4lt", "4mb", "4mg", "4ml", "4ng", "4ow", "4pk", "4pl", "4rg", "4rn", "4rs", "4sh", "4sk", "4tb", "4tg", "4th", "4tp", "4ts", "4tu", "4uc", "4ui", "4ul", "4vb", "4vg", "5hb", "5lb", "5mb", "5sc", "5tb", "5vb", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mp", "7mt", "7o7", "7p7", "7pa", "7pi", "7qr", "7qs", "7s7", "7s8", "7sb", "7sc", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7tw", "7vo", "7wa", "7wb", "7wc", "7wh", "7wn", "7ws", "7xf", "7yw", "82a", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9be", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gp", "9gs", "9gw", "9h9", "9ha", "9ja", "9kl", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mn", "9mp", "9mt", "9nj", "9nn", "9ns", "9p9", "9pa", "9pb", "9pi", "9qr", "9qs", "9rd", "9rm", "9s8", "9s9", "9sb", "9sc", "9sh", "9sm", "9sp", "9sr", "9ss", "9st", "9sy", "9ta", "9tk", "9tr", "9ts", "9tw", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9ws", "9xb", "9xf", "9yw", "aar", "ahb", "alb", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "apb", "arm", "atb", "avb", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "bmb", "br2", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "bts", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "ci4", "cix", "clb", "clk", "clm", "clw", "cr2", "crn", "crs", "cst", "dbt", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "dwc", "eht", "elv", "fhl", "fla", "flb", "flc", "fld", "fts", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsc", "gsd", "gsp", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "irg", "jav", "kit", "kkl", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mnb", "mpi", "msb", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "ned", "nee", "nef", "neg", "nin", "njt", "nrd", "nsy", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pbe", "pik", "pil", "plt", "q00", "q01", "q02", "q03", "q04", "q05", "q06", "q07", "q08", "q09", "q10", "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q28", "q29", "q2a", "q2b", "q2c", "q2d", "q2e", "q2f", "q30", "q31", "q32", "q33", "q34", "q35", "q36", "q37", "q38", "q39", "q3a", "q3b", "q3c", "q3d", "q3e", "q3f", "q40", "q41", "q42", "q43", "q44", "q45", "q46", "q47", "q48", "q49", "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q50", "q51", "q52", "q53", "q54", "q55", "q56", "q57", "q58", "q59", "q60", "q61", "q62", "q63", "q64", "q65", "q66", "q67", "q68", "q69", "q70", "q71", "q72", "q73", "q74", "q75", "q76", "q77", "q78", "q79", "q80", "q81", "q82", "q83", "q84", "q85", "q86", "qba", "qbc", "qbd", "qbe", "qda", "qdb", "qdd", "qde", "qdf", "qi2", "qi3", "qna", "qne", "qnf", "qp9", "qpc", "qpe", "qui", "rng", "rob", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scp", "scy", "shc", "shl", "skp", "skr", "sml", "sp2", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "syn", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wsp", "wst", "xap", "xar", "xbt", "xcl", "xdw", "xea", "xft", "xh9", "xhb", "xhg", "xhh", "xhl", "xhm", "xhn", "xht", "xig", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlk", "xlm", "xlt", "xlv", "xmb", "xmg", "xml", "xms", "xng", "xow", "xpk", "xpl", "xrb", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "yap", "yar", "ybt", "ycl", "ydw", "yea", "yft", "yh9", "yhb", "yhg", "yhh", "yhl", "yhm", "yhn", "yht", "yig", "yit", "ykp", "yla", "ylb", "yld", "ylg", "ylk", "ylm", "ylt", "ylv", "ymb", "ymg", "yml", "yms", "yng", "yow", "ypk", "ypl", "yrb", "yrg", "yrn", "yrs", "ysh", "ysk", "ytb", "ytg", "yth", "ytp", "yts", "ytu", "yuc", "yui", "yul", "yvb", "yvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb"},
-            quality = "2",
-            sockets ="1-",
-            pstat = { index = 12, op = ">=", value = 10 },
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" }
-        },
-        -- Hiding items after level 20 (All magic Weapons/Armor - 2 lowest postions - Chipped gems)
-        {
-            codes = {"cqv","cq2","cq0","aq0","aq2","aqv","kgk","cqv","aqv","srk","fsk","kgl","02h", "0ax", "0b0", "0b6", "0b7", "0ba", "0be", "0bk", "0bl", "0br", "0bs", "0bt", "0bw", "0cl", "0cm", "0cr", "0dg", "0di", "0fb", "0fc", "0fl", "0ga", "0gd", "0gi", "0gl", "0gm", "0gp", "0gs", "0gw", "0h0", "0ha", "0ja", "0kl", "0kr", "0la", "0ls", "0m0", "0ma", "0mn", "0mp", "0mt", "0nn", "0ns", "0p0", "0pa", "0pb", "0pi", "0qs", "0rd", "0rm", "0s8", "0s9", "0sb", "0sh", "0sm", "0sp", "0sr", "0ss", "0st", "0sy", "0ta", "0tk", "0tr", "0ts", "0vo", "0wa", "0wc", "0wd", "0wh", "0wn", "0ws", "0xb", "0yw", "1bs", "1cb", "1cs", "1hb", "1hx", "1l8", "1lb", "1ls", "1lw", "1lx", "1mx", "1rx", "1s8", "1sb", "1ss", "1sw", "1ws", "2ap", "2ar", "2ax", "2cl", "2ea", "2h9", "2hb", "2hg", "2hl", "2hm", "2hn", "2hs", "2it", "2kp", "2la", "2lb", "2ld", "2lg", "2lm", "2lt", "2mb", "2mg", "2ml", "2ng", "2ow", "2pk", "2pl", "2rg", "2rn", "2rs", "2sh", "2sk", "2tb", "2tg", "2th", "2tp", "2ts", "2tu", "2uc", "2ui", "2ul", "2vb", "2vg", "3hb", "3lb", "3mb", "3tb", "3vb", "4ap", "4ar", "4cl", "4ea", "4h9", "4hb", "4hg", "4hl", "4hm", "4hn", "4it", "4kp", "4la", "4lb", "4ld", "4lg", "4lm", "4lt", "4mb", "4mg", "4ml", "4ng", "4ow", "4pk", "4pl", "4rg", "4rn", "4rs", "4sh", "4sk", "4tb", "4tg", "4th", "4tp", "4ts", "4tu", "4uc", "4ui", "4ul", "4vb", "4vg", "5hb", "5lb", "5mb", "5sc", "5tb", "5vb", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mp", "7mt", "7o7", "7p7", "7pa", "7pi", "7qr", "7qs", "7s7", "7s8", "7sb", "7sc", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7tw", "7vo", "7wa", "7wb", "7wc", "7wh", "7wn", "7ws", "7xf", "7yw", "82a", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9be", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gp", "9gs", "9gw", "9h9", "9ha", "9ja", "9kl", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mn", "9mp", "9mt", "9nj", "9nn", "9ns", "9p9", "9pa", "9pb", "9pi", "9qr", "9qs", "9rd", "9rm", "9s8", "9s9", "9sb", "9sc", "9sh", "9sm", "9sp", "9sr", "9ss", "9st", "9sy", "9ta", "9tk", "9tr", "9ts", "9tw", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9ws", "9xb", "9xf", "9yw", "aar", "ahb", "alb", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "apb", "arm", "atb", "avb", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "bmb", "br2", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "bts", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "ci4", "cix", "clb", "clk", "clm", "clw", "cr2", "crn", "crs", "cst", "dbt", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "dwc", "eht", "elv", "fhl", "fla", "flb", "flc", "fld", "fts", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsc", "gsd", "gsp", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "irg", "jav", "kit", "kkl", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mnb", "mpi", "msb", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "ned", "nee", "nef", "neg", "nin", "njt", "nrd", "nsy", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pbe", "pik", "pil", "plt", "q00", "q01", "q02", "q03", "q04", "q05", "q06", "q07", "q08", "q09", "q10", "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q28", "q29", "q2a", "q2b", "q2c", "q2d", "q2e", "q2f", "q30", "q31", "q32", "q33", "q34", "q35", "q36", "q37", "q38", "q39", "q3a", "q3b", "q3c", "q3d", "q3e", "q3f", "q40", "q41", "q42", "q43", "q44", "q45", "q46", "q47", "q48", "q49", "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q50", "q51", "q52", "q53", "q54", "q55", "q56", "q57", "q58", "q59", "q60", "q61", "q62", "q63", "q64", "q65", "q66", "q67", "q68", "q69", "q70", "q71", "q72", "q73", "q74", "q75", "q76", "q77", "q78", "q79", "q80", "q81", "q82", "q83", "q84", "q85", "q86", "qba", "qbc", "qbd", "qbe", "qda", "qdb", "qdd", "qde", "qdf", "qi2", "qi3", "qna", "qne", "qnf", "qp9", "qpc", "qpe", "qui", "rng", "rob", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scp", "scy", "shc", "shl", "skp", "skr", "sml", "sp2", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "syn", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wsp", "wst", "xap", "xar", "xbt", "xcl", "xdw", "xea", "xft", "xh9", "xhb", "xhg", "xhh", "xhl", "xhm", "xhn", "xht", "xig", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlk", "xlm", "xlt", "xlv", "xmb", "xmg", "xml", "xms", "xng", "xow", "xpk", "xpl", "xrb", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "yap", "yar", "ybt", "ycl", "ydw", "yea", "yft", "yh9", "yhb", "yhg", "yhh", "yhl", "yhm", "yhn", "yht", "yig", "yit", "ykp", "yla", "ylb", "yld", "ylg", "ylk", "ylm", "ylt", "ylv", "ymb", "ymg", "yml", "yms", "yng", "yow", "ypk", "ypl", "yrb", "yrg", "yrn", "yrs", "ysh", "ysk", "ytb", "ytg", "yth", "ytp", "yts", "ytu", "yuc", "yui", "yul", "yvb", "yvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb"},
-            quality = 4,
-            pstat = { index = 12, op = ">=", value = 20},
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" }
-        },
-        {
-            codes ={"hp2","mp2"},
-            pstat = { index = 12, op = ">=", value = 20},
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" }
-        },
-        {
-            codes ={"gcv","gcy", "gcb", "gcg", "gcr", "gcw", "skc", "gck"},
-            pstat = { index = 12, op = ">=", value = 20},
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" }
-        },
-        -- Hiding items after level 40 (3 lowest potions, normal gems)
-        {
-            codes ={"hp3","mp3"},
-            pstat = { index = 12, op = ">=", value = 40},
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" }
-        },
-        {
-            codes ={"gnv","gny", "gnb", "gng", "gnr", "gnw", "snc", "gnk"},
-            pstat = { index = 12, op = ">=", value = 40},
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" }
-        },
-        -- Hiding items after level 60 (All potions)
-        {
-            codes ={"hp4","hp5","mp4","mp5"},
-            pstat = { index = 12, op = ">=", value = 40},
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" }
-        },
-        -- Leveling filter is handled based on Levels but this will show items the other strictness levels are hiding
-        {
-            codes ="allitems",
-            hide = false,
-            filter_levels = 1
-        },
-        -- Strict: Hiding Low Tier LoD Decals
-        {
-            codes = {"01l","02l","03l","04l","05l","06l","07l","08l","09l"}, -- Hiding Low Tier LoD Decals
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 2
-        },
-        -- Strict: Hiding White, Yellow, and Orange ESR runes
-        {
-            codes = {"r01","r02","r03","r04","r05","r08","r09","r10","r11","r12","r15","r16","r17","r18","r19","r20","r21"}, 
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 2
-        },
-        -- Strict: Hiding non-class based rings and amulets
-        {
-            codes = {"rng","amu"}, 
-            quality = "4-",
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 3,
-        },
-        -- Very Strict: Hiding Low and Mid Tier LoD Decals
-        {
-            codes = {"01l","02l","03l","04l","05l","06l","07l","08l","09l","10l","11l","12l","13l","14l","15l","16l","17l","18l","19l","20l","21l","22l"}, -- Hiding Low and Mid Tier LoD Decals
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 3
-        },
-        -- Very Strict: Hiding White, Yellow, and Orange ESR runes
-        {
-            codes = {"r01","r02","r03","r04","r05","r06","r07","r08","r09","r10","r11","r12","r13","r14","r15","r16","r17","r18","r19","r20","r21","r22","r23","r24","r25","r26","r27","r28"}, 
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 3
-        },
-        -- Very Strict: Hiding Normal Coupons
-        {
-            codes = {"01c","02c","03c","04c","05c","06c","07c","08c","09c","10c","11c","12c","13c","14c","15c","16c","17c","18c","19c","20c","21c","22c","23c","24c","25c","26c","27c","28c","29c","30c","31c","32c","33c","34c","35c","36c","37c","38c","39c","40c","41c","42c","43c","44c","45c","46c","01f","02f","03f","04f","05f","06f","07f","08f","09f","10f","11f","12f","13f","14f","15f","16f","17f","18f","19f","20f","21f","22f","23f","24f","25f","26f","27f","28f","29f","30f","31f","32f","33f","34f","35f","36f","37f","38f","39f","40f","41f","42f","43f","44f","45f","46f","47f","48f","49f","50f","51f","52f","53f","54f","55f","56f","57f","58f","59f","60f","61f","62f","63f","64f","65f","66f","67f","68f","69f","70f","71f","01i","02i","03i","01j","02j","04j"},
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 3
-        },
-        -- Very Strict: Hiding all magic jewelry, large and grand charms
-        {
-            codes = {"rng","amu","zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam","cm1","cm2","cm3","cx1","cx2","cx3"}, 
-            quality = "4",
-            hide = true, 
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels =3
-        },
-        -- Very Strict: Hiding all Normal rarity Unique weapons/armor
-        {
-            codes = {"srk","fsk","kgl","02h", "0ax", "0b0", "0b6", "0b7", "0ba", "0be", "0bk", "0bl", "0br", "0bs", "0bt", "0bw", "0cl", "0cm", "0cr", "0dg", "0di", "0fb", "0fc", "0fl", "0ga", "0gd", "0gi", "0gl", "0gm", "0gp", "0gs", "0gw", "0h0", "0ha", "0ja", "0kl", "0kr", "0la", "0ls", "0m0", "0ma", "0mn", "0mp", "0mt", "0nn", "0ns", "0p0", "0pa", "0pb", "0pi", "0qs", "0rd", "0rm", "0s8", "0s9", "0sb", "0sh", "0sm", "0sp", "0sr", "0ss", "0st", "0sy", "0ta", "0tk", "0tr", "0ts", "0vo", "0wa", "0wc", "0wd", "0wh", "0wn", "0ws", "0xb", "0yw", "1bs", "1cb", "1cs", "1hb", "1hx", "1l8", "1lb", "1ls", "1lw", "1lx", "1mx", "1rx", "1s8", "1sb", "1ss", "1sw", "1ws", "2ap", "2ar", "2ax", "2cl", "2ea", "2h9", "2hb", "2hg", "2hl", "2hm", "2hn", "2hs", "2it", "2kp", "2la", "2lb", "2ld", "2lg", "2lm", "2lt", "2mb", "2mg", "2ml", "2ng", "2ow", "2pk", "2pl", "2rg", "2rn", "2rs", "2sh", "2sk", "2tb", "2tg", "2th", "2tp", "2ts", "2tu", "2uc", "2ui", "2ul", "2vb", "2vg", "3hb", "3lb", "3mb", "3tb", "3vb", "4ap", "4ar", "4cl", "4ea", "4h9", "4hb", "4hg", "4hl", "4hm", "4hn", "4it", "4kp", "4la", "4lb", "4ld", "4lg", "4lm", "4lt", "4mb", "4mg", "4ml", "4ng", "4ow", "4pk", "4pl", "4rg", "4rn", "4rs", "4sh", "4sk", "4tb", "4tg", "4th", "4tp", "4ts", "4tu", "4uc", "4ui", "4ul", "4vb", "4vg", "5hb", "5lb", "5mb", "5sc", "5tb", "5vb", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mp", "7mt", "7o7", "7p7", "7pa", "7pi", "7qr", "7qs", "7s7", "7s8", "7sb", "7sc", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7tw", "7vo", "7wa", "7wb", "7wc", "7wh", "7wn", "7ws", "7xf", "7yw", "82a", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9be", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gp", "9gs", "9gw", "9h9", "9ha", "9ja", "9kl", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mn", "9mp", "9mt", "9nj", "9nn", "9ns", "9p9", "9pa", "9pb", "9pi", "9qr", "9qs", "9rd", "9rm", "9s8", "9s9", "9sb", "9sc", "9sh", "9sm", "9sp", "9sr", "9ss", "9st", "9sy", "9ta", "9tk", "9tr", "9ts", "9tw", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9ws", "9xb", "9xf", "9yw", "aar", "ahb", "alb", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "apb", "arm", "atb", "avb", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "bmb", "br2", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "bts", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "ci4", "cix", "clb", "clk", "clm", "clw", "cr2", "crn", "crs", "cst", "dbt", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "dwc", "eht", "elv", "fhl", "fla", "flb", "flc", "fld", "fts", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsc", "gsd", "gsp", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "irg", "jav", "kit", "kkl", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mnb", "mpi", "msb", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "ned", "nee", "nef", "neg", "nin", "njt", "nrd", "nsy", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pbe", "pik", "pil", "plt", "q00", "q01", "q02", "q03", "q04", "q05", "q06", "q07", "q08", "q09", "q10", "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q28", "q29", "q2a", "q2b", "q2c", "q2d", "q2e", "q2f", "q30", "q31", "q32", "q33", "q34", "q35", "q36", "q37", "q38", "q39", "q3a", "q3b", "q3c", "q3d", "q3e", "q3f", "q40", "q41", "q42", "q43", "q44", "q45", "q46", "q47", "q48", "q49", "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q50", "q51", "q52", "q53", "q54", "q55", "q56", "q57", "q58", "q59", "q60", "q61", "q62", "q63", "q64", "q65", "q66", "q67", "q68", "q69", "q70", "q71", "q72", "q73", "q74", "q75", "q76", "q77", "q78", "q79", "q80", "q81", "q82", "q83", "q84", "q85", "q86", "qba", "qbc", "qbd", "qbe", "qda", "qdb", "qdd", "qde", "qdf", "qi2", "qi3", "qna", "qne", "qnf", "qp9", "qpc", "qpe", "qui", "rng", "rob", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scp", "scy", "shc", "shl", "skp", "skr", "sml", "sp2", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "syn", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wsp", "wst", "xap", "xar", "xbt", "xcl", "xdw", "xea", "xft", "xh9", "xhb", "xhg", "xhh", "xhl", "xhm", "xhn", "xht", "xig", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlk", "xlm", "xlt", "xlv", "xmb", "xmg", "xml", "xms", "xng", "xow", "xpk", "xpl", "xrb", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "yap", "yar", "ybt", "ycl", "ydw", "yea", "yft", "yh9", "yhb", "yhg", "yhh", "yhl", "yhm", "yhn", "yht", "yig", "yit", "ykp", "yla", "ylb", "yld", "ylg", "ylk", "ylm", "ylt", "ylv", "ymb", "ymg", "yml", "yms", "yng", "yow", "ypk", "ypl", "yrb", "yrg", "yrn", "yrs", "ysh", "ysk", "ytb", "ytg", "yth", "ytp", "yts", "ytu", "yuc", "yui", "yul", "yvb", "yvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb"},
-            quality = "7",
-            rarity = "0",
-            hide = true, 
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 3
-        },
-        -- Very Strict: Hiding all Normal rarity weapons/armor
-        {
-            codes = {"srk","fsk","kgl","02h", "0ax", "0b0", "0b6", "0b7", "0ba", "0be", "0bk", "0bl", "0br", "0bs", "0bt", "0bw", "0cl", "0cm", "0cr", "0dg", "0di", "0fb", "0fc", "0fl", "0ga", "0gd", "0gi", "0gl", "0gm", "0gp", "0gs", "0gw", "0h0", "0ha", "0ja", "0kl", "0kr", "0la", "0ls", "0m0", "0ma", "0mn", "0mp", "0mt", "0nn", "0ns", "0p0", "0pa", "0pb", "0pi", "0qs", "0rd", "0rm", "0s8", "0s9", "0sb", "0sh", "0sm", "0sp", "0sr", "0ss", "0st", "0sy", "0ta", "0tk", "0tr", "0ts", "0vo", "0wa", "0wc", "0wd", "0wh", "0wn", "0ws", "0xb", "0yw", "1bs", "1cb", "1cs", "1hb", "1hx", "1l8", "1lb", "1ls", "1lw", "1lx", "1mx", "1rx", "1s8", "1sb", "1ss", "1sw", "1ws", "2ap", "2ar", "2ax", "2cl", "2ea", "2h9", "2hb", "2hg", "2hl", "2hm", "2hn", "2hs", "2it", "2kp", "2la", "2lb", "2ld", "2lg", "2lm", "2lt", "2mb", "2mg", "2ml", "2ng", "2ow", "2pk", "2pl", "2rg", "2rn", "2rs", "2sh", "2sk", "2tb", "2tg", "2th", "2tp", "2ts", "2tu", "2uc", "2ui", "2ul", "2vb", "2vg", "3hb", "3lb", "3mb", "3tb", "3vb", "4ap", "4ar", "4cl", "4ea", "4h9", "4hb", "4hg", "4hl", "4hm", "4hn", "4it", "4kp", "4la", "4lb", "4ld", "4lg", "4lm", "4lt", "4mb", "4mg", "4ml", "4ng", "4ow", "4pk", "4pl", "4rg", "4rn", "4rs", "4sh", "4sk", "4tb", "4tg", "4th", "4tp", "4ts", "4tu", "4uc", "4ui", "4ul", "4vb", "4vg", "5hb", "5lb", "5mb", "5sc", "5tb", "5vb", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mp", "7mt", "7o7", "7p7", "7pa", "7pi", "7qr", "7qs", "7s7", "7s8", "7sb", "7sc", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7tw", "7vo", "7wa", "7wb", "7wc", "7wh", "7wn", "7ws", "7xf", "7yw", "82a", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9be", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gp", "9gs", "9gw", "9h9", "9ha", "9ja", "9kl", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mn", "9mp", "9mt", "9nj", "9nn", "9ns", "9p9", "9pa", "9pb", "9pi", "9qr", "9qs", "9rd", "9rm", "9s8", "9s9", "9sb", "9sc", "9sh", "9sm", "9sp", "9sr", "9ss", "9st", "9sy", "9ta", "9tk", "9tr", "9ts", "9tw", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9ws", "9xb", "9xf", "9yw", "aar", "ahb", "alb", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "apb", "arm", "atb", "avb", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "bmb", "br2", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "bts", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "ci4", "cix", "clb", "clk", "clm", "clw", "cr2", "crn", "crs", "cst", "dbt", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "dwc", "eht", "elv", "fhl", "fla", "flb", "flc", "fld", "fts", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsc", "gsd", "gsp", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "irg", "jav", "kit", "kkl", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mnb", "mpi", "msb", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "ned", "nee", "nef", "neg", "nin", "njt", "nrd", "nsy", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pbe", "pik", "pil", "plt", "q00", "q01", "q02", "q03", "q04", "q05", "q06", "q07", "q08", "q09", "q10", "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q28", "q29", "q2a", "q2b", "q2c", "q2d", "q2e", "q2f", "q30", "q31", "q32", "q33", "q34", "q35", "q36", "q37", "q38", "q39", "q3a", "q3b", "q3c", "q3d", "q3e", "q3f", "q40", "q41", "q42", "q43", "q44", "q45", "q46", "q47", "q48", "q49", "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q50", "q51", "q52", "q53", "q54", "q55", "q56", "q57", "q58", "q59", "q60", "q61", "q62", "q63", "q64", "q65", "q66", "q67", "q68", "q69", "q70", "q71", "q72", "q73", "q74", "q75", "q76", "q77", "q78", "q79", "q80", "q81", "q82", "q83", "q84", "q85", "q86", "qba", "qbc", "qbd", "qbe", "qda", "qdb", "qdd", "qde", "qdf", "qi2", "qi3", "qna", "qne", "qnf", "qp9", "qpc", "qpe", "qui", "rng", "rob", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scp", "scy", "shc", "shl", "skp", "skr", "sml", "sp2", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "syn", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wsp", "wst", "xap", "xar", "xbt", "xcl", "xdw", "xea", "xft", "xh9", "xhb", "xhg", "xhh", "xhl", "xhm", "xhn", "xht", "xig", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlk", "xlm", "xlt", "xlv", "xmb", "xmg", "xml", "xms", "xng", "xow", "xpk", "xpl", "xrb", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "yap", "yar", "ybt", "ycl", "ydw", "yea", "yft", "yh9", "yhb", "yhg", "yhh", "yhl", "yhm", "yhn", "yht", "yig", "yit", "ykp", "yla", "ylb", "yld", "ylg", "ylk", "ylm", "ylt", "ylv", "ymb", "ymg", "yml", "yms", "yng", "yow", "ypk", "ypl", "yrb", "yrg", "yrn", "yrs", "ysh", "ysk", "ytb", "ytg", "yth", "ytp", "yts", "ytu", "yuc", "yui", "yul", "yvb", "yvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb"},
-            quality = "2",
-            hide = true, 
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 3
-        },
-        -- Very Strict: Hiding 25% rejuvs
-        {
-            code = "rvs", 
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 3
-        },
-        -- Very Strict: Hiding all Normal/Exceptional Set items
-        {
-            codes = "allitems",
-            quality = "5",
-            rarity = "1-",
-            hide = true, 
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 3,
-        },
-        -- Hide Normal/Exceptional Superior items
-        {
-            codes = "allitems",
-            quality = "3",
-            rarity = "1-",
-            hide = true, 
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 3
-        },
-        -- Very Strict: Hiding flawless gems
-        {
-            codes = {"gzv", "gly", "glb", "glg", "glr", "glw", "skl", "gzk"}, 
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 3
-        },
-        -- Very Strict: Hide magic arrows/bolts
-        {
-            codes = {"cqv","cq2","cq0","aq0","aq2","aqv"}, 
-            hide = true,
-            quality = "3-",
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 3
-        },
-        -- Hiding all rares with 0 sockets
-        {
-            codes = {"kgk","srk","fsk","kgl","02h", "0ax", "0b0", "0b6", "0b7", "0ba", "0be", "0bk", "0bl", "0br", "0bs", "0bt", "0bw", "0cl", "0cm", "0cr", "0dg", "0di", "0fb", "0fc", "0fl", "0ga", "0gd", "0gi", "0gl", "0gm", "0gp", "0gs", "0gw", "0h0", "0ha", "0ja", "0kl", "0kr", "0la", "0ls", "0m0", "0ma", "0mn", "0mp", "0mt", "0nn", "0ns", "0p0", "0pa", "0pb", "0pi", "0qs", "0rd", "0rm", "0s8", "0s9", "0sb", "0sh", "0sm", "0sp", "0sr", "0ss", "0st", "0sy", "0ta", "0tk", "0tr", "0ts", "0vo", "0wa", "0wc", "0wd", "0wh", "0wn", "0ws", "0xb", "0yw", "1bs", "1cb", "1cs", "1hb", "1hx", "1l8", "1lb", "1ls", "1lw", "1lx", "1mx", "1rx", "1s8", "1sb", "1ss", "1sw", "1ws", "2ap", "2ar", "2ax", "2cl", "2ea", "2h9", "2hb", "2hg", "2hl", "2hm", "2hn", "2hs", "2it", "2kp", "2la", "2lb", "2ld", "2lg", "2lm", "2lt", "2mb", "2mg", "2ml", "2ng", "2ow", "2pk", "2pl", "2rg", "2rn", "2rs", "2sh", "2sk", "2tb", "2tg", "2th", "2tp", "2ts", "2tu", "2uc", "2ui", "2ul", "2vb", "2vg", "3hb", "3lb", "3mb", "3tb", "3vb", "4ap", "4ar", "4cl", "4ea", "4h9", "4hb", "4hg", "4hl", "4hm", "4hn", "4it", "4kp", "4la", "4lb", "4ld", "4lg", "4lm", "4lt", "4mb", "4mg", "4ml", "4ng", "4ow", "4pk", "4pl", "4rg", "4rn", "4rs", "4sh", "4sk", "4tb", "4tg", "4th", "4tp", "4ts", "4tu", "4uc", "4ui", "4ul", "4vb", "4vg", "5hb", "5lb", "5mb", "5sc", "5tb", "5vb", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mp", "7mt", "7o7", "7p7", "7pa", "7pi", "7qr", "7qs", "7s7", "7s8", "7sb", "7sc", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7tw", "7vo", "7wa", "7wb", "7wc", "7wh", "7wn", "7ws", "7xf", "7yw", "82a", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9be", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gp", "9gs", "9gw", "9h9", "9ha", "9ja", "9kl", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mn", "9mp", "9mt", "9nj", "9nn", "9ns", "9p9", "9pa", "9pb", "9pi", "9qr", "9qs", "9rd", "9rm", "9s8", "9s9", "9sb", "9sc", "9sh", "9sm", "9sp", "9sr", "9ss", "9st", "9sy", "9ta", "9tk", "9tr", "9ts", "9tw", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9ws", "9xb", "9xf", "9yw", "aar", "ahb", "alb", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "apb", "arm", "atb", "avb", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "bmb", "br2", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "bts", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "ci4", "cix", "clb", "clk", "clm", "clw", "cr2", "crn", "crs", "cst", "dbt", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "dwc", "eht", "elv", "fhl", "fla", "flb", "flc", "fld", "fts", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsc", "gsd", "gsp", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "irg", "jav", "kit", "kkl", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mnb", "mpi", "msb", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "ned", "nee", "nef", "neg", "nin", "njt", "nrd", "nsy", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pbe", "pik", "pil", "plt", "q00", "q01", "q02", "q03", "q04", "q05", "q06", "q07", "q08", "q09", "q10", "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q28", "q29", "q2a", "q2b", "q2c", "q2d", "q2e", "q2f", "q30", "q31", "q32", "q33", "q34", "q35", "q36", "q37", "q38", "q39", "q3a", "q3b", "q3c", "q3d", "q3e", "q3f", "q40", "q41", "q42", "q43", "q44", "q45", "q46", "q47", "q48", "q49", "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q50", "q51", "q52", "q53", "q54", "q55", "q56", "q57", "q58", "q59", "q60", "q61", "q62", "q63", "q64", "q65", "q66", "q67", "q68", "q69", "q70", "q71", "q72", "q73", "q74", "q75", "q76", "q77", "q78", "q79", "q80", "q81", "q82", "q83", "q84", "q85", "q86", "qba", "qbc", "qbd", "qbe", "qda", "qdb", "qdd", "qde", "qdf", "qi2", "qi3", "qna", "qne", "qnf", "qp9", "qpc", "qpe", "qui", "rng", "rob", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scp", "scy", "shc", "shl", "skp", "skr", "sml", "sp2", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "syn", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wsp", "wst", "xap", "xar", "xbt", "xcl", "xdw", "xea", "xft", "xh9", "xhb", "xhg", "xhh", "xhl", "xhm", "xhn", "xht", "xig", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlk", "xlm", "xlt", "xlv", "xmb", "xmg", "xml", "xms", "xng", "xow", "xpk", "xpl", "xrb", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "yap", "yar", "ybt", "ycl", "ydw", "yea", "yft", "yh9", "yhb", "yhg", "yhh", "yhl", "yhm", "yhn", "yht", "yig", "yit", "ykp", "yla", "ylb", "yld", "ylg", "ylk", "ylm", "ylt", "ylv", "ymb", "ymg", "yml", "yms", "yng", "yow", "ypk", "ypl", "yrb", "yrg", "yrn", "yrs", "ysh", "ysk", "ytb", "ytg", "yth", "ytp", "yts", "ytu", "yuc", "yui", "yul", "yvb", "yvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb"},
-            quality = 6,
-            sockets = "0",
-            hide = true, 
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 3
-        },
-        -- Uber Strict: Hiding low Low/Mid LoD Decals
-        {
-            codes = {"01l","02l","03l","04l","05l","06l","07l","08l","09l","10l","11l","12l","13l","14l","15l","16l","17l","18l","19l","20l","21l","22l"}, 
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 4
-        },
-        -- Uber Strict: Hiding all magic and normal Mythical items
-        {
-            codes = {"m01","m02","m03","m04","m05","m06","m07","m08","m09","m10","m11","m12","m13","m14","m15","m16","m17","m18","m19","m20","m21","m22","m23","m24","m25","m26","m27","m28","m29","m30","m31","m32","m33","m34","m35","m36","m37","m38","m39"},
-            quality = 4,
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 4                                              
-        },
-        {
-            codes = {"m01","m02","m03","m04","m05","m06","m07","m08","m09","m10","m11","m12","m13","m14","m15","m16","m17","m18","m19","m20","m21","m22","m23","m24","m25","m26","m27","m28","m29","m30","m31","m32","m33","m34","m35","m36","m37","m38","m39"},
-            quality = 2,
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 4
-                                                            
-        },
-        -- Uber Strict: Hiding T1 Maps
-        {
-            codes = {"z01","z02","z03","z04"},
-            hide = true,
-            filter_levels = 4
-        },
-        -- Uber Strict: Hiding any ESR runes below Gold
-        {
-            codes = {"r01","r02","r03","r04","r05","r06","r07","r08","r09","r10","r11","r12","r13","r14","r15","r16","r17","r18","r19","r20","r21","r22","r23","r24","r25","r26","r27","r28", "r29", "r30", "r31","r32","r33","r34","r35"},
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 4
-        },
-        -- Uber Strict: Hiding all Normal and Exceptional quality Unique weapons/armor
-        {
-            codes = {"srk","fsk","kgl","02h", "0ax", "0b0", "0b6", "0b7", "0ba", "0be", "0bk", "0bl", "0br", "0bs", "0bt", "0bw", "0cl", "0cm", "0cr", "0dg", "0di", "0fb", "0fc", "0fl", "0ga", "0gd", "0gi", "0gl", "0gm", "0gp", "0gs", "0gw", "0h0", "0ha", "0ja", "0kl", "0kr", "0la", "0ls", "0m0", "0ma", "0mn", "0mp", "0mt", "0nn", "0ns", "0p0", "0pa", "0pb", "0pi", "0qs", "0rd", "0rm", "0s8", "0s9", "0sb", "0sh", "0sm", "0sp", "0sr", "0ss", "0st", "0sy", "0ta", "0tk", "0tr", "0ts", "0vo", "0wa", "0wc", "0wd", "0wh", "0wn", "0ws", "0xb", "0yw", "1bs", "1cb", "1cs", "1hb", "1hx", "1l8", "1lb", "1ls", "1lw", "1lx", "1mx", "1rx", "1s8", "1sb", "1ss", "1sw", "1ws", "2ap", "2ar", "2ax", "2cl", "2ea", "2h9", "2hb", "2hg", "2hl", "2hm", "2hn", "2hs", "2it", "2kp", "2la", "2lb", "2ld", "2lg", "2lm", "2lt", "2mb", "2mg", "2ml", "2ng", "2ow", "2pk", "2pl", "2rg", "2rn", "2rs", "2sh", "2sk", "2tb", "2tg", "2th", "2tp", "2ts", "2tu", "2uc", "2ui", "2ul", "2vb", "2vg", "3hb", "3lb", "3mb", "3tb", "3vb", "4ap", "4ar", "4cl", "4ea", "4h9", "4hb", "4hg", "4hl", "4hm", "4hn", "4it", "4kp", "4la", "4lb", "4ld", "4lg", "4lm", "4lt", "4mb", "4mg", "4ml", "4ng", "4ow", "4pk", "4pl", "4rg", "4rn", "4rs", "4sh", "4sk", "4tb", "4tg", "4th", "4tp", "4ts", "4tu", "4uc", "4ui", "4ul", "4vb", "4vg", "5hb", "5lb", "5mb", "5sc", "5tb", "5vb", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mp", "7mt", "7o7", "7p7", "7pa", "7pi", "7qr", "7qs", "7s7", "7s8", "7sb", "7sc", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7tw", "7vo", "7wa", "7wb", "7wc", "7wh", "7wn", "7ws", "7xf", "7yw", "82a", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9be", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gp", "9gs", "9gw", "9h9", "9ha", "9ja", "9kl", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mn", "9mp", "9mt", "9nj", "9nn", "9ns", "9p9", "9pa", "9pb", "9pi", "9qr", "9qs", "9rd", "9rm", "9s8", "9s9", "9sb", "9sc", "9sh", "9sm", "9sp", "9sr", "9ss", "9st", "9sy", "9ta", "9tk", "9tr", "9ts", "9tw", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9ws", "9xb", "9xf", "9yw", "aar", "ahb", "alb", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "apb", "arm", "atb", "avb", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "bmb", "br2", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "bts", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "ci4", "cix", "clb", "clk", "clm", "clw", "cr2", "crn", "crs", "cst", "dbt", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "dwc", "eht", "elv", "fhl", "fla", "flb", "flc", "fld", "fts", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsc", "gsd", "gsp", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "irg", "jav", "kit", "kkl", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mnb", "mpi", "msb", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "ned", "nee", "nef", "neg", "nin", "njt", "nrd", "nsy", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pbe", "pik", "pil", "plt", "q00", "q01", "q02", "q03", "q04", "q05", "q06", "q07", "q08", "q09", "q10", "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q28", "q29", "q2a", "q2b", "q2c", "q2d", "q2e", "q2f", "q30", "q31", "q32", "q33", "q34", "q35", "q36", "q37", "q38", "q39", "q3a", "q3b", "q3c", "q3d", "q3e", "q3f", "q40", "q41", "q42", "q43", "q44", "q45", "q46", "q47", "q48", "q49", "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q50", "q51", "q52", "q53", "q54", "q55", "q56", "q57", "q58", "q59", "q60", "q61", "q62", "q63", "q64", "q65", "q66", "q67", "q68", "q69", "q70", "q71", "q72", "q73", "q74", "q75", "q76", "q77", "q78", "q79", "q80", "q81", "q82", "q83", "q84", "q85", "q86", "qba", "qbc", "qbd", "qbe", "qda", "qdb", "qdd", "qde", "qdf", "qi2", "qi3", "qna", "qne", "qnf", "qp9", "qpc", "qpe", "qui", "rng", "rob", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scp", "scy", "shc", "shl", "skp", "skr", "sml", "sp2", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "syn", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wsp", "wst", "xap", "xar", "xbt", "xcl", "xdw", "xea", "xft", "xh9", "xhb", "xhg", "xhh", "xhl", "xhm", "xhn", "xht", "xig", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlk", "xlm", "xlt", "xlv", "xmb", "xmg", "xml", "xms", "xng", "xow", "xpk", "xpl", "xrb", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "yap", "yar", "ybt", "ycl", "ydw", "yea", "yft", "yh9", "yhb", "yhg", "yhh", "yhl", "yhm", "yhn", "yht", "yig", "yit", "ykp", "yla", "ylb", "yld", "ylg", "ylk", "ylm", "ylt", "ylv", "ymb", "ymg", "yml", "yms", "yng", "yow", "ypk", "ypl", "yrb", "yrg", "yrn", "yrs", "ysh", "ysk", "ytb", "ytg", "yth", "ytp", "yts", "ytu", "yuc", "yui", "yul", "yvb", "yvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb"},
-            quality = "7",
-            rarity = "1-",
-            hide = true, 
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 4
-        },
-        -- Uber Strict: Hiding all Set items
-        {
-            codes = "allitems",
-            quality = "5",
-            hide = true, -- Hiding all Set items
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 4
-        },
-        -- Uber Strict: Hiding magic rings, amulets, charms, and jewels
-        {
-            codes = {"mrn","mam","rin","amu","zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam","cm1","cm2","cm3","cx1","cx2","cx3"},
-            quality = "4",
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels =4
-        },
-        -- Uber Strict: Hiding all non mythical superior base
-        {
-            codes = {"kgk","srk","fsk","kgl","02h", "0ax", "0b0", "0b6", "0b7", "0ba", "0be", "0bk", "0bl", "0br", "0bs", "0bt", "0bw", "0cl", "0cm", "0cr", "0dg", "0di", "0fb", "0fc", "0fl", "0ga", "0gd", "0gi", "0gl", "0gm", "0gp", "0gs", "0gw", "0h0", "0ha", "0ja", "0kl", "0kr", "0la", "0ls", "0m0", "0ma", "0mn", "0mp", "0mt", "0nn", "0ns", "0p0", "0pa", "0pb", "0pi", "0qs", "0rd", "0rm", "0s8", "0s9", "0sb", "0sh", "0sm", "0sp", "0sr", "0ss", "0st", "0sy", "0ta", "0tk", "0tr", "0ts", "0vo", "0wa", "0wc", "0wd", "0wh", "0wn", "0ws", "0xb", "0yw", "1bs", "1cb", "1cs", "1hb", "1hx", "1l8", "1lb", "1ls", "1lw", "1lx", "1mx", "1rx", "1s8", "1sb", "1ss", "1sw", "1ws", "2ap", "2ar", "2ax", "2cl", "2ea", "2h9", "2hb", "2hg", "2hl", "2hm", "2hn", "2hs", "2it", "2kp", "2la", "2lb", "2ld", "2lg", "2lm", "2lt", "2mb", "2mg", "2ml", "2ng", "2ow", "2pk", "2pl", "2rg", "2rn", "2rs", "2sh", "2sk", "2tb", "2tg", "2th", "2tp", "2ts", "2tu", "2uc", "2ui", "2ul", "2vb", "2vg", "3hb", "3lb", "3mb", "3tb", "3vb", "4ap", "4ar", "4cl", "4ea", "4h9", "4hb", "4hg", "4hl", "4hm", "4hn", "4it", "4kp", "4la", "4lb", "4ld", "4lg", "4lm", "4lt", "4mb", "4mg", "4ml", "4ng", "4ow", "4pk", "4pl", "4rg", "4rn", "4rs", "4sh", "4sk", "4tb", "4tg", "4th", "4tp", "4ts", "4tu", "4uc", "4ui", "4ul", "4vb", "4vg", "5hb", "5lb", "5mb", "5sc", "5tb", "5vb", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mp", "7mt", "7o7", "7p7", "7pa", "7pi", "7qr", "7qs", "7s7", "7s8", "7sb", "7sc", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7tw", "7vo", "7wa", "7wb", "7wc", "7wh", "7wn", "7ws", "7xf", "7yw", "82a", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9be", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gp", "9gs", "9gw", "9h9", "9ha", "9ja", "9kl", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mn", "9mp", "9mt", "9nj", "9nn", "9ns", "9p9", "9pa", "9pb", "9pi", "9qr", "9qs", "9rd", "9rm", "9s8", "9s9", "9sb", "9sc", "9sh", "9sm", "9sp", "9sr", "9ss", "9st", "9sy", "9ta", "9tk", "9tr", "9ts", "9tw", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9ws", "9xb", "9xf", "9yw", "aar", "ahb", "alb", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "apb", "arm", "atb", "avb", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "bmb", "br2", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "bts", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "ci4", "cix", "clb", "clk", "clm", "clw", "cr2", "crn", "crs", "cst", "dbt", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "dwc", "eht", "elv", "fhl", "fla", "flb", "flc", "fld", "fts", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsc", "gsd", "gsp", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "irg", "jav", "kit", "kkl", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mnb", "mpi", "msb", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "ned", "nee", "nef", "neg", "nin", "njt", "nrd", "nsy", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pbe", "pik", "pil", "plt", "q00", "q01", "q02", "q03", "q04", "q05", "q06", "q07", "q08", "q09", "q10", "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q28", "q29", "q2a", "q2b", "q2c", "q2d", "q2e", "q2f", "q30", "q31", "q32", "q33", "q34", "q35", "q36", "q37", "q38", "q39", "q3a", "q3b", "q3c", "q3d", "q3e", "q3f", "q40", "q41", "q42", "q43", "q44", "q45", "q46", "q47", "q48", "q49", "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q50", "q51", "q52", "q53", "q54", "q55", "q56", "q57", "q58", "q59", "q60", "q61", "q62", "q63", "q64", "q65", "q66", "q67", "q68", "q69", "q70", "q71", "q72", "q73", "q74", "q75", "q76", "q77", "q78", "q79", "q80", "q81", "q82", "q83", "q84", "q85", "q86", "qba", "qbc", "qbd", "qbe", "qda", "qdb", "qdd", "qde", "qdf", "qi2", "qi3", "qna", "qne", "qnf", "qp9", "qpc", "qpe", "qui", "rng", "rob", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scp", "scy", "shc", "shl", "skp", "skr", "sml", "sp2", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "syn", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wsp", "wst", "xap", "xar", "xbt", "xcl", "xdw", "xea", "xft", "xh9", "xhb", "xhg", "xhh", "xhl", "xhm", "xhn", "xht", "xig", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlk", "xlm", "xlt", "xlv", "xmb", "xmg", "xml", "xms", "xng", "xow", "xpk", "xpl", "xrb", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "yap", "yar", "ybt", "ycl", "ydw", "yea", "yft", "yh9", "yhb", "yhg", "yhh", "yhl", "yhm", "yhn", "yht", "yig", "yit", "ykp", "yla", "ylb", "yld", "ylg", "ylk", "ylm", "ylt", "ylv", "ymb", "ymg", "yml", "yms", "yng", "yow", "ypk", "ypl", "yrb", "yrg", "yrn", "yrs", "ysh", "ysk", "ytb", "ytg", "yth", "ytp", "yts", "ytu", "yuc", "yui", "yul", "yvb", "yvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb"},
-            quality = "3-",
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 4
-        },
-        -- Uber Strict: hiding all non mythical rares
-        {
-            codes = {"cqv","cq2","cq0","aq0","aq2","aqv","kgk","srk","fsk","kgl","02h", "0ax", "0b0", "0b6", "0b7", "0ba", "0be", "0bk", "0bl", "0br", "0bs", "0bt", "0bw", "0cl", "0cm", "0cr", "0dg", "0di", "0fb", "0fc", "0fl", "0ga", "0gd", "0gi", "0gl", "0gm", "0gp", "0gs", "0gw", "0h0", "0ha", "0ja", "0kl", "0kr", "0la", "0ls", "0m0", "0ma", "0mn", "0mp", "0mt", "0nn", "0ns", "0p0", "0pa", "0pb", "0pi", "0qs", "0rd", "0rm", "0s8", "0s9", "0sb", "0sh", "0sm", "0sp", "0sr", "0ss", "0st", "0sy", "0ta", "0tk", "0tr", "0ts", "0vo", "0wa", "0wc", "0wd", "0wh", "0wn", "0ws", "0xb", "0yw", "1bs", "1cb", "1cs", "1hb", "1hx", "1l8", "1lb", "1ls", "1lw", "1lx", "1mx", "1rx", "1s8", "1sb", "1ss", "1sw", "1ws", "2ap", "2ar", "2ax", "2cl", "2ea", "2h9", "2hb", "2hg", "2hl", "2hm", "2hn", "2hs", "2it", "2kp", "2la", "2lb", "2ld", "2lg", "2lm", "2lt", "2mb", "2mg", "2ml", "2ng", "2ow", "2pk", "2pl", "2rg", "2rn", "2rs", "2sh", "2sk", "2tb", "2tg", "2th", "2tp", "2ts", "2tu", "2uc", "2ui", "2ul", "2vb", "2vg", "3hb", "3lb", "3mb", "3tb", "3vb", "4ap", "4ar", "4cl", "4ea", "4h9", "4hb", "4hg", "4hl", "4hm", "4hn", "4it", "4kp", "4la", "4lb", "4ld", "4lg", "4lm", "4lt", "4mb", "4mg", "4ml", "4ng", "4ow", "4pk", "4pl", "4rg", "4rn", "4rs", "4sh", "4sk", "4tb", "4tg", "4th", "4tp", "4ts", "4tu", "4uc", "4ui", "4ul", "4vb", "4vg", "5hb", "5lb", "5mb", "5sc", "5tb", "5vb", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mp", "7mt", "7o7", "7p7", "7pa", "7pi", "7qr", "7qs", "7s7", "7s8", "7sb", "7sc", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7tw", "7vo", "7wa", "7wb", "7wc", "7wh", "7wn", "7ws", "7xf", "7yw", "82a", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9be", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gp", "9gs", "9gw", "9h9", "9ha", "9ja", "9kl", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mn", "9mp", "9mt", "9nj", "9nn", "9ns", "9p9", "9pa", "9pb", "9pi", "9qr", "9qs", "9rd", "9rm", "9s8", "9s9", "9sb", "9sc", "9sh", "9sm", "9sp", "9sr", "9ss", "9st", "9sy", "9ta", "9tk", "9tr", "9ts", "9tw", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9ws", "9xb", "9xf", "9yw", "aar", "ahb", "alb", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "apb", "arm", "atb", "avb", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "bmb", "br2", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "bts", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "ci4", "cix", "clb", "clk", "clm", "clw", "cr2", "crn", "crs", "cst", "dbt", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "dwc", "eht", "elv", "fhl", "fla", "flb", "flc", "fld", "fts", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsc", "gsd", "gsp", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "irg", "jav", "kit", "kkl", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mnb", "mpi", "msb", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "ned", "nee", "nef", "neg", "nin", "njt", "nrd", "nsy", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pbe", "pik", "pil", "plt", "q00", "q01", "q02", "q03", "q04", "q05", "q06", "q07", "q08", "q09", "q10", "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q28", "q29", "q2a", "q2b", "q2c", "q2d", "q2e", "q2f", "q30", "q31", "q32", "q33", "q34", "q35", "q36", "q37", "q38", "q39", "q3a", "q3b", "q3c", "q3d", "q3e", "q3f", "q40", "q41", "q42", "q43", "q44", "q45", "q46", "q47", "q48", "q49", "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q50", "q51", "q52", "q53", "q54", "q55", "q56", "q57", "q58", "q59", "q60", "q61", "q62", "q63", "q64", "q65", "q66", "q67", "q68", "q69", "q70", "q71", "q72", "q73", "q74", "q75", "q76", "q77", "q78", "q79", "q80", "q81", "q82", "q83", "q84", "q85", "q86", "qba", "qbc", "qbd", "qbe", "qda", "qdb", "qdd", "qde", "qdf", "qi2", "qi3", "qna", "qne", "qnf", "qp9", "qpc", "qpe", "qui", "rng", "rob", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scp", "scy", "shc", "shl", "skp", "skr", "sml", "sp2", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "syn", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wsp", "wst", "xap", "xar", "xbt", "xcl", "xdw", "xea", "xft", "xh9", "xhb", "xhg", "xhh", "xhl", "xhm", "xhn", "xht", "xig", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlk", "xlm", "xlt", "xlv", "xmb", "xmg", "xml", "xms", "xng", "xow", "xpk", "xpl", "xrb", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "yap", "yar", "ybt", "ycl", "ydw", "yea", "yft", "yh9", "yhb", "yhg", "yhh", "yhl", "yhm", "yhn", "yht", "yig", "yit", "ykp", "yla", "ylb", "yld", "ylg", "ylk", "ylm", "ylt", "ylv", "ymb", "ymg", "yml", "yms", "yng", "yow", "ypk", "ypl", "yrb", "yrg", "yrn", "yrs", "ysh", "ysk", "ytb", "ytg", "yth", "ytp", "yts", "ytu", "yuc", "yui", "yul", "yvb", "yvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb"},
-            quality = 6,
-            hide = true, 
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 4
-        },
-        -- Uber Strict: Hiding non-perfect gems
-        {
-            codes = {"gzv","gpv","gly","gpy","glb", "gpb", "glg", "gpg", "glr", "gpr", "glw", "gpw", "skl","skz", "gzk", "gpk"}, 
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 4
-        },
-        -- Uber Strict: Hiding 25% rejuvs
-        {
-            code = "rvs", 
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 4
-        },
-        -- Uber Strict: Hide all arrows/bolts
-        {
-            codes = {"cqv","cq2","cq0","aq0","aq2","aqv"}, 
-            quality = "7-",
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 4
-        },
-        -- Uber Strict: Hide ancient decipherers
-            {   
-            code = "ddd",
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 4
-        },
-        -- Uber Strict: Hiding all normal coupons except highlighted ones (SoJ)
-        {
-            codes = {"01c","02c","03c","04c","05c","06c","07c","08c","09c","10c","11c","12c","13c","14c","15c","16c","17c","18c","19c","20c","21c","22c","23c","24c","25c","26c","27c","28c","29c","30c","31c","32c","33c","34c","35c","36c","37c","38c","39c","40c","41c","42c","43c","44c","45c","46c","01f","02f","03f","04f","05f","06f","07f","08f","09f","10f","11f","12f","13f","14f","15f","16f","17f","18f","19f","20f","21f","22f","23f","24f","25f","26f","27f","28f","29f","30f","31f","32f","33f","34f","35f","36f","37f","38f","39f","40f","41f","42f","43f","44f","45f","46f","47f","48f","49f","50f","51f","52f","53f","54f","55f","56f","57f","58f","59f","60f","61f","62f","63f","64f","65f","66f","67f","68f","69f","70f","71f","01i","02i","03i","01j","02j","04j"},
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 4
-        },
-        -- Uber Strict: Hiding all exceptional coupons
-        {
-            codes = {"01d","02d","03d","04d","05d","06d","07d","08d","09d","10d","11d","12d","14d","15d","16d","17d","18d","19d","20d","21d","22d","23d","24d","25d","26d","27d","28d","29d","30d","31d","32d","33d","34d","35d","36d","37d","38d","39d","40d","41d","42d","43d","44d","45d","46d","47d","48d","49d","50d","01g","02g","03g","04g","05g","06g","07g","08g","09g","10g","11g","12g","13g","14g","15g","16g","17g","18g","19g","20g","21g","22g","23g","24g","25g","26g","27g","28g","29g","30g","31g","32g","33g","34g","35g","36g","37g","38g","39g","40g","41g","42g","43g","44g","45g","46g","47g","48g","49g","50g","51g","52g","53g","54g","55g","56g","57g","58g","59g","60g","61g","62g","63g","64g","65g","66g","67g","68g","69g","70g","71g","72g","73g","74g","75g","76g","77g","78g","05i","06i","07i","08i","05j","06j","07j","08j","04i"},
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 4 
-        },
-        {
-            codes = {"kgk","srk","fsk","kgl","02h", "0ax", "0b0", "0b6", "0b7", "0ba", "0be", "0bk", "0bl", "0br", "0bs", "0bt", "0bw", "0cl", "0cm", "0cr", "0dg", "0di", "0fb", "0fc", "0fl", "0ga", "0gd", "0gi", "0gl", "0gm", "0gp", "0gs", "0gw", "0h0", "0ha", "0ja", "0kl", "0kr", "0la", "0ls", "0m0", "0ma", "0mn", "0mp", "0mt", "0nn", "0ns", "0p0", "0pa", "0pb", "0pi", "0qs", "0rd", "0rm", "0s8", "0s9", "0sb", "0sh", "0sm", "0sp", "0sr", "0ss", "0st", "0sy", "0ta", "0tk", "0tr", "0ts", "0vo", "0wa", "0wc", "0wd", "0wh", "0wn", "0ws", "0xb", "0yw", "1bs", "1cb", "1cs", "1hb", "1hx", "1l8", "1lb", "1ls", "1lw", "1lx", "1mx", "1rx", "1s8", "1sb", "1ss", "1sw", "1ws", "2ap", "2ar", "2ax", "2cl", "2ea", "2h9", "2hb", "2hg", "2hl", "2hm", "2hn", "2hs", "2it", "2kp", "2la", "2lb", "2ld", "2lg", "2lm", "2lt", "2mb", "2mg", "2ml", "2ng", "2ow", "2pk", "2pl", "2rg", "2rn", "2rs", "2sh", "2sk", "2tb", "2tg", "2th", "2tp", "2ts", "2tu", "2uc", "2ui", "2ul", "2vb", "2vg", "3hb", "3lb", "3mb", "3tb", "3vb", "4ap", "4ar", "4cl", "4ea", "4h9", "4hb", "4hg", "4hl", "4hm", "4hn", "4it", "4kp", "4la", "4lb", "4ld", "4lg", "4lm", "4lt", "4mb", "4mg", "4ml", "4ng", "4ow", "4pk", "4pl", "4rg", "4rn", "4rs", "4sh", "4sk", "4tb", "4tg", "4th", "4tp", "4ts", "4tu", "4uc", "4ui", "4ul", "4vb", "4vg", "5hb", "5lb", "5mb", "5sc", "5tb", "5vb", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mp", "7mt", "7o7", "7p7", "7pa", "7pi", "7qr", "7qs", "7s7", "7s8", "7sb", "7sc", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7tw", "7vo", "7wa", "7wb", "7wc", "7wh", "7wn", "7ws", "7xf", "7yw", "82a", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9be", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gp", "9gs", "9gw", "9h9", "9ha", "9ja", "9kl", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mn", "9mp", "9mt", "9nj", "9nn", "9ns", "9p9", "9pa", "9pb", "9pi", "9qr", "9qs", "9rd", "9rm", "9s8", "9s9", "9sb", "9sc", "9sh", "9sm", "9sp", "9sr", "9ss", "9st", "9sy", "9ta", "9tk", "9tr", "9ts", "9tw", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9ws", "9xb", "9xf", "9yw", "aar", "ahb", "alb", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "apb", "arm", "atb", "avb", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "bmb", "br2", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "bts", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "ci4", "cix", "clb", "clk", "clm", "clw", "cr2", "crn", "crs", "cst", "dbt", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "dwc", "eht", "elv", "fhl", "fla", "flb", "flc", "fld", "fts", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsc", "gsd", "gsp", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "irg", "jav", "kit", "kkl", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mnb", "mpi", "msb", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "ned", "nee", "nef", "neg", "nin", "njt", "nrd", "nsy", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pbe", "pik", "pil", "plt", "q00", "q01", "q02", "q03", "q04", "q05", "q06", "q07", "q08", "q09", "q10", "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q28", "q29", "q2a", "q2b", "q2c", "q2d", "q2e", "q2f", "q30", "q31", "q32", "q33", "q34", "q35", "q36", "q37", "q38", "q39", "q3a", "q3b", "q3c", "q3d", "q3e", "q3f", "q40", "q41", "q42", "q43", "q44", "q45", "q46", "q47", "q48", "q49", "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q50", "q51", "q52", "q53", "q54", "q55", "q56", "q57", "q58", "q59", "q60", "q61", "q62", "q63", "q64", "q65", "q66", "q67", "q68", "q69", "q70", "q71", "q72", "q73", "q74", "q75", "q76", "q77", "q78", "q79", "q80", "q81", "q82", "q83", "q84", "q85", "q86", "qba", "qbc", "qbd", "qbe", "qda", "qdb", "qdd", "qde", "qdf", "qi2", "qi3", "qna", "qne", "qnf", "qp9", "qpc", "qpe", "qui", "rng", "rob", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scp", "scy", "shc", "shl", "skp", "skr", "sml", "sp2", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "syn", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wsp", "wst", "xap", "xar", "xbt", "xcl", "xdw", "xea", "xft", "xh9", "xhb", "xhg", "xhh", "xhl", "xhm", "xhn", "xht", "xig", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlk", "xlm", "xlt", "xlv", "xmb", "xmg", "xml", "xms", "xng", "xow", "xpk", "xpl", "xrb", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "yap", "yar", "ybt", "ycl", "ydw", "yea", "yft", "yh9", "yhb", "yhg", "yhh", "yhl", "yhm", "yhn", "yht", "yig", "yit", "ykp", "yla", "ylb", "yld", "ylg", "ylk", "ylm", "ylt", "ylv", "ymb", "ymg", "yml", "yms", "yng", "yow", "ypk", "ypl", "yrb", "yrg", "yrn", "yrs", "ysh", "ysk", "ytb", "ytg", "yth", "ytp", "yts", "ytu", "yuc", "yui", "yul", "yvb", "yvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb"},
-            quality = "7", -- Elite Uniques
-            rarity = "2",
-            hide = true,
-            area = NOT { "Rogue Encampment", "Lut Gholein", "Kurast Docktown", "The Pandemonium Fortress", "Harrogath" },
-            filter_levels = 4
-        },
-        -- NEVER hide Runeword items (I mean don't drop them outside of town... but just in case)
-        {
-            codes = "allitems",
-            runeword = true,
-            hide = false
-        },
-        -- Always highlight and notify for Rare Jewels
-        {
-            code = "jew",
-            quality = "6",
-            notify = "{yellow}** Rare Jewel **",
-            border = {0,200,200,255},
-            background = {0,0,0,255},
-            name_override = "{yellow}{name}",
-            audio = "other.mp3"
-        },
-        -- Tooltip for Jewel crfating options
-        {
-            code = "jew",
-            location = {"onplayer","atvendor"},
-            quality = "6-",
-            suffix_desc = "{gray}Can be forged. Check Akara's inventory for recipes{blue}\n"
-        },
-        -- Rejuvination Potion Style
-        {
-            code = "rvs",
-            border = {128, 0, 128, 255},
-            name_override = "{white}*{purple}25%%{white}*"
-        },
-        {
-            code = "rvl",
-            border = {128, 0, 128, 255},
-            name_override = "{white}*{purple}50%%{white}*"
-        },
-        {
-            code = "po3",
-            border = {128, 0, 128, 255},
-            name_override = "{purple}*{white}Full{purple}*"
-        },
-        -- Ores tooltip, style, and notifications
-        {
-            code = "ore",
-            border = {0, 0, 0, 255},
-            background = {255, 215, 150},
-            prefix = "{green}$$",
-            name_override = "{black}Ore",
-            suffix = "{green}$$",
-        },
-        {
-            code = "ore",
-            location = {"onplayer","atvendor"},
-            suffix_desc = "{purple} Sell to vendor when empty \n",
-        },
-        -- Fake note style, notifications
-        {
-            code = "fkn",
-            border = {0, 0, 0, 255},
-            background = {255, 215, 150},
-            prefix = "{green}$$",
-            name_override = "{black}Fake Note",
-            suffix = "{green}$$",
-        },
-        -- Tooltip description for D-Stones
-        {
-            code = "ppp",
-            location = {"onplayer","atvendor","onground"},
-            suffix_desc = "{red}Assassin Crafting Material\n",
-            name_override = "{purple}D-Stone",
-            border = {128, 0, 128, 255},
-        },
-        {
-            code = "hly",
-            location = {"onplayer","atvendor"},
-            suffix_desc = "{white}Paladin Crafting Material\n",
-        },
-        {
-            code = "eee",
-            location = {"onplayer","atvendor"},
-            suffix_desc = "{gray}Necromancer Crafting Material\n",
-        },
-        {
-            code = "hh2",
-            location = {"onplayer","atvendor"},
-            suffix_desc = "{purple}Barbarian Crafting Material\n",
-        },
-        {
-            code = "ggg",
-            location = {"onplayer","atvendor"},
-            suffix_desc = "{blue}Sorceress Crafting Material\n",
-        },
-        {
-            code = "sss",
-            location = {"onplayer","atvendor"},
-            suffix_desc = "{green}Amazon Crafting Material\n",
-        },
-        {
-            code = "ttt",
-            location = {"onplayer","atvendor"},
-            suffix_desc = "{Yellow}Druid Crafting Material\n",
-        },
-        -- Crafting Reagants Style and notifications: Socket Donut
-        {
-            code = "sdo",
-            audio = "mid.mp3",
-            border = {0, 0, 0, 255},
-            background = {200, 150, 0, 255},
-            name_override = "{black}Socket Donut",
-        },
-        -- Crafting Reagants Style and notifications: Orb of Annointment
-        {
-            code = "um7",
-            notify = "{red}*{green}*{blue}* {red}Rare Crafting Reagant: {purple} Orb of Annointment {red}*{green}*{blue}*",
-            border = {150,0,200,250},
-            background = {255,255,255,250}
-        },
-        -- Crafting Reagants Style and notifications: Worldstone Shard
-        {
-            code = "wss",
-            border = {0, 0, 0, 255},
-            background = {200, 150, 0, 255},
-            name_override = "{black}Worldstone Shard",
-            audio = "mid.mp3"
-        },
-        {
-            code = "wss",
-            location = {"onplayer","atvendor"},
-            prefix = "{white}Cube with Multi-Stocker to store\n{red}Crafting Material\n"
-        },
-        -- Crafting Reagants Style and notifications: Maple Leaf
-        {
-            code = "map",
-            notify = "{red}*{green}*{blue}* {red}Rare Crafting Reagant: {gold} Maple Leaf {red}*{green}*{blue}*",
-            border = {0, 0, 0, 255},
-            background = {200, 150, 0, 255},
-            name_override = "{black}Maple Leaf",
-            audio = "gong.mp3"
-        },
-        -- Crafting Reagants Style and notifications: Anvil Stone
-        {
-            code = "qqq",
-            notify = "{red}*{green}*{blue}* {red}Rare Crafting Reagant: {gold} Anvil Stone {red}*{green}*{blue}*",
-            border = {0, 0, 0, 255},
-            background = {200, 150, 0, 255},
-            name_override = "{black}Anvil Stone",
-            audio = "gong.mp3"
-        },
-        -- Crafting Reagants Style and notifications: Elixir
-        {
-            code = "elx",
-            notify = "{red}*{green}*{blue}* {red}Rare Crafting Reagant: {gold} Elixir {red}*{green}*{blue}*",
-            border = {0, 0, 0, 255},
-            background = {200, 150, 0, 255},
-            name_override = "{black}Elixir",
-            audio = "gong.mp3"
-        },
-        -- Crafting Reagants Style and notifications: Cookbook
-        {
-            code = "yyy",
-            notify = "{red}*{green}*{blue}* {red}Rare Crafting Reagant: {gold} Cookbook {red}*{green}*{blue}*",
-            border = {0, 0, 0, 255},
-            background = {200, 150, 0, 255},
-            name_override = "{black}Cookbook",
-            audio = "gong.mp3"
-        },
-        -- Tooltips for Maple Leaf, Anvil Stone, Elixir, Cookbook
-        {
-            codes = {"map", "elx", "yyy","qqq"},
-            location = {"onplayer","atvendor"},
-            prefix = "{white}Cube with Multi-Stocker to store\n{red} Rare Crafting Reagant \n"
-        },
-        -- Supreme Crafting Material notifications and style - Lilith's Tear
-        {
-            code = "um8",
-            notify = "{red}*{blue}*{green}*  {gold}S-Tier Crafting Material {red}*{blue}*{green}*: {name}",
-            border = {255,0,0,255},
-            background = {255,255,255,255},
-            name_override = "{lilac}Lilith's Crystallized Tear",
-            audio = "tink.mp3"
-        },
-        -- Tyrael's Feather
-        {
-            code = "um9",
-            notify = "{red}*{blue}*{green}*  {gold}S-Tier Crafting Material {red}*{blue}*{green}*: {name}",
-            border = {255,0,0,255},
-            background = {255,255,255,255},
-            name_override = "{lilac}Tyrael's Eternal Feather",
-            audio = "tink.mp3"
-        },
-        -- Lucion's Essence
-        {
-            code = "u17",
-            notify = "{red}*{blue}*{green}*  {gold}S-Tier Crafting Material {red}*{blue}*{green}*: {name}",
-            border = {255,0,0,255},
-            background = {255,255,255,255},
-            name_override = "{lilac}Lucion's Essence",
-            audio = "tink.mp3"
-        },
-        -- Astrogha's Heart
-        {
-            code ="u20",
-            notify = "{red}*{blue}*{green}*  {gold}S-Tier Crafting Material {red}*{blue}*{green}*: {name}",
-            border = {255,0,0,255},
-            background = {255,255,255,255},
-            name_override = "{lilac}Astrogha's Petrified Heart",
-            audio = "tink.mp3"
-        },
-        -- Aura Stones notification
-        {
-            codes = {"an3", "an4", "an5", "an6", "an7", "an8", "an9"},
-            notify = "{red}*{blue}*{green}*  {orange}Aura Stone {red}*{blue}*{green}*",
-            border = {255,0,0,255},
-            background = {255,255,255,255},
-            name_override = "{red}{name}",
-            audio = "tink.mp3"
-        },
-        -- Aura Stone Tooltips
-        {
-            code = "an3",
-            location = {"onplayer","atvendor"},
-            prefix = "{green} Lvl 10 Blessed Aim Aura when equipped\n{white}Cube with any Amulet and a chipped gem to forge:\n {red}Rare Crafting Material\n"
-        },
-        {
-            code = "an4",
-            location = {"onplayer","atvendor"},
-            prefix = "{red} Lvl 15 Concentration Aura when equipped\n{white}Cube with any Amulet and a chipped gem to forge:\n {red}Rare Crafting Material\n"
-        },
-        {
-            code = "an5",
-            location = {"onplayer","atvendor"},
-            prefix = "{purple} Lvl 20 Defiance Aura when equipped\n{white}Cube with any Amulet and a chipped gem to forge:\n {red}Rare Crafting Material\n"
-        },
-        {
-            code = "an6",
-            location = {"onplayer","atvendor"},
-            prefix = "{yellow} Lvl 10 Vigor Aura when equipped\n{white}Cube with any Amulet and a chipped gem to forge:\n {red}Rare Crafting Material\n"
-        },
-        {
-            code = "an7",
-            location = {"onplayer","atvendor"},
-            prefix = "{gray} Lvl 30 Thorns Aura when equipped\n{white}Cube with any Amulet and a chipped gem to forge:\n {red}Rare Crafting Material\n"
-        },
-        {
-            code = "an8",
-            location = {"onplayer","atvendor"},
-            prefix = "{Gold} Lvl 21 Conviction Aura when equipped\n{white}Cube with any Amulet and a chipped gem to forge:\n {red}Rare Crafting Material\n"
-        },
-        {
-            code = "an9",
-            location = {"onplayer","atvendor"},
-            prefix = "{Blue} Lvl 15 Meditation Aura when equipped\n{white}Cube with any Amulet and a chipped gem to forge:\n {red}Rare Crafting Material\n"
-        },
-        -- Highlighting Uniques/Sets
-            {   
-            codes = {"kgk","srk","fsk","kgl","02h", "0ax", "0b0", "0b6", "0b7", "0ba", "0be", "0bk", "0bl", "0br", "0bs", "0bt", "0bw", "0cl", "0cm", "0cr", "0dg", "0di", "0fb", "0fc", "0fl", "0ga", "0gd", "0gi", "0gl", "0gm", "0gp", "0gs", "0gw", "0h0", "0ha", "0ja", "0kl", "0kr", "0la", "0ls", "0m0", "0ma", "0mn", "0mp", "0mt", "0nn", "0ns", "0p0", "0pa", "0pb", "0pi", "0qs", "0rd", "0rm", "0s8", "0s9", "0sb", "0sh", "0sm", "0sp", "0sr", "0ss", "0st", "0sy", "0ta", "0tk", "0tr", "0ts", "0vo", "0wa", "0wc", "0wd", "0wh", "0wn", "0ws", "0xb", "0yw", "1bs", "1cb", "1cs", "1hb", "1hx", "1l8", "1lb", "1ls", "1lw", "1lx", "1mx", "1rx", "1s8", "1sb", "1ss", "1sw", "1ws", "2ap", "2ar", "2ax", "2cl", "2ea", "2h9", "2hb", "2hg", "2hl", "2hm", "2hn", "2hs", "2it", "2kp", "2la", "2lb", "2ld", "2lg", "2lm", "2lt", "2mb", "2mg", "2ml", "2ng", "2ow", "2pk", "2pl", "2rg", "2rn", "2rs", "2sh", "2sk", "2tb", "2tg", "2th", "2tp", "2ts", "2tu", "2uc", "2ui", "2ul", "2vb", "2vg", "3hb", "3lb", "3mb", "3tb", "3vb", "4ap", "4ar", "4cl", "4ea", "4h9", "4hb", "4hg", "4hl", "4hm", "4hn", "4it", "4kp", "4la", "4lb", "4ld", "4lg", "4lm", "4lt", "4mb", "4mg", "4ml", "4ng", "4ow", "4pk", "4pl", "4rg", "4rn", "4rs", "4sh", "4sk", "4tb", "4tg", "4th", "4tp", "4ts", "4tu", "4uc", "4ui", "4ul", "4vb", "4vg", "5hb", "5lb", "5mb", "5sc", "5tb", "5vb", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mp", "7mt", "7o7", "7p7", "7pa", "7pi", "7qr", "7qs", "7s7", "7s8", "7sb", "7sc", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7tw", "7vo", "7wa", "7wb", "7wc", "7wh", "7wn", "7ws", "7xf", "7yw", "82a", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9be", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gp", "9gs", "9gw", "9h9", "9ha", "9ja", "9kl", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mn", "9mp", "9mt", "9nj", "9nn", "9ns", "9p9", "9pa", "9pb", "9pi", "9qr", "9qs", "9rd", "9rm", "9s8", "9s9", "9sb", "9sc", "9sh", "9sm", "9sp", "9sr", "9ss", "9st", "9sy", "9ta", "9tk", "9tr", "9ts", "9tw", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9ws", "9xb", "9xf", "9yw", "aar", "ahb", "alb", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "apb", "arm", "atb", "avb", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "bmb", "br2", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "bts", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "ci4", "cix", "clb", "clk", "clm", "clw", "cr2", "crn", "crs", "cst", "dbt", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "dwc", "eht", "elv", "fhl", "fla", "flb", "flc", "fld", "fts", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsc", "gsd", "gsp", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "irg", "jav", "kit", "kkl", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mnb", "mpi", "msb", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "ned", "nee", "nef", "neg", "nin", "njt", "nrd", "nsy", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pbe", "pik", "pil", "plt", "q00", "q01", "q02", "q03", "q04", "q05", "q06", "q07", "q08", "q09", "q10", "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q28", "q29", "q2a", "q2b", "q2c", "q2d", "q2e", "q2f", "q30", "q31", "q32", "q33", "q34", "q35", "q36", "q37", "q38", "q39", "q3a", "q3b", "q3c", "q3d", "q3e", "q3f", "q40", "q41", "q42", "q43", "q44", "q45", "q46", "q47", "q48", "q49", "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q50", "q51", "q52", "q53", "q54", "q55", "q56", "q57", "q58", "q59", "q60", "q61", "q62", "q63", "q64", "q65", "q66", "q67", "q68", "q69", "q70", "q71", "q72", "q73", "q74", "q75", "q76", "q77", "q78", "q79", "q80", "q81", "q82", "q83", "q84", "q85", "q86", "qba", "qbc", "qbd", "qbe", "qda", "qdb", "qdd", "qde", "qdf", "qi2", "qi3", "qna", "qne", "qnf", "qp9", "qpc", "qpe", "qui", "rng", "rob", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scp", "scy", "shc", "shl", "skp", "skr", "sml", "sp2", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "syn", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wsp", "wst", "xap", "xar", "xbt", "xcl", "xdw", "xea", "xft", "xh9", "xhb", "xhg", "xhh", "xhl", "xhm", "xhn", "xht", "xig", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlk", "xlm", "xlt", "xlv", "xmb", "xmg", "xml", "xms", "xng", "xow", "xpk", "xpl", "xrb", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "yap", "yar", "ybt", "ycl", "ydw", "yea", "yft", "yh9", "yhb", "yhg", "yhh", "yhl", "yhm", "yhn", "yht", "yig", "yit", "ykp", "yla", "ylb", "yld", "ylg", "ylk", "ylm", "ylt", "ylv", "ymb", "ymg", "yml", "yms", "yng", "yow", "ypk", "ypl", "yrb", "yrg", "yrn", "yrs", "ysh", "ysk", "ytb", "ytg", "yth", "ytp", "yts", "ytu", "yuc", "yui", "yul", "yvb", "yvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb"},
-            quality = "7", --Normal Uniques
-            rarity = "0",
-            audio = "unique.mp3",
-            border = {255,165,0,255},
-            filter_levels = "1,2"
-        },
-        {
-            codes = {"kgk","srk","fsk","kgl","02h", "0ax", "0b0", "0b6", "0b7", "0ba", "0be", "0bk", "0bl", "0br", "0bs", "0bt", "0bw", "0cl", "0cm", "0cr", "0dg", "0di", "0fb", "0fc", "0fl", "0ga", "0gd", "0gi", "0gl", "0gm", "0gp", "0gs", "0gw", "0h0", "0ha", "0ja", "0kl", "0kr", "0la", "0ls", "0m0", "0ma", "0mn", "0mp", "0mt", "0nn", "0ns", "0p0", "0pa", "0pb", "0pi", "0qs", "0rd", "0rm", "0s8", "0s9", "0sb", "0sh", "0sm", "0sp", "0sr", "0ss", "0st", "0sy", "0ta", "0tk", "0tr", "0ts", "0vo", "0wa", "0wc", "0wd", "0wh", "0wn", "0ws", "0xb", "0yw", "1bs", "1cb", "1cs", "1hb", "1hx", "1l8", "1lb", "1ls", "1lw", "1lx", "1mx", "1rx", "1s8", "1sb", "1ss", "1sw", "1ws", "2ap", "2ar", "2ax", "2cl", "2ea", "2h9", "2hb", "2hg", "2hl", "2hm", "2hn", "2hs", "2it", "2kp", "2la", "2lb", "2ld", "2lg", "2lm", "2lt", "2mb", "2mg", "2ml", "2ng", "2ow", "2pk", "2pl", "2rg", "2rn", "2rs", "2sh", "2sk", "2tb", "2tg", "2th", "2tp", "2ts", "2tu", "2uc", "2ui", "2ul", "2vb", "2vg", "3hb", "3lb", "3mb", "3tb", "3vb", "4ap", "4ar", "4cl", "4ea", "4h9", "4hb", "4hg", "4hl", "4hm", "4hn", "4it", "4kp", "4la", "4lb", "4ld", "4lg", "4lm", "4lt", "4mb", "4mg", "4ml", "4ng", "4ow", "4pk", "4pl", "4rg", "4rn", "4rs", "4sh", "4sk", "4tb", "4tg", "4th", "4tp", "4ts", "4tu", "4uc", "4ui", "4ul", "4vb", "4vg", "5hb", "5lb", "5mb", "5sc", "5tb", "5vb", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mp", "7mt", "7o7", "7p7", "7pa", "7pi", "7qr", "7qs", "7s7", "7s8", "7sb", "7sc", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7tw", "7vo", "7wa", "7wb", "7wc", "7wh", "7wn", "7ws", "7xf", "7yw", "82a", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9be", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gp", "9gs", "9gw", "9h9", "9ha", "9ja", "9kl", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mn", "9mp", "9mt", "9nj", "9nn", "9ns", "9p9", "9pa", "9pb", "9pi", "9qr", "9qs", "9rd", "9rm", "9s8", "9s9", "9sb", "9sc", "9sh", "9sm", "9sp", "9sr", "9ss", "9st", "9sy", "9ta", "9tk", "9tr", "9ts", "9tw", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9ws", "9xb", "9xf", "9yw", "aar", "ahb", "alb", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "apb", "arm", "atb", "avb", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "bmb", "br2", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "bts", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "ci4", "cix", "clb", "clk", "clm", "clw", "cr2", "crn", "crs", "cst", "dbt", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "dwc", "eht", "elv", "fhl", "fla", "flb", "flc", "fld", "fts", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsc", "gsd", "gsp", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "irg", "jav", "kit", "kkl", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mnb", "mpi", "msb", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "ned", "nee", "nef", "neg", "nin", "njt", "nrd", "nsy", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pbe", "pik", "pil", "plt", "q00", "q01", "q02", "q03", "q04", "q05", "q06", "q07", "q08", "q09", "q10", "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q28", "q29", "q2a", "q2b", "q2c", "q2d", "q2e", "q2f", "q30", "q31", "q32", "q33", "q34", "q35", "q36", "q37", "q38", "q39", "q3a", "q3b", "q3c", "q3d", "q3e", "q3f", "q40", "q41", "q42", "q43", "q44", "q45", "q46", "q47", "q48", "q49", "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q50", "q51", "q52", "q53", "q54", "q55", "q56", "q57", "q58", "q59", "q60", "q61", "q62", "q63", "q64", "q65", "q66", "q67", "q68", "q69", "q70", "q71", "q72", "q73", "q74", "q75", "q76", "q77", "q78", "q79", "q80", "q81", "q82", "q83", "q84", "q85", "q86", "qba", "qbc", "qbd", "qbe", "qda", "qdb", "qdd", "qde", "qdf", "qi2", "qi3", "qna", "qne", "qnf", "qp9", "qpc", "qpe", "qui", "rng", "rob", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scp", "scy", "shc", "shl", "skp", "skr", "sml", "sp2", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "syn", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wsp", "wst", "xap", "xar", "xbt", "xcl", "xdw", "xea", "xft", "xh9", "xhb", "xhg", "xhh", "xhl", "xhm", "xhn", "xht", "xig", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlk", "xlm", "xlt", "xlv", "xmb", "xmg", "xml", "xms", "xng", "xow", "xpk", "xpl", "xrb", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "yap", "yar", "ybt", "ycl", "ydw", "yea", "yft", "yh9", "yhb", "yhg", "yhh", "yhl", "yhm", "yhn", "yht", "yig", "yit", "ykp", "yla", "ylb", "yld", "ylg", "ylk", "ylm", "ylt", "ylv", "ymb", "ymg", "yml", "yms", "yng", "yow", "ypk", "ypl", "yrb", "yrg", "yrn", "yrs", "ysh", "ysk", "ytb", "ytg", "yth", "ytp", "yts", "ytu", "yuc", "yui", "yul", "yvb", "yvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb"},
-            quality = "7", -- Exceptional Uniques
-            rarity = "1",
-            audio = "unique.mp3",
-            border = {255,165,0,255},
-            filter_levels = "1,2"
-        },
-        {
-            codes = {"kgk","srk","fsk","kgl","02h", "0ax", "0b0", "0b6", "0b7", "0ba", "0be", "0bk", "0bl", "0br", "0bs", "0bt", "0bw", "0cl", "0cm", "0cr", "0dg", "0di", "0fb", "0fc", "0fl", "0ga", "0gd", "0gi", "0gl", "0gm", "0gp", "0gs", "0gw", "0h0", "0ha", "0ja", "0kl", "0kr", "0la", "0ls", "0m0", "0ma", "0mn", "0mp", "0mt", "0nn", "0ns", "0p0", "0pa", "0pb", "0pi", "0qs", "0rd", "0rm", "0s8", "0s9", "0sb", "0sh", "0sm", "0sp", "0sr", "0ss", "0st", "0sy", "0ta", "0tk", "0tr", "0ts", "0vo", "0wa", "0wc", "0wd", "0wh", "0wn", "0ws", "0xb", "0yw", "1bs", "1cb", "1cs", "1hb", "1hx", "1l8", "1lb", "1ls", "1lw", "1lx", "1mx", "1rx", "1s8", "1sb", "1ss", "1sw", "1ws", "2ap", "2ar", "2ax", "2cl", "2ea", "2h9", "2hb", "2hg", "2hl", "2hm", "2hn", "2hs", "2it", "2kp", "2la", "2lb", "2ld", "2lg", "2lm", "2lt", "2mb", "2mg", "2ml", "2ng", "2ow", "2pk", "2pl", "2rg", "2rn", "2rs", "2sh", "2sk", "2tb", "2tg", "2th", "2tp", "2ts", "2tu", "2uc", "2ui", "2ul", "2vb", "2vg", "3hb", "3lb", "3mb", "3tb", "3vb", "4ap", "4ar", "4cl", "4ea", "4h9", "4hb", "4hg", "4hl", "4hm", "4hn", "4it", "4kp", "4la", "4lb", "4ld", "4lg", "4lm", "4lt", "4mb", "4mg", "4ml", "4ng", "4ow", "4pk", "4pl", "4rg", "4rn", "4rs", "4sh", "4sk", "4tb", "4tg", "4th", "4tp", "4ts", "4tu", "4uc", "4ui", "4ul", "4vb", "4vg", "5hb", "5lb", "5mb", "5sc", "5tb", "5vb", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mp", "7mt", "7o7", "7p7", "7pa", "7pi", "7qr", "7qs", "7s7", "7s8", "7sb", "7sc", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7tw", "7vo", "7wa", "7wb", "7wc", "7wh", "7wn", "7ws", "7xf", "7yw", "82a", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9be", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gp", "9gs", "9gw", "9h9", "9ha", "9ja", "9kl", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mn", "9mp", "9mt", "9nj", "9nn", "9ns", "9p9", "9pa", "9pb", "9pi", "9qr", "9qs", "9rd", "9rm", "9s8", "9s9", "9sb", "9sc", "9sh", "9sm", "9sp", "9sr", "9ss", "9st", "9sy", "9ta", "9tk", "9tr", "9ts", "9tw", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9ws", "9xb", "9xf", "9yw", "aar", "ahb", "alb", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "apb", "arm", "atb", "avb", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "bmb", "br2", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "bts", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "ci4", "cix", "clb", "clk", "clm", "clw", "cr2", "crn", "crs", "cst", "dbt", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "dwc", "eht", "elv", "fhl", "fla", "flb", "flc", "fld", "fts", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsc", "gsd", "gsp", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "irg", "jav", "kit", "kkl", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mnb", "mpi", "msb", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "ned", "nee", "nef", "neg", "nin", "njt", "nrd", "nsy", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pbe", "pik", "pil", "plt", "q00", "q01", "q02", "q03", "q04", "q05", "q06", "q07", "q08", "q09", "q10", "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q28", "q29", "q2a", "q2b", "q2c", "q2d", "q2e", "q2f", "q30", "q31", "q32", "q33", "q34", "q35", "q36", "q37", "q38", "q39", "q3a", "q3b", "q3c", "q3d", "q3e", "q3f", "q40", "q41", "q42", "q43", "q44", "q45", "q46", "q47", "q48", "q49", "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q50", "q51", "q52", "q53", "q54", "q55", "q56", "q57", "q58", "q59", "q60", "q61", "q62", "q63", "q64", "q65", "q66", "q67", "q68", "q69", "q70", "q71", "q72", "q73", "q74", "q75", "q76", "q77", "q78", "q79", "q80", "q81", "q82", "q83", "q84", "q85", "q86", "qba", "qbc", "qbd", "qbe", "qda", "qdb", "qdd", "qde", "qdf", "qi2", "qi3", "qna", "qne", "qnf", "qp9", "qpc", "qpe", "qui", "rng", "rob", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scp", "scy", "shc", "shl", "skp", "skr", "sml", "sp2", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "syn", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wsp", "wst", "xap", "xar", "xbt", "xcl", "xdw", "xea", "xft", "xh9", "xhb", "xhg", "xhh", "xhl", "xhm", "xhn", "xht", "xig", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlk", "xlm", "xlt", "xlv", "xmb", "xmg", "xml", "xms", "xng", "xow", "xpk", "xpl", "xrb", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "yap", "yar", "ybt", "ycl", "ydw", "yea", "yft", "yh9", "yhb", "yhg", "yhh", "yhl", "yhm", "yhn", "yht", "yig", "yit", "ykp", "yla", "ylb", "yld", "ylg", "ylk", "ylm", "ylt", "ylv", "ymb", "ymg", "yml", "yms", "yng", "yow", "ypk", "ypl", "yrb", "yrg", "yrn", "yrs", "ysh", "ysk", "ytb", "ytg", "yth", "ytp", "yts", "ytu", "yuc", "yui", "yul", "yvb", "yvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb"},
-            quality = "7", -- Elite Uniques
-            rarity = "2",
-            audio = "unique.mp3",
-            border = {255,165,0,255},
-            filter_levels = "1,2,3"
-        },
-        {
-            codes = {"rin","amu","zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"},
-            quality = "7", -- Unique Class Jewelry
-            notify = "{red}*{green}*{blue} {gold}{name} {red}*{green}*{blue}",
-            border = {255,0,0,255},
-            audio = "other.mp3"
-        },
-        {
-            codes = {"aq2","cq2","aqv","cqv","cq0","aq0"}, -- Arrows and Bolts
-            quality = "7",
-            notify = "{white} ** {gold}{name} {white}**",
-            audio = "unique.mp3",
-            border = {255,165,0,255}  
-        },
-        {
-            codes = {"cm1","cm2","cm3","jew","cm4"}, -- Unique Jewels and Charms
-            quality = "7",
-            notify = "{red}*{green}*{blue} {gold}{name} {red}*{green}*{blue}",
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "tink.mp3"
-        },
-        {
-            codes = "allitems", -- Set Items Normal
-            quality = "5",
-            rarity = "0",
-            audio = "unique.mp3",
-            border = {0,255,0,255},
-            filter_levels = "1,2"
-        },
-        {
-            codes = "allitems", -- Set Items Exceptional
-            quality = "5",
-            rarity = "1",
-            audio = "unique.mp3",
-            border = {0,255,0,255},
-            filter_levels = "1,2"
-        },
-        {
-            codes = "allitems", -- Set Items Elite
-            quality = "5",
-            rarity = "2",
-            audio = "unique.mp3",
-            border = {0,255,0,255},
-            filter_levels = "1,2,3"
-        },
-        -- Display Base type for Uniques and Sets on the ground
-        {
-            codes = {"srk","fsk","kgk","kgl","02h","0ax", "0b0", "0b6", "0b7", "0ba", "0be", "0bk", "0bl", "0br", "0bs", "0bt", "0bw", "0cl", "0cm", "0cr", "0dg", "0di", "0fb", "0fc", "0fl", "0ga", "0gd", "0gi", "0gl", "0gm", "0gp", "0gs", "0gw", "0h0", "0ha", "0ja", "0kl", "0kr", "0la", "0ls", "0m0", "0ma", "0mn", "0mp", "0mt", "0nn", "0ns", "0p0", "0pa", "0pb", "0pi", "0qs", "0rd", "0rm", "0s8", "0s9", "0sb", "0sh", "0sm", "0sp", "0sr", "0ss", "0st", "0sy", "0ta", "0tk", "0tr", "0ts", "0vo", "0wa", "0wc", "0wd", "0wh", "0wn", "0ws", "0xb", "0yw", "1bs", "1cb", "1cs", "1hb", "1hx", "1l8", "1lb", "1ls", "1lw", "1lx", "1mx", "1rx", "1s8", "1sb", "1ss", "1sw", "1ws", "2ap", "2ar", "2ax", "2cl", "2ea", "2h9", "2hb", "2hg", "2hl", "2hm", "2hn", "2hs", "2it", "2kp", "2la", "2lb", "2ld", "2lg", "2lm", "2lt", "2mb", "2mg", "2ml", "2ng", "2ow", "2pk", "2pl", "2rg", "2rn", "2rs", "2sh", "2sk", "2tb", "2tg", "2th", "2tp", "2ts", "2tu", "2uc", "2ui", "2ul", "2vb", "2vg", "3hb", "3lb", "3mb", "3tb", "3vb", "4ap", "4ar", "4cl", "4ea", "4h9", "4hb", "4hg", "4hl", "4hm", "4hn", "4it", "4kp", "4la", "4lb", "4ld", "4lg", "4lm", "4lt", "4mb", "4mg", "4ml", "4ng", "4ow", "4pk", "4pl", "4rg", "4rn", "4rs", "4sh", "4sk", "4tb", "4tg", "4th", "4tp", "4ts", "4tu", "4uc", "4ui", "4ul", "4vb", "4vg", "5hb", "5lb", "5mb", "5sc", "5tb", "5vb", "6bs", "6cb", "6cs", "6hb", "6hx", "6l7", "6lb", "6ls", "6lw", "6lx", "6mx", "6rx", "6s7", "6sb", "6ss", "6sw", "6ws", "72a", "72h", "7ar", "7ax", "7b7", "7b8", "7ba", "7bk", "7bl", "7br", "7bs", "7bt", "7bw", "7cl", "7cm", "7cr", "7cs", "7dg", "7di", "7fb", "7fc", "7fl", "7ga", "7gd", "7gi", "7gl", "7gm", "7gs", "7gw", "7h7", "7ha", "7ja", "7kr", "7la", "7ls", "7lw", "7m7", "7ma", "7mp", "7mt", "7o7", "7p7", "7pa", "7pi", "7qr", "7qs", "7s7", "7s8", "7sb", "7sc", "7sm", "7sp", "7sr", "7ss", "7st", "7ta", "7tk", "7tr", "7ts", "7tw", "7vo", "7wa", "7wb", "7wc", "7wh", "7wn", "7ws", "7xf", "7yw", "82a", "8bs", "8cb", "8cs", "8hb", "8hx", "8l8", "8lb", "8ls", "8lw", "8lx", "8mx", "8rx", "8s8", "8sb", "8ss", "8sw", "8ws", "92a", "92h", "9ar", "9ax", "9b7", "9b8", "9b9", "9ba", "9be", "9bk", "9bl", "9br", "9bs", "9bt", "9bw", "9cl", "9cm", "9cr", "9cs", "9dg", "9di", "9fb", "9fc", "9fl", "9ga", "9gd", "9gi", "9gl", "9gm", "9gp", "9gs", "9gw", "9h9", "9ha", "9ja", "9kl", "9kr", "9la", "9ls", "9lw", "9m9", "9ma", "9mn", "9mp", "9mt", "9nj", "9nn", "9ns", "9p9", "9pa", "9pb", "9pi", "9qr", "9qs", "9rd", "9rm", "9s8", "9s9", "9sb", "9sc", "9sh", "9sm", "9sp", "9sr", "9ss", "9st", "9sy", "9ta", "9tk", "9tr", "9ts", "9tw", "9vo", "9wa", "9wb", "9wc", "9wd", "9wh", "9wn", "9ws", "9xb", "9xf", "9yw", "aar", "ahb", "alb", "am1", "am2", "am3", "am4", "am5", "am6", "am7", "am8", "am9", "ama", "amb", "amc", "amd", "ame", "amf", "apb", "arm", "atb", "avb", "axe", "axf", "ba1", "ba2", "ba3", "ba4", "ba5", "ba6", "ba7", "ba8", "ba9", "baa", "bab", "bac", "bad", "bae", "baf", "bal", "bar", "bax", "bhm", "bkf", "bld", "bmb", "br2", "brn", "brs", "bsd", "bsh", "bst", "bsw", "btl", "bts", "btx", "buc", "bwn", "cap", "cbw", "ces", "chn", "ci0", "ci1", "ci2", "ci3", "ci4", "cix", "clb", "clk", "clm", "clw", "cr2", "crn", "crs", "cst", "dbt", "dgr", "dir", "dr1", "dr2", "dr3", "dr4", "dr5", "dr6", "dr7", "dr8", "dr9", "dra", "drb", "drc", "drd", "dre", "drf", "dwc", "eht", "elv", "fhl", "fla", "flb", "flc", "fld", "fts", "ful", "gax", "ghm", "gis", "gix", "glv", "gma", "gsc", "gsd", "gsp", "gth", "gts", "gwn", "hal", "hax", "hbl", "hbt", "hbw", "hgl", "hla", "hlm", "hxb", "irg", "jav", "kit", "kkl", "kri", "ktr", "lax", "lbb", "lbl", "lbt", "lbw", "lea", "lgl", "lrg", "lsd", "lst", "ltp", "lwb", "lxb", "mac", "mau", "mbl", "mbt", "mgl", "mnb", "mpi", "msb", "msk", "mst", "mxb", "ne1", "ne2", "ne3", "ne4", "ne5", "ne6", "ne7", "ne8", "ne9", "nea", "neb", "ned", "nee", "nef", "neg", "nin", "njt", "nrd", "nsy", "ob1", "ob2", "ob3", "ob4", "ob5", "ob6", "ob7", "ob8", "ob9", "oba", "obb", "obc", "obd", "obe", "obf", "p01", "p02", "p03", "p04", "p05", "p06", "p07", "p08", "p09", "p10", "p11", "p12", "p13", "p14", "p15", "p16", "p17", "p18", "p19", "p20", "p21", "p22", "p23", "p24", "p25", "p26", "p27", "p28", "p29", "p30", "p31", "p32", "p33", "p34", "p35", "p36", "p37", "p38", "p39", "p40", "p41", "p42", "p43", "p44", "p45", "p46", "p47", "p48", "p49", "p50", "p51", "p52", "p53", "p54", "p55", "p56", "p57", "p58", "p59", "p60", "p61", "p62", "p63", "p64", "p65", "p66", "p67", "p68", "p69", "p70", "p71", "pa1", "pa2", "pa3", "pa4", "pa5", "pa6", "pa7", "pa8", "pa9", "paa", "pab", "pac", "pad", "pae", "paf", "pax", "pbe", "pik", "pil", "plt", "q00", "q01", "q02", "q03", "q04", "q05", "q06", "q07", "q08", "q09", "q10", "q11", "q12", "q13", "q14", "q15", "q16", "q17", "q18", "q19", "q1a", "q1b", "q1c", "q1d", "q1e", "q1f", "q20", "q21", "q22", "q23", "q24", "q25", "q26", "q27", "q28", "q29", "q2a", "q2b", "q2c", "q2d", "q2e", "q2f", "q30", "q31", "q32", "q33", "q34", "q35", "q36", "q37", "q38", "q39", "q3a", "q3b", "q3c", "q3d", "q3e", "q3f", "q40", "q41", "q42", "q43", "q44", "q45", "q46", "q47", "q48", "q49", "q4a", "q4b", "q4c", "q4d", "q4e", "q4f", "q50", "q51", "q52", "q53", "q54", "q55", "q56", "q57", "q58", "q59", "q60", "q61", "q62", "q63", "q64", "q65", "q66", "q67", "q68", "q69", "q70", "q71", "q72", "q73", "q74", "q75", "q76", "q77", "q78", "q79", "q80", "q81", "q82", "q83", "q84", "q85", "q86", "qba", "qbc", "qbd", "qbe", "qda", "qdb", "qdd", "qde", "qdf", "qi2", "qi3", "qna", "qne", "qnf", "qp9", "qpc", "qpe", "qui", "rng", "rob", "rxb", "sbb", "sbr", "sbw", "scl", "scm", "scp", "scy", "shc", "shl", "skp", "skr", "sml", "sp2", "spc", "spk", "spl", "spr", "spt", "ssd", "ssp", "sst", "stu", "swb", "syn", "tax", "tbl", "tbt", "tgl", "tkf", "tow", "tri", "tsp", "uap", "uar", "ucl", "uea", "uh9", "uhb", "uhc", "uhg", "uhl", "uhm", "uhn", "uit", "ukp", "ula", "ulb", "ulc", "uld", "ulg", "ulm", "ult", "umb", "umc", "umg", "uml", "ung", "uow", "upk", "upl", "urg", "urn", "urs", "ush", "usk", "utb", "utc", "utg", "uth", "utp", "uts", "utu", "uuc", "uui", "uul", "uvb", "uvc", "uvg", "vbl", "vbt", "vgl", "vou", "wax", "whm", "wnd", "wrb", "wsc", "wsd", "wsp", "wst", "xap", "xar", "xbt", "xcl", "xdw", "xea", "xft", "xh9", "xhb", "xhg", "xhh", "xhl", "xhm", "xhn", "xht", "xig", "xit", "xkp", "xla", "xlb", "xld", "xlg", "xlk", "xlm", "xlt", "xlv", "xmb", "xmg", "xml", "xms", "xng", "xow", "xpk", "xpl", "xrb", "xrg", "xrn", "xrs", "xsh", "xsk", "xtb", "xtg", "xth", "xtp", "xts", "xtu", "xuc", "xui", "xul", "xvb", "xvg", "yap", "yar", "ybt", "ycl", "ydw", "yea", "yft", "yh9", "yhb", "yhg", "yhh", "yhl", "yhm", "yhn", "yht", "yig", "yit", "ykp", "yla", "ylb", "yld", "ylg", "ylk", "ylm", "ylt", "ylv", "ymb", "ymg", "yml", "yms", "yng", "yow", "ypk", "ypl", "yrb", "yrg", "yrn", "yrs", "ysh", "ysk", "ytb", "ytg", "yth", "ytp", "yts", "ytu", "yuc", "yui", "yul", "yvb", "yvg", "ywn", "zhb", "zlb", "zmb", "ztb", "zvb"},
-            quality = "7",
-            name_override = "{grey}[{rarity}]{gold}{name}"
-        },
-        {
-            codes = "allitems",
-            quality = "5",
-            name_override = "{grey}[{rarity}]{green}{name}"
-        },
-        -- Highlight Superior Mythical Bases
-        {
-            codes = {"m01","m02","m03","m04","m05","m06","m07","m08","m09","m10","m11","m12","m13","m14","m15","m16","m17","m18","m19","m20","m21","m22","m23","m24","m25","m26","m27","m28","m29","m30","m31","m32","m33","m34","m35","m36","m37","m38","m39"},
-            quality = "3",
-            border = {0,0,0,255},
-            background = {0,50,50,255}
-        },
-        -- Mythical Uniques: Individual name strucutre for all mythicals to prevent clipping
-        {
-            code = "mrn",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Marksmen Bow", 
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "au9",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Amulet", 
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m01",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Marksmen Bow", 
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m02",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            name_override = "Odysseus Crossbow",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m03",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Titan's Maul",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m04",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Demonic Wand",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m05",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Soul Destroyer",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m06",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Gemstoned Armor",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m07",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            name_override = "Dimensional Shard",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m08",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Balanced Dagger",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m09",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Magic Blade",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m10",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Hemp Band",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m11",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Arcane Staff",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m12",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            name_override = "Seraphic Sceptre",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m13",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            name_override = "Scissors Suwayyah",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m14",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            name_override = "Ceremonial Dagger",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m15",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Dream Spirit",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m16",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Rapier",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },    
-        {
-            code = "m17",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            name_override = "Celestial Sceptre",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m18",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Death Blade",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m19",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Death Blade",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        }, 
-        {
-            code = "dd1",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Death Blade",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        }, 
-        {
-            code = "m20",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Diadem",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        }, 
-        {
-            code = "m21",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Razor Axe",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m22",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Hellfire Sword",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m29",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Petrified Staff",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },  
-        {
-            code = "m30",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Ancient Bow",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },  
-        {
-            code = "m31",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            name_override = "Matriarchal Javelin",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m32",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Whale Hunter",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },  
-        {
-            code = "m33",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Ancient Shards",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m34",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Shillelagh",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-                                                                                                                                                    
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m35",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Celestial Sword",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m36",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Mage Staff",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m37",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Katana",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m38",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            name_override = "Arreat's Hatchet",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "m39",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Kagekiri",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        {
-            code = "mam",
-            quality = "7",
-            notify = "\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*\n{red}*{green}*{blue}*{purple}* {gold}MYTHICAL UNIQUE {red}*{green}*{blue}*{purple}*\n{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}*{purple}*{red}*{green}*{blue}",
-            name_style = "Rainbow Group",
-            prefix = "Mythical ",
-            name_override = "Amulet",
-            background = {0, 0, 0, 255},
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        -- Coupon style and notification
-        {
-            codes = {"01c","02c","03c","04c","05c","06c","07c","08c","09c","10c","11c","12c","13c","14c","15c","16c","17c","18c","19c","20c","21c","22c","23c","24c","25c","26c","27c","28c","29c","30c","31c","32c","33c","34c","35c","36c","37c","38c","39c","40c","41c","42c","43c","44c","45c","46c","01f","02f","03f","04f","05f","06f","07f","08f","09f","10f","11f","12f","13f","14f","15f","16f","17f","18f","19f","20f","21f","22f","23f","24f","25f","26f","27f","28f","29f","30f","31f","32f","33f","34f","35f","36f","37f","38f","39f","40f","41f","42f","43f","44f","45f","46f","47f","48f","49f","50f","51f","52f","53f","54f","55f","56f","57f","58f","59f","60f","61f","62f","63f","64f","65f","66f","67f","68f","69f","70f","71f","01i","02i","03i","01j","02j","04j"},
-            border = {255,165,0,255}, -- Normal Coupons
-            name_override = "{gray}Norm:{gold}{name}"
-        },
-        {
-            codes = {"01d","02d","03d","04d","05d","06d","07d","08d","09d","10d","11d","12d","14d","15d","16d","17d","18d","19d","20d","21d","22d","23d","24d","25d","26d","27d","28d","29d","30d","31d","32d","33d","34d","35d","36d","37d","38d","39d","40d","41d","42d","43d","44d","45d","46d","47d","48d","49d","50d","01g","02g","03g","04g","05g","06g","07g","08g","09g","10g","11g","12g","13g","14g","15g","16g","17g","18g","19g","20g","21g","22g","23g","24g","25g","26g","27g","28g","29g","30g","31g","32g","33g","34g","35g","36g","37g","38g","39g","40g","41g","42g","43g","44g","45g","46g","47g","48g","49g","50g","51g","52g","53g","54g","55g","56g","57g","58g","59g","60g","61g","62g","63g","64g","65g","66g","67g","68g","69g","70g","71g","72g","73g","74g","75g","76g","77g","78g","05i","06i","07i","08i","05j","06j","07j","08j","04i"},
-            border = {255,165,0,255}, -- Exceptional Coupons
-            name_override = "{gray}Exc:{gold}{name}"
-        },
-        {
-            codes = {"01e","02e","04e","05e","07e","08e","09e","10e","11e","12e","13e","14e","15e","16e","18e","19e","20e","21e","22e","23e","24e","25e","26e","27e","28e","29e","30e","31e","32e","33e","34e","35e","36e","37e","38e","39e","01h","02k","03h","04h","05h","06h","07h","08h","09h","10h","11h","12k","13h","14h","15h","16h","17h","18h","19h","20h","21h","22k","23h","24h","25h","26h","27h","28h","29h","30h","31h","32k","33h","34h","35h","36h","37h","38h","39h","40h","41h","42k","43h","44h","45h","47h","48h","49h","50h","51h","52k","53h","54h","55h","56h","57h","58h","59h","60h","61h","62k","09i","10i","11i","12i","09j","10j"},
-            audio = "other.mp3", -- Elite Coupons
-            border = {255,165,0,255},
-            name_override = "{gray}Elt:{gold}{name}",
-            filter_levels = "3-"
-        },
-        {
-            codes = {"01e","02e","04e","05e","07e","08e","09e","10e","11e","12e","13e","14e","15e","16e","18e","19e","20e","21e","22e","23e","24e","25e","26e","27e","28e","29e","30e","31e","32e","33e","34e","35e","36e","37e","38e","39e","01h","02k","03h","04h","05h","06h","07h","08h","09h","10h","11h","12k","13h","14h","15h","16h","17h","18h","19h","20h","21h","22k","23h","24h","25h","26h","27h","28h","29h","30h","31h","32k","33h","34h","35h","36h","37h","38h","39h","40h","41h","42k","43h","44h","45h","47h","48h","49h","50h","51h","52k","53h","54h","55h","56h","57h","58h","59h","60h","61h","62k","09i","10i","11i","12i","09j","10j"},
-            border = {255,165,0,255}, -- Elite coupons for uber-strict without sound
-            name_override = "{gray}Elt:{gold}{name}",
-            filter_lvels = 4
-        },
-        -- S-Tier Coupons: SOJ, Death Fathom, Arachnid Mesh, Veil of Steel, Shako, Tyrael's Might, Verdungo's, Waterwalk
-        {
-            codes = {"03j", "46h", "41e", "03e", "17e", "40e","06e","13d"},
-            audio = "tink.mp3",
-            border = {255,0,0,255},
-            background = {255,255,255,255}, 
-            notify = "{red}High Tier Unique Coupon: {name}",
-            hide = false,
-            filter_levels = "4-"
-        },
-        -- S-Tier Uniques
-        {
-            code = "ci3",
-            quality = "7",
-            audio = "tink.mp3",
-            notify = "{orange}High Tier Unique: {name}",
-            background = {255,255,255,255},
-            border = {255,0,0,255}
-        },
-        -- Highlight Class specific Magic/Rare Jewellery
-        {
-            codes = {"zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"},
-            quality = "4",
-            notify = "Class Jewellery: {blue}{name}",
-            border = {0,0,255,230}
-        },
-        {
-            codes = {"zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"},
-            quality = "4",
-            location = {"onplayer","atvendor"},
-            suffix_desc = "{gray}Crafting Available: Check Akara's perfect gems for recipes{blue}\n"
-                                                                                                                        
-        },
-        {
-            codes = {"zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"},
-            quality = "6",
-            border = {0,255,255,230}
-        },
-        -- Tooltip description for monster parts showing common drop locations
-        {
-            code = "hrt",
-            location = "onplayer",
-            prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily in Cow Level and Maps \n Crafting Reagant\n"
-        },
-        {
-            code = "brz",
-            location = "onplayer",
-            prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily from Sand Leapers in Act 1, Ratmen in Act 3, and Maps \n Crafting Reagant\n"
-        },
-        {
-            code = "jaw",
-            location = "onplayer",
-            prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily from Skeleton Archers/Dark Rangers: Act 1 and Maps \n Crafting Reagant\n"
-        },
-        {
-            code = "eyz",
-            location = "onplayer",
-            prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily from Golems in Act 4, Act 5 Nihlathak's Domain, and Maps\n Crafting Reagant\n"
-        },
-        {
-            code = "hrn",
-            location = "onplayer",
-            prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily from Barlog in Act 4 and Maps\n Crafting Reagant\n"
-        },
-        {
-            code = "tal",
-            location = "onplayer",
-            prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily from Huntress' and Slinger's in Act 2 and Maps\n Crafting Reagant\n"
-        },
-        {
-            code = "flg",
-            location = "onplayer",
-            prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily from Fallen Shamen in Act 1 and Maps\n Crafting Reagant\n"
-        },
-        {
-            code = "fng",
-            location = "onplayer",
-            prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily from Arachs, Tomb Vipers, and Dune beasts in Act 2 and Maps\n Crafting Reagant\n"
-        },
-        {
-            code = "qll",
-            location = "onplayer",
-            prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily from Quill Rats in Act 1, Thorned Hulks in Act 3, and Maps\n Crafting Reagant\n"
-        },
-        {
-            code = "sol",
-            location = "onplayer",
-            prefix_desc = "{white}Cube with Multi Stocker to store \n {purple}Found primarily from Ghosts, Gloams, Goatmen in all Acts and Poppy Farm/Maps\n Crafting Reagant\n"
-        },
-        {
-            code = "scz",
-            location = "onplayer",
-            prefix_desc = "{white}Cube with Multi Stocker to store \n {purple} Doom Knights and Abyss Knights in Chaos Sanctuary Act 5, and Maps\n Found primarily from Ghoul Lords in Act 1 and 3,\n Crafting Reagant\n"
-        },
-        {
-            code = "spe",
-            location = "onplayer",
-            prefix_desc = "{white}Cube with Multi Stocker to store \n {purple} Primairly dropped from Zakarumite in Act 3, Over Lords and Coruplent in Act 4, and Maps \n Crafting Reagant\n"
-        },
-        {
-            code = "zzz",
-            location = "onplayer",
-            prefix_desc = "{white}Cube with Multi Stocker to store \n {purple} Exclusively dropped in The Secret Cow Level. For steak recipes please consult Gordon Ramsey \n Crafting Reagant\n"
-        },
-        -- Tooltip information and filtering for Uber Keys -
-        {
-            codes = {"pk1", "pk2", "pk3"},
-            notify = "{red}Pandemonium Key: {name}",
-            background = {0, 0, 0, 200},
-            border = {165, 55, 253, 255},
-            audio = "gong.mp3"
-        },
-        {
-            codes = {"pk1", "pk2", "pk3"},
-            location = {"onplayer", "atvendor"},
-            suffix_desc = "{white} Cube with the other two Uber keys and 1 normal key to create a Pandemonium Key Set: 1x1 inventory space \n",
-        },
-        -- Tooltip information for Body Armor showing available 2 socket Runewords
-        {
-            codes = {"clk","xlk", "ylk","qui", "lea", "hla", "stu", "rng", "scl", "chn", "brs", "spl", "plt", "fld", "gth", "ful", "aar", "ltp", "shl", "elv", "2ui", "2ea", "2la", "2tu", "2ng", "2cl", "2hn", "2rs", "2pl", "2lt", "br2", "xui", "xea", "xla", "xtu", "xng", "xcl", "xhn", "xrs", "xpl", "xlt", "xld", "xth", "xul", "xar", "xtp", "xhh", "xlv", "4ui", "4ea", "4la", "4tu", "4ng", "4cl", "4hn", "4rs", "4pl", "4lt", "4ld", "4th", "4ul", "4ar", "4tp", "yui", "yea", "yla", "ytu", "yng", "ycl", "yhn", "yrs", "ypl", "ylt", "yld", "yth", "yul", "yar", "ytp", "yhh", "ylv", "uui", "uea", "ula", "utu", "ung", "ucl", "uhn", "urs", "upl", "ult", "uld", "uth", "uul", "uar", "utp", "m06"},
-            runeword = false,
-            quality = "3-",
-            location = {"onplayer", "atvendor", "equipped"},
-            suffix_desc = "{gray}Hot: {red}Tsu {gold}Ne {gray}Lvl: 55{blue} \n{gray}Prudence: {orange} Mal Tir {gray}Lvl: 49{blue} \n{gray}Mist: {green}Mo {red}Ya {gray}Lvl: 47{blue} \n{gray}Deception: {yellow}Sa {orange}Wa{gray} Lvl: 38\n{gray}Smoke: {white}Nef {orange}Lem {gray}Lvl: 37{blue} \n{gray}Wealth: {orange}To {red}Mi {gray}Lvl: 36{blue}\n{gray}Stealth: {white}Tal Eth {gray}Lvl: 17{blue}\n{gray}Darkness: {red}Ya {red}Mi {gray}Lvl: 15{blue}\n{gray}Fog: {red}Ki {red}Ri {gray}Lvl: 12{blue}\n{gray}Gold: {red}Ki N {gray}Lvl: 10{blue}\n {gray}Greed: {white}Yo Ku {gray}Lvl: 9{blue}\n",
-            sockets = "2"
-        },
-        -- Tooltip information for Body Armor showing available 3 socket Runewords
-        {
-            codes = {"clk","xlk", "ylk","qui", "lea", "hla", "stu", "rng", "scl", "chn", "brs", "spl", "plt", "fld", "gth", "ful", "aar", "ltp", "shl", "elv", "2ui", "2ea", "2la", "2tu", "2ng", "2cl", "2hn", "2rs", "2pl", "2lt", "br2", "xui", "xea", "xla", "xtu", "xng", "xcl", "xhn", "xrs", "xpl", "xlt", "xld", "xth", "xul", "xar", "xtp", "xhh", "xlv", "4ui", "4ea", "4la", "4tu", "4ng", "4cl", "4hn", "4rs", "4pl", "4lt", "4ld", "4th", "4ul", "4ar", "4tp", "yui", "yea", "yla", "ytu", "yng", "ycl", "yhn", "yrs", "ypl", "ylt", "yld", "yth", "yul", "yar", "ytp", "yhh", "ylv", "uui", "uea", "ula", "utu", "ung", "ucl", "uhn", "urs", "upl", "ult", "uld", "uth", "uul", "uar", "utp", "m06"},
-            runeword = false,
-            quality = "3-",
-            pstat = { index = 12, op = "<=", value = 40 }, -- Char Level 40 or below
-            location = {"onplayer", "atvendor", "equipped"},
-            suffix_desc = "{gray}Maiden: {yellow}O {orange}To Me {gray}Lvl: 36{blue}\n{gray}Impetuous: {red}Mi {Yellow}Sa {Orange}To {gray}Lvl: 36{blue}\n{gray}Praise: {orange}Ho {orange}Me {orange}Ru {gray}Lvl: 34{blue}\n{gray}Captive: {orange}Ho {red}Ri{white} Yo {gray}Lvl: 31{blue}\n{gray}Peace: {orange}Shael {white}Thul Amn {gray}Lvl: 29{blue}\n{gray}Hustle: {white}Shael Ral Eld {gray}Lvl: 29{blue}\n{gray}Oath: {red}Ki{white} Ka I {gray}Lvl: 29{blue}\n{gray}Myth: {orange}Hel{white} Amn Nef {gray}Lvl: 25{blue}\n{gray}Exuberance: {red}A{white} I Ka {gray}Lvl: 17{blue}\n{gray}Famine: {red}Ki Ki{white} N {gray}Lvl: 10{blue}\n{gray}Forefeel: {white}Yo Ka N {gray}Lvl: 9{blue}\n{gray}Evolution: {white}Shi N Ka {gray}Lvl: 6{blue}\n",
-            sockets = "3",
-        },
-        {
-            codes = {"clk","xlk","ylk","qui", "lea", "hla", "stu", "rng", "scl", "chn", "brs", "spl", "plt", "fld", "gth", "ful", "aar", "ltp", "shl", "elv", "2ui", "2ea", "2la", "2tu", "2ng", "2cl", "2hn", "2rs", "2pl", "2lt", "br2", "xui", "xea", "xla", "xtu", "xng", "xcl", "xhn", "xrs", "xpl", "xlt", "xld", "xth", "xul", "xar", "xtp", "xhh", "xlv", "4ui", "4ea", "4la", "4tu", "4ng", "4cl", "4hn", "4rs", "4pl", "4lt", "4ld", "4th", "4ul", "4ar", "4tp", "yui", "yea", "yla", "ytu", "yng", "ycl", "yhn", "yrs", "ypl", "ylt", "yld", "yth", "yul", "yar", "ytp", "yhh", "ylv", "uui", "uea", "ula", "utu", "ung", "ucl", "uhn", "urs", "upl", "ult", "uld", "uth", "uul", "uar", "utp", "m06"},
-            runeword = false,
-            quality = "3-",
-            pstat = { index = 12, op = ">=", value = 41 }, -- Char Level 41 or above
-            location = {"onplayer", "atvendor", "equipped"},
-            suffix_desc = "{gray}Enigma:{purple} Jah{white} Ith {purple}Ber {gray}Lvl: 65{blue}\n{gray}Dragon:{purple}Sur Lo{orange} Sol {gray}Lvl: 61{blue}\n{gray}Nightgown: {orange}Ne {green}Ma {red}Ki {gray}Lvl: 55{blue}\n{gray}Fox: {red}Ki {red}Tsu {orange}Ne {gray}Lvl: 55{blue}\n{gray}Smoke: {gold}Ke {orange}Mu {red}Ri {gray}Lvl: 54{blue}\n{gray}Principle: {white}Ral {purple}Gul{white} Eld {gray}Lvl: 53{blue}\n{purple}Rain: {white}Ort {purple}Mal{white} Ith {gray}Lvl: 49{blue}\n{gray}Duress: {orange}Shael {orange}Um{white} Thul {gray}Lvl: 47{blue}\n{gray}Bone: {white}Sol {orange}Um {orange}Um {gray}Lvl: 47{blue}\n{gray}Daylight: {green}Hi {orange}Ru {green}Ma {gray}Lvl: 46{blue}\n{gray}Indominable: {yellow}Ra{white} N{green}Ma {gray}Lvl: 45{blue}\n{gray}Abundant: {orange}Ho{white} U{green}Fu {gray}Lvl: 44{blue}\n{gray}Harmony: {orange}Wa {green}Se{white} I {gray}Lvl: 43{blue}\n{gray}Fossil of the Sun: {white}Ka {green}Se {red}Ki {gray}Lvl: 43{blue}\n{gray}Lionheart: {orange}Hel {orange}Lum {orange}Fal {gray}Lvl: 41{blue}\n",
-            sockets = "3",
-        },
-        -- Tooltip information for Body Armor showing available 4 socket Runewords
-        {
-            codes = {"clk","xlk", "ylk","qui", "lea", "hla", "stu", "rng", "scl", "chn", "brs", "spl", "plt", "fld", "gth", "ful", "aar", "ltp", "shl", "elv", "2ui", "2ea", "2la", "2tu", "2ng", "2cl", "2hn", "2rs", "2pl", "2lt", "br2", "xui", "xea", "xla", "xtu", "xng", "xcl", "xhn", "xrs", "xpl", "xlt", "xld", "xth", "xul", "xar", "xtp", "xhh", "xlv", "4ui", "4ea", "4la", "4tu", "4ng", "4cl", "4hn", "4rs", "4pl", "4lt", "4ld", "4th", "4ul", "4ar", "4tp", "yui", "yea", "yla", "ytu", "yng", "ycl", "yhn", "yrs", "ypl", "ylt", "yld", "yth", "yul", "yar", "ytp", "yhh", "ylv", "uui", "uea", "ula", "utu", "ung", "ucl", "uhn", "urs", "upl", "ult", "uld", "uth", "uul", "uar", "utp", "m06"},
-            runeword = false,
-            quality = "3-",
-            pstat = { index = 12, op = "<=", value = 40 }, -- Char Level 40 or below
-            location = {"onplayer", "atvendor", "equipped"},
-            suffix_desc = "{gray}Sorrow: {white}Ka {green}Na{white} Shi {red}Mi {gray}Lvl: 40{blue}\n{gray}Animal Friend: {green}Na{white} U Shi Ka {gray}Lvl: 40{blue}\n{gray}Journey: {red}Ri{white} Yo {orange}Ko{white} U {gray}Lvl: 39{blue}\n{gray}Healthy: {yellow}Ke{white} N {orange}Ko{white} U {gray}Lvl: 39{blue}\n{gray}Fortune: {orange}Ko{white} U U U {gray}Lvl: 39{blue}\n{gray}Efficiency: {orange}Ko{white} U {red}Ri {red}Tsu {gray}Lvl: 39{blue}\n{gray}Illustrious: {red}A {yellow}Yu{white} Ka {orange}Wa {gray}Lvl: 38{blue}\n{gray}Trust: {white}Shi N Ra I {gray}Lvl: 28{blue}\n{gray}Eneternity: {yellow}E{white} I {yellow}E{white} N {gray}Lvl: 26{blue}\n{gray}Beauty: {white}U {red}Tsu{white} Ku Shi {gray}Lvl: 19{blue}\n{gray}Insanity: {red}Ki{white} Yo U {red}Ki {gray}Lvl: 10{blue}\n",
-            sockets = "4",
-        },
-        {
-            codes = {"clk","xlk", "ylk","qui", "lea", "hla", "stu", "rng", "scl", "chn", "brs", "spl", "plt", "fld", "gth", "ful", "aar", "ltp", "shl", "elv", "2ui", "2ea", "2la", "2tu", "2ng", "2cl", "2hn", "2rs", "2pl", "2lt", "br2", "xui", "xea", "xla", "xtu", "xng", "xcl", "xhn", "xrs", "xpl", "xlt", "xld", "xth", "xul", "xar", "xtp", "xhh", "xlv", "4ui", "4ea", "4la", "4tu", "4ng", "4cl", "4hn", "4rs", "4pl", "4lt", "4ld", "4th", "4ul", "4ar", "4tp", "yui", "yea", "yla", "ytu", "yng", "ycl", "yhn", "yrs", "ypl", "ylt", "yld", "yth", "yul", "yar", "ytp", "yhh", "ylv", "uui", "uea", "ula", "utu", "ung", "ucl", "uhn", "urs", "upl", "ult", "uld", "uth", "uul", "uar", "utp", "m06"},
-            runeword = false,
-            quality = "3-",
-            pstat = { index = 12, op = ">=", value = 41 }, -- Char Level 41 or above
-            location = {"onplayer", "atvendor", "equipped"},
-            suffix_desc = "{gray}Chains of Honor: {orange}Dol {orange}Um {purple}Ber {purple}Ist {gray}Lvl: 63{blue}\n{gray}Bramble: {white}Ral {purple}Ohm {purple}Sur{white} Eth {gray}Lvl: 61{blue}\n{gray}Gold Scarab: {orange}Ko {blue}Metal {gold}Mu{white} Shi {gray}Lvl: 60{blue}\n{gray}Fortitude: {white}El {orange}Sol {orange}Dol {purple}Lo {gray}Lvl: 59{blue}\n{gray}Transformation: {purple}He{white} N Shi N {gray}Lvl: 59{blue}\n{gray}Unknown: {red}Mi/Ri/Ki {red}Chi {purple}Su{white} U {gray}Lvl: 57{blue}\n{gray}Lynx: {red}Ya {green}Ma {gold}Ne {orange}Ko {gray}Lvl: 55{blue}\n{gray}Able: {orange}Yu{white} U {gold}No{white} U {gray}Lvl: 48{blue}\n{gray}Question: {white}Shi {red}Tsu {green}Mo{white} N {gray}Lvl: 47{blue}\n{gray}Stone: {orange}Shael {orange}Um {orange}Pul {orange}Lum {gray}Lvl: 47{blue}\n{gray}Stomach Ache: {green}Fu{white} Ku {red}Tsu{white} U {gray}Lvl: 44{blue}\n",
-            sockets = "4",
-        },
-        -- Tooltip information for Body Armor showing available 5 socket Runewords
-        {
-            codes = {"clk","xlk", "ylk","qui", "lea", "hla", "stu", "rng", "scl", "chn", "brs", "spl", "plt", "fld", "gth", "ful", "aar", "ltp", "shl", "elv", "2ui", "2ea", "2la", "2tu", "2ng", "2cl", "2hn", "2rs", "2pl", "2lt", "br2", "xui", "xea", "xla", "xtu", "xng", "xcl", "xhn", "xrs", "xpl", "xlt", "xld", "xth", "xul", "xar", "xtp", "xhh", "xlv", "4ui", "4ea", "4la", "4tu", "4ng", "4cl", "4hn", "4rs", "4pl", "4lt", "4ld", "4th", "4ul", "4ar", "4tp", "yui", "yea", "yla", "ytu", "yng", "ycl", "yhn", "yrs", "ypl", "ylt", "yld", "yth", "yul", "yar", "ytp", "yhh", "ylv", "uui", "uea", "ula", "utu", "ung", "ucl", "uhn", "urs", "upl", "ult", "uld", "uth", "uul", "uar", "utp", "m06"},
-            runeword = false,
-            quality = "3-",
-            location = {"onplayer", "atvendor", "equipped"},
-            suffix_desc = "{gray}Gold Scarab: {blue}Jewel {orange}Ko {blue}Metal {gold}Mu{white} Shi {gray}Lvl: 60{blue}\n{gray}Wooden Colossus: {blue}Wood {orange}Ko {gold}Ro {yellow}Sa {purple}Su {gray}Lvl: 60{blue}\n{gray}Horizon: {red}Chi {purple}He{white} I {green}Se{white} N {gray}Lvl: 59{blue}\n{gray}Jindujun: Su {orange}Ha {yellow}Ra{white} Shi I {gray}Lvl: 57{blue}\n{gray}Zenith: {gold}Te{white} N {red}Chi{white} Yo U {gray}Lvl: 50{blue}\n{gray}Pear: {green}Hi {orange}To {gold}Te {green}Na{white} Shi {gray}Lvl: 50{blue}\n{gray}Phoenix: {green}Fu{white} Shi {red}Chi{white} Yo U {gray}Lvl: 44{blue}\n{gray}Lionheart: {white}Ka I {yellow}O {green}Na{white} I {gray}Lvl: 40{blue}\n{gray}Pride: {orange}Ho {orange}Ko {yellow}Ra{white} Shi {yellow}Sa {gray}Lvl: 39{blue}\n",
-            sockets = "5",
-        },
-        -- Tooltip information for Body Armor showing available 6 socket Runewords
-        {
-            codes = {"clk","xlk", "ylk","qui", "lea", "hla", "stu", "rng", "scl", "chn", "brs", "spl", "plt", "fld", "gth", "ful", "aar", "ltp", "shl", "elv", "2ui", "2ea", "2la", "2tu", "2ng", "2cl", "2hn", "2rs", "2pl", "2lt", "br2", "xui", "xea", "xla", "xtu", "xng", "xcl", "xhn", "xrs", "xpl", "xlt", "xld", "xth", "xul", "xar", "xtp", "xhh", "xlv", "4ui", "4ea", "4la", "4tu", "4ng", "4cl", "4hn", "4rs", "4pl", "4lt", "4ld", "4th", "4ul", "4ar", "4tp", "yui", "yea", "yla", "ytu", "yng", "ycl", "yhn", "yrs", "ypl", "ylt", "yld", "yth", "yul", "yar", "ytp", "yhh", "ylv", "uui", "uea", "ula", "utu", "ung", "ucl", "uhn", "urs", "upl", "ult", "uld", "uth", "uul", "uar", "utp", "m06"},
-            runeword = false,
-            quality = "3-",
-            location = {"onplayer", "atvendor", "equipped"},
-            suffix_desc = "{gray}Gold Scarab: {blue}Jewel Jewel {orange}Ko {blue}Metal {gold}Mu{white} Shi {gray}Lvl: 60{blue}\n{gray}Insight: {red}Mi {purple}Nu{white} Ku {red}Chi{white} Ka {yellow}Ra {gray}Lvl: 60{blue}\n{gray}Eternal Reign: {gold}Te{white} N Ka {purple}Wo {orange}To {orange}Ru {gray}Lvl: 60{blue}\n{gray}Golden Dragon: {red}Ki{white} N {gold}No {red}Ri {yellow}Yu{white} U {gray}Lvl: 48{blue}\n{gray}Dark Star: {green}Hi{white} Ka {red}Ri {gold}No {orange}Ke{white} N {gray}Lvl: 48{blue}\n{gray}Courage: {white}Ka {red}Mi {red}Ya {orange}Ta{white} I {red}Chi {gray}Lvl: 35{blue}\n{gray}Ascend: {white}Shi Yo {red}Ri {yellow}Yu {yellow}Ke{white} N {gray}Lvl: 24{blue}\n",
-            sockets = "6",
-        },
-        -- Tooltip information for Gloves showing available 2 socket Runewords
-        {
-            codes = {"2hg","2lg","2mg","2tg","4hg","4lg","4mg","4tg","hgl","irg","lgl","mgl","tgl","ulg","umg","utg","vhg","vgl","xhg","xig","xlg","xmg","xtg","ylg","yhg","yig","ymg","ytg","uvg","vg1"},
-            runeword = false,
-            quality = "3-",
-            location = {"onplayer", "atvendor", "equipped"},
-            suffix_desc ="{gray}Swamp: {purple}Nu {green}Ma {gray}Lvl: 60{blue}\n{gray}Mist: {green}Mo {red}Ya {gray}Lvl: 47{blue}\n{gray}Dance: {green}Ma {white}I {gray}Lvl: 45{blue}\n{gray}Authority: {yellow}Ke {green}Ni {gray}Lvl: 42{blue}\n{gray}Spring: {orange}Ha Ru {gray}Lvl: 39{blue}\n{gray}Deception: {yellow}Sa {orange}Wa {gray}Lvl: 38{blue}\n{gray}Wealth: {orange}To {red}Mi {gray}Lvl: 36{blue}\n{gray}Rain: {red}A {orange}Me {gray}Lvl: 32{blue}\n{gray}Dream: {yellow}Yu {orange}Me {gray}Lvl: 32{blue}\n",
-            sockets = "2"
-        },
-        -- Tooltip information for Belts showing available 2 socket Runewords
-        {
-            codes = {"lbl","vbl","mbl","tbl","hbl","msb","3lb","3vb","3mb","3tb","3hb","zlb","zvb","zmb","ztb","zhb","xms","5lb","5vb","5mb","5tb","5hb","alb","avb","bmb","atb","ahb","yms","ulc","uvc","umc","utc","uhc","m10"},
-            runeword = false,
-            quality = "3-",
-            location = {"onplayer","atvendor","equipped"},
-            suffix_desc ="{gray}Navel: {purple}He {gold}So: {gray}: Lvl: 59\n {gray}Mist: {green}Mo {red}Ya {gray}Lvl: 47{blue}\n{gray}Dance: {green}Ma{white} I: {gray}Lvl: 45{blue}\n{gray}Spring: {orange}Ha {orange}Ru {gray}Lvl: 39{blue}\n{gray}Wealth: {orange}To {red}Mi {gray}Lvl: 36{blue}\n{gray}Rain: {red}A {orange}Me {gray}Lvl: 32{blue}\n{gray}Dream: {yellow}Yu {orange}Me {gray}Lvl: 32{blue}\n{gray}Autumn: {red}A {red}Ki {gray}Lvl: 17{blue}\n{gray}Gold: {red}Ki{white} N {gray}Lvl: 10{blue}\n",
-            sockets = "2"
-        },
-        -- Tooltip information for Boots showing available 2 socket Runewords
-        {
-            codes = {"lbt","vbt","mbt","tbt","hbt","dbt","2lb","2vb","2mb","2tb","2hb","xlb","xvb","xmb","xtb","xhb","xbt","4lb","4vb","4mb","4tb","4hb","ylb","yvb","ymb","ytb","yhb","ybt","ulb","uvb","umb","utb","uhb"},
-            runeword = false,
-            quality = "3-",
-            location = {"onplayer","atvendor","equipped"},
-            suffix_desc = "{gray}Skank: {purple}Su {gold}Ne {gray}Lvl: 57{blue}\n{gray}Mist: {green}Mo {red}Ya {gray}Lvl: 47{blue}\n{gray}Trip: {orange}Ta {green}Hi {gray}Lvl: 46{blue}\n{gray}Dance: {green}Ma{white} I {gray}Lvl: 45{blue}\n{gray}Summer: {green}Na {red}Tsu {gray}Lvl: 40{blue}\n{gray}Spring: {orange}Ha {orange}Ru {gray}Lvl: 39{blue}\n{gray}Rain: {red}A {orange}Me {gray}Lvl: 32{blue}\n{gray}Kick: {yellow}Ke {red}Ri {gray}Lvl: 24{blue}\n{gray}Autumn: {red}A {red}Ki {gray}Lvl: 17{blue}\n",
-            sockets = "2"
-        },
-        -- Tooltip information for all Helms showing available 2 socket Runewords
-        {
-            codes = {"cap", "skp", "hlm", "fhl", "ghm", "crn", "msk", "bhm", "dwc", "2ap", "2kp", "2lm", "2hl", "2hm", "2rn", "2sk", "2h9", "xap", "xkp", "xlm", "xhl", "xhm", "xrn", "xsk", "xh9", "xdw", "4ap", "4kp", "4lm", "4hl", "4hm", "4rn", "4sk", "4h9", "yap", "ykp", "ylm", "yhl", "yhm", "yrn", "ysk", "yh9", "ydw", "uap", "ukp", "ulm", "uhl", "uhm", "urn", "usk", "uh9", "dr3", "dr4", "dr5", "dr1", "dr2", "dr8", "dr9", "dra", "dr6", "dr7", "drd", "dre", "drf", "drb", "drc", "qda", "qdb", "eht", "xht", "yht", "ba3", "ba4", "ba5", "ba1", "ba2", "ba8", "ba9", "baa", "ba6", "ba7", "bad", "bae", "baf", "bab", "bac", "qba", "qbc", "qbd", "qbe", "cix", "ci0", "ci4", "ci1", "ci2", "ci3", "qi2", "qi3", "m20"},
-            runeword = false,
-            quality = "3-",
-            location = {"onplayer","atvendor","equipped"},
-            suffix_desc = "{gray}Hawk: {orange}Ta{white} Ka {gray}Lvl: 35{blue}\n{gray}Dream: {yellow}Yu {red}Me {gray}Lvl: 32{blue}\n{gray}Lore: {white}Ort Sol {gray}Lvl: 27{blue}\n{gray}Wisdom: {red}Chi {yellow}E {gray}Lvl: 26{blue}\n{gray}Nadir: {white}Nef Tir {gray}Lvl: 13{blue}\n{gray}Hades: {white}Yo {red}Mi {gray}Lvl: 13{blue}\n{gray}Hunt: {white}Ka {red}Ri {gray}Lvl: 12{blue}\n{gray}Fog: {red}Ki {red}Ri {gray}Lvl: 12{blue}\n{gray}Greed: {white}Yo Ku {gray}Lvl: 9{blue}\n{gray}Feel: {white}Ka N {gray}Lvl: 6{blue}\n",
-            sockets = "2"
-        },
-        -- Tooltip information for all Helms showing available 3 socket Runewords
-        {
-            codes = {"cap", "skp", "hlm", "fhl", "ghm", "crn", "msk", "bhm", "dwc", "2ap", "2kp", "2lm", "2hl", "2hm", "2rn", "2sk", "2h9", "xap", "xkp", "xlm", "xhl", "xhm", "xrn", "xsk", "xh9", "xdw", "4ap", "4kp", "4lm", "4hl", "4hm", "4rn", "4sk", "4h9", "yap", "ykp", "ylm", "yhl", "yhm", "yrn", "ysk", "yh9", "ydw", "uap", "ukp", "ulm", "uhl", "uhm", "urn", "usk", "uh9", "dr3", "dr4", "dr5", "dr1", "dr2", "dr8", "dr9", "dra", "dr6", "dr7", "drd", "dre", "drf", "drb", "drc", "qda", "qdb", "eht", "xht", "yht", "ba3", "ba4", "ba5", "ba1", "ba2", "ba8", "ba9", "baa", "ba6", "ba7", "bad", "bae", "baf", "bab", "bac", "qba", "qbc", "qbd", "qbe", "cix", "ci0", "ci4", "ci1", "ci2", "ci3", "qi2", "qi3", "m20"},
-            runeword = false,
-            quality = "3-",
-            pstat = { index = 12, op = "<=", value = 44 }, -- Char Level 39 or lower
-            location = {"onplayer","atvendor","equipped"},
-            suffix_desc = "{gray}Maiden: {yellow}O {orange}To {orange}Me {gray}Lvl: 36{blue}\n{gray}Jealousy: {white}Shi {red}Tsu {orange}To {gray}Lvl: 36{blue}\n{gray}Temper: {orange}Shael{white} Io Ral {gray}Lvl: 35{blue}\n{gray}Ground: {orange}Shael{white} Io Ral {gray}Lvl: 35{blue}\n{gray}Earth: {orange}Shael{white} Io Thul {gray}Lvl: 35{blue}\n{gray}Cure: {orange}Shael{white} Io Tal {gray}Lvl: 35{blue}\n{gray}Bulwark: {orange}Shael{white} Io Sol {gray}Lvl: 35{blue}\n{gray}Richesdotcom: {yellow}P.Topaz {orange}Ru {yellow}P.Topaz {gray}Lvl: 34{blue}\n{gray}Psychic: {red}A {red}Ki {yellow}Ra {gray}Lvl: 28{blue}\n{gray}Cherry Blossom: {yellow}Sa{white} Ku{yellow}Ra {gray}Lvl: 28{blue}\n{gray}Radiance: {white}Nef Sol Ith {gray}Lvl: 27{blue}\n{gray}Royalty: {red}A {yellow}E{white} Ka {gray}Lvl: 26{blue}\n{gray}Reason: {red}Ri {yellow}Yu{white} U {gray}Lvl: 23{blue}\n{gray}Knowledge: {red}Chi{white} Shi {red}Ki {gray}Lvl: 20{blue}\n{gray}Forefeel: {white}Yo Ka N {gray}Lvl: 9{blue}\n",
-            sockets = "3"
-        },
-        {
-            codes = {"cap", "skp", "hlm", "fhl", "ghm", "crn", "msk", "bhm", "dwc", "2ap", "2kp", "2lm", "2hl", "2hm", "2rn", "2sk", "2h9", "xap", "xkp", "xlm", "xhl", "xhm", "xrn", "xsk", "xh9", "xdw", "4ap", "4kp", "4lm", "4hl", "4hm", "4rn", "4sk", "4h9", "yap", "ykp", "ylm", "yhl", "yhm", "yrn", "ysk", "yh9", "ydw", "uap", "ukp", "ulm", "uhl", "uhm", "urn", "usk", "uh9", "dr3", "dr4", "dr5", "dr1", "dr2", "dr8", "dr9", "dra", "dr6", "dr7", "drd", "dre", "drf", "drb", "drc", "qda", "qdb", "eht", "xht", "yht", "ba3", "ba4", "ba5", "ba1", "ba2", "ba8", "ba9", "baa", "ba6", "ba7", "bad", "bae", "baf", "bab", "bac", "qba", "qbc", "qbd", "qbe", "cix", "ci0", "ci4", "ci1", "ci2", "ci3", "qi2", "qi3", "m20"},
-            runeword = false,
-            quality = "3-",
-            pstat = {index = 12, op = ">=", value = 45}, -- Char Level 40 or higher
-            location = {"onplayer","atvendor","equipped"},
-            suffix_desc = "{gray}Metamorphosis: {orange}Io {purple}Cham {orange}Fal {gray}Lvl: 67{blue}\n{gray}Dream: {orange}Io {purple}Jah {orange}Pul {gray}Lvl: 65{blue}\n{gray}Peace: He{white} I {orange}Wa {gray}Lvl: 59{blue}\n{gray}Discontent: {green}Fu {purple}He{white} I {gray}Lvl: 59{blue}\n{gray}Abandon: {purple}Su {gold}Te {orange}Ru {gray}Lvl: 57{blue}\n{gray}Flickering Flame: {white}Nef {orange}Pul {purple}Vex {gray}Lvl: 55{blue}\n{gray}Thought: {white}Shi {gold}So{white} U {gray}Lvl: 52{blue}\n{gray}Spirit: {orange}Ko {orange}Ko {gold}Ro {gray}Lvl: 51{blue}\n{gray}Delirium: {orange}Lem {orange}Ist {orange}Io {gray}Lvl: 51{blue}\n{gray}Radiance: {green}Hi{white} Ka {orange}Ru {gray}Lvl: 46{blue}\n{gray}One: {green}Hi {orange}To {red}Tsu {gray}Lvl: 46{blue}\n{gray}Wisdom: {orange}Pul{white} Ith Eld {gray}Lvl: 45{blue}\n",
-            sockets = "3"
-        },
-        -- Tooltip information for all Shields showing avaiable 2 socket Runewords
-        {
-            codes = {"buc", "sml", "lrg", "kit", "tow", "gts", "bsh", "spk", "fts", "2uc", "2ml", "2rg", "2it", "2ow", "2ts", "2sh", "2pk", "sp2", "xuc", "xml", "xrg", "xit", "xow", "xts", "xsh", "xpk", "xft", "4uc", "4ml", "4rg", "4it", "4ow", "4ts", "4sh", "4pk", "yuc", "yml", "yrg", "yit", "yow", "yts", "ysh", "ypk", "yft", "uuc", "uml", "urg", "uit", "uow", "uts", "ush", "upk", "pa1", "pa3", "pa4", "pa5", "pa2", "pa6", "pa8", "pa9", "paa", "pa7", "pab", "pad", "pae", "pae", "paf", "qp9", "qpc", "qpc", "qpe", "ne1", "ne2", "ne3"},
-            runeword = false,
-            quality = "3-",
-            location = {"onplayer","atvendor","equipped"},
-            suffix_desc = "{gray}Splendor: {white}Eth {orange}Lum {gray}Lvl: 37{blue}\n{gray}Rhyme: {orange}Shael{white} Eth {gray}Lvl: 29{blue}\n{gray}Rhino: {yellow}Sa{white} I {gray}Lvl: 22{blue}\n{gray}Gold: {red}Ki{white} N {gray}Lvl: 10{blue}\n{gray}Luck: {white}U N {gray}Lvl: 6{blue}\n",
-            sockets = "2"
-        },
-        -- Tooltip information for all Shields showing avaiable 3 socket Runewords
-        {
-            codes = {"buc", "sml", "lrg", "kit", "tow", "gts", "bsh", "spk", "fts", "2uc", "2ml", "2rg", "2it", "2ow", "2ts", "2sh", "2pk", "sp2", "xuc", "xml", "xrg", "xit", "xow", "xts", "xsh", "xpk", "xft", "4uc", "4ml", "4rg", "4it", "4ow", "4ts", "4sh", "4pk", "yuc", "yml", "yrg", "yit", "yow", "yts", "ysh", "ypk", "yft", "uuc", "uml", "urg", "uit", "uow", "uts", "ush", "upk", "pa1", "pa3", "pa4", "pa5", "pa2", "pa6", "pa8", "pa9", "paa", "pa7", "pab", "pad", "pae", "pae", "paf", "qp9", "qpc", "qpc", "qpe", "ne1", "ne2", "ne3"},
-            runeword = false,
-            quality = "3-",
-            pstat = {index = 12, op = "<=", value = 49}, -- Char Level 49 or lower
-            location = {"onplayer","atvendor","equipped"},
-            suffix_desc = "{gray}Sanctuary: {orange}Ko {orange}Ko {purple}Mal {gray}LvL: 49{blue}\n{gray}Woodsman: {red}Ki {orange}Ko {red}Ri {gray}Lvl: 39{blue}\n{gray}Daylight: {green}Hi {orange}Ru {green}Ma {gray}Lvl: 46{blue}\n{gray}Sunny: {yellow}Sa {green}Ni {white}I {gray}Lvl: 43{blue}\n{gray}Secret: {white}Shi {green}Ni {orange}Ti {gray}Lvl: 42{blue}\n{gray}Pillar of Faith: {orange}Ha {white}Shi {yellow}Ra {gray}Level: 39{blue}\n{gray}Conquest: {white}Shi Shi {yellow}O {gray}Level :30{blue}\n{gray}Ancient's Pledge: {white}Ral Ort Tal {gray}Lvl: 21{blue}\n",
-            sockets = "3"
-        },
-        {
-            codes = {"buc", "sml", "lrg", "kit", "tow", "gts", "bsh", "spk", "fts", "2uc", "2ml", "2rg", "2it", "2ow", "2ts", "2sh", "2pk", "sp2", "xuc", "xml", "xrg", "xit", "xow", "xts", "xsh", "xpk", "xft", "4uc", "4ml", "4rg", "4it", "4ow", "4ts", "4sh", "4pk", "yuc", "yml", "yrg", "yit", "yow", "yts", "ysh", "ypk", "yft", "uuc", "uml", "urg", "uit", "uow", "uts", "ush", "upk", "pa1", "pa3", "pa4", "pa5", "pa2", "pa6", "pa8", "pa9", "paa", "pa7", "pab", "pad", "pae", "pae", "paf", "qp9", "qpc", "qpc", "qpe", "ne1", "ne2", "ne3"},
-            runeword = false,
-            quality = "3-",
-            pstat = {index = 12, op = ">=", value = 50}, -- Char Level 50 or higher
-            location = {"onplayer","atvendor","equipped"},
-            suffix_desc = "{gray}Dream: {orange}Io {purple}Jah {orange}Pul {gray}Lvl: 65{blue}\n{gray}Dragon: Sur Lo {white}Sol {gray}Lvl: 61{blue}\n{gray}Sunlight: {blue}Sun {orange}Ko {white}U {gray}Lvl: 60{blue}\n{gray}Dodge: {white}Ka {orange}Wa {purple}Su {gray}Lvl: 57{blue}\n{gray}Abandon: {purple}Su {gold}Te {orange}Ru {gray}Lvl: 57{blue}\n{gray}Rift: {red}Ki {gold}Re {red}Tsu {gray}Lvl: 56{blue}\n",
-            sockets = "3"
-        },
-        -- Tooltip information for all Shields showing avaiable 4 socket Runewords
-        {
-            codes = {"buc", "sml", "lrg", "kit", "tow", "gts", "bsh", "spk", "fts", "2uc", "2ml", "2rg", "2it", "2ow", "2ts", "2sh", "2pk", "sp2", "xuc", "xml", "xrg", "xit", "xow", "xts", "xsh", "xpk", "xft", "4uc", "4ml", "4rg", "4it", "4ow", "4ts", "4sh", "4pk", "yuc", "yml", "yrg", "yit", "yow", "yts", "ysh", "ypk", "yft", "uuc", "uml", "urg", "uit", "uow", "uts", "ush", "upk", "pa1", "pa3", "pa4", "pa5", "pa2", "pa6", "pa8", "pa9", "paa", "pa7", "pab", "pad", "pae", "pae", "paf", "qp9", "qpc", "qpc", "qpe", "ne1", "ne2", "ne3"},
-            runeword = false,
-            quality = "3-",
-            location = {"onplayer","atvendor","equipped"},
-            suffix_desc = "{gray}Phoenix: {purple}Vex Vex Lo Jah {gray}Lvl: 65{blue}\n{gray}Dread: {yellow}O {gold}So Re {orange}Ru {gray}Lvl: 56{blue}\n{gray}Dome: {green}Ma {orange}Ru {red}Ya {gold}Ne {gray}Lvl: 55{blue}\n{gray}Medicine: {red}Ya {white}Ku {green}Hi {white}N {gray}Lvl: 46{blue}\n{gray}Glory: {yellow}E {white}I {orange}Ko {white}U {gray}Lvl: 39{blue}\n{gray}Faith: {white}Shi N {orange}Ko {white}U {gray}Lvl: 39{blue}\n{gray}Temptation: {yellow}Wa {white}U {orange}Wa {white}Ku {gray}Lvl: 38{blue}\n{gray}Achieve: {white}Ka {red}Chi {orange}To Ru {gray}Lvl: 36{blue}\n{gray}Spirit: {white}Tal Thul Ort Amn {gray}Lvl: 25{blue}\n{gray}Fortress: {white}Yo U {yellow}Sa {white}I {gray}Lvl: 22{blue}\n{gray}Beauty: {white}U {red}Tsu {white}Ku Shi {gray}Lvl: 19{blue}\n",
-            sockets = "4"
-        },
-        -- Tooltip information for all 2H Swinging Weapon 2 socket Runewords
-        {
-            codes = {"lax","bax","btx","gax","gix","p06","p07","p08","p09","p10","9la","9ba","9bt","9ga","9gi","q05","q06","q07","q08","q09","0la","0ba","0bt","0ga","0gi","7la","7ba","7bt","7ga","7gi","njt","9nj","0nn","m37","arm","9rm","0rm","pbe","9be","0be","m35","mnb","9mn","0mn","m09","sst","lst","cst","bst","wst","p55","p56","p57","p58","p59","8ss","8ls","8cs","8bs","8ws","q54","q55","q56","q57","q58","1ss","1ls","1cs","1bs","1ws","6ss","6ls","6cs","6bs","6ws","m29","m36","m11","2hs","clm","gls","bsw","flb","gsd","p34","p35","p36","p37","p38","p39","q1a","q1b","q1c","q1d","q1e","q1f","9cm","9gs","9b9","9fb","9gd","q33","q34","q35","q36","q37","q38","a2a","q2b","q2c","q2d","q2e","a2f","0cm","0gs","0b0","0fb","0gd","72h","7cm","7gs","7b7","7fb","7gd","q3a","q3b","q3c","q3d","q3e","q3f","q4a","q4b","q4c","q4d","q4e","q4f","m16","m22","m22","m18","dd1"},
-            runeword = false,
-            quality = "3-",
-            location = {"onplayer","atvendor","equipped"},
-            sockets = "2",
-            suffix_desc = "{gray}Shinigami: {blue}Death God {gray}Lvl: 60{blue}\n"
-        },
-        -- Tooltip information for all 2H Swinging Weapon 4 socket Runewords
-        {
-            codes = {"lax","bax","btx","gax","gix","p06","p07","p08","p09","p10","9la","9ba","9bt","9ga","9gi","q05","q06","q07","q08","q09","0la","0ba","0bt","0ga","0gi","7la","7ba","7bt","7ga","7gi","njt","9nj","0nn","m37","arm","9rm","0rm","pbe","9be","0be","m35","mnb","9mn","0mn","m09","sst","lst","cst","bst","wst","p55","p56","p57","p58","p59","8ss","8ls","8cs","8bs","8ws","q54","q55","q56","q57","q58","1ss","1ls","1cs","1bs","1ws","6ss","6ls","6cs","6bs","6ws","m29","m36","m11","2hs","clm","gls","bsw","flb","gsd","p34","p35","p36","p37","p38","p39","q1a","q1b","q1c","q1d","q1e","q1f","9cm","9gs","9b9","9fb","9gd","q33","q34","q35","q36","q37","q38","a2a","q2b","q2c","q2d","q2e","a2f","0cm","0gs","0b0","0fb","0gd","72h","7cm","7gs","7b7","7fb","7gd","q3a","q3b","q3c","q3d","q3e","q3f","q4a","q4b","q4c","q4d","q4e","q4f","m16","m22","m22","m18","dd1"},
-            runeword = false,
-            quality = "3-",
-            location = {"onplayer","atvendor","equipped"},
-            sockets = "4",
-            suffix_desc = "{gray}Tourbillion: {red}Tsu {gold}Mu {white}Shi {blue}Wind {gray}Lvl: 60\n{gray}Nature's Kingdom: {green}Mo {gold}No No {yellow}Ke {gray}Lvl: 48{blue}\n"
-        },
-        -- Tooltip information for all 2H Swinging Weapon 5 socket Runewords
-        {
-            codes = {"lax","bax","btx","gax","gix","p06","p07","p08","p09","p10","9la","9ba","9bt","9ga","9gi","q05","q06","q07","q08","q09","0la","0ba","0bt","0ga","0gi","7la","7ba","7bt","7ga","7gi","njt","9nj","0nn","m37","arm","9rm","0rm","pbe","9be","0be","m35","mnb","9mn","0mn","m09","sst","lst","cst","bst","wst","p55","p56","p57","p58","p59","8ss","8ls","8cs","8bs","8ws","q54","q55","q56","q57","q58","1ss","1ls","1cs","1bs","1ws","6ss","6ls","6cs","6bs","6ws","m29","m36","m11","2hs","clm","gls","bsw","flb","gsd","p34","p35","p36","p37","p38","p39","q1a","q1b","q1c","q1d","q1e","q1f","9cm","9gs","9b9","9fb","9gd","q33","q34","q35","q36","q37","q38","a2a","q2b","q2c","q2d","q2e","a2f","0cm","0gs","0b0","0fb","0gd","72h","7cm","7gs","7b7","7fb","7gd","q3a","q3b","q3c","q3d","q3e","q3f","q4a","q4b","q4c","q4d","q4e","q4f","m16","m22","m22","m18","dd1"},
-            runeword = false,
-            quality = "3-",
-            location = {"onplayer","atvendor","equipped"},
-            sockets = "5",
-            suffix_desc = "{gray}Work of God {blue}God {gold}No {red}Mi {orange}Wa {yellow}Sa {gray}Lvl: 60\nMight of the Earth: {red}Chi {white}Ka {yellow}Ra {gold}No {blue}Earth {gray}Lvl: 60\nGrief: {white}Eth Tir {purple}Lo Mal {white}Ral {gray}Lvl: 59\nManiac: {green}Ma Ni {red}A Tsu {white}Ku {gray}Lvl: 45{blue}\n"
-        },
-        -- Tooltip information for all 2h Axe 6 socket Runewords
-        {
-            codes = {"lax","bax","btx","gax","gix","p06","p07","p08","p09","p10","9la","9ba","9bt","9ga","9gi","q05","q06","q07","q08","q09","0la","0ba","0bt","0ga","0gi","7la","7ba","7bt","7ga","7gi"},
-            runeword = false,
-            quality = "3-",
-            location = {"onplayer","atvendor","equipped"},
-            sockets = "6",
-            suffix_desc = "{gray}Last Wish: {purple}Jah Mal Jah Sur Jah Ber {gray}Lvl: 65{blue}\n"
-        },
-        -- Tooltip information for all 2h Axe 5 socket Runewords
-        {
-            codes = {"lax","bax","btx","gax","gix","p06","p07","p08","p09","p10","9la","9ba","9bt","9ga","9gi","q05","q06","q07","q08","q09","0la","0ba","0bt","0ga","0gi","7la","7ba","7bt","7ga","7gi"},
-            runeword = false,
-            quality = "3-",
-            location = {"onplayer","atvendor","equipped"},
-            sockets = "5",
-            suffix_desc = "{gray}Doom: {orange}Hel {purple}Ohm {orange}Um {purple}Lo Cham {gray}Lvl: 67\n{gray}Beast: {purple}Ber {white}Tir {orange}Um {purple}Mal {orange}Lum {gray}Lvl: "
-        },
-        -- Tooltip information for all Axe 4 socket Runewords
-        {
-            codes = {"lax","bax","btx","gax","gix","p06","p07","p08","p09","p10","9la","9ba","9bt","9ga","9gi","q05","q06","q07","q08","q09","0la","0ba","0bt","0ga","0gi","7la","7ba","7bt","7ga","7gi","hax","axe","2ax","mpi","wax","p01","p02","p03","p04","po5","p06","po7","po8","po9","p10","9ha","9ax","92a","9mp","9wa","qoo","q01","q02","q03","q04","0ha","0ax","82a","0mp","0wa","7ha","7ax","72a","7mp","7wa","m21"},
-            runeword = false,
-            quality = "3-",
-            location = {"onplayer","atvendor","equipped"},
-            sockets = "4",
-            suffix_desc = "{gray}Famine: {orange}Fal {purple}Ohm {white}Ort {purple}Jah {gray}Lvl: 65\nKingslayer: {purple}Mal {orange}Um {purple}Gul {orange}Fal {gray}Lvl: 53\nOath: {orange}Shael Pul {purple}Mal {orange}Lum {gray}Level: 49\nFrostbite: {white}Shi {green}Mo {red}Ya {yellow}Ke {gray}Lvl: 47\nHunger: {white}Ku U {green}Fu {white}Ku {gray}Lvl: 44\nAcid {yellow}Sa {white}N {green}Se {white}I {gray}Lvl: 43\nLaw: {orange}Ho {white}U {red}Ri Tsu {gray}Lvl: 31\nBlood {yellow}Ke {red}Tsu {yellow}E {red}Ki {gray}Lvl: 26{blue}\n"
-        },
-        -- Tooltip information for all Axe 3 socket Runewords
-        {
-            codes = {"lax","bax","btx","gax","gix","p06","p07","p08","p09","p10","9la","9ba","9bt","9ga","9gi","q05","q06","q07","q08","q09","0la","0ba","0bt","0ga","0gi","7la","7ba","7bt","7ga","7gi","hax","axe","2ax","mpi","wax","p01","p02","p03","p04","po5","p06","po7","po8","po9","p10","9ha","9ax","92a","9mp","9wa","qoo","q01","q02","q03","q04","0ha","0ax","82a","0mp","0wa","7ha","7ax","72a","7mp","7wa","m21"},
-            runeword = false,
-            quality = "3-",
-            location = {"onplayer","atvendor","equipped"},
-            sockets = "3",
-            suffix_desc = "{gray}Crescent Moon: {orange}Shael Um {white}Tir {gray}Lvl: 47\nButcher {green}Ni {white}Ku {red}Ya {gray}Lvl: 42\nLight: {red}A {white}Ka {red}Ri {gray}Lvl: 17{blue}\n"
-        },
-        -- Tooltip information for all Axe 2 socket Runewords
-        {
-            codes = {"lax","bax","btx","gax","gix","p06","p07","p08","p09","p10","9la","9ba","9bt","9ga","9gi","q05","q06","q07","q08","q09","0la","0ba","0bt","0ga","0gi","7la","7ba","7bt","7ga","7gi","hax","axe","2ax","mpi","wax","p01","p02","p03","p04","po5","p06","po7","po8","po9","p10","9ha","9ax","92a","9mp","9wa","qoo","q01","q02","q03","q04","0ha","0ax","82a","0mp","0wa","7ha","7ax","72a","7mp","7wa","m21"},
-            runeword = false,
-            quality = "3-",
-            location = {"onplayer","atvendor","equipped"},
-            sockets = "2",
-            suffix_desc = "Edge {green}Fu {red}Chi {gray}Lvl: 44\nSteel: {white}Tir El {gray}Lvl: 13{blue}\n"
-        },
-        -- Monster Part Styling
-        {
-            codes = {"qll", "hrt", "brz", "jaw", "eyz", "hrn", "tal", "flg", "fng","sol", "scz", "spe", "zzz"},
-            location = "onground",
-            border = {200, 150, 0, 255}
-        },
-        -- Crystal Styling
-        {
-            codes = {"xl1","xl2","xl3","xl4","xl5","xl6","xl7","xl8","xl9","xlx","xly"},
-            border = {200, 150, 0, 255}
-        },
-        -- Perfect Gem Styling
-        {
-            code = "gvb",
-            border = {200, 150, 0, 255},
-            name_override = "{purple}*P.Gem*",
-            filterlevels = "4"
-        },
-        {
-            code = "gyb",
-            border = {200, 150, 0, 255},
-            name_override = "{yellow}*P.Gem*",
-            filterlevels = "4"
-        },
-        {
-            code = "gbb",
-            border = {200, 150, 0, 255},
-            name_override = "{blue}*P.Gem*",
-            filterlevels = "4"
-        },
-        {
-            code = "ggb",
-            border = {200, 150, 0, 255},
-            name_override = "{green}*P.Gem*",
-            filterlevels = "4"
-        },
-        {
-            code = "grb",
-            border = {200, 150, 0, 255},
-            name_override = "{red}*P.Gem*",
-            filterlevels = "4"
-        },
-        {
-            code = "gwb",
-            border = {200, 150, 0, 255},
-            name_override = "{white}*P.Gem*",
-            filterlevels = "4"
-        },
-        {
-            code = "skb",
-            border = {200, 150, 0, 255},
-            name_override = "{gray}*P.Gem*",
-            filterlevels = "4"
-        },
-        {
-            code = "gbk",
-            border = {200, 150, 0, 255},
-            name_override = "{black}*P.Gem*",
-            filterlevels = "4"
-        },
-        -- In game notification for all high LOD rune drops
-            {   
-            code = "23l",
-            notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Mal  {red}*{blue}*{green}*",
-            name_override = "{black}Mal Rune",
-            border = {0, 0, 0, 255},
-            background = {200, 150, 0, 255},
-            audio = "mid.mp3"
-        },
-        {   
-            code = "24l",
-            notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Ist   {red}*{blue}*{green}*",
-            name_override = "{black}Ist Rune",
-            border = {0, 0, 0, 255},
-            background = {200, 150, 0, 255},
-            audio = "mid.mp3"
-        },
-        {   
-            code = "25l",
-            notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Gul   {red}*{blue}*{green}*",
-            name_override = "{black}Gul Rune",
-            border = {0, 0, 0, 255},
-            background = {200, 150, 0, 255},
-            audio = "mid.mp3"
-        },
-        {   
-            code = "26l",
-            notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Vex   {red}*{blue}*{green}*",
-            name_override = "{red}Vex Rune",
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "tink.mp3"
-        },
-        {   
-            code = "27l",
-            notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Ohm  {red}*{blue}*{green}*",
-            name_override = "{red}Ohm Rune",
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "tink.mp3"
-        },
-        {   
-            code = "28l",
-            notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Lo   {red}*{blue}*{green}*",
-            name_override = "{red}Lo Rune",
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "tink.mp3"
-        },
-        {   
-            code = "29l",
-            notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Sur   {red}*{blue}*{green}*",
-            name_override = "{red}Sur Rune",
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "tink.mp3"
-        },
-        {   
-            code = "30l",
-            notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Ber  {red}*{blue}*{green}*",
-            name_override = "{red}Ber Rune",
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "tink.mp3"
-        },
-        {   
-            code = "31l",
-            notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Jah   {red}*{blue}*{green}*",
-            name_override = "{red}Jah Rune",
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "tink.mp3"
-        },
-        {   
-            code = "32l",
-            notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Cham   {red}*{blue}*{green}*",
-            name_override = "{red}Cham Rune",
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "tink.mp3"
-        },
-        {   
-            code = "33l",
-            notify = "{red}*{blue}*{green}*   {orange}High Rune Drop: {white}Zod   {red}*{blue}*{green}*",
-            name_override = "{red}Zod Rune",
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "mythical.mp3"
-        },
-        -- In game notification for all high ES rune drops (Gold + Purple)   
-        {
-            codes = {"r36","r37","r38","r39","r40","r41","r42"},
-            notify = "{Red}Gold Rune Drop{gold}: {name}",
-            border = {255,215,0,255},
-            background = {0,0,0,255},
-            audio = "mid.mp3"
-        },
-        {   
-            code = "r43",
-            notify = "{orange}Purple ESR Rune: {name}",
-            name_override = "{purple}Su Rune",
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "tink.mp3"
-        },
-        {   
-            code = "r44",
-            notify = "{orange}Purple ESR Rune: {name}",
-            name_override = "{purple}He Rune",
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "tink.mp3"
-        },
-        {   
-            code = "r45",
-            notify = "{orange}Purple ESR Rune: {name}",
-            name_override = "{purple}Nu Rune",
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "tink.mp3"
-        },
-        {   
-            code = "r46",
-            notify = "{orange}Purple ESR Rune: {name}",
-            name_override = "{purple}Wo Rune",
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "tink.mp3"
-        },
-        {   
-            code = "r50",
-            notify = "{orange}Purple ESR Rune: {name}",
-            name_override = "{purple}Null Rune",
-            background = {255, 255, 255, 255 },
-            border = {240, 0, 0, 230, 2},
-            audio = "tink.mp3"
-        },
-        -- Tooltips for Rune and Decal Stocker
-        {
-            codes = {"s01","s02","s03","s04","s05","s06","s07","s08","s09","s10","s11","s12","s13","s14","s15","s16","s17","s18","s19","s20","s21","s22","s23","s24","s25","s26","s27","s28","s29","s30","s31","s32","s33","s34","s35","s36","s37","s38","s39","s40","s41","s42","s43","s44","s45","s46","s47","s48","s49","s50","s51","s52","s53","s54","s55","s56","s57","s58","s59","s60","s61","s62","s63","s64","s65","s66","s67","s68","s69","s70","s71","s72","s73","s74","s75","s76","s77","s78","s79","s80","s81","s82","s83"},
-            location = {"onplayer","atvendor","onground"},
-            suffix_desc = "\n{gray}Cube with {red}ID {gray}scroll to convert into higher tier points\nCube with {blue}TP {gray}scroll to convert into lower tier points\n"
-        },
-        -- Tooltip for Kanji runes on Null rune - Ty boggins and Kitzun
-            {   
-            code = "r50",
-            location = {"onplayer","atvendor"},
-            prefix = "\nGod Rune: {blue}Frozen Soul {red}Enigmatic Cinnabar {gold}Pulsing Opal {gray}Shadow Quartz\n{orange}Heaven Rune: {red}Bleeding Stone {blue}Dark Azurite {dark green}Bitter Peridot {purple}Tainted Tourmarine{white}\n{orange}Death Rune: {gray}Shadow Quartz{white}\n{orange}Life Rune: {gold}Pulsing Opal\n{orange}Dragon Rune: Storm Amber\nWind Rune: {purple}Tainted Tourmaline\n{orange}Thunder Rune: {yellow}Burning Sulphur\n{orange}Sun Rune: {red}Enigmatic Cinnabar\n{orange}Earth Rune: {dark green}Bitter Peridot\n{orange}Metal Rune: {white}Solid Mercury\n{orange}Wood Rune: {green}Tomb Jade\n{orange}Water Rune: {blue}Dark Azurite\n{orange}Fire Rune: {red}Bleeding Stone\n{orange}Moon Rune: {blue}Frozen Soul\n{white}** Combine this rune with the below crystals to obtain Kanji Runes **{purple}\n"
-        },
-        -- Maps Tier 1
-            {   
-            code = "z01",
-            notify = "Tier 1 Map: {white}Cellars of Pain",
-            name_override = "Cellar of Pain (Tier 1)",
-            border = {255,255,255,255},
-            background = {0,0,0,255}
-        },
-        {   
-            code = "z02",
-            notify = "Tier 1 Map: {white}Chasm of Horrors",
-            name_override = "Chasm of Horrors (Tier 1)",
-            border = {255,255,255,255},
-            background = {0,0,0,255}
-        },
-        {   
-            code = "z03",
-            notify = "Tier 1 Map: {white}Crypt of Damnation",
-            name_override = "Crypt Of Damnation (Tier 1)",
-            border = {255,255,255,255},
-            background = {0,0,0,255}
-        },
-        {   
-            code = "z04",
-            notify = "Tier 1 Map: {white}Necropolis",
-            name_override = "Necropolis (Tier 1)",
-            border = {255,255,255,255},
-            background = {0,0,0,255}
-        },
-        -- Tier 2
-            {   
-            code = "z05",
-            notify = "Tier 2 Map: {white}Ancient Tomb",
-            audio = "map.mp3",
-            name_override = "Ancient Tomb (Tier 2)",
-            border = {255,255,255,255},
-            background = {0,0,0,255}
-        },
-        {   
-            code = "z06",
-            notify = "Tier 2 Map: {white}Chaos Rift",
-            audio = "map.mp3",
-            name_override = "Chaos Rift (Tier 2)",
-            border = {255,255,255,255},
-            background = {0,0,0,255}
-        },
-        {   
-            code = "z07",
-            notify = "Tier 2 Map: {white}Infested Lair",
-            audio = "map.mp3",
-            name_override = "Infested Lair (Tier 2)",
-            border = {255,255,255,255},
-            background = {0,0,0,255}
-        },
-        {   
-            code = "z08",
-            notify = "Tier 2 Map: {white}Labyrinth of Suffering",
-            audio = "map.mp3",
-            name_override = "Labyrinth of Suffering (Tier 2)",
-            border = {255,255,255,255},
-            background = {0,0,0,255}
-        },
-        -- Tier 3
-            {   
-            code = "z09",
-            notify = "Tier 3 Map: {white}Decaying Depths",
-            audio = "map.mp3",
-            name_override = "Decaying Depths (Tier 3)",
-            border = {255,255,255,255},
-            background = {0,0,0,255}
-        },
-        {   
-            code = "z10",
-            notify = "Tier 3 Map: {white}Endless Abyss",
-            audio = "map.mp3",
-            name_override = "Endless Abyss (Tier 3)",
-            border = {255,255,255,255},
-            background = {0,0,0,255}
-        },
-        {   
-            code = "z11",
-            notify = "Tier 3 Map: {white}Frozen Wastes",
-            audio = "map.mp3",
-            name_override = "Frozen Wastes (Tier 3)",
-            border = {255,255,255,255},
-            background = {0,0,0,255}
-        },
-        {   
-            code = "z12",
-            notify = "Tier 3 Map: {white}Twisted Maze",
-            audio = "map.mp3",
-            name_override = "Twisted Maze (Tier 3)",
-            border = {255,255,255,255},
-            background = {0,0,0,255}
-        },
-        -- Tier 4
-            {   
-            code = "z13",
-            notify = "Tier 4 Map: {white}Cursed Ossuary",
-            audio = "map.mp3",
-            name_override = "Cursed Ossuary (Tier 4)",
-            border = {255,255,255,255},
-            background = {0,0,0,255}
-        },
-        {   
-            code = "z14",
-            notify = "Tier 4 Map: {white}Infernal Nexus",
-            audio = "map.mp3",
-            name_override = "Infernal Nexus (Tier 4)",
-            border = {255,255,255,255},
-            background = {0,0,0,255}
-        },
-        {   
-            code = "z15",
-            notify = "Tier 4 Map: {white}Reliquary of Souls",
-            audio = "map.mp3",
-            name_override = "Reliquary of Souls (Tier 4)",
-            border = {255,255,255,255},
-            background = {0,0,0,255}
-        },
-        {   
-            code = "z16",
-            notify = "Tier 4 Map: {white}Shrine of Destruction",
-            audio = "map.mp3",
-            name_override = "{white}Shrine of Destruction (Tier 4)",
-            border = {255,255,255,255},
-            background = {0,0,0,255}
-        },
-        -- Tier 5
-            {   
-            code = "z17",
-            notify = "Tier 5 Map: {white}Eye of the Storm",
-            audio = "t5_map.mp3",
-            name_override = "{black}Eye of the Storm",
-            border = {0,0,0,255},
-            background = {255,255,255,255}
-        },
-        {   
-            code = "z18",
-            notify = "Tier 5 Map: {white}Ice Crown Citadel",
-            audio = "t5_map.mp3",
-            name_override = "{black}Ice Crown Citadel",
-            border = {0,0,0,255},
-            background = {255,255,255,255}
-        },
-        {   
-            code = "z19",
-            notify = "Tier 5 Map: {white}The Sanctum of the Dead",
-            audio = "t5_map.mp3",
-            name_override = "{black}The Sanctum of the Dead",
-            border = {0,0,0,255},
-            background = {255,255,255,255}
-        },
-        {   
-            code = "z20",
-            notify = "Tier 5 Map: {white}The Reliquary of False Light",
-            audio = "t5_map.mp3",
-            name_override = "{black}The Reliquary of False Light",
-            border = {0,0,0,255},
-            background = {255,255,255,255}
-        },
-        -- Tooltips on ESR Runes (Thanks to Quan + Squid)
-        {
-            code="r01",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+1 White Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r02",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+2 White Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r03",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+4 White Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r04",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+8 White Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r05",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+16 White Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r06",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+32 White Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r07",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+64 White Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r08",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+1 Red Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r09",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+2 Red Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r10",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+4 Red Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r11",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+8 Red Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r12",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+16 Red Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r13",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+32 Red Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r14",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+64 Red Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r15",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+1 Yellow Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r16",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+2 Yellow Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r17",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+4 Yellow Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r18",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+8 Yellow Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r19",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+16 Yellow Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r20",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+32 Yellow Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r21",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+64 Yellow Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r22",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+1 Orange Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r23",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+2 Orange Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r24",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+4 Orange Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r25",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+8 Orange Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r26",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+16 Orange Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r27",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+32 Orange Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r28",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+64 Orange Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r29",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+1 Green Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r30",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+2 Green Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r31",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+4 Green Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r32",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+8 Green Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r33",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+16 Green Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r34",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+32 Green Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r35",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+64 Green Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r36",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+1 Gold Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r37",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+2 Gold Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r38",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+4 Gold Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r39",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+8 Gold Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r40",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+16 Gold Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r41",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+32 Gold Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r42",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+64 Gold Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r43",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+1 Purple Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r44",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+2 Purple Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r45",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+4 Purple Rune Points when bagged{orange}\n"
-        },
-        {
-            code="r46",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+8 Purple Rune Points when bagged{orange}\n"
-        },
-        -- Tooltips on LoD Decals
-        {
-            code="01l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+1 Low Rune Points when bagged{white}\n"
-        },
-        {
-            code="02l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+2 Low Rune Points when bagged{white}\n"
-        },
-        {
-            code="03l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+4 Low Rune Points when bagged{white}\n"
-        },
-        {
-            code="04l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+8 Low Rune Points when bagged{white}\n"
-        },
-        {
-            code="05l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+16 Low Rune Points when bagged{white}\n"
-        },
-        {
-            code="06l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+32 Low Rune Points when bagged{white}\n"
-        },
-        {
-            code="07l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+64 Low Rune Points when bagged{white}\n"
-        },
-        {
-            code="08l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+128 Low Rune Points when bagged{white}\n"
-        },
-        {
-            code="09l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+256 Low Rune Points when bagged{white}\n"
-        },
-        {
-            code="10l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+512 Low Rune Points when bagged{white}\n"
-        },
-        {
-            code="11l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+1024 Low Rune Points when bagged{white}\n"
-        },
-        {
-            code="12l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+1 Mid Rune Points when bagged{white}\n"
-        },
-        {
-            code="13l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+2 Mid Rune Points when bagged{white}\n"
-        },
-        {
-            code="14l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+4 Mid Rune Points when bagged{white}\n"
-        },
-        {
-            code="15l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+8 Mid Rune Points when bagged{white}\n"
-        },
-        {
-            code="16l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+16 Mid Rune Points when bagged{white}\n"
-        },
-        {
-            code="17l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+32 Mid Rune Points when bagged{white}\n"
-        },
-        {
-            code="18l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+64 Mid Rune Points when bagged{white}\n"
-        },
-        {
-            code="19l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+128 Mid Rune Points when bagged{white}\n"
-        },
-        {
-            code="20l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+256 Mid Rune Points when bagged{white}\n"
-        },
-        {
-            code="21l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+512 Mid Rune Points when bagged{white}\n"
-        },
-        {
-            code="22l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+1024 Mid Rune Points when bagged{white}\n"
-        },
-        {
-            code="23l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+1 High Rune Points when bagged{white}\n"
-        },
-        {
-            code="24l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+2 High Rune Points when bagged{white}\n"
-        },
-        {
-            code="25l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+4 High Rune Points when bagged{white}\n"
-        },
-        {
-            code="26l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+8 High Rune Points when bagged{white}\n"
-        },
-        {
-            code="27l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+16 High Rune Points when bagged{white}\n"
-        },
-        {
-            code="28l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+32 High Rune Points when bagged{white}\n"
-        },
-        {
-            code="29l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+64 High Rune Points when bagged{white}\n"
-        },
-        {
-            code="30l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+128 High Rune Points when bagged{white}\n"
-        },
-        {
-            code="31l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+256 High Rune Points when bagged{white}\n"
-        },
-        {
-            code="32l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+512 High Rune Points when bagged{white}\n"
-        },
-        {
-            code="33l",
-            location={"onplayer","atvendor"},
-            prefix="{gray}+1024 High Rune Points when bagged{white}\n"
-        },
-        -- Socket info for ground items
-            {   
-            codes = "allitems",
-            location = {"onground"},
-            suffix = " {lilac}[{sockets}]",
-            sockets = "1+"
-        }, 
-        -- Item tooltip Item shows (available/max) sockets for it's ilvl - Thank you Khaos!
-        {
-            codes = "allitems",
-            location = {"onplayer", "atvendor", "equipped", "onground"},
-            suffix_desc = "{gray}Sockets: {dark green}{sockets}{white}/{green}{maxsock} \n{blue}",
-            sockets = "0+",
-            maxsock = false
-        },
-        -- Item tooltip - Item has maximum sockets for it's ilvl
-        {
-            codes = "allitems",
-            location = {"onplayer", "atvendor", "equipped", "onground"},
-            suffix_desc = "{purple}Max Sockets: {green}{sockets}{white}/{green}{maxsock}\n{blue}",
-            sockets = "1+",
-            maxsock = true
-        },
-    }
+// Sully's QoL Filter, converted from Sullys-QoL-Filter.lua (D2RLAN).
+// Its sound files go in the sounds folder next to this file: gong.mp3, map.mp3, mid.mp3,
+// mythical.mp3, other.mp3, t5_map.mp3, tink.mp3, unique.mp3.
+{
+  "formatVersion": 1,
+  "title": "Sully's QoL Filter",
+  "author": "Sully",
+  "version": ".5",
+  "description": "Sully's D2RLAN QoL filter - Full conversion in progress.",
+  "updateurl": "https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.lua",
+  "filterLevels": [
+    {"id": 1, "name": "Leveling"},
+    {"id": 2, "name": "Strict - Nightmare"},
+    {"id": 3, "name": "Very-Strict - Hell (pre-maps)"},
+    {"id": 4, "name": "Uber-Strict - Maps+"}
+  ],
+  "defaultLevel": 3,
+  "styles": {
+    "Mythical": {
+      "chatMessage": "\nÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*\nÿc1*ÿc2*ÿc3*ÿc;* ÿc4MYTHICAL UNIQUE ÿc1*ÿc2*ÿc3*ÿc;*\nÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3",
+      "sound": "mythical.mp3",
+      "labelBackground": [255, 255, 255, 255],
+      "labelBorder": {"color": [240, 0, 0, 230], "width": 2}
+    },
+    "Jackpot": {"sound": "tink.mp3", "labelBackground": [255, 255, 255, 255], "labelBorder": {"color": [240, 0, 0, 230], "width": 2}},
+    "PurpleRune": {
+      "chatMessage": "ÿc8Purple ESR Rune: {name}",
+      "sound": "tink.mp3",
+      "labelBackground": [255, 255, 255, 255],
+      "labelBorder": {"color": [240, 0, 0, 230], "width": 2},
+      "droplight": {"color": [174, 0, 255]}
+    },
+    "STierMaterial": {
+      "chatMessage": "ÿc1*ÿc3*ÿc2*  ÿc4S-Tier Crafting Material ÿc1*ÿc3*ÿc2*: {name}",
+      "sound": "tink.mp3",
+      "labelBackground": [255, 255, 255, 255],
+      "labelBorder": {"color": [255, 0, 0, 255], "width": 1}
+    },
+    "Valuable": {"sound": "tink.mp3", "labelBackground": [255, 255, 255, 255], "labelBorder": {"color": [255, 0, 0, 255], "width": 1}},
+    "GoldPlate": {"labelBackground": [200, 150, 0, 255], "labelBorder": {"color": [0, 0, 0, 255], "width": 1}},
+    "UniqueLabel": {"sound": "unique.mp3", "labelBorder": {"color": [255, 165, 0, 255], "width": 1}},
+    "SetLabel": {"sound": "unique.mp3", "labelBorder": {"color": [0, 255, 0, 255], "width": 1}},
+    "Uber": {"sound": "gong.mp3", "labelBackground": [0, 0, 0, 200], "labelBorder": {"color": [165, 55, 253, 255], "width": 1}},
+    "MapTier1": {"labelBackground": [0, 0, 0, 255], "labelBorder": {"color": [255, 255, 255, 255], "width": 1}},
+    "Map": {"sound": "map.mp3", "labelBackground": [0, 0, 0, 255], "labelBorder": {"color": [255, 255, 255, 255], "width": 1}},
+    "MapTier5": {"sound": "t5_map.mp3", "labelBackground": [255, 255, 255, 255], "labelBorder": {"color": [0, 0, 0, 255], "width": 1}}
+  },
+  "rules": [
+    // Crafting reagents
+    {"itemCodes": ["ddd"], "activeInLevels": [1, 2, 3], "chatMessage": "ÿc1Crafting Reagant: ÿc4Ancient Decipherer"},
+    {"itemCodes": ["sdo"], "chatMessage": "ÿc1Crafting Material: {name}"},
+    {"itemCodes": ["wss"], "chatMessage": "ÿc1Crafting Reagant: ÿc0Worldstone Shard"},
+    {"itemCodes": ["rel"], "chatMessage": "ÿc1Crafting Reagant: ÿc0Relic of Knowledge"},
+    {
+      "itemCodes": ["xl0", "xl1", "xl2", "xl3", "xl4", "xl5", "xl6", "xl7", "xl8", "xl9", "xlx", "xly"],
+      "activeInLevels": [1, 2, 3],
+      "chatMessage": "ÿc1Crafting Reagant: {name}"
+    },
+    {"itemCodes": ["xt0", "xt1", "xt2", "xt3", "xt4", "xt5", "xt6", "xt7", "xt8", "xt9", "xtx", "xty"], "chatMessage": "ÿc1Crafting Reagant: {name}"},
+
+    // Drop announcements: uniques, sets and coupons
+    {
+      "itemTypes": ["weap", "armo"],
+      "excludeItemCodes": [
+        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
+        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
+        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
+        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
+        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
+        "qf1", "qf2"
+      ],
+      "quality": "unique",
+      "baseTier": 0,
+      "activeInLevels": [1, 2],
+      "chatMessage": "ÿc0 ** ÿc5Normal: ÿc4{name} ÿc0**"
+    },
+    {
+      "itemTypes": ["weap", "armo"],
+      "excludeItemCodes": [
+        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
+        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
+        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
+        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
+        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
+        "qf1", "qf2"
+      ],
+      "quality": "unique",
+      "baseTier": 1,
+      "activeInLevels": [1, 2],
+      "chatMessage": "ÿc0 ** ÿc5Exceptional: ÿc4{name} ÿc0**"
+    },
+    {
+      "itemTypes": ["weap", "armo"],
+      "excludeItemCodes": [
+        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
+        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
+        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
+        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
+        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
+        "qf1", "qf2"
+      ],
+      "quality": "unique",
+      "baseTier": 2,
+      "activeInLevels": [1, 2, 3],
+      "chatMessage": "ÿc0 ** ÿc5Elite: ÿc4{name} ÿc0**"
+    },
+    {"quality": "set", "baseTier": 0, "activeInLevels": [1, 2], "chatMessage": "ÿc0 ** ÿc5ÿc2{name}ÿc0 **"},
+    {"quality": "set", "baseTier": 1, "activeInLevels": [1, 2], "chatMessage": "ÿc0 ** ÿc5ÿc2{name}ÿc0 **"},
+    {"quality": "set", "baseTier": 2, "activeInLevels": [1, 2, 3], "chatMessage": "ÿc0 ** ÿc5ÿc2{name}ÿc0 **"},
+    {
+      "itemCodes": [
+        "01c", "02c", "03c", "04c", "05c", "06c", "07c", "08c", "09c", "10c", "11c", "12c", "13c", "14c", "15c",
+        "16c", "17c", "18c", "19c", "20c", "21c", "22c", "23c", "24c", "25c", "26c", "27c", "28c", "29c", "30c",
+        "31c", "32c", "33c", "34c", "35c", "36c", "37c", "38c", "39c", "40c", "41c", "42c", "43c", "44c", "45c",
+        "46c", "01f", "02f", "03f", "04f", "05f", "06f", "07f", "08f", "09f", "10f", "11f", "12f", "13f", "14f",
+        "15f", "16f", "17f", "18f", "19f", "20f", "21f", "22f", "23f", "24f", "25f", "26f", "27f", "28f", "29f",
+        "30f", "31f", "32f", "33f", "34f", "35f", "36f", "37f", "38f", "39f", "40f", "41f", "42f", "43f", "44f",
+        "45f", "46f", "47f", "48f", "49f", "50f", "51f", "52f", "53f", "54f", "55f", "56f", "57f", "58f", "59f",
+        "60f", "61f", "62f", "63f", "64f", "65f", "66f", "67f", "68f", "69f", "70f", "71f", "01i", "02i", "03i",
+        "01j", "02j", "04j", "96j"
+      ],
+      "activeInLevels": [1, 2],
+      "chatMessage": "ÿc4Normal Coupon: ÿc0{name}"
+    },
+    {
+      "itemCodes": [
+        "01d", "02d", "03d", "04d", "05d", "06d", "07d", "08d", "09d", "10d", "11d", "12d", "14d", "15d", "16d",
+        "17d", "18d", "19d", "20d", "21d", "22d", "23d", "24d", "25d", "26d", "27d", "28d", "29d", "30d", "31d",
+        "32d", "33d", "34d", "35d", "36d", "37d", "38d", "39d", "40d", "41d", "42d", "43d", "44d", "45d", "46d",
+        "47d", "48d", "49d", "50d", "01g", "02g", "03g", "04g", "05g", "06g", "07g", "08g", "09g", "10g", "11g",
+        "12g", "13g", "14g", "15g", "16g", "17g", "18g", "19g", "20g", "21g", "22g", "23g", "24g", "25g", "26g",
+        "27g", "28g", "29g", "30g", "31g", "32g", "33g", "34g", "35g", "36g", "37g", "38g", "39g", "40g", "41g",
+        "42g", "43g", "44g", "45g", "46g", "47g", "48g", "49g", "50g", "51g", "52g", "53g", "54g", "55g", "56g",
+        "57g", "58g", "59g", "60g", "61g", "62g", "63g", "64g", "65g", "66g", "67g", "68g", "69g", "70g", "71g",
+        "72g", "73g", "74g", "75g", "76g", "77g", "78g", "05i", "06i", "07i", "08i", "05j", "06j", "07j", "08j",
+        "04i", "51d", "97j"
+      ],
+      "activeInLevels": [1, 2, 3],
+      "chatMessage": "ÿc4Exceptional Coupon: ÿc0{name}"
+    },
+    {
+      "itemCodes": [
+        "01e", "02e", "04e", "05e", "07e", "08e", "09e", "10e", "11e", "12e", "13d", "13e", "14e", "15e", "16e", "18e",
+        "19e", "20e", "21e", "22e", "23e", "24e", "25e", "26e", "27e", "28e", "29e", "30e", "31e", "32e", "33e",
+        "34e", "35e", "36e", "37e", "38e", "39e", "01h", "02k", "03h", "04h", "05h", "06h", "07h", "08h", "09h",
+        "10h", "11h", "12k", "13h", "14h", "15h", "16h", "17h", "18h", "19h", "20h", "21h", "22k", "23h", "24h",
+        "25h", "26h", "27h", "28h", "29h", "30h", "31h", "32k", "33h", "34h", "35h", "36h", "37h", "38h", "39h",
+        "40h", "41h", "42k", "43h", "44h", "45h", "47h", "48h", "49h", "50h", "51h", "52k", "53h", "54h", "55h",
+        "56h", "57h", "58h", "59h", "60h", "61h", "62k", "09i", "10i", "11i", "12i", "09j", "10j", "11j", "12j",
+        "13i", "42e", "43e", "44e", "45e", "46e", "47e", "63k", "64k", "98j"
+      ],
+      "activeInLevels": [1, 2, 3],
+      "chatMessage": "ÿc4Elite Coupon: ÿc0{name}"
+    },
+
+    // Class jewellery, reagents and perfect gems
+    {
+      "itemCodes": ["zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"],
+      "quality": "rare",
+      "activeInLevels": [1, 2, 3],
+      "chatMessage": "Class Jewellery: ÿc9{name}"
+    },
+    {
+      "itemCodes": ["qll", "hrt", "brz", "jaw", "eyz", "hrn", "tal", "flg", "fng", "sol", "scz", "spe", "zzz"],
+      "activeInLevels": [1, 2, 3],
+      "chatMessage": "ÿc1Crafting Reagant: ÿc0{name}"
+    },
+    {"itemCodes": ["hrt", "sol"], "activeInLevels": [4], "chatMessage": "ÿc1Crafting Reagant: ÿc0{name}"},
+    {"itemCodes": ["gvb", "gyb", "gbb", "ggb", "grb", "gwb", "skb", "gbk"], "activeInLevels": [1, 2, 3], "chatMessage": "{name}"},
+
+    // Bases worth a look: tags on their stats
+    {
+      "itemCodes": ["ylb", "yvb", "ymb", "ytb", "yhb", "ybt", "ulb", "uvb", "umb", "utb", "uhb"],
+      "itemStats": [{"stat": 96, "op": ">=", "value": 20}],
+      "nameSuffix": "ÿc1[{stat:96}%FRW]"
+    },
+    {
+      "itemCodes": ["ylb", "yvb", "ymb", "ytb", "yhb", "ybt", "ulb", "uvb", "umb", "utb", "uhb"],
+      "itemStats": [{"stat": 336, "op": ">=", "value": 8}],
+      "nameSuffix": "ÿc1[-{stat:333}% Res Pierce]"
+    },
+    {
+      "itemCodes": ["alb", "avb", "bmb", "atb", "ahb", "yms", "ulc", "uvc", "umc", "utc", "uhc", "m10"],
+      "itemStats": [{"stat": 336, "op": ">=", "value": 8}],
+      "nameSuffix": "ÿc1[-{stat:333}% Res Pierce]"
+    },
+    {
+      "itemCodes": ["alb", "avb", "bmb", "atb", "ahb", "yms", "ulc", "uvc", "umc", "utc", "uhc", "m10"],
+      "itemStats": [{"stat": 36, "op": ">=", "value": 8}],
+      "nameSuffix": "ÿc1[{stat:36}% Phys Res]"
+    },
+    {
+      "itemCodes": ["0pb", "amb", "amc", "q80", "amf", "q82", "m31", "amd", "ame", "q81"],
+      "quality": "superior",
+      "itemStatsAnyOf": [{"stat": 188, "op": ">=", "value": 3}, {"stat": 188, "param": 1, "op": ">=", "value": 3}, {"stat": 188, "param": 2, "op": ">=", "value": 3}, {"stat": 188, "param": 3, "op": ">=", "value": 3}, {"stat": 188, "param": 4, "op": ">=", "value": 3}, {"stat": 188, "param": 5, "op": ">=", "value": 3}, {"stat": 188, "param": 6, "op": ">=", "value": 3}, {"stat": 188, "param": 7, "op": ">=", "value": 3}, {"stat": 188, "param": 8, "op": ">=", "value": 3}, {"stat": 188, "param": 9, "op": ">=", "value": 3}, {"stat": 188, "param": 10, "op": ">=", "value": 3}, {"stat": 188, "param": 11, "op": ">=", "value": 3}, {"stat": 188, "param": 12, "op": ">=", "value": 3}, {"stat": 188, "param": 13, "op": ">=", "value": 3}, {"stat": 188, "param": 14, "op": ">=", "value": 3}, {"stat": 188, "param": 15, "op": ">=", "value": 3}, {"stat": 188, "param": 16, "op": ">=", "value": 3}, {"stat": 188, "param": 17, "op": ">=", "value": 3}, {"stat": 188, "param": 18, "op": ">=", "value": 3}, {"stat": 188, "param": 19, "op": ">=", "value": 3}, {"stat": 188, "param": 20, "op": ">=", "value": 3}, {"stat": 188, "param": 21, "op": ">=", "value": 3}],
+      "nameSuffix": "ÿc1[+3]"
+    },
+    {
+      "itemCodes": ["1ss", "1ls", "1cs", "1bs", "1ws", "6ss", "6ls", "6cs", "6bs", "6ws", "m29", "m36", "m11"],
+      "quality": "superior",
+      "itemStatsAnyOf": [{"stat": 188, "op": "==", "value": 4}, {"stat": 188, "param": 1, "op": "==", "value": 4}, {"stat": 188, "param": 2, "op": "==", "value": 4}, {"stat": 188, "param": 3, "op": "==", "value": 4}, {"stat": 188, "param": 4, "op": "==", "value": 4}, {"stat": 188, "param": 5, "op": "==", "value": 4}, {"stat": 188, "param": 6, "op": "==", "value": 4}, {"stat": 188, "param": 7, "op": "==", "value": 4}, {"stat": 188, "param": 8, "op": "==", "value": 4}, {"stat": 188, "param": 9, "op": "==", "value": 4}, {"stat": 188, "param": 10, "op": "==", "value": 4}, {"stat": 188, "param": 11, "op": "==", "value": 4}, {"stat": 188, "param": 12, "op": "==", "value": 4}, {"stat": 188, "param": 13, "op": "==", "value": 4}, {"stat": 188, "param": 14, "op": "==", "value": 4}, {"stat": 188, "param": 15, "op": "==", "value": 4}, {"stat": 188, "param": 16, "op": "==", "value": 4}, {"stat": 188, "param": 17, "op": "==", "value": 4}, {"stat": 188, "param": 18, "op": "==", "value": 4}, {"stat": 188, "param": 19, "op": "==", "value": 4}, {"stat": 188, "param": 20, "op": "==", "value": 4}, {"stat": 188, "param": 21, "op": ">=", "value": 4}],
+      "nameSuffix": "ÿc1[+4]"
+    },
+    {
+      "itemCodes": ["1ss", "1ls", "1cs", "1bs", "1ws", "6ss", "6ls", "6cs", "6bs", "6ws", "m29", "m36", "m11"],
+      "quality": "superior",
+      "itemStatsAnyOf": [{"stat": 188, "op": "==", "value": 5}, {"stat": 188, "param": 1, "op": "==", "value": 5}, {"stat": 188, "param": 2, "op": "==", "value": 5}, {"stat": 188, "param": 3, "op": "==", "value": 5}, {"stat": 188, "param": 4, "op": "==", "value": 5}, {"stat": 188, "param": 5, "op": "==", "value": 5}, {"stat": 188, "param": 6, "op": "==", "value": 5}, {"stat": 188, "param": 7, "op": "==", "value": 5}, {"stat": 188, "param": 8, "op": "==", "value": 5}, {"stat": 188, "param": 9, "op": "==", "value": 5}, {"stat": 188, "param": 10, "op": "==", "value": 5}, {"stat": 188, "param": 11, "op": "==", "value": 5}, {"stat": 188, "param": 12, "op": "==", "value": 5}, {"stat": 188, "param": 13, "op": "==", "value": 5}, {"stat": 188, "param": 14, "op": "==", "value": 5}, {"stat": 188, "param": 15, "op": "==", "value": 5}, {"stat": 188, "param": 16, "op": "==", "value": 5}, {"stat": 188, "param": 17, "op": "==", "value": 5}, {"stat": 188, "param": 18, "op": "==", "value": 5}, {"stat": 188, "param": 19, "op": "==", "value": 5}, {"stat": 188, "param": 20, "op": "==", "value": 5}, {"stat": 188, "param": 21, "op": "==", "value": 5}],
+      "nameSuffix": "ÿc1[+5]"
+    },
+    {
+      "itemCodes": ["ylg", "yvg", "ymg", "ytg", "yhg", "yig", "ulg", "uvg", "umg", "utg", "uhg"],
+      "quality": "superior",
+      "itemStats": [{"stat": 93, "op": ">=", "value": 20}],
+      "nameSuffix": "ÿc1[{stat:93}% IAS]"
+    },
+    {
+      "itemCodes": ["ylg", "yvg", "ymg", "ytg", "yhg", "yig", "ulg", "uvg", "umg", "utg", "uhg"],
+      "quality": "superior",
+      "itemStats": [{"stat": 105, "op": ">=", "value": 20}],
+      "nameSuffix": "ÿc1[{stat:105}% FCR]"
+    },
+    {
+      "itemCodes": ["ylg", "yvg", "ymg", "ytg", "yhg", "yig", "ulg", "uvg", "umg", "utg", "uhg"],
+      "itemStats": [{"stat": 336, "op": ">=", "value": 8}],
+      "nameSuffix": "ÿc1-{stat:333}% Enemy Res"
+    },
+
+    // Gold and low-value items
+    {"itemCodes": ["gld"], "itemStats": [{"stat": 14, "op": "<=", "value": 1}], "hide": true},
+    {
+      "itemCodes": ["gld"],
+      "itemStats": [{"stat": 14, "op": "<=", "value": 99}],
+      "playerStats": [{"stat": 12, "op": ">=", "value": 20}],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "hide": true
+    },
+    {
+      "itemCodes": ["gld"],
+      "itemStats": [{"stat": 14, "op": "<=", "value": 499}],
+      "playerStats": [{"stat": 12, "op": ">=", "value": 60}],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "hide": true
+    },
+    {
+      "itemCodes": ["gld"],
+      "itemStats": [{"stat": 14, "op": "<=", "value": 749}],
+      "playerStats": [{"stat": 12, "op": ">=", "value": 80}],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "hide": true
+    },
+    {
+      "itemCodes": ["gld"],
+      "itemStats": [{"stat": 14, "op": "<=", "value": 1999}],
+      "playerStats": [{"stat": 12, "op": ">=", "value": 90}],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "hide": true
+    },
+    {"itemCodes": ["gld"], "replaceName": "ÿc0$$"},
+    {"itemCodes": ["vps", "yps", "gpm", "opm", "wms", "tbk", "ibk", "tsc", "isc", "hp1", "mp1"], "excludeAreas": [1, 40, 75, 103, 109], "hide": true},
+    {"quality": "inferior", "playerStats": [{"stat": 12, "op": ">=", "value": 10}], "excludeAreas": [1, 40, 75, 103, 109], "hide": true},
+    {
+      "itemTypes": ["weap", "armo"],
+      "excludeItemCodes": [
+        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
+        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
+        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
+        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
+        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
+        "qf1", "qf2"
+      ],
+      "quality": "normal",
+      "sockets": {"max": 1},
+      "playerStats": [{"stat": 12, "op": ">=", "value": 10}],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "hide": true
+    },
+    {
+      "itemCodes": ["aq0", "aq2", "aqv", "cq0", "cq2", "cqv"],
+      "quality": "normal",
+      "sockets": {"max": 1},
+      "playerStats": [{"stat": 12, "op": ">=", "value": 10}],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "hide": true
+    },
+    {
+      "itemTypes": ["weap", "armo"],
+      "excludeItemCodes": [
+        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
+        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
+        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
+        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
+        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
+        "qf1", "qf2"
+      ],
+      "quality": "magic",
+      "playerStats": [{"stat": 12, "op": ">=", "value": 20}],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "hide": true
+    },
+    {
+      "itemCodes": ["aq0", "aq2", "aqv", "cq0", "cq2", "cqv"],
+      "quality": "magic",
+      "playerStats": [{"stat": 12, "op": ">=", "value": 20}],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "hide": true
+    },
+    {"itemCodes": ["hp2", "mp2"], "playerStats": [{"stat": 12, "op": ">=", "value": 20}], "excludeAreas": [1, 40, 75, 103, 109], "hide": true},
+    {
+      "itemCodes": ["gcv", "gcy", "gcb", "gcg", "gcr", "gcw", "skc", "gck"],
+      "playerStats": [{"stat": 12, "op": ">=", "value": 20}],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "hide": true
+    },
+    {"itemCodes": ["hp3", "mp3"], "playerStats": [{"stat": 12, "op": ">=", "value": 40}], "excludeAreas": [1, 40, 75, 103, 109], "hide": true},
+    {
+      "itemCodes": ["hp4", "hp5", "mp4", "mp5"],
+      "playerStats": [{"stat": 12, "op": ">=", "value": 40}],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "hide": true
+    },
+
+    // Strictness levels
+    {
+      "itemCodes": ["01l", "02l", "03l", "04l", "05l", "06l", "07l", "08l", "09l", "r51", "r52", "r53", "r54", "r55", "r56", "r57", "r58", "r59"],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [2],
+      "hide": true
+    },
+    {
+      "itemCodes": ["r01", "r02", "r03", "r04", "r05", "r08", "r09", "r10", "r11", "r12", "r15", "r16", "r17", "r18", "r19", "r20", "r21"],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [2],
+      "hide": true
+    },
+    {"itemCodes": ["rng", "amu"], "quality": {"max": "magic"}, "excludeAreas": [1, 40, 75, 103, 109], "activeInLevels": [3], "hide": true},
+    {
+      "itemCodes": [
+        "01l", "02l", "03l", "04l", "05l", "06l", "07l", "08l", "09l", "10l", "11l", "12l", "13l", "14l", "15l",
+        "16l", "17l", "18l", "19l", "20l", "21l", "22l", "r51", "r52", "r53", "r54", "r55", "r56", "r57", "r58",
+        "r59", "r60", "r61", "r62", "r63", "r64", "r65", "r66", "r67", "r68", "r69", "r70", "r71", "r72"
+      ],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [3],
+      "hide": true
+    },
+    {
+      "itemCodes": [
+        "r01", "r02", "r03", "r04", "r05", "r06", "r07", "r08", "r09", "r10", "r11", "r12", "r13", "r14", "r15",
+        "r16", "r17", "r18", "r19", "r20", "r21", "r22", "r23", "r24", "r25", "r26", "r27", "r28"
+      ],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [3],
+      "hide": true
+    },
+    {
+      "itemCodes": [
+        "01c", "02c", "03c", "04c", "05c", "06c", "07c", "08c", "09c", "10c", "11c", "12c", "13c", "14c", "15c",
+        "16c", "17c", "18c", "19c", "20c", "21c", "22c", "23c", "24c", "25c", "26c", "27c", "28c", "29c", "30c",
+        "31c", "32c", "33c", "34c", "35c", "36c", "37c", "38c", "39c", "40c", "41c", "42c", "43c", "44c", "45c",
+        "46c", "01f", "02f", "03f", "04f", "05f", "06f", "07f", "08f", "09f", "10f", "11f", "12f", "13f", "14f",
+        "15f", "16f", "17f", "18f", "19f", "20f", "21f", "22f", "23f", "24f", "25f", "26f", "27f", "28f", "29f",
+        "30f", "31f", "32f", "33f", "34f", "35f", "36f", "37f", "38f", "39f", "40f", "41f", "42f", "43f", "44f",
+        "45f", "46f", "47f", "48f", "49f", "50f", "51f", "52f", "53f", "54f", "55f", "56f", "57f", "58f", "59f",
+        "60f", "61f", "62f", "63f", "64f", "65f", "66f", "67f", "68f", "69f", "70f", "71f", "01i", "02i", "03i",
+        "01j", "02j", "04j", "96j"
+      ],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [3],
+      "hide": true
+    },
+    {
+      "itemCodes": [
+        "rng", "amu", "zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam",
+        "aam", "cm1", "cm2", "cm3", "cx1", "cx2", "cx3"
+      ],
+      "quality": "magic",
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [3],
+      "hide": true
+    },
+    {
+      "itemTypes": ["weap", "armo"],
+      "excludeItemCodes": [
+        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
+        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
+        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
+        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
+        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "kgk", "leg", "msf", "opl", "opm",
+        "ops", "qf1", "qf2"
+      ],
+      "quality": "unique",
+      "baseTier": 0,
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [3],
+      "hide": true
+    },
+    {
+      "itemTypes": ["weap", "armo"],
+      "excludeItemCodes": [
+        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
+        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
+        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
+        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
+        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "kgk", "leg", "msf", "opl", "opm",
+        "ops", "qf1", "qf2"
+      ],
+      "quality": "normal",
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [3],
+      "hide": true
+    },
+    {"itemCodes": ["rvs"], "excludeAreas": [1, 40, 75, 103, 109], "activeInLevels": [3], "hide": true},
+    {"quality": "set", "baseTier": {"max": 1}, "excludeAreas": [1, 40, 75, 103, 109], "activeInLevels": [3], "hide": true},
+    {"quality": "superior", "baseTier": {"max": 1}, "excludeAreas": [1, 40, 75, 103, 109], "activeInLevels": [3], "hide": true},
+    {
+      "itemCodes": ["gzv", "gly", "glb", "glg", "glr", "glw", "skl", "gzk"],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [3],
+      "hide": true
+    },
+    {
+      "itemCodes": ["cqv", "cq2", "cq0", "aq0", "aq2", "aqv"],
+      "quality": {"max": "superior"},
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [3],
+      "hide": true
+    },
+    {
+      "itemTypes": ["weap", "armo"],
+      "excludeItemCodes": [
+        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
+        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
+        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
+        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
+        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
+        "qf1", "qf2"
+      ],
+      "quality": "rare",
+      "sockets": 0,
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [3],
+      "hide": true
+    },
+    {
+      "itemCodes": [
+        "01l", "02l", "03l", "04l", "05l", "06l", "07l", "08l", "09l", "10l", "11l", "12l", "13l", "14l", "15l",
+        "16l", "17l", "18l", "19l", "20l", "21l", "22l", "r51", "r52", "r53", "r54", "r55", "r56", "r57", "r58",
+        "r59", "r60", "r61", "r62", "r63", "r64", "r65", "r66", "r67", "r68", "r69", "r70", "r71", "r72"
+      ],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [4],
+      "hide": true
+    },
+    {
+      "itemCodes": [
+        "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15",
+        "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31",
+        "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39"
+      ],
+      "quality": "magic",
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [4],
+      "hide": true
+    },
+    {
+      "itemCodes": [
+        "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15",
+        "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31",
+        "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39"
+      ],
+      "quality": "normal",
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [4],
+      "hide": true
+    },
+    {"itemCodes": ["z01", "z02", "z03", "z04"], "activeInLevels": [4], "hide": true},
+    {
+      "itemCodes": [
+        "r01", "r02", "r03", "r04", "r05", "r06", "r07", "r08", "r09", "r10", "r11", "r12", "r13", "r14", "r15",
+        "r16", "r17", "r18", "r19", "r20", "r21", "r22", "r23", "r24", "r25", "r26", "r27", "r28", "r29", "r30",
+        "r31", "r32", "r33", "r34", "r35"
+      ],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [4],
+      "hide": true
+    },
+    {
+      "itemTypes": ["weap", "armo"],
+      "excludeItemCodes": [
+        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
+        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
+        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
+        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
+        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "kgk", "leg", "msf", "opl", "opm",
+        "ops", "qf1", "qf2"
+      ],
+      "quality": "unique",
+      "baseTier": {"max": 1},
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [4],
+      "hide": true
+    },
+    {"quality": "set", "excludeAreas": [1, 40, 75, 103, 109], "activeInLevels": [4], "hide": true},
+    {
+      "itemCodes": [
+        "mrn", "mam", "rin", "amu", "zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam",
+        "bam", "dam", "aam", "cm1", "cm2", "cm3", "cx1", "cx2", "cx3"
+      ],
+      "quality": "magic",
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [4],
+      "hide": true
+    },
+    {
+      "itemTypes": ["weap", "armo"],
+      "excludeItemCodes": [
+        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
+        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
+        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
+        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
+        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
+        "qf1", "qf2"
+      ],
+      "quality": {"max": "superior"},
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [4],
+      "hide": true
+    },
+    {
+      "itemTypes": ["weap", "armo"],
+      "excludeItemCodes": [
+        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
+        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
+        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
+        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
+        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
+        "qf1", "qf2"
+      ],
+      "quality": "rare",
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [4],
+      "hide": true
+    },
+    {
+      "itemCodes": ["aq0", "aq2", "aqv", "cq0", "cq2", "cqv"],
+      "quality": "rare",
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [4],
+      "hide": true
+    },
+    {
+      "itemCodes": ["gzv", "gpv", "gly", "gpy", "glb", "gpb", "glg", "gpg", "glr", "gpr", "glw", "gpw", "skl", "skz", "gzk", "gpk"],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [4],
+      "hide": true
+    },
+    {"itemCodes": ["rvs"], "excludeAreas": [1, 40, 75, 103, 109], "activeInLevels": [4], "hide": true},
+    {
+      "itemCodes": ["cqv", "cq2", "cq0", "aq0", "aq2", "aqv"],
+      "quality": {"max": "unique"},
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [4],
+      "hide": true
+    },
+    {"itemCodes": ["ddd"], "excludeAreas": [1, 40, 75, 103, 109], "activeInLevels": [4], "hide": true},
+    {
+      "itemCodes": [
+        "01c", "02c", "03c", "04c", "05c", "06c", "07c", "08c", "09c", "10c", "11c", "12c", "13c", "14c", "15c",
+        "16c", "17c", "18c", "19c", "20c", "21c", "22c", "23c", "24c", "25c", "26c", "27c", "28c", "29c", "30c",
+        "31c", "32c", "33c", "34c", "35c", "36c", "37c", "38c", "39c", "40c", "41c", "42c", "43c", "44c", "45c",
+        "46c", "01f", "02f", "03f", "04f", "05f", "06f", "07f", "08f", "09f", "10f", "11f", "12f", "13f", "14f",
+        "15f", "16f", "17f", "18f", "19f", "20f", "21f", "22f", "23f", "24f", "25f", "26f", "27f", "28f", "29f",
+        "30f", "31f", "32f", "33f", "34f", "35f", "36f", "37f", "38f", "39f", "40f", "41f", "42f", "43f", "44f",
+        "45f", "46f", "47f", "48f", "49f", "50f", "51f", "52f", "53f", "54f", "55f", "56f", "57f", "58f", "59f",
+        "60f", "61f", "62f", "63f", "64f", "65f", "66f", "67f", "68f", "69f", "70f", "71f", "01i", "02i", "03i",
+        "01j", "02j", "04j", "96j"
+      ],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [4],
+      "hide": true
+    },
+    {
+      "itemCodes": [
+        "01d", "02d", "03d", "04d", "05d", "06d", "07d", "08d", "09d", "10d", "11d", "12d", "14d", "15d", "16d",
+        "17d", "18d", "19d", "20d", "21d", "22d", "23d", "24d", "25d", "26d", "27d", "28d", "29d", "30d", "31d",
+        "32d", "33d", "34d", "35d", "36d", "37d", "38d", "39d", "40d", "41d", "42d", "43d", "44d", "45d", "46d",
+        "47d", "48d", "49d", "50d", "01g", "02g", "03g", "04g", "05g", "06g", "07g", "08g", "09g", "10g", "11g",
+        "12g", "13g", "14g", "15g", "16g", "17g", "18g", "19g", "20g", "21g", "22g", "23g", "24g", "25g", "26g",
+        "27g", "28g", "29g", "30g", "31g", "32g", "33g", "34g", "35g", "36g", "37g", "38g", "39g", "40g", "41g",
+        "42g", "43g", "44g", "45g", "46g", "47g", "48g", "49g", "50g", "51g", "52g", "53g", "54g", "55g", "56g",
+        "57g", "58g", "59g", "60g", "61g", "62g", "63g", "64g", "65g", "66g", "67g", "68g", "69g", "70g", "71g",
+        "72g", "73g", "74g", "75g", "76g", "77g", "78g", "05i", "06i", "07i", "08i", "05j", "06j", "07j", "08j",
+        "04i", "51d", "97j"
+      ],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [4],
+      "hide": true
+    },
+    {
+      "itemTypes": ["weap", "armo"],
+      "excludeItemCodes": [
+        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
+        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
+        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
+        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
+        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
+        "qf1", "qf2"
+      ],
+      "quality": "unique",
+      "baseTier": 2,
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "activeInLevels": [4],
+      "hide": true
+    },
+
+    // Jewels, potions and special items
+    {
+      "itemCodes": ["jew"],
+      "quality": "rare",
+      "replaceName": "ÿc9{name}",
+      "chatMessage": "ÿc9** Rare Jewel **",
+      "sound": "other.mp3",
+      "labelBackground": [0, 0, 0, 255],
+      "labelBorder": {"color": [0, 200, 200, 255], "width": 1}
+    },
+    {"itemCodes": ["rvs"], "replaceName": "ÿc0*ÿc;25%ÿc0*", "labelBorder": {"color": [128, 0, 128, 255], "width": 1}},
+    {"itemCodes": ["rvl"], "replaceName": "ÿc0*ÿc;50%ÿc0*", "labelBorder": {"color": [128, 0, 128, 255], "width": 1}},
+    {"itemCodes": ["po3"], "replaceName": "ÿc;*ÿc0Fullÿc;*", "labelBorder": {"color": [128, 0, 128, 255], "width": 1}},
+    {
+      "itemCodes": ["ore"],
+      "replaceName": "ÿc6Ore",
+      "namePrefix": "ÿc2$$",
+      "nameSuffix": "ÿc2$$",
+      "labelBackground": [255, 215, 150, 242],
+      "labelBorder": {"color": [0, 0, 0, 255], "width": 1}
+    },
+    {
+      "itemCodes": ["fkn"],
+      "replaceName": "ÿc6Fake Note",
+      "namePrefix": "ÿc2$$",
+      "nameSuffix": "ÿc2$$",
+      "labelBackground": [255, 215, 150, 242],
+      "labelBorder": {"color": [0, 0, 0, 255], "width": 1}
+    },
+    {
+      "itemCodes": ["ppp"],
+      "location": ["stored", "atVendor", "onGround"],
+      "replaceName": "ÿc;D-Stone",
+      "labelBorder": {"color": [128, 0, 128, 255], "width": 1}
+    },
+    {"itemCodes": ["sdo"], "replaceName": "ÿc6Socket Donut", "sound": "mid.mp3", "useStyle": "GoldPlate"},
+    {
+      "itemCodes": ["um7"],
+      "chatMessage": "ÿc1*ÿc2*ÿc3* ÿc1Rare Crafting Reagant: ÿc; Orb of Annointment ÿc1*ÿc2*ÿc3*",
+      "labelBackground": [255, 255, 255, 250],
+      "labelBorder": {"color": [150, 0, 200, 250], "width": 1}
+    },
+    {"itemCodes": ["wss"], "replaceName": "ÿc6Worldstone Shard", "sound": "mid.mp3", "useStyle": "GoldPlate"},
+    {"itemCodes": ["rel"], "replaceName": "ÿc6Relice of Knowledge", "sound": "mid.mp3", "useStyle": "GoldPlate"},
+
+    {
+      "itemCodes": ["map"],
+      "replaceName": "ÿc6Maple Leaf",
+      "chatMessage": "ÿc1*ÿc2*ÿc3* ÿc1Rare Crafting Reagant: ÿc4 Maple Leaf ÿc1*ÿc2*ÿc3*",
+      "sound": "gong.mp3",
+      "useStyle": "GoldPlate"
+    },
+    {
+      "itemCodes": ["qqq"],
+      "replaceName": "ÿc6Anvil Stone",
+      "chatMessage": "ÿc1*ÿc2*ÿc3* ÿc1Rare Crafting Reagant: ÿc4 Anvil Stone ÿc1*ÿc2*ÿc3*",
+      "sound": "gong.mp3",
+      "useStyle": "GoldPlate"
+    },
+    {
+      "itemCodes": ["elx"],
+      "replaceName": "ÿc6Elixir",
+      "chatMessage": "ÿc1*ÿc2*ÿc3* ÿc1Rare Crafting Reagant: ÿc4 Elixir ÿc1*ÿc2*ÿc3*",
+      "sound": "gong.mp3",
+      "useStyle": "GoldPlate"
+    },
+    {
+      "itemCodes": ["yyy"],
+      "replaceName": "ÿc6Cookbook",
+      "chatMessage": "ÿc1*ÿc2*ÿc3* ÿc1Rare Crafting Reagant: ÿc4 Cookbook ÿc1*ÿc2*ÿc3*",
+      "sound": "gong.mp3",
+      "useStyle": "GoldPlate"
+    },
+    {
+      "itemCodes": ["map", "elx", "yyy", "qqq"],
+      "location": ["stored", "atVendor"],
+      "namePrefix": "ÿc0Cube with Multi-Stocker to store\nÿc1 Rare Crafting Reagant \n"
+    },
+    {"itemCodes": ["um8"], "replaceName": "ÿcPLilith's Crystallized Tear", "useStyle": "STierMaterial"},
+    {"itemCodes": ["um9"], "replaceName": "ÿcPTyrael's Eternal Feather", "useStyle": "STierMaterial"},
+    {"itemCodes": ["u17"], "replaceName": "ÿcPLucion's Essence", "useStyle": "STierMaterial"},
+    {"itemCodes": ["u20"], "replaceName": "ÿcPAstrogha's Petrified Heart", "useStyle": "STierMaterial"},
+    {
+      "itemCodes": ["an3", "an4", "an5", "an6", "an7", "an8", "an9", "a10"],
+      "replaceName": "ÿc1{name}",
+      "chatMessage": "ÿc1*ÿc3*ÿc2*  ÿc8Aura Stone ÿc1*ÿc3*ÿc2*",
+      "useStyle": "Valuable"
+    },
+    {
+      "itemCodes": ["an3"],
+      "location": ["stored", "atVendor"],
+      "namePrefix": "ÿc2 Lvl 10 Blessed Aim Aura when equipped\nÿc0Cube with any Amulet and a chipped gem to forge:\n ÿc1Rare Crafting Material\n"
+    },
+    {
+      "itemCodes": ["an4"],
+      "location": ["stored", "atVendor"],
+      "namePrefix": "ÿc1 Lvl 15 Concentration Aura when equipped\nÿc0Cube with any Amulet and a chipped gem to forge:\n ÿc1Rare Crafting Material\n"
+    },
+    {
+      "itemCodes": ["an5"],
+      "location": ["stored", "atVendor"],
+      "namePrefix": "ÿc; Lvl 20 Defiance Aura when equipped\nÿc0Cube with any Amulet and a chipped gem to forge:\n ÿc1Rare Crafting Material\n"
+    },
+    {
+      "itemCodes": ["an6"],
+      "location": ["stored", "atVendor"],
+      "namePrefix": "ÿc9 Lvl 10 Vigor Aura when equipped\nÿc0Cube with any Amulet and a chipped gem to forge:\n ÿc1Rare Crafting Material\n"
+    },
+    {
+      "itemCodes": ["an7"],
+      "location": ["stored", "atVendor"],
+      "namePrefix": "ÿc5 Lvl 30 Thorns Aura when equipped\nÿc0Cube with any Amulet and a chipped gem to forge:\n ÿc1Rare Crafting Material\n"
+    },
+    {
+      "itemCodes": ["an8"],
+      "location": ["stored", "atVendor"],
+      "namePrefix": "ÿc4 Lvl 21 Conviction Aura when equipped\nÿc0Cube with any Amulet and a chipped gem to forge:\n ÿc1Rare Crafting Material\n"
+    },
+    {
+      "itemCodes": ["an9"],
+      "location": ["stored", "atVendor"],
+      "namePrefix": "ÿc3 Lvl 15 Meditation Aura when equipped\nÿc0Cube with any Amulet and a chipped gem to forge:\n ÿc1Rare Crafting Material\n"
+    },
+
+    // Unique and set labels
+    {
+      "itemTypes": ["weap", "armo"],
+      "excludeItemCodes": [
+        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
+        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
+        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
+        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
+        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
+        "qf1", "qf2"
+      ],
+      "quality": "unique",
+      "baseTier": 0,
+      "activeInLevels": [1, 2],
+      "useStyle": "UniqueLabel"
+    },
+    {
+      "itemTypes": ["weap", "armo"],
+      "excludeItemCodes": [
+        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
+        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
+        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
+        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
+        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
+        "qf1", "qf2"
+      ],
+      "quality": "unique",
+      "baseTier": 1,
+      "activeInLevels": [1, 2],
+      "useStyle": "UniqueLabel"
+    },
+    {
+      "itemTypes": ["weap", "armo"],
+      "excludeItemCodes": [
+        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
+        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
+        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
+        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
+        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
+        "qf1", "qf2"
+      ],
+      "quality": "unique",
+      "baseTier": 2,
+      "activeInLevels": [1, 2, 3],
+      "useStyle": "UniqueLabel"
+    },
+    {
+      "itemCodes": ["rin", "amu", "zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"],
+      "quality": "unique",
+      "chatMessage": "ÿc1*ÿc2*ÿc3 ÿc4{name} ÿc1*ÿc2*ÿc3",
+      "sound": "other.mp3",
+      "labelBorder": {"color": [255, 0, 0, 255], "width": 1}
+    },
+    {"itemCodes": ["aq2", "cq2", "aqv", "cqv", "cq0", "aq0"], "quality": "unique", "chatMessage": "ÿc0 ** ÿc4{name} ÿc0**", "useStyle": "UniqueLabel"},
+    {
+      "itemCodes": ["cm1", "cm2", "cm3", "jew", "cm4", "mjw", "z99"],
+      "quality": "unique",
+      "chatMessage": "ÿc1*ÿc2*ÿc3 ÿc4{name} ÿc1*ÿc2*ÿc3",
+      "useStyle": "Jackpot"
+    },
+    {"quality": "set", "baseTier": 0, "activeInLevels": [1, 2], "useStyle": "SetLabel"},
+    {"quality": "set", "baseTier": 1, "activeInLevels": [1, 2], "useStyle": "SetLabel"},
+    {"quality": "set", "baseTier": 2, "activeInLevels": [1, 2, 3], "useStyle": "SetLabel"},
+    {
+      "itemTypes": ["weap", "armo"],
+      "excludeItemCodes": [
+        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
+        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
+        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
+        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
+        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
+        "qf1", "qf2"
+      ],
+      "quality": "unique",
+      "replaceName": "ÿc5[{baseTier}]ÿc4{name}"
+    },
+    {"quality": "set", "replaceName": "ÿc5[{baseTier}]ÿc2{name}"},
+    {
+      "itemCodes": [
+        "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15",
+        "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31",
+        "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39"
+      ],
+      "quality": "superior",
+      "labelBackground": [0, 50, 50, 255],
+      "labelBorder": {"color": [0, 0, 0, 255], "width": 1}
+    },
+
+    // Mythical uniques
+    {"itemCodes": ["mrn"], "quality": "unique", "replaceName": "Marksmen Bow", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["au9"], "quality": "unique", "replaceName": "Amulet", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m01"], "quality": "unique", "replaceName": "Marksmen Bow", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m02"], "quality": "unique", "replaceName": "Odysseus Crossbow", "useStyle": "Mythical"},
+    {"itemCodes": ["m03"], "quality": "unique", "replaceName": "Titan's Maul", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m04"], "quality": "unique", "replaceName": "Demonic Wand", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m05"], "quality": "unique", "replaceName": "Soul Destroyer", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m06"], "quality": "unique", "replaceName": "Gemstoned Armor", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m07"], "quality": "unique", "replaceName": "Dimensional Shard", "useStyle": "Mythical"},
+    {"itemCodes": ["m08"], "quality": "unique", "replaceName": "Balanced Dagger", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m09"], "quality": "unique", "replaceName": "Magic Blade", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m10"], "quality": "unique", "replaceName": "Hemp Band", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m11"], "quality": "unique", "replaceName": "Arcane Staff", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m12"], "quality": "unique", "replaceName": "Seraphic Sceptre", "useStyle": "Mythical"},
+    {"itemCodes": ["m13"], "quality": "unique", "replaceName": "Scissors Suwayyah", "useStyle": "Mythical"},
+    {"itemCodes": ["m14"], "quality": "unique", "replaceName": "Ceremonial Dagger", "useStyle": "Mythical"},
+    {"itemCodes": ["m15"], "quality": "unique", "replaceName": "Dream Spirit", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m16"], "quality": "unique", "replaceName": "Rapier", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m17"], "quality": "unique", "replaceName": "Celestial Sceptre", "useStyle": "Mythical"},
+    {"itemCodes": ["m18"], "quality": "unique", "replaceName": "Death Blade", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["dd1"], "quality": "unique", "replaceName": "Death Blade", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m20"], "quality": "unique", "replaceName": "Diadem", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m21"], "quality": "unique", "replaceName": "Razor Axe", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m22"], "quality": "unique", "replaceName": "Hellfire Sword", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m29"], "quality": "unique", "replaceName": "Petrified Staff", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m30"], "quality": "unique", "replaceName": "Ancient Bow", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m31"], "quality": "unique", "replaceName": "Matriarchal Javelin", "useStyle": "Mythical"},
+    {"itemCodes": ["m32"], "quality": "unique", "replaceName": "Whale Hunter", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m33"], "quality": "unique", "replaceName": "Ancient Shards", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m34"], "quality": "unique", "replaceName": "Shillelagh", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m35"], "quality": "unique", "replaceName": "Celestial Sword", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m36"], "quality": "unique", "replaceName": "Mage Staff", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m37"], "quality": "unique", "replaceName": "Katana", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m38"], "quality": "unique", "replaceName": "Arreat's Hatchet", "useStyle": "Mythical"},
+    {"itemCodes": ["m39"], "quality": "unique", "replaceName": "Kagekiri", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["mam"], "quality": "unique", "replaceName": "Amulet", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m60"], "quality": "unique", "replaceName": "Light Plate", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+    {"itemCodes": ["m61"], "quality": "unique", "replaceName": "Abyssal Blade", "namePrefix": "Mythical ", "useStyle": "Mythical"},
+
+    // Coupon and class jewellery labels
+    {
+      "itemCodes": [
+        "01c", "02c", "03c", "04c", "05c", "06c", "07c", "08c", "09c", "10c", "11c", "12c", "13c", "14c", "15c",
+        "16c", "17c", "18c", "19c", "20c", "21c", "22c", "23c", "24c", "25c", "26c", "27c", "28c", "29c", "30c",
+        "31c", "32c", "33c", "34c", "35c", "36c", "37c", "38c", "39c", "40c", "41c", "42c", "43c", "44c", "45c",
+        "46c", "01f", "02f", "03f", "04f", "05f", "06f", "07f", "08f", "09f", "10f", "11f", "12f", "13f", "14f",
+        "15f", "16f", "17f", "18f", "19f", "20f", "21f", "22f", "23f", "24f", "25f", "26f", "27f", "28f", "29f",
+        "30f", "31f", "32f", "33f", "34f", "35f", "36f", "37f", "38f", "39f", "40f", "41f", "42f", "43f", "44f",
+        "45f", "46f", "47f", "48f", "49f", "50f", "51f", "52f", "53f", "54f", "55f", "56f", "57f", "58f", "59f",
+        "60f", "61f", "62f", "63f", "64f", "65f", "66f", "67f", "68f", "69f", "70f", "71f", "01i", "02i", "03i",
+        "01j", "02j", "04j", "96j"
+      ],
+      "replaceName": "ÿc5Norm:ÿc4{name}",
+      "labelBorder": {"color": [255, 165, 0, 255], "width": 1}
+    },
+    {
+      "itemCodes": [
+        "01d", "02d", "03d", "04d", "05d", "06d", "07d", "08d", "09d", "10d", "11d", "12d", "14d", "15d", "16d",
+        "17d", "18d", "19d", "20d", "21d", "22d", "23d", "24d", "25d", "26d", "27d", "28d", "29d", "30d", "31d",
+        "32d", "33d", "34d", "35d", "36d", "37d", "38d", "39d", "40d", "41d", "42d", "43d", "44d", "45d", "46d",
+        "47d", "48d", "49d", "50d", "01g", "02g", "03g", "04g", "05g", "06g", "07g", "08g", "09g", "10g", "11g",
+        "12g", "13g", "14g", "15g", "16g", "17g", "18g", "19g", "20g", "21g", "22g", "23g", "24g", "25g", "26g",
+        "27g", "28g", "29g", "30g", "31g", "32g", "33g", "34g", "35g", "36g", "37g", "38g", "39g", "40g", "41g",
+        "42g", "43g", "44g", "45g", "46g", "47g", "48g", "49g", "50g", "51g", "52g", "53g", "54g", "55g", "56g",
+        "57g", "58g", "59g", "60g", "61g", "62g", "63g", "64g", "65g", "66g", "67g", "68g", "69g", "70g", "71g",
+        "72g", "73g", "74g", "75g", "76g", "77g", "78g", "05i", "06i", "07i", "08i", "05j", "06j", "07j", "08j",
+        "04i", "51d", "97j"
+      ],
+      "replaceName": "ÿc5Exc:ÿc4{name}",
+      "labelBorder": {"color": [255, 165, 0, 255], "width": 1}
+    },
+    {
+      "itemCodes": [
+        "01e", "02e", "04e", "05e", "07e", "08e", "09e", "10e", "11e", "12e", "13e", "14e", "15e", "16e", "18e",
+        "19e", "20e", "21e", "22e", "23e", "24e", "25e", "26e", "27e", "28e", "29e", "30e", "31e", "32e", "33e",
+        "34e", "35e", "36e", "37e", "38e", "39e", "01h", "02k", "03h", "04h", "05h", "06h", "07h", "08h", "09h",
+        "10h", "11h", "12k", "13h", "14h", "15h", "16h", "17h", "18h", "19h", "20h", "21h", "22k", "23h", "24h",
+        "25h", "26h", "27h", "28h", "29h", "30h", "31h", "32k", "33h", "34h", "35h", "36h", "37h", "38h", "39h",
+        "40h", "41h", "42k", "43h", "44h", "45h", "47h", "48h", "49h", "50h", "51h", "52k", "53h", "54h", "55h",
+        "56h", "57h", "58h", "59h", "60h", "61h", "62k", "09i", "10i", "11i", "12i", "09j", "10j", "11j", "12j",
+        "13i", "42e", "43e", "44e", "45e", "46e", "47e", "63k", "64k", "98j"
+      ],
+      "activeInLevels": [1, 2, 3],
+      "replaceName": "ÿc5Elt:ÿc4{name}",
+      "sound": "other.mp3",
+      "labelBorder": {"color": [255, 165, 0, 255], "width": 1}
+    },
+    {
+      "itemCodes": [
+        "01e", "02e", "04e", "05e", "07e", "08e", "09e", "10e", "11e", "12e", "13e", "14e", "15e", "16e", "18e",
+        "19e", "20e", "21e", "22e", "23e", "24e", "25e", "26e", "27e", "28e", "29e", "30e", "31e", "32e", "33e",
+        "34e", "35e", "36e", "37e", "38e", "39e", "01h", "02k", "03h", "04h", "05h", "06h", "07h", "08h", "09h",
+        "10h", "11h", "12k", "13h", "14h", "15h", "16h", "17h", "18h", "19h", "20h", "21h", "22k", "23h", "24h",
+        "25h", "26h", "27h", "28h", "29h", "30h", "31h", "32k", "33h", "34h", "35h", "36h", "37h", "38h", "39h",
+        "40h", "41h", "42k", "43h", "44h", "45h", "47h", "48h", "49h", "50h", "51h", "52k", "53h", "54h", "55h",
+        "56h", "57h", "58h", "59h", "60h", "61h", "62k", "09i", "10i", "11i", "12i", "09j", "10j", "11j", "12j",
+        "13i", "42e", "43e", "44e", "45e", "46e", "47e", "63k", "64k", "98j"
+      ],
+      "replaceName": "ÿc5Elt:ÿc4{name}",
+      "labelBorder": {"color": [255, 165, 0, 255], "width": 1}
+    },
+    {
+      "itemCodes": ["03j", "46h", "41e", "03e", "17e", "40e", "06e", "43e"],
+      "chatMessage": "ÿc1High Tier Unique Coupon: {name}",
+      "useStyle": "Valuable"
+    },
+    {"itemCodes": ["ci3"], "quality": "unique", "chatMessage": "ÿc8High Tier Unique: {name}", "useStyle": "Valuable"},
+    {
+      "itemCodes": ["zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"],
+      "quality": "magic",
+      "chatMessage": "Class Jewellery: ÿc3{name}",
+      "labelBorder": {"color": [0, 0, 255, 230], "width": 1}
+    },
+    {
+      "itemCodes": ["zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"],
+      "quality": "rare",
+      "labelBorder": {"color": [0, 255, 255, 230], "width": 1}
+    },
+
+    // Pandemonium keys and organs, respec items
+    {"itemCodes": ["pk1", "pk2", "pk3"], "chatMessage": "ÿc1Pandemonium Key: {name}", "useStyle": "Uber"},
+    {"itemCodes": ["dhn", "bey", "mbr", "ht1", "ht2", "ht3"], "chatMessage": "ÿc1Pandemonium Organ: {name}", "useStyle": "Uber"},
+    {"itemCodes": ["toa", "tes", "ceh", "bet", "fed"], "chatMessage": "ÿc1Respec: {name}", "useStyle": "Uber"},
+
+    // Crafting reagent and perfect gem labels
+    {
+      "itemCodes": ["qll", "hrt", "brz", "jaw", "eyz", "hrn", "tal", "flg", "fng", "sol", "scz", "spe", "zzz"],
+      "labelBorder": {"color": [200, 150, 0, 255], "width": 1}
+    },
+    {
+      "itemCodes": [
+        "xl0", "xl1", "xl2", "xl3", "xl4", "xl5", "xl6", "xl7", "xl8", "xl9", "xlx", "xly", "xt0", "xt1", "xt2",
+        "xt3", "xt4", "xt5", "xt6", "xt7", "xt8", "xt9", "xtx", "xty"
+      ],
+      "labelBorder": {"color": [200, 150, 0, 255], "width": 1}
+    },
+    {"itemCodes": ["gvb"], "replaceName": "ÿc;*P.Gem*", "labelBorder": {"color": [200, 150, 0, 255], "width": 1}},
+    {"itemCodes": ["gyb"], "replaceName": "ÿc9*P.Gem*", "labelBorder": {"color": [200, 150, 0, 255], "width": 1}},
+    {"itemCodes": ["gbb"], "replaceName": "ÿc3*P.Gem*", "labelBorder": {"color": [200, 150, 0, 255], "width": 1}},
+    {"itemCodes": ["ggb"], "replaceName": "ÿc2*P.Gem*", "labelBorder": {"color": [200, 150, 0, 255], "width": 1}},
+    {"itemCodes": ["grb"], "replaceName": "ÿc1*P.Gem*", "labelBorder": {"color": [200, 150, 0, 255], "width": 1}},
+    {"itemCodes": ["gwb"], "replaceName": "ÿc0*P.Gem*", "labelBorder": {"color": [200, 150, 0, 255], "width": 1}},
+    {"itemCodes": ["skb"], "replaceName": "ÿc5*P.Gem*", "labelBorder": {"color": [200, 150, 0, 255], "width": 1}},
+    {"itemCodes": ["gbk"], "replaceName": "ÿc6*P.Gem*", "labelBorder": {"color": [200, 150, 0, 255], "width": 1}},
+
+    // Runes
+    {
+      "itemCodes": ["23l", "r73"],
+      "replaceName": "ÿc6Mal Rune",
+      "chatMessage": "ÿc1*ÿc3*ÿc2*   ÿc8High Rune Drop: ÿc0Mal  ÿc1*ÿc3*ÿc2*",
+      "sound": "mid.mp3",
+      "useStyle": "GoldPlate"
+    },
+    {
+      "itemCodes": ["24l", "r74"],
+      "replaceName": "ÿc6Ist Rune",
+      "chatMessage": "ÿc1*ÿc3*ÿc2*   ÿc8High Rune Drop: ÿc0Ist   ÿc1*ÿc3*ÿc2*",
+      "sound": "mid.mp3",
+      "useStyle": "GoldPlate"
+    },
+    {
+      "itemCodes": ["25l", "r75"],
+      "replaceName": "ÿc6Gul Rune",
+      "chatMessage": "ÿc1*ÿc3*ÿc2*   ÿc8High Rune Drop: ÿc0Gul   ÿc1*ÿc3*ÿc2*",
+      "sound": "mid.mp3",
+      "useStyle": "GoldPlate"
+    },
+    {
+      "itemCodes": ["26l", "r76"],
+      "replaceName": "ÿc1Vex Rune",
+      "chatMessage": "ÿc1*ÿc3*ÿc2*   ÿc8High Rune Drop: ÿc0Vex   ÿc1*ÿc3*ÿc2*",
+      "useStyle": "Jackpot"
+    },
+    {
+      "itemCodes": ["27l", "r77"],
+      "replaceName": "ÿc1Ohm Rune",
+      "chatMessage": "ÿc1*ÿc3*ÿc2*   ÿc8High Rune Drop: ÿc0Ohm  ÿc1*ÿc3*ÿc2*",
+      "useStyle": "Jackpot"
+    },
+    {
+      "itemCodes": ["28l", "r78"],
+      "replaceName": "ÿc1Lo Rune",
+      "chatMessage": "ÿc1*ÿc3*ÿc2*   ÿc8High Rune Drop: ÿc0Lo   ÿc1*ÿc3*ÿc2*",
+      "useStyle": "Jackpot"
+    },
+    {
+      "itemCodes": ["29l", "r79"],
+      "replaceName": "ÿc1Sur Rune",
+      "chatMessage": "ÿc1*ÿc3*ÿc2*   ÿc8High Rune Drop: ÿc0Sur   ÿc1*ÿc3*ÿc2*",
+      "useStyle": "Jackpot"
+    },
+    {
+      "itemCodes": ["30l", "r80"],
+      "replaceName": "ÿc1Ber Rune",
+      "chatMessage": "ÿc1*ÿc3*ÿc2*   ÿc8High Rune Drop: ÿc0Ber  ÿc1*ÿc3*ÿc2*",
+      "useStyle": "Jackpot"
+    },
+    {
+      "itemCodes": ["31l", "r81"],
+      "replaceName": "ÿc1Jah Rune",
+      "chatMessage": "ÿc1*ÿc3*ÿc2*   ÿc8High Rune Drop: ÿc0Jah   ÿc1*ÿc3*ÿc2*",
+      "useStyle": "Jackpot"
+    },
+    {
+      "itemCodes": ["32l", "r82"],
+      "replaceName": "ÿc1Cham Rune",
+      "chatMessage": "ÿc1*ÿc3*ÿc2*   ÿc8High Rune Drop: ÿc0Cham   ÿc1*ÿc3*ÿc2*",
+      "useStyle": "Jackpot"
+    },
+    {
+      "itemCodes": ["33l", "r83"],
+      "replaceName": "ÿc1Zod Rune",
+      "chatMessage": "ÿc1*ÿc3*ÿc2*   ÿc8High Rune Drop: ÿc0Zod   ÿc1*ÿc3*ÿc2*",
+      "sound": "Jackpot",
+      "labelBackground": [255, 255, 255, 255],
+      "labelBorder": {"color": [240, 0, 0, 230], "width": 2}
+    },
+    {
+      "itemCodes": ["r36", "r37", "r38", "r39", "r40", "r41", "r42"],
+      "chatMessage": "ÿc1Gold Rune Dropÿc4: {name}",
+      "sound": "mid.mp3",
+      "labelBackground": [0, 0, 0, 255],
+      "labelBorder": {"color": [255, 215, 0, 255], "width": 1},
+      "droplight": {"color": [255, 215, 0]}
+    },
+    {"itemCodes": ["r43"], "replaceName": "ÿc;Su Rune", "useStyle": "PurpleRune"},
+    {"itemCodes": ["r44"], "replaceName": "ÿc;He Rune", "useStyle": "PurpleRune"},
+    {"itemCodes": ["r45"], "replaceName": "ÿc;Nu Rune", "useStyle": "PurpleRune"},
+    {"itemCodes": ["r46"], "replaceName": "ÿc;Wo Rune", "icon": {"iconName": "goldstar", "iconSize": 50, "color": [255, 215, 0]}, "useStyle": "PurpleRune"},
+    {"itemCodes": ["r50"], "replaceName": "ÿc;Null Rune", "useStyle": "PurpleRune"},
+    {
+      "itemCodes": ["r84", "r85", "r86", "r87", "r88", "r89", "r90", "r91", "r92", "r93", "r94", "r95", "r96", "r97"],
+      "chatMessage": "ÿc8ESR Rune: {name}",
+      "useStyle": "Jackpot"
+    },
+    {
+      "itemCodes": ["r50"],
+      "location": ["stored", "atVendor"],
+      "namePrefix": "\nGod Rune: ÿc3Frozen Soul ÿc1Enigmatic Cinnabar ÿc4Pulsing Opal ÿc5Shadow Quartz\nÿc8Heaven Rune: ÿc1Bleeding Stone ÿc3Dark Azurite ÿcABitter Peridot ÿc;Tainted Tourmarineÿc0\nÿc8Death Rune: ÿc5Shadow Quartzÿc0\nÿc8Life Rune: ÿc4Pulsing Opal\nÿc8Dragon Rune: Storm Amber\nWind Rune: ÿc;Tainted Tourmaline\nÿc8Thunder Rune: ÿc9Burning Sulphur\nÿc8Sun Rune: ÿc1Enigmatic Cinnabar\nÿc8Earth Rune: ÿcABitter Peridot\nÿc8Metal Rune: ÿc0Solid Mercury\nÿc8Wood Rune: ÿc2Tomb Jade\nÿc8Water Rune: ÿc3Dark Azurite\nÿc8Fire Rune: ÿc1Bleeding Stone\nÿc8Moon Rune: ÿc3Frozen Soul\nÿc0** Combine this rune with the below crystals to obtain Kanji Runes **ÿc;\n"
+    },
+
+    // Maps
+    {"itemCodes": ["z01"], "replaceName": "Cellar of Pain (Tier 1)", "chatMessage": "Tier 1 Map: ÿc0Cellars of Pain", "useStyle": "MapTier1"},
+    {"itemCodes": ["z02"], "replaceName": "Chasm of Horrors (Tier 1)", "chatMessage": "Tier 1 Map: ÿc0Chasm of Horrors", "useStyle": "MapTier1"},
+    {"itemCodes": ["z03"], "replaceName": "Crypt Of Damnation (Tier 1)", "chatMessage": "Tier 1 Map: ÿc0Crypt of Damnation", "useStyle": "MapTier1"},
+    {"itemCodes": ["z04"], "replaceName": "Necropolis (Tier 1)", "chatMessage": "Tier 1 Map: ÿc0Necropolis", "useStyle": "MapTier1"},
+    {"itemCodes": ["z05"], "replaceName": "Ancient Tomb (Tier 2)", "chatMessage": "Tier 2 Map: ÿc0Ancient Tomb", "useStyle": "Map"},
+    {"itemCodes": ["z06"], "replaceName": "Chaos Rift (Tier 2)", "chatMessage": "Tier 2 Map: ÿc0Chaos Rift", "useStyle": "Map"},
+    {"itemCodes": ["z07"], "replaceName": "Infested Lair (Tier 2)", "chatMessage": "Tier 2 Map: ÿc0Infested Lair", "useStyle": "Map"},
+    {
+      "itemCodes": ["z08"],
+      "replaceName": "Labyrinth of Suffering (Tier 2)",
+      "chatMessage": "Tier 2 Map: ÿc0Labyrinth of Suffering",
+      "useStyle": "Map"
+    },
+    {"itemCodes": ["z09"], "replaceName": "Decaying Depths (Tier 3)", "chatMessage": "Tier 3 Map: ÿc0Decaying Depths", "useStyle": "Map"},
+    {"itemCodes": ["z10"], "replaceName": "Endless Abyss (Tier 3)", "chatMessage": "Tier 3 Map: ÿc0Endless Abyss", "useStyle": "Map"},
+    {"itemCodes": ["z11"], "replaceName": "Frozen Wastes (Tier 3)", "chatMessage": "Tier 3 Map: ÿc0Frozen Wastes", "useStyle": "Map"},
+    {"itemCodes": ["z12"], "replaceName": "Twisted Maze (Tier 3)", "chatMessage": "Tier 3 Map: ÿc0Twisted Maze", "useStyle": "Map"},
+    {"itemCodes": ["z13"], "replaceName": "Cursed Ossuary (Tier 4)", "chatMessage": "Tier 4 Map: ÿc0Cursed Ossuary", "useStyle": "Map"},
+    {"itemCodes": ["z14"], "replaceName": "Infernal Nexus (Tier 4)", "chatMessage": "Tier 4 Map: ÿc0Infernal Nexus", "useStyle": "Map"},
+    {"itemCodes": ["z15"], "replaceName": "Reliquary of Souls (Tier 4)", "chatMessage": "Tier 4 Map: ÿc0Reliquary of Souls", "useStyle": "Map"},
+    {
+      "itemCodes": ["z16"],
+      "replaceName": "ÿc0Shrine of Destruction (Tier 4)",
+      "chatMessage": "Tier 4 Map: ÿc0Shrine of Destruction",
+      "useStyle": "Map"
+    },
+    {"itemCodes": ["z17"], "replaceName": "ÿc6Eye of the Storm", "chatMessage": "Tier 5 Map: ÿc0Eye of the Storm", "useStyle": "MapTier5"},
+    {"itemCodes": ["z18"], "replaceName": "ÿc6Ice Crown Citadel", "chatMessage": "Tier 5 Map: ÿc0Ice Crown Citadel", "useStyle": "MapTier5"},
+    {
+      "itemCodes": ["z19"],
+      "replaceName": "ÿc6The Sanctum of the Dead",
+      "chatMessage": "Tier 5 Map: ÿc0The Sanctum of the Dead",
+      "useStyle": "MapTier5"
+    },
+    {
+      "itemCodes": ["z20"],
+      "replaceName": "ÿc6The Reliquary of False Light",
+      "chatMessage": "Tier 5 Map: ÿc0The Reliquary of False Light",
+      "useStyle": "MapTier5"
+    },
+    {"itemCodes": ["z99"], "replaceName": "ÿc6The Hidden Vault", "chatMessage": "Unique Map: ÿc0The Hidden Vault", "useStyle": "MapTier5"},
+    // Socket count
+    {"sockets": {"min": 1}, "nameSuffix": " ÿcP[{sockets}]"}
+  ]
 }
