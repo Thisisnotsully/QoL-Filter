@@ -1,11 +1,3 @@
-https://drive.google.com/file/d/13qMygJup3_6v1tOLWqpAN8WDj12ijEVq/view?usp=drive_link
-^^ Sound pack ^^
-To install this filter you will need to locate your EasternSunLan install location. This Should be within  D2RLan\D2R\Mods\
-Navigate to:
-EasternSunLAN\EasternSunLAN.mpq\Data\D2RLAN\Filters
-If this folder does not exist, you should create it
-Within that folder you need to place the Sound folder containted within the soundpack. If the directory is not exactly correct
-the filter cannot play the custom drop sounds.
 
 The filter comes with 4 strictness levels. To cycle through strictness levels, while in game, press F12 -> Hotkey Controls -> and set a key to Cycle Filter Level. It's also a good idea to have a hotkey 
 to refresh the filter in case of any weird stuff
