@@ -1,4 +1,4 @@
-// Sully's QoL Filter, converted from Sullys-QoL-Filter.lua (D2RLAN).
+// Sully's QoL Filter, converted from Sullys-QoL-Filter.json (D2RLAN).
 // Its sound files go in the sounds folder next to this file: gong.mp3, map.mp3, mid.mp3,
 // mythical.mp3, other.mp3, t5_map.mp3, tink.mp3, unique.mp3.
 {
@@ -7,7 +7,7 @@
   "author": "Sully",
   "version": ".5",
   "description": "Sully's D2RLAN QoL filter - Full conversion in progress.",
-  "updateurl": "https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.lua",
+  "updateurl": "https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.json",
   "filterLevels": [
     {"id": 1, "name": "Leveling"},
     {"id": 2, "name": "Strict - Nightmare"},
