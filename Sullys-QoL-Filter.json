@@ -7,7 +7,7 @@
   "author": "Sully",
   "version": ".5",
   "description": "Sully's D2RLAN QoL filter - Full conversion in progress.",
-  "updateurl": "https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.json",
+  "updateUrl": "https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.json",
   "filterLevels": [
     {"id": 1, "name": "Leveling"},
     {"id": 2, "name": "Strict - Nightmare"},
