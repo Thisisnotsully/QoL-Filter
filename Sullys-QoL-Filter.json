@@ -5,7 +5,7 @@
   "formatVersion": 1,
   "title": "Sully's QoL Filter",
   "author": "Sully",
-  "version": ".5",
+  "version": "0.5.1",
   "description": "Sully's D2RLAN QoL filter - Full conversion in progress.",
   "updateUrl": "https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.json",
   "filterLevels": [
@@ -170,25 +170,77 @@
 
     // Bases worth a look: tags on their stats
     {
-      "itemCodes": ["ylb", "yvb", "ymb", "ytb", "yhb", "ybt", "ulb", "uvb", "umb", "utb", "uhb"],
-      "itemStats": [{"stat": 96, "op": ">=", "value": 20}],
-      "nameSuffix": "ÿc1[{stat:96}%FRW]"
-    },
-    {
-      "itemCodes": ["ylb", "yvb", "ymb", "ytb", "yhb", "ybt", "ulb", "uvb", "umb", "utb", "uhb"],
+      "itemTypes": ["armo", "weap"],
+	"quality": "superior",
       "itemStats": [{"stat": 336, "op": ">=", "value": 8}],
       "nameSuffix": "ÿc1[-{stat:333}% Res Pierce]"
     },
-    {
-      "itemCodes": ["alb", "avb", "bmb", "atb", "ahb", "yms", "ulc", "uvc", "umc", "utc", "uhc", "m10"],
-      "itemStats": [{"stat": 336, "op": ">=", "value": 8}],
-      "nameSuffix": "ÿc1[-{stat:333}% Res Pierce]"
-    },
-    {
-      "itemCodes": ["alb", "avb", "bmb", "atb", "ahb", "yms", "ulc", "uvc", "umc", "utc", "uhc", "m10"],
-      "itemStats": [{"stat": 36, "op": ">=", "value": 8}],
-      "nameSuffix": "ÿc1[{stat:36}% Phys Res]"
-    },
+	{
+		"itemTypes": ["armo", "weap"],
+		"quality": "superior",
+		"itemStats": [{"stat": 127, "op": ">=", "value": 1}],
+		"nameSuffix": "ÿc1[{stat:127} All Skills]"		
+	},
+	{
+		"itemTypes": ["armo", "weap"],
+		"quality": "superior",
+		"itemStats": [{"stat": 256, "op": ">=", "value": 5}],
+		"nameSuffix": "ÿc1[{stat:256}% all attributes]"		
+	},
+	{
+		"itemTypes": ["armo", "weap"],
+		"quality": "superior",
+		"itemStats": [{"stat": 77, "op": ">=", "value": 1}],
+		"nameSuffix": "ÿc1[{stat:77}% Mana]"		
+	},
+	{
+		"itemTypes": ["armo", "weap"],
+		"quality": "superior",
+		"itemStats": [{"stat": 76, "op": ">=", "value": 1}],
+		"nameSuffix": "ÿc1[{stat:76}% Life]"		
+	},
+	{
+		"itemTypes": ["armo", "weap"],
+		"quality": "superior",
+		"itemStats": [{"stat": 40, "op": ">=", "value": 1}],
+		"nameSuffix": "ÿc1[{stat:40}% max Res]"		
+	},
+	{
+		"itemTypes": ["armo", "weap"],
+		"quality": "superior",
+		"itemStats": [{"stat": 142, "op": ">=", "value": 1}],
+		"nameSuffix": "ÿc1[{stat:142}% Absorb]"		
+	},
+	{
+		"itemTypes": ["armo", "weap"],
+		"quality": "superior",
+		"itemStats": [{"stat": 89, "op": ">=", "value": 15}],
+		"nameSuffix": "ÿc1[{stat:89} Light Radius]"		
+	},
+	{
+		"itemTypes": ["armo", "weap"],
+		"quality": "superior",
+		"itemStats": [{"stat": 530, "op": ">=", "value": 1}],
+		"nameSuffix": "ÿc1[{stat:530} PHASING]"		
+	},
+	{
+		"itemTypes": ["armo", "weap"],
+		"quality": "superior",
+		"itemStats": [{"stat": 338, "op": ">=", "value": 15}],
+		"nameSuffix": "ÿc1[{stat:338}% Dodge Chance]"		
+	},
+	{
+		"itemTypes": ["armo", "weap"],
+		"quality": "superior",
+		"itemStats": [{"stat": 218, "op": ">=", "value": 1}],
+		"nameSuffix": "ÿc1[{stat:218}/8 Max Damage per Level]"		
+	},
+	{
+		"itemTypes": ["armo", "weap"],
+		"quality": "superior",
+		"itemStats": [{"stat": 219, "op": ">=", "value": 1}],
+		"nameSuffix": "ÿc1[{stat:219}/8 %Max Damage per Level]"		
+	},
     {
       "itemCodes": ["0pb", "amb", "amc", "q80", "amf", "q82", "m31", "amd", "ame", "q81"],
       "quality": "superior",
@@ -320,7 +372,14 @@
     },
 
     // Strictness levels
-    {"itemCodes": ["rng", "amu"], "quality": {"max": "magic"}, "excludeAreas": [1, 40, 75, 103, 109], "activeInLevels": [3], "hide": true},
+    {"itemCodes": [
+		"rng", "amu", "rin"
+		],
+		"quality": {"max": "magic"},
+		"excludeAreas": [1, 40, 75, 103, 109],
+		"activeInLevels": [3],
+		"hide": true
+	},
     {
       "itemCodes": [
         "01c", "02c", "03c", "04c", "05c", "06c", "07c", "08c", "09c", "10c", "11c", "12c", "13c", "14c", "15c",
@@ -380,7 +439,26 @@
     },
     {"itemCodes": ["rvs"], "excludeAreas": [1, 40, 75, 103, 109], "activeInLevels": [3], "hide": true},
     {"quality": "set", "baseTier": {"max": 1}, "excludeAreas": [1, 40, 75, 103, 109], "activeInLevels": [3], "hide": true},
-    {"quality": "superior", "baseTier": {"max": 1}, "excludeAreas": [1, 40, 75, 103, 109], "activeInLevels": [3], "hide": true},
+    {
+		"itemTypes": ["armo"],
+		"quality": "superior",
+		"baseTier": {"max": 0},
+		"excludeItemCodes": [
+		"scl", "plt", "ful", "kit", "tow", "gts", "fts"
+		],
+		"excludeAreas": [1, 40, 75, 103, 109],
+		"activeInLevels": [3],
+		"hide": true},
+	{
+		"itemTypes": ["weap"],
+		"quality": "superior",
+		"baseTier": {"max": 1},
+		"excludeItemCodes": [
+		"wsp", "crs", "wax", "mpi", "9pm", "9pa", "9cr", "9ws"
+		],
+		"excludeAreas": [1, 40, 75, 103, 109],
+		"activeInLevels": [3],
+		"hide": true},
     {
       "itemCodes": ["gzv", "gly", "glb", "glg", "glr", "glw", "skl", "gzk"],
       "excludeAreas": [1, 40, 75, 103, 109],
@@ -413,7 +491,7 @@
     {
       "itemCodes": [
         "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15",
-        "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31",
+        "m16", "m17", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31",
         "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39"
       ],
       "quality": "magic",
@@ -424,7 +502,7 @@
     {
       "itemCodes": [
         "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15",
-        "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31",
+        "m16", "m17", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31",
         "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39"
       ],
       "quality": "normal",
