@@ -1,11 +1,12 @@
 // Sully's QoL Filter, converted from Sullys-QoL-Filter.lua (D2RLAN).
 // Its sound files go in the sounds folder next to this file: gong.mp3, map.mp3, mid.mp3,
 // mythical.mp3, other.mp3, t5_map.mp3, tink.mp3, unique.mp3.
+// volume can be adjusted on line 19 "soundVolume": XX, where XX is a number between 0-100; By default set to 50
 {
   "formatVersion": 1,
   "title": "Sully's QoL Filter",
   "author": "Sully",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Sully's D2RLAN QoL filter - Full conversion in progress.",
   "updateUrl": "https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.json",
   "filterLevels": [
@@ -15,6 +16,7 @@
     {"id": 4, "name": "Uber-Strict - Maps+"}
   ],
   "defaultLevel": 3,
+  "soundVolume": 50,
   "styles": {
     "Mythical": {
       "chatMessage": "\nÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*\nÿc1*ÿc2*ÿc3*ÿc;* ÿc4MYTHICAL UNIQUE ÿc1*ÿc2*ÿc3*ÿc;*\nÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3*ÿc;*ÿc1*ÿc2*ÿc3",
