@@ -6,8 +6,8 @@
   "formatVersion": 1,
   "title": "Sully's QoL Filter",
   "author": "Sully",
-  "version": "0.6.0",
-  "description": "Sully's D2RLAN QoL filter - Sounds/Chat Notification/Drop Icons.",
+  "version": "0.6.1",
+  "description": "Sully's D2RLAN QoL filter - Full conversion in progress.",
   "updateUrl": "https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.json",
   "filterLevels": [
     {"id": 1, "name": "Leveling"},
@@ -159,7 +159,7 @@
 
     // Class jewellery, reagents and perfect gems
     {
-      "itemCodes": ["zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"],
+      "itemCodes": ["zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "wrn", "zam", "sam", "nam", "pam", "bam", "dam", "aam", "wam"],
       "quality": "rare",
       "activeInLevels": [1, 2, 3],
       "chatMessage": "Class Jewellery: ÿc9{name}"
@@ -403,7 +403,7 @@
     },
     {
       "itemCodes": [
-        "rng", "amu", "zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam",
+        "rng", "amu", "zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "wrn", "wam",
         "aam", "cm1", "cm2", "cm3", "cx1", "cx2", "cx3"
       ],
       "quality": "magic",
@@ -537,7 +537,7 @@
     {"quality": "set", "excludeAreas": [1, 40, 75, 103, 109], "activeInLevels": [4], "hide": true},
     {
       "itemCodes": [
-        "mrn", "mam", "rin", "amu", "zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam",
+        "mrn", "mam", "rin", "amu", "zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "wam", "wrn",
         "bam", "dam", "aam", "cm1", "cm2", "cm3", "cx1", "cx2", "cx3"
       ],
       "quality": "magic",
@@ -823,7 +823,7 @@
       "useStyle": "UniqueLabel"
     },
     {
-      "itemCodes": ["rin", "amu", "zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"],
+      "itemCodes": ["rin", "amu", "zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam","wam", "wrn"],
       "quality": "unique",
       "chatMessage": "ÿc1*ÿc2*ÿc3 ÿc4{name} ÿc1*ÿc2*ÿc3",
       "sound": "other.mp3",
@@ -976,13 +976,13 @@
     },
     {"itemCodes": ["ci3"], "quality": "unique", "chatMessage": "ÿc8High Tier Unique: {name}", "useStyle": "Valuable", "icon": {"iconName": "goldstar", "iconSize": 50}},
     {
-      "itemCodes": ["zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"],
+      "itemCodes": ["zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam", "wam", "wrn"],
       "quality": "magic",
       "chatMessage": "Class Jewellery: ÿc3{name}",
       "labelBorder": {"color": [0, 0, 255, 230], "width": 1}
     },
     {
-      "itemCodes": ["zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam"],
+      "itemCodes": ["zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam", "wam", "wrn"],
       "quality": "rare",
       "labelBorder": {"color": [0, 255, 255, 230], "width": 1}
     },
