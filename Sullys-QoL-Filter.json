@@ -7,7 +7,7 @@
   "title": "Sully's QoL Filter",
   "author": "Sully",
   "version": "0.6.0",
-  "description": "Sully's D2RLAN QoL filter - Full conversion in progress.",
+  "description": "Sully's D2RLAN QoL filter - Sounds/Chat Notification/Drop Icons.",
   "updateUrl": "https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.json",
   "filterLevels": [
     {"id": 1, "name": "Leveling"},
