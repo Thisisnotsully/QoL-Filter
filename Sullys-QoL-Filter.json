@@ -460,7 +460,7 @@
       "quality": "superior",
       "baseTier": {"max": 1},
       "excludeItemCodes": [
-        "wsp", "crs", "wax", "mpi", "9pm", "9pa", "9cr", "9ws"
+        "wsp", "crs", "wax", "mpi", "9mp", "9pa", "9cr", "9ws"
       ],
       "excludeAreas": [1, 40, 75, 103, 109],
       "activeInLevels": [3],
@@ -1163,6 +1163,6 @@
       "chatMessage": "Tier 5 Map: ÿc0The Reliquary of False Light",
       "useStyle": "MapTier5"
     },
-    {"itemCodes": ["z99"], "replaceName": "ÿc6The Hidden Vault", "chatMessage": "Unique Map: ÿc0The Hidden Vault", "useStyle": "MapTier5"},
+    {"itemCodes": ["z99"], "replaceName": "ÿc6The Hidden Vault", "chatMessage": "Unique Map: ÿc0The Hidden Vault", "useStyle": "MapTier5"}
   ]
 }
