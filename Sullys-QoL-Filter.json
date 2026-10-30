@@ -6,7 +6,7 @@
   "formatVersion": 1,
   "title": "Sully's QoL Filter",
   "author": "Sully",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "Sully's D2RLAN QoL filter - Full conversion in progress.",
   "updateUrl": "https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.json",
   "filterLevels": [
@@ -183,6 +183,10 @@
       "itemTypes": ["armo", "weap"],
       "quality": "superior",
       "itemStats": [{"stat": 127, "op": ">=", "value": 1}],
+      "chatMessage": "ÿc1*ÿc2*ÿc3 ÿc4+1 All Skills Base ÿc1*ÿc2*ÿc3",
+      "sound": "other.mp3",
+      "labelBorder": {"color": [255, 0, 0, 255], "width": 1},
+      "icon": {"iconName": "goldstar", "iconSize": 40}
       "nameSuffix": "ÿc1[{stat:127} All Skills]"
     },
     {
