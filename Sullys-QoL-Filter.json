@@ -6,7 +6,7 @@
   "formatVersion": 1,
   "title": "Sully's QoL Filter",
   "author": "Sully",
-  "version": "0.6.9",
+  "version": "0.6.10",
   "description": "Sully's D2RLAN QoL filter - PoE themed drop labels, sounds, mini-map icons.",
   "updateUrl": "https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.json",
   "filterLevels": [
@@ -639,7 +639,7 @@
     },
     {
       "itemCodes": [
-        "01d", "02d", "03d", "04d", "05d", "06d", "07d", "08d", "09d", "10d", "11d", "12d", "14d", "15d", "16d",
+        "01d", "02d", "03d", "04d", "05d", "06d", "07d", "08d", "09d", "10d", "11d", "12d", "13d", "14d", "15d", "16d",
         "17d", "18d", "19d", "20d", "21d", "22d", "23d", "24d", "25d", "26d", "27d", "28d", "29d", "30d", "31d",
         "32d", "33d", "34d", "35d", "36d", "37d", "38d", "39d", "40d", "41d", "42d", "43d", "44d", "45d", "46d",
         "47d", "48d", "49d", "50d", "01g", "02g", "03g", "04g", "05g", "06g", "07g", "08g", "09g", "10g", "11g",
@@ -956,7 +956,7 @@
     },
     {
       "itemCodes": [
-        "01d", "02d", "03d", "04d", "05d", "06d", "07d", "08d", "09d", "10d", "11d", "12d", "14d", "15d", "16d",
+        "01d", "02d", "03d", "04d", "05d", "06d", "07d", "08d", "09d", "10d", "11d", "12d", "13d", "14d", "15d", "16d",
         "17d", "18d", "19d", "20d", "21d", "22d", "23d", "24d", "25d", "26d", "27d", "28d", "29d", "30d", "31d",
         "32d", "33d", "34d", "35d", "36d", "37d", "38d", "39d", "40d", "41d", "42d", "43d", "44d", "45d", "46d",
         "47d", "48d", "49d", "50d", "01g", "02g", "03g", "04g", "05g", "06g", "07g", "08g", "09g", "10g", "11g",
