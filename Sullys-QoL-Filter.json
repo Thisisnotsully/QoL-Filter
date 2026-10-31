@@ -6,7 +6,7 @@
   "formatVersion": 1,
   "title": "Sully's QoL Filter",
   "author": "Sully",
-  "version": "0.6.6",
+  "version": "0.6.7",
   "description": "Sully's D2RLAN QoL filter - PoE themed drop labels, sounds, mini-map icons.",
   "updateUrl": "https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.json",
   "filterLevels": [
@@ -467,6 +467,7 @@
     {"quality": "set", "baseTier": {"max": 1}, "excludeAreas": [1, 40, 75, 103, 109], "activeInLevels": [3], "hide": true},
     {
       "itemTypes": ["armo"],
+      "itemStats": [{"stat": 127, "op": "<", "value": 1}],
       "quality": "superior",
       "baseTier": {"max": 0},
       "excludeItemCodes": [
@@ -478,6 +479,7 @@
     },
     {
       "itemTypes": ["weap"],
+      "itemStats": [{"stat": 127, "op": "<", "value": 1}],
       "quality": "superior",
       "baseTier": {"max": 1},
       "excludeItemCodes": [
@@ -576,6 +578,7 @@
         "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
         "qf1", "qf2"
       ],
+      "itemStats": [{"stat": 127, "op": "<", "value": 1}],
       "quality": {"max": "superior"},
       "excludeAreas": [1, 40, 75, 103, 109],
       "activeInLevels": [4],
