@@ -6,7 +6,7 @@
   "formatVersion": 1,
   "title": "Sully's QoL Filter",
   "author": "Sully",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "description": "Sully's D2RLAN QoL filter - PoE themed drop labels, sounds, mini-map icons.",
   "updateUrl": "https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.json",
   "filterLevels": [
@@ -306,6 +306,12 @@
       "hide": true
     },
     {
+      "itemCodes": ["mp1","hp1"],
+      "playerStats": [{"stat": 12, "op": ">=", "value": 12}],
+      "excludeAreas": [1, 40, 75, 103, 109],
+      "hide": true
+    },
+    {
       "itemCodes": ["gld"],
       "itemStats": [{"stat": 14, "op": "<=", "value": 499}],
       "playerStats": [{"stat": 12, "op": ">=", "value": 60}],
@@ -327,7 +333,7 @@
       "hide": true
     },
     {"itemCodes": ["gld"], "replaceName": "ÿc0$$"},
-    {"itemCodes": ["vps", "yps", "gpm", "opm", "wms", "tbk", "ibk", "tsc", "isc", "hp1", "mp1"], "excludeAreas": [1, 40, 75, 103, 109], "hide": true},
+    {"itemCodes": ["vps", "yps", "gpm", "opm", "wms", "tbk", "ibk", "tsc", "isc"], "excludeAreas": [1, 40, 75, 103, 109], "hide": true},
     {"quality": "inferior", "playerStats": [{"stat": 12, "op": ">=", "value": 10}], "excludeAreas": [1, 40, 75, 103, 109], "hide": true},
     {
       "itemTypes": ["weap", "armo"],
