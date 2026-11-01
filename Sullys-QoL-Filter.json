@@ -673,7 +673,7 @@
 
     // Jewels, potions and special items
     {
-      "itemCodes": ["jew"],
+      "itemCodes": ["jew","mjw"],
       "quality": "rare",
       "replaceName": "ÿc9{name}",
       "chatMessage": "ÿc9** Rare Jewel **",
