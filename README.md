@@ -13,6 +13,9 @@ Very Strict - Begins hiding mid tier runes and rune decals. Hides ALL magic jewe
 Uber Strict - Begins hiding all ESR runes except the highest two tiers (gold and purple), only show high LoD runes, hides all set items, and all rare items except jewels, jewelry, and charms. This also filters out all base types except Mythicals.
 Only use this when you have a strong understanding of itemization in this game and are establishing yourself in end-game maps.
 
-Feel free to make any edits to this filter to fit your needs. I only request that you refer to https://locbones.github.io/D2RLAN-LootFilterGuide/ before asking questions that are answered there.
+Feel free to make any edits to this filter to fit your needs. I only request that you refer to the Loot Filter guide that Celestialray created (it's in your mods loot filter folder)
+
+Use this to edit loot filters without diving into the json code
+https://istvan-panczel.github.io/d2r-esr-runeword-browser/loot-filters
 
 Always open to suggestions and if you notice anything out of place please let me know in discord with images and details.
