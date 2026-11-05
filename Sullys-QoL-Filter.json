@@ -7,7 +7,7 @@
   "title": "Sully's QoL Filter",
   "author": "Sully",
   "version": "0.7.0",
-  "description": "Sully's D2RLAN QoL filter - PoE themed filter with language localizations",
+  "description": "Sully's ESR QoL filter - PoE themed filter with language localizations",
   "updateUrl": "https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.json",
   "filterLevels": [
     {"id": 1, "name": {"enUS": "Leveling", "deDE": "Leveln", "esES": "Subir de nivel", "frFR": "Montée de niveau", "itIT": "Livellamento", "koKR": "레벨링", "plPL": "Levelowanie", "ruRU": "Прокачка", "zhCN": "升级", "zhTW": "升級", "esMX": "Subir de nivel"}},
