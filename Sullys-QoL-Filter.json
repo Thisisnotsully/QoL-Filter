@@ -6,7 +6,7 @@
   "formatVersion": 1,
   "title": "Sully's QoL Filter",
   "author": "Sully",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "Sully's ESR QoL filter (0.9.4) - PoE themed filter with language localizations, beams, full ESR item coverage and strictness-scaled gold/potion filtering",
   "updateUrl": "https://raw.githubusercontent.com/Thisisnotsully/QoL-Filter/refs/heads/main/Sullys-QoL-Filter.json",
   "filterLevels": [
@@ -1049,22 +1049,8 @@
     },
 
     // ---- Mythical bases
-    // Magic and white mythical bases.
+    // White mythical bases. Magic mythical bases are never hidden.
 
-    {
-      "comment": "R115 | On level 4, hides magic-quality mythical bases (all 61) outside towns | hide at L4",
-      "itemCodes": [
-        "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15",
-        "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31",
-        "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46",
-        "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61",
-        "dd1"
-      ],
-      "quality": "magic",
-      "excludeAreas": [1, 40, 75, 103, 109],
-      "activeInLevels": [4],
-      "hide": true
-    },
     {
       "comment": "R116 | On level 4, hides normal-quality mythical bases (all 61) outside towns | hide at L4",
       "itemCodes": [
