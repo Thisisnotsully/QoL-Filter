@@ -73,9 +73,11 @@
     {
       "comment": "R001 | Mythical uniques: never hidden at any level | never hide",
       "quality": "unique",
-      "itemCodes": ["dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "mrn", "mam", "mjw", "au9"],
+      "itemCodes": ["dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "mrn", "mam", "mjw"],
       "show": true
     },
+    // The Lich King Essence amulets (au9) are the only Mythical uniques on that base: never hidden at any level. The other au9 uniques are ordinary.
+    {"comment": "R705 | Lich King Essence amulets (au9 Mythical uniques): never hidden at any level | never hide", "itemCodes": ["au9"], "uniqueOrSetIds": [1090, 1091, 1092, 1093, 1094, 1095], "quality": "unique", "show": true},
 
     // ---- Ethereal weapons
     // Ethereal weapons with 0 or 2+ sockets are never hidden (normal bases at L1, exceptional at L1-2, elite at L1-4). Ethereal mythical bases (not 1-socket) are never hidden and get a chat line, sound and map icon.
@@ -1369,7 +1371,8 @@
     // Uniques from rings, amulets and class jewellery: chat line, other.mp3 sound, red border, goldstar icon.
     {
       "comment": "R155 | Uniques from rings, amulets and class jewellery: chat line, other.mp3 sound, red border, goldstar icon | chat+sound+label",
-      "itemCodes": ["rin", "amu", "zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam", "wam", "wrn"],
+      "itemCodes": ["rin", "amu", "zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam", "wam", "wrn", "au9"],
+      "excludeUniqueOrSetIds": [1090, 1091, 1092, 1093, 1094, 1095],
       "quality": "unique",
       "chatMessage": "ÿc1*ÿc2*ÿc3 ÿc4{name} ÿc1*ÿc2*ÿc3",
       "sound": "other.mp3",
@@ -1421,7 +1424,7 @@
       "droplight": {"color": [0, 200, 200]}
     },
     {"comment": "R164 | Mythical label: Mythical Ring (mrn), with the Mythical style and name prefix | chat+sound+label+name", "itemCodes": ["mrn"], "quality": "unique", "replaceName": {"enUS": "Ring", "deDE": "Ring", "esES": "Anillo", "frFR": "Anneau", "itIT": "Anello", "koKR": "반지", "plPL": "Pierścień", "ruRU": "Кольцо", "zhCN": "戒指", "zhTW": "戒指", "esMX": "Anillo", "jaJP": "リング", "ptBR": "Anel"}, "namePrefix": {"enUS": "Mythical ", "deDE": "Mythische ", "esES": "Mítico ", "frFR": "Mythique ", "itIT": "Mitico ", "koKR": "신화적인 ", "plPL": "Mityczny ", "ruRU": "Мифическое ", "zhCN": "神话", "zhTW": "神話", "esMX": "Mítico ", "jaJP": "神話の", "ptBR": "Mítico "}, "useStyle": "Mythical"},
-    {"comment": "R165 | Mythical label: Amulet (au9), with the Mythical style and name prefix | chat+sound+label+name", "itemCodes": ["au9"], "quality": "unique", "replaceName": {"enUS": "Amulet", "deDE": "Amulett", "esES": "Amuleto", "frFR": "Amulette", "itIT": "Amuleto", "koKR": "아뮬렛", "plPL": "Amulet", "ruRU": "Амулет", "zhCN": "护身符", "zhTW": "護身符", "esMX": "Amuleto", "jaJP": "アミュレット", "ptBR": "Amuleto"}, "namePrefix": {"enUS": "Mythical ", "deDE": "Mythische ", "esES": "Mítico ", "frFR": "Mythique ", "itIT": "Mitico ", "koKR": "신화적인 ", "plPL": "Mityczny ", "ruRU": "Мифическое ", "zhCN": "神话", "zhTW": "神話", "esMX": "Mítico ", "jaJP": "神話の", "ptBR": "Mítico "}, "useStyle": "Mythical"},
+    {"comment": "R165 | Mythical label: Lich King Essence amulets (au9), with the Mythical style and name prefix | chat+sound+label+name", "itemCodes": ["au9"], "uniqueOrSetIds": [1090, 1091, 1092, 1093, 1094, 1095], "quality": "unique", "replaceName": {"enUS": "Amulet", "deDE": "Amulett", "esES": "Amuleto", "frFR": "Amulette", "itIT": "Amuleto", "koKR": "아뮬렛", "plPL": "Amulet", "ruRU": "Амулет", "zhCN": "护身符", "zhTW": "護身符", "esMX": "Amuleto", "jaJP": "アミュレット", "ptBR": "Amuleto"}, "namePrefix": {"enUS": "Mythical ", "deDE": "Mythische ", "esES": "Mítico ", "frFR": "Mythique ", "itIT": "Mitico ", "koKR": "신화적인 ", "plPL": "Mityczny ", "ruRU": "Мифическое ", "zhCN": "神话", "zhTW": "神話", "esMX": "Mítico ", "jaJP": "神話の", "ptBR": "Mítico "}, "useStyle": "Mythical"},
     {"comment": "R166 | Mythical label: Marksmen Bow (m01), with the Mythical style and name prefix | chat+sound+label+name", "itemCodes": ["m01"], "quality": "unique", "replaceName": {"enUS": "Marksmen Bow", "deDE": "Schützenbogen", "esES": "Arco de Francotirador", "frFR": "Arc de tireur d'élite", "itIT": "Arco del Tiratore", "koKR": "명사수의 활", "plPL": "Łuk Strzelca", "ruRU": "Стрелковый лук", "zhCN": "神射手之弓", "zhTW": "神射手之弓", "esMX": "Arco de Francotirador", "jaJP": "マークスマンの弓", "ptBR": "Arco de atirador"}, "namePrefix": {"enUS": "Mythical ", "deDE": "Mythische ", "esES": "Mítico ", "frFR": "Mythique ", "itIT": "Mitico ", "koKR": "신화적인 ", "plPL": "Mityczny ", "ruRU": "Мифическое ", "zhCN": "神话", "zhTW": "神話", "esMX": "Mítico ", "jaJP": "神話の", "ptBR": "Mítico "}, "useStyle": "Mythical"},
     {"comment": "R167 | Mythical label: Odysseus Crossbow (m02), with the Mythical style | chat+sound+label+name", "itemCodes": ["m02"], "quality": "unique", "replaceName": {"enUS": "Odysseus Crossbow", "deDE": "Odysseus-Armbrust", "esES": "Ballesta de Odiseo", "frFR": "Arbalète d'Ulysse", "itIT": "Balestra di Odisseo", "koKR": "오디세우스 석궁", "plPL": "Kusza Odyseusza", "ruRU": "Арбалет Одиссея", "zhCN": "奥德修斯十字弩", "zhTW": "奧德修斯十字弩", "esMX": "Ballesta de Odiseo", "jaJP": "オデュッセウスのクロスボウ", "ptBR": "Besta de Odisseu"}, "useStyle": "Mythical"},
     {"comment": "R168 | Mythical label: Titan's Maul (m03), with the Mythical style and name prefix | chat+sound+label+name", "itemCodes": ["m03"], "quality": "unique", "replaceName": {"enUS": "Titan's Maul", "deDE": "Titanenhammer", "esES": "Mazo del Titán", "frFR": "Maillet du Titan", "itIT": "Maglio del Titano", "koKR": "타이탄의 망치", "plPL": "Młot Tytana", "ruRU": "Молот Титана", "zhCN": "泰坦之槌", "zhTW": "泰坦之槌", "esMX": "Mazo del Titán", "jaJP": "タイタンの大槌", "ptBR": "Maça do Titã"}, "namePrefix": {"enUS": "Mythical ", "deDE": "Mythische ", "esES": "Mítico ", "frFR": "Mythique ", "itIT": "Mitico ", "koKR": "신화적인 ", "plPL": "Mityczny ", "ruRU": "Мифическое ", "zhCN": "神话", "zhTW": "神話", "esMX": "Mítico ", "jaJP": "神話の", "ptBR": "Mítico "}, "useStyle": "Mythical"},
@@ -1541,80 +1544,115 @@
       "labelBorder": {"color": [200, 150, 0, 255], "width": 1},
       "icon": {"iconName": "cube", "iconSize": 27}
     },
-    // Reagent gems (xl* and xt* codes): gold border and gem2 icon. Label only.
+    // ESR crystals (xl* flawed and xt* codes): the Worldstone Shard's gold background, a gold border and the gem2 icon. Label only; R706-R729 below name them.
     {
-      "comment": "R212 | Reagent gems (xl* and xt* codes): gold border and gem2 icon | label",
+      "comment": "R212 | ESR crystals (xl* flawed and xt* codes): gold background and border, gem2 icon | label",
       "itemCodes": [
         "xl0", "xl1", "xl2", "xl3", "xl4", "xl5", "xl6", "xl7", "xl8", "xl9", "xlx", "xly", "xt0", "xt1", "xt2",
         "xt3", "xt4", "xt5", "xt6", "xt7", "xt8", "xt9", "xtx", "xty"
       ],
+      "labelBackground": [200, 150, 0, 255],
       "labelBorder": {"color": [200, 150, 0, 255], "width": 1},
       "icon": {"iconName": "gem2", "iconSize": 27}
     },
     {
-      "comment": "R213 | Perfect gem gvb: renames to a purple gem label with a gold border and gem2 icon | label+name",
+      "comment": "R213 | Perfect gem gvb: renames to a purple gem label on a gold background with a gold border and gem2 icon | label+name",
       "itemCodes": ["gvb"],
+      "labelBackground": [200, 150, 0, 255],
       "replaceName": {"enUS": "ÿc;*P.Gem*", "deDE": "ÿc;*Perf.-Edelstein*", "esES": "ÿc;*Gema perf.*", "frFR": "ÿc;*Gemme parf.*", "itIT": "ÿc;*Gemma perf.*", "koKR": "ÿc;*완벽한 보석*", "plPL": "ÿc;*Doskonały klejnot*", "ruRU": "ÿc;*Идеальный камень*", "zhCN": "ÿc;*完美宝石*", "zhTW": "ÿc;*完美寶石*", "esMX": "ÿc;*Gema perf.*", "jaJP": "ÿc;*完璧な宝石*", "ptBR": "ÿc;*Gema perf.*"},
       "labelBorder": {"color": [200, 150, 0, 255], "width": 1},
       "droplight": {"color": [174, 0, 255]},
       "icon": {"iconName": "gem2", "iconSize": 27}
     },
     {
-      "comment": "R214 | Perfect gem gyb: renames to a yellow P.Gem label with a gold border and gem2 icon | label+name",
+      "comment": "R214 | Perfect gem gyb: renames to a yellow P.Gem label on a gold background with a gold border and gem2 icon | label+name",
       "itemCodes": ["gyb"],
+      "labelBackground": [200, 150, 0, 255],
       "replaceName": {"enUS": "ÿc9*P.Gem*", "deDE": "ÿc9*Perf.-Edelstein*", "esES": "ÿc9*Gema perf.*", "frFR": "ÿc9*Gemme parf.*", "itIT": "ÿc9*Gemma perf.*", "koKR": "ÿc9*완벽한 보석*", "plPL": "ÿc9*Doskonały klejnot*", "ruRU": "ÿc9*Идеальный камень*", "zhCN": "ÿc9*完美宝石*", "zhTW": "ÿc9*完美寶石*", "esMX": "ÿc9*Gema perf.*", "jaJP": "ÿc9*完璧な宝石*", "ptBR": "ÿc9*Gema perf.*"},
       "labelBorder": {"color": [200, 150, 0, 255], "width": 1},
       "droplight": {"color": [255, 255, 100]},
       "icon": {"iconName": "gem2", "iconSize": 27}
     },
     {
-      "comment": "R215 | Perfect gem gbb: renames to a blue P.Gem label with a gold border and gem2 icon | label+name",
+      "comment": "R215 | Perfect gem gbb: renames to a blue P.Gem label on a gold background with a gold border and gem2 icon | label+name",
       "itemCodes": ["gbb"],
+      "labelBackground": [200, 150, 0, 255],
       "replaceName": {"enUS": "ÿc3*P.Gem*", "deDE": "ÿc3*Perf.-Edelstein*", "esES": "ÿc3*Gema perf.*", "frFR": "ÿc3*Gemme parf.*", "itIT": "ÿc3*Gemma perf.*", "koKR": "ÿc3*완벽한 보석*", "plPL": "ÿc3*Doskonały klejnot*", "ruRU": "ÿc3*Идеальный камень*", "zhCN": "ÿc3*完美宝石*", "zhTW": "ÿc3*完美寶石*", "esMX": "ÿc3*Gema perf.*", "jaJP": "ÿc3*完璧な宝石*", "ptBR": "ÿc3*Gema perf.*"},
       "labelBorder": {"color": [200, 150, 0, 255], "width": 1},
       "droplight": {"color": [110, 110, 255]},
       "icon": {"iconName": "gem2", "iconSize": 27}
     },
     {
-      "comment": "R216 | Perfect gem ggb: renames to a green P.Gem label with a gold border and gem2 icon | label+name",
+      "comment": "R216 | Perfect gem ggb: renames to a green P.Gem label on a gold background with a gold border and gem2 icon | label+name",
       "itemCodes": ["ggb"],
+      "labelBackground": [200, 150, 0, 255],
       "replaceName": {"enUS": "ÿc2*P.Gem*", "deDE": "ÿc2*Perf.-Edelstein*", "esES": "ÿc2*Gema perf.*", "frFR": "ÿc2*Gemme parf.*", "itIT": "ÿc2*Gemma perf.*", "koKR": "ÿc2*완벽한 보석*", "plPL": "ÿc2*Doskonały klejnot*", "ruRU": "ÿc2*Идеальный камень*", "zhCN": "ÿc2*完美宝石*", "zhTW": "ÿc2*完美寶石*", "esMX": "ÿc2*Gema perf.*", "jaJP": "ÿc2*完璧な宝石*", "ptBR": "ÿc2*Gema perf.*"},
       "labelBorder": {"color": [200, 150, 0, 255], "width": 1},
       "droplight": {"color": [0, 255, 0]},
       "icon": {"iconName": "gem2", "iconSize": 27}
     },
     {
-      "comment": "R217 | Perfect gem grb: renames to a red P.Gem label with a gold border and gem2 icon | label+name",
+      "comment": "R217 | Perfect gem grb: renames to a red P.Gem label on a gold background with a gold border and gem2 icon | label+name",
       "itemCodes": ["grb"],
+      "labelBackground": [200, 150, 0, 255],
       "replaceName": {"enUS": "ÿc1*P.Gem*", "deDE": "ÿc1*Perf.-Edelstein*", "esES": "ÿc1*Gema perf.*", "frFR": "ÿc1*Gemme parf.*", "itIT": "ÿc1*Gemma perf.*", "koKR": "ÿc1*완벽한 보석*", "plPL": "ÿc1*Doskonały klejnot*", "ruRU": "ÿc1*Идеальный камень*", "zhCN": "ÿc1*完美宝石*", "zhTW": "ÿc1*完美寶石*", "esMX": "ÿc1*Gema perf.*", "jaJP": "ÿc1*完璧な宝石*", "ptBR": "ÿc1*Gema perf.*"},
       "labelBorder": {"color": [200, 150, 0, 255], "width": 1},
       "droplight": {"color": [255, 77, 77]},
       "icon": {"iconName": "gem2", "iconSize": 27}
     },
     {
-      "comment": "R218 | Perfect gem gwb: renames to a white P.Gem label with a gold border and gem2 icon | label+name",
+      "comment": "R218 | Perfect gem gwb: renames to a white P.Gem label on a gold background with a gold border and gem2 icon | label+name",
       "itemCodes": ["gwb"],
+      "labelBackground": [200, 150, 0, 255],
       "replaceName": {"enUS": "ÿc0*P.Gem*", "deDE": "ÿc0*Perf.-Edelstein*", "esES": "ÿc0*Gema perf.*", "frFR": "ÿc0*Gemme parf.*", "itIT": "ÿc0*Gemma perf.*", "koKR": "ÿc0*완벽한 보석*", "plPL": "ÿc0*Doskonały klejnot*", "ruRU": "ÿc0*Идеальный камень*", "zhCN": "ÿc0*完美宝石*", "zhTW": "ÿc0*完美寶石*", "esMX": "ÿc0*Gema perf.*", "jaJP": "ÿc0*完璧な宝石*", "ptBR": "ÿc0*Gema perf.*"},
       "labelBorder": {"color": [200, 150, 0, 255], "width": 1},
       "droplight": {},
       "icon": {"iconName": "gem2", "iconSize": 27}
     },
     {
-      "comment": "R219 | Perfect gem skb: renames to a grey P.Gem label with a gold border and gem2 icon | label+name",
+      "comment": "R219 | Perfect gem skb: renames to a grey P.Gem label on a gold background with a gold border and gem2 icon | label+name",
       "itemCodes": ["skb"],
+      "labelBackground": [200, 150, 0, 255],
       "replaceName": {"enUS": "ÿc5*P.Gem*", "deDE": "ÿc5*Perf.-Edelstein*", "esES": "ÿc5*Gema perf.*", "frFR": "ÿc5*Gemme parf.*", "itIT": "ÿc5*Gemma perf.*", "koKR": "ÿc5*완벽한 보석*", "plPL": "ÿc5*Doskonały klejnot*", "ruRU": "ÿc5*Идеальный камень*", "zhCN": "ÿc5*完美宝石*", "zhTW": "ÿc5*完美寶石*", "esMX": "ÿc5*Gema perf.*", "jaJP": "ÿc5*完璧な宝石*", "ptBR": "ÿc5*Gema perf.*"},
       "labelBorder": {"color": [200, 150, 0, 255], "width": 1},
       "droplight": {"color": [150, 150, 150]},
       "icon": {"iconName": "gem2", "iconSize": 27}
     },
     {
-      "comment": "R220 | Perfect gem gbk: renames to a gold P.Gem label with a gold border and gem2 icon | label+name",
+      "comment": "R220 | Perfect gem gbk: renames to a gold P.Gem label on a gold background with a gold border and gem2 icon | label+name",
       "itemCodes": ["gbk"],
+      "labelBackground": [200, 150, 0, 255],
       "replaceName": {"enUS": "ÿc6*P.Gem*", "deDE": "ÿc6*Perf.-Edelstein*", "esES": "ÿc6*Gema perf.*", "frFR": "ÿc6*Gemme parf.*", "itIT": "ÿc6*Gemma perf.*", "koKR": "ÿc6*완벽한 보석*", "plPL": "ÿc6*Doskonały klejnot*", "ruRU": "ÿc6*Идеальный камень*", "zhCN": "ÿc6*完美宝石*", "zhTW": "ÿc6*完美寶石*", "esMX": "ÿc6*Gema perf.*", "jaJP": "ÿc6*完璧な宝石*", "ptBR": "ÿc6*Gema perf.*"},
       "labelBorder": {"color": [200, 150, 0, 255], "width": 1},
       "droplight": {"color": [120, 120, 120]},
       "icon": {"iconName": "gem2", "iconSize": 27}
     },
+    // ---- ESR crystal names
+    // Each crystal's own name from the game's strings, in the player's language and its own color. Replacing the name drops the item level the game adds after it, such as "(1)".
+    {"comment": "R706 | Flawed crystal xl0: its game name without the item level | name", "itemCodes": ["xl0"], "replaceName": "{string:xl0}"},
+    {"comment": "R707 | Flawed crystal xl1: its game name without the item level | name", "itemCodes": ["xl1"], "replaceName": "{string:xl1}"},
+    {"comment": "R708 | Flawed crystal xl2: its game name without the item level | name", "itemCodes": ["xl2"], "replaceName": "{string:xl2}"},
+    {"comment": "R709 | Flawed crystal xl3: its game name without the item level | name", "itemCodes": ["xl3"], "replaceName": "{string:xl3}"},
+    {"comment": "R710 | Flawed crystal xl4: its game name without the item level | name", "itemCodes": ["xl4"], "replaceName": "{string:xl4}"},
+    {"comment": "R711 | Flawed crystal xl5: its game name without the item level | name", "itemCodes": ["xl5"], "replaceName": "{string:xl5}"},
+    {"comment": "R712 | Flawed crystal xl6: its game name without the item level | name", "itemCodes": ["xl6"], "replaceName": "{string:xl6}"},
+    {"comment": "R713 | Flawed crystal xl7: its game name without the item level | name", "itemCodes": ["xl7"], "replaceName": "{string:xl7}"},
+    {"comment": "R714 | Flawed crystal xl8: its game name without the item level | name", "itemCodes": ["xl8"], "replaceName": "{string:xl8}"},
+    {"comment": "R715 | Flawed crystal xl9: its game name without the item level | name", "itemCodes": ["xl9"], "replaceName": "{string:xl9}"},
+    {"comment": "R716 | Flawed crystal xlx: its game name without the item level | name", "itemCodes": ["xlx"], "replaceName": "{string:xlx}"},
+    {"comment": "R717 | Flawed crystal xly: its game name without the item level | name", "itemCodes": ["xly"], "replaceName": "{string:xly}"},
+    {"comment": "R718 | Crystal xt0: its game name without the item level | name", "itemCodes": ["xt0"], "replaceName": "{string:xt0}"},
+    {"comment": "R719 | Crystal xt1: its game name without the item level | name", "itemCodes": ["xt1"], "replaceName": "{string:xt1}"},
+    {"comment": "R720 | Crystal xt2: its game name without the item level | name", "itemCodes": ["xt2"], "replaceName": "{string:xt2}"},
+    {"comment": "R721 | Crystal xt3: its game name without the item level | name", "itemCodes": ["xt3"], "replaceName": "{string:xt3}"},
+    {"comment": "R722 | Crystal xt4: its game name without the item level | name", "itemCodes": ["xt4"], "replaceName": "{string:xt4}"},
+    {"comment": "R723 | Crystal xt5: its game name without the item level | name", "itemCodes": ["xt5"], "replaceName": "{string:xt5}"},
+    {"comment": "R724 | Crystal xt6: its game name without the item level | name", "itemCodes": ["xt6"], "replaceName": "{string:xt6}"},
+    {"comment": "R725 | Crystal xt7: its game name without the item level | name", "itemCodes": ["xt7"], "replaceName": "{string:xt7}"},
+    {"comment": "R726 | Crystal xt8: its game name without the item level | name", "itemCodes": ["xt8"], "replaceName": "{string:xt8}"},
+    {"comment": "R727 | Crystal xt9: its game name without the item level | name", "itemCodes": ["xt9"], "replaceName": "{string:xt9}"},
+    {"comment": "R728 | Crystal xtx: its game name without the item level | name", "itemCodes": ["xtx"], "replaceName": "{string:xtx}"},
+    {"comment": "R729 | Crystal xty: its game name without the item level | name", "itemCodes": ["xty"], "replaceName": "{string:xty}"},
 
     // ---- Runes
     // High, ESR, mid and Null rune labels.
