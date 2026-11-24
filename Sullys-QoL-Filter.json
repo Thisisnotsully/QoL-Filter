@@ -73,7 +73,7 @@
     {
       "comment": "R001 | Mythical uniques: never hidden at any level | never hide",
       "quality": "unique",
-      "itemCodes": ["7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "mrn", "mam", "mjw", "au9"],
+      "itemCodes": ["dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "mrn", "mam", "mjw", "au9"],
       "show": true
     },
 
@@ -83,7 +83,7 @@
     {"comment": "R002 | Ethereal normal weapons with 0 or 2+ sockets: never hidden at L1 | never hide at L1", "itemTypes": ["weap"], "baseTier": 0, "isEthereal": true, "sockets": [0, 2, 3, 4, 5, 6], "activeInLevels": [1], "show": true},
     {"comment": "R003 | Ethereal exceptional weapons with 0 or 2+ sockets: never hidden at L1-2 | never hide at L1-2", "itemTypes": ["weap"], "baseTier": 1, "isEthereal": true, "sockets": [0, 2, 3, 4, 5, 6], "activeInLevels": [1, 2], "show": true},
     {"comment": "R004 | Ethereal elite weapons with 0 or 2+ sockets: never hidden at L1-4 | never hide at L1-4", "itemTypes": ["weap"], "baseTier": 2, "isEthereal": true, "sockets": [0, 2, 3, 4, 5, 6], "activeInLevels": [1, 2, 3, 4], "show": true},
-    {"comment": "R005 | Ethereal mythical base weapons (0 or 2+ sockets): never hidden | never hide", "itemCodes": ["7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m07", "m08", "m09", "m11", "m12", "m13", "m14", "m16", "m17", "m18", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m61"], "quality": ["normal", "superior"], "isEthereal": true, "sockets": [0, 2, 3, 4, 5, 6], "show": true},
+    {"comment": "R005 | Ethereal mythical base weapons (0 or 2+ sockets): never hidden | never hide", "itemCodes": ["dd1", "m01", "m02", "m03", "m04", "m05", "m07", "m08", "m09", "m11", "m12", "m13", "m14", "m16", "m17", "m18", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m61"], "quality": ["normal", "superior"], "isEthereal": true, "sockets": [0, 2, 3, 4, 5, 6], "show": true},
 
     // ---- Skill bases
     // Bases with +All Skills, +1 Summons Limit or +3 or more to a skill tab are never hidden.
@@ -96,7 +96,7 @@
       "show": true
     },
     {
-      "comment": "R007 | Superior armor/weapons with +1 or more to Non-Unique Summons Limit: never hidden | never hide",
+      "comment": "R007 | Normal/superior armor/weapons with +1 or more to Non-Unique Summons Limit: never hidden | never hide",
       "itemTypes": ["armo", "weap"],
       "quality": ["normal", "superior"],
       "itemStats": [{"stat": "passive_summ_limit", "op": ">=", "value": 1}],
@@ -162,12 +162,12 @@
       "comment": "R018 | Chat announcement for normal-tier uniques (baseTier 0), levels 1-2 | chat (L1-2)",
       "itemTypes": ["weap", "armo"],
       "excludeItemCodes": [
-        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
-        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
-        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
-        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
-        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
-        "qf1", "qf2"
+        "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14",
+        "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30",
+        "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45",
+        "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60",
+        "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1",
+        "qf2"
       ],
       "quality": "unique",
       "baseTier": 0,
@@ -179,12 +179,12 @@
       "comment": "R019 | Chat announcement for exceptional-tier uniques (baseTier 1), levels 1-2 | chat (L1-2)",
       "itemTypes": ["weap", "armo"],
       "excludeItemCodes": [
-        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
-        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
-        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
-        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
-        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
-        "qf1", "qf2"
+        "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14",
+        "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30",
+        "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45",
+        "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60",
+        "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1",
+        "qf2"
       ],
       "quality": "unique",
       "baseTier": 1,
@@ -195,7 +195,7 @@
     {
       "comment": "R020 | Chat announcement for elite-tier uniques (baseTier 2), levels 1-3 | chat (L1-3)",
       "itemTypes": ["weap", "armo"],
-      "excludeItemCodes": ["7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2", "ci3"],
+      "excludeItemCodes": ["dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2", "ci3"],
       "quality": "unique",
       "baseTier": 2,
       "activeInLevels": [1, 2, 3],
@@ -483,43 +483,43 @@
     },
 
     // Superior gloves with the maximum gem effect roll (+20%): never hidden, highlighted at every level
-    {"comment": "R051 | Superior gloves with the maximum gem effect roll (+20%) | never hide+label", "itemTypes": ["glov"], "quality": "superior", "itemStats": [{"stat": "gem_effect", "op": ">=", "value": 20}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4+20% Gem Effect ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4+20% Edelstein-Wirkung ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4+20% Efecto de gemas ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4+20% Effet des gemmes ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4+20% Effetto gemme ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4+20% 보석 효과 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4+20% Efekt klejnotów ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4+20% Эффект самоцветов ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4+20% 宝石效果 ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4+20% 寶石效果 ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4+20% Efecto de gemas ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4+20% 宝石効果 ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4+20% Efeito de gemas ÿc1*ÿc2*ÿc3"}, "nameSuffix": {"enUS": "ÿc1[+{stat:1022}% Gem Effect]", "deDE": "ÿc1[+{stat:1022}% Edelstein-Wirkung]", "esES": "ÿc1[+{stat:1022}% Efecto de gemas]", "frFR": "ÿc1[+{stat:1022}% Effet des gemmes]", "itIT": "ÿc1[+{stat:1022}% Effetto gemme]", "koKR": "ÿc1[+{stat:1022}% 보석 효과]", "plPL": "ÿc1[+{stat:1022}% Efekt klejnotów]", "ruRU": "ÿc1[+{stat:1022}% Эффект самоцветов]", "zhCN": "ÿc1[+{stat:1022}% 宝石效果]", "zhTW": "ÿc1[+{stat:1022}% 寶石效果]", "esMX": "ÿc1[+{stat:1022}% Efecto de gemas]", "jaJP": "ÿc1[+{stat:1022}% 宝石効果]", "ptBR": "ÿc1[+{stat:1022}% Efeito de gemas]"}},
+    {"comment": "R051 | Superior gloves with the maximum gem effect roll (+20%) | never hide+chat+sound+label+name", "itemTypes": ["glov"], "quality": "superior", "itemStats": [{"stat": "gem_effect", "op": ">=", "value": 20}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4+20% Gem Effect ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4+20% Edelstein-Wirkung ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4+20% Efecto de gemas ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4+20% Effet des gemmes ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4+20% Effetto gemme ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4+20% 보석 효과 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4+20% Efekt klejnotów ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4+20% Эффект самоцветов ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4+20% 宝石效果 ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4+20% 寶石效果 ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4+20% Efecto de gemas ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4+20% 宝石効果 ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4+20% Efeito de gemas ÿc1*ÿc2*ÿc3"}, "nameSuffix": {"enUS": "ÿc1[+{stat:1022}% Gem Effect]", "deDE": "ÿc1[+{stat:1022}% Edelstein-Wirkung]", "esES": "ÿc1[+{stat:1022}% Efecto de gemas]", "frFR": "ÿc1[+{stat:1022}% Effet des gemmes]", "itIT": "ÿc1[+{stat:1022}% Effetto gemme]", "koKR": "ÿc1[+{stat:1022}% 보석 효과]", "plPL": "ÿc1[+{stat:1022}% Efekt klejnotów]", "ruRU": "ÿc1[+{stat:1022}% Эффект самоцветов]", "zhCN": "ÿc1[+{stat:1022}% 宝石效果]", "zhTW": "ÿc1[+{stat:1022}% 寶石效果]", "esMX": "ÿc1[+{stat:1022}% Efecto de gemas]", "jaJP": "ÿc1[+{stat:1022}% 宝石効果]", "ptBR": "ÿc1[+{stat:1022}% Efeito de gemas]"}},
     // Superior gloves with a lower gem effect roll (below +20%): never hidden and highlighted at levels 1-3
-    {"comment": "R052 | Superior gloves with a lower gem effect roll (below +20%) | never hide+label", "itemTypes": ["glov"], "quality": "superior", "itemStats": [{"stat": "gem_effect", "op": ">=", "value": 1}, {"stat": "gem_effect", "op": "<", "value": 20}], "activeInLevels": [1, 2, 3], "show": true, "useStyle": "AffixGood", "nameSuffix": {"enUS": "ÿc9[+{stat:1022}% Gem Effect]", "deDE": "ÿc9[+{stat:1022}% Edelstein-Wirkung]", "esES": "ÿc9[+{stat:1022}% Efecto de gemas]", "frFR": "ÿc9[+{stat:1022}% Effet des gemmes]", "itIT": "ÿc9[+{stat:1022}% Effetto gemme]", "koKR": "ÿc9[+{stat:1022}% 보석 효과]", "plPL": "ÿc9[+{stat:1022}% Efekt klejnotów]", "ruRU": "ÿc9[+{stat:1022}% Эффект самоцветов]", "zhCN": "ÿc9[+{stat:1022}% 宝石效果]", "zhTW": "ÿc9[+{stat:1022}% 寶石效果]", "esMX": "ÿc9[+{stat:1022}% Efecto de gemas]", "jaJP": "ÿc9[+{stat:1022}% 宝石効果]", "ptBR": "ÿc9[+{stat:1022}% Efeito de gemas]"}},
+    {"comment": "R052 | Superior gloves with a lower gem effect roll (below +20%) | never hide+label+name (L1-3)", "itemTypes": ["glov"], "quality": "superior", "itemStats": [{"stat": "gem_effect", "op": ">=", "value": 1}, {"stat": "gem_effect", "op": "<", "value": 20}], "activeInLevels": [1, 2, 3], "show": true, "useStyle": "AffixGood", "nameSuffix": {"enUS": "ÿc9[+{stat:1022}% Gem Effect]", "deDE": "ÿc9[+{stat:1022}% Edelstein-Wirkung]", "esES": "ÿc9[+{stat:1022}% Efecto de gemas]", "frFR": "ÿc9[+{stat:1022}% Effet des gemmes]", "itIT": "ÿc9[+{stat:1022}% Effetto gemme]", "koKR": "ÿc9[+{stat:1022}% 보석 효과]", "plPL": "ÿc9[+{stat:1022}% Efekt klejnotów]", "ruRU": "ÿc9[+{stat:1022}% Эффект самоцветов]", "zhCN": "ÿc9[+{stat:1022}% 宝石效果]", "zhTW": "ÿc9[+{stat:1022}% 寶石效果]", "esMX": "ÿc9[+{stat:1022}% Efecto de gemas]", "jaJP": "ÿc9[+{stat:1022}% 宝石効果]", "ptBR": "ÿc9[+{stat:1022}% Efeito de gemas]"}},
     // Superior belts with the maximum utility potion effectiveness roll (+25%): never hidden, highlighted at every level
-    {"comment": "R053 | Superior belts, max utility potion roll (+25%) | never hide+label", "itemTypes": ["belt"], "quality": "superior", "itemStats": [{"stat": "utilitypotionmultiplier", "op": ">=", "value": 25}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4+25% Utility Potion Effectiveness ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4+25% Nützlichkeitstrankwirksamkeit ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4+25% Efectividad de pociones de utilidad ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4+25% Efficacité des potions d'utilité ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4+25% Efficacia delle pozioni di utilità ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4+25% 유틸리티 물약 효과 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4+25% Skuteczność mikstur użytkowych ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4+25% Эффективность вспомогательных зелий ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4+25% 辅助药水效果 ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4+25% 輔助藥水效果 ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4+25% Efectividad de pociones de utilidad ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4+25% ユーティリティポーション効果 ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4+25% Eficiência de poções de utilidade ÿc1*ÿc2*ÿc3"}, "nameSuffix": {"enUS": "ÿc1[+{stat:925}% Utility Potion Effectiveness]", "deDE": "ÿc1[+{stat:925}% Nützlichkeitstrankwirksamkeit]", "esES": "ÿc1[+{stat:925}% Efectividad de pociones de utilidad]", "frFR": "ÿc1[+{stat:925}% Efficacité des potions d'utilité]", "itIT": "ÿc1[+{stat:925}% Efficacia delle pozioni di utilità]", "koKR": "ÿc1[+{stat:925}% 유틸리티 물약 효과]", "plPL": "ÿc1[+{stat:925}% Skuteczność mikstur użytkowych]", "ruRU": "ÿc1[+{stat:925}% Эффективность вспомогательных зелий]", "zhCN": "ÿc1[+{stat:925}% 辅助药水效果]", "zhTW": "ÿc1[+{stat:925}% 輔助藥水效果]", "esMX": "ÿc1[+{stat:925}% Efectividad de pociones de utilidad]", "jaJP": "ÿc1[+{stat:925}% ユーティリティポーション効果]", "ptBR": "ÿc1[+{stat:925}% Eficiência de poções de utilidade]"}},
+    {"comment": "R053 | Superior belts, max utility potion roll (+25%) | never hide+chat+sound+label+name", "itemTypes": ["belt"], "quality": "superior", "itemStats": [{"stat": "utilitypotionmultiplier", "op": ">=", "value": 25}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4+25% Utility Potion Effectiveness ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4+25% Nützlichkeitstrankwirksamkeit ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4+25% Efectividad de pociones de utilidad ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4+25% Efficacité des potions d'utilité ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4+25% Efficacia delle pozioni di utilità ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4+25% 유틸리티 물약 효과 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4+25% Skuteczność mikstur użytkowych ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4+25% Эффективность вспомогательных зелий ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4+25% 辅助药水效果 ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4+25% 輔助藥水效果 ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4+25% Efectividad de pociones de utilidad ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4+25% ユーティリティポーション効果 ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4+25% Eficiência de poções de utilidade ÿc1*ÿc2*ÿc3"}, "nameSuffix": {"enUS": "ÿc1[+{stat:925}% Utility Potion Effectiveness]", "deDE": "ÿc1[+{stat:925}% Nützlichkeitstrankwirksamkeit]", "esES": "ÿc1[+{stat:925}% Efectividad de pociones de utilidad]", "frFR": "ÿc1[+{stat:925}% Efficacité des potions d'utilité]", "itIT": "ÿc1[+{stat:925}% Efficacia delle pozioni di utilità]", "koKR": "ÿc1[+{stat:925}% 유틸리티 물약 효과]", "plPL": "ÿc1[+{stat:925}% Skuteczność mikstur użytkowych]", "ruRU": "ÿc1[+{stat:925}% Эффективность вспомогательных зелий]", "zhCN": "ÿc1[+{stat:925}% 辅助药水效果]", "zhTW": "ÿc1[+{stat:925}% 輔助藥水效果]", "esMX": "ÿc1[+{stat:925}% Efectividad de pociones de utilidad]", "jaJP": "ÿc1[+{stat:925}% ユーティリティポーション効果]", "ptBR": "ÿc1[+{stat:925}% Eficiência de poções de utilidade]"}},
     // Superior belts with a lower utility potion effectiveness roll (below +25%): never hidden and highlighted at levels 1-3
-    {"comment": "R054 | Superior belts, lower utility potion roll (below +25%) | never hide+label", "itemTypes": ["belt"], "quality": "superior", "itemStats": [{"stat": "utilitypotionmultiplier", "op": ">=", "value": 1}, {"stat": "utilitypotionmultiplier", "op": "<", "value": 25}], "activeInLevels": [1, 2, 3], "show": true, "useStyle": "AffixGood", "nameSuffix": {"enUS": "ÿc9[+{stat:925}% Utility Potion Effectiveness]", "deDE": "ÿc9[+{stat:925}% Nützlichkeitstrankwirksamkeit]", "esES": "ÿc9[+{stat:925}% Efectividad de pociones de utilidad]", "frFR": "ÿc9[+{stat:925}% Efficacité des potions d'utilité]", "itIT": "ÿc9[+{stat:925}% Efficacia delle pozioni di utilità]", "koKR": "ÿc9[+{stat:925}% 유틸리티 물약 효과]", "plPL": "ÿc9[+{stat:925}% Skuteczność mikstur użytkowych]", "ruRU": "ÿc9[+{stat:925}% Эффективность вспомогательных зелий]", "zhCN": "ÿc9[+{stat:925}% 辅助药水效果]", "zhTW": "ÿc9[+{stat:925}% 輔助藥水效果]", "esMX": "ÿc9[+{stat:925}% Efectividad de pociones de utilidad]", "jaJP": "ÿc9[+{stat:925}% ユーティリティポーション効果]", "ptBR": "ÿc9[+{stat:925}% Eficiência de poções de utilidade]"}},
+    {"comment": "R054 | Superior belts, lower utility potion roll (below +25%) | never hide+label+name (L1-3)", "itemTypes": ["belt"], "quality": "superior", "itemStats": [{"stat": "utilitypotionmultiplier", "op": ">=", "value": 1}, {"stat": "utilitypotionmultiplier", "op": "<", "value": 25}], "activeInLevels": [1, 2, 3], "show": true, "useStyle": "AffixGood", "nameSuffix": {"enUS": "ÿc9[+{stat:925}% Utility Potion Effectiveness]", "deDE": "ÿc9[+{stat:925}% Nützlichkeitstrankwirksamkeit]", "esES": "ÿc9[+{stat:925}% Efectividad de pociones de utilidad]", "frFR": "ÿc9[+{stat:925}% Efficacité des potions d'utilité]", "itIT": "ÿc9[+{stat:925}% Efficacia delle pozioni di utilità]", "koKR": "ÿc9[+{stat:925}% 유틸리티 물약 효과]", "plPL": "ÿc9[+{stat:925}% Skuteczność mikstur użytkowych]", "ruRU": "ÿc9[+{stat:925}% Эффективность вспомогательных зелий]", "zhCN": "ÿc9[+{stat:925}% 辅助药水效果]", "zhTW": "ÿc9[+{stat:925}% 輔助藥水效果]", "esMX": "ÿc9[+{stat:925}% Efectividad de pociones de utilidad]", "jaJP": "ÿc9[+{stat:925}% ユーティリティポーション効果]", "ptBR": "ÿc9[+{stat:925}% Eficiência de poções de utilidade]"}},
     // Superior helms with the maximum rune effect roll (+20%): never hidden, highlighted at every level
-    {"comment": "R055 | Superior helms with the maximum rune effect roll (+20%) | never hide+label", "itemTypes": ["helm"], "quality": "superior", "itemStats": [{"stat": "rune_effect", "op": ">=", "value": 20}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4+20% Rune Effect ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4+20% Runen-Wirkung ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4+20% Efecto de runas ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4+20% Effet des runes ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4+20% Effetto rune ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4+20% 룬 효과 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4+20% Efekt run ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4+20% Эффект рун ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4+20% 符文效果 ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4+20% 符文效果 ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4+20% Efecto de runas ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4+20% ルーン効果 ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4+20% Efeito de runas ÿc1*ÿc2*ÿc3"}, "nameSuffix": {"enUS": "ÿc1[+{stat:1023}% Rune Effect]", "deDE": "ÿc1[+{stat:1023}% Runen-Wirkung]", "esES": "ÿc1[+{stat:1023}% Efecto de runas]", "frFR": "ÿc1[+{stat:1023}% Effet des runes]", "itIT": "ÿc1[+{stat:1023}% Effetto rune]", "koKR": "ÿc1[+{stat:1023}% 룬 효과]", "plPL": "ÿc1[+{stat:1023}% Efekt run]", "ruRU": "ÿc1[+{stat:1023}% Эффект рун]", "zhCN": "ÿc1[+{stat:1023}% 符文效果]", "zhTW": "ÿc1[+{stat:1023}% 符文效果]", "esMX": "ÿc1[+{stat:1023}% Efecto de runas]", "jaJP": "ÿc1[+{stat:1023}% ルーン効果]", "ptBR": "ÿc1[+{stat:1023}% Efeito de runas]"}},
+    {"comment": "R055 | Superior helms with the maximum rune effect roll (+20%) | never hide+chat+sound+label+name", "itemTypes": ["helm"], "quality": "superior", "itemStats": [{"stat": "rune_effect", "op": ">=", "value": 20}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4+20% Rune Effect ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4+20% Runen-Wirkung ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4+20% Efecto de runas ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4+20% Effet des runes ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4+20% Effetto rune ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4+20% 룬 효과 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4+20% Efekt run ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4+20% Эффект рун ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4+20% 符文效果 ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4+20% 符文效果 ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4+20% Efecto de runas ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4+20% ルーン効果 ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4+20% Efeito de runas ÿc1*ÿc2*ÿc3"}, "nameSuffix": {"enUS": "ÿc1[+{stat:1023}% Rune Effect]", "deDE": "ÿc1[+{stat:1023}% Runen-Wirkung]", "esES": "ÿc1[+{stat:1023}% Efecto de runas]", "frFR": "ÿc1[+{stat:1023}% Effet des runes]", "itIT": "ÿc1[+{stat:1023}% Effetto rune]", "koKR": "ÿc1[+{stat:1023}% 룬 효과]", "plPL": "ÿc1[+{stat:1023}% Efekt run]", "ruRU": "ÿc1[+{stat:1023}% Эффект рун]", "zhCN": "ÿc1[+{stat:1023}% 符文效果]", "zhTW": "ÿc1[+{stat:1023}% 符文效果]", "esMX": "ÿc1[+{stat:1023}% Efecto de runas]", "jaJP": "ÿc1[+{stat:1023}% ルーン効果]", "ptBR": "ÿc1[+{stat:1023}% Efeito de runas]"}},
     // Superior helms with a lower rune effect roll (below +20%): never hidden and highlighted at levels 1-3
-    {"comment": "R056 | Superior helms with a lower rune effect roll (below +20%) | never hide+label", "itemTypes": ["helm"], "quality": "superior", "itemStats": [{"stat": "rune_effect", "op": ">=", "value": 1}, {"stat": "rune_effect", "op": "<", "value": 20}], "activeInLevels": [1, 2, 3], "show": true, "useStyle": "AffixGood", "nameSuffix": {"enUS": "ÿc9[+{stat:1023}% Rune Effect]", "deDE": "ÿc9[+{stat:1023}% Runen-Wirkung]", "esES": "ÿc9[+{stat:1023}% Efecto de runas]", "frFR": "ÿc9[+{stat:1023}% Effet des runes]", "itIT": "ÿc9[+{stat:1023}% Effetto rune]", "koKR": "ÿc9[+{stat:1023}% 룬 효과]", "plPL": "ÿc9[+{stat:1023}% Efekt run]", "ruRU": "ÿc9[+{stat:1023}% Эффект рун]", "zhCN": "ÿc9[+{stat:1023}% 符文效果]", "zhTW": "ÿc9[+{stat:1023}% 符文效果]", "esMX": "ÿc9[+{stat:1023}% Efecto de runas]", "jaJP": "ÿc9[+{stat:1023}% ルーン効果]", "ptBR": "ÿc9[+{stat:1023}% Efeito de runas]"}},
+    {"comment": "R056 | Superior helms with a lower rune effect roll (below +20%) | never hide+label+name (L1-3)", "itemTypes": ["helm"], "quality": "superior", "itemStats": [{"stat": "rune_effect", "op": ">=", "value": 1}, {"stat": "rune_effect", "op": "<", "value": 20}], "activeInLevels": [1, 2, 3], "show": true, "useStyle": "AffixGood", "nameSuffix": {"enUS": "ÿc9[+{stat:1023}% Rune Effect]", "deDE": "ÿc9[+{stat:1023}% Runen-Wirkung]", "esES": "ÿc9[+{stat:1023}% Efecto de runas]", "frFR": "ÿc9[+{stat:1023}% Effet des runes]", "itIT": "ÿc9[+{stat:1023}% Effetto rune]", "koKR": "ÿc9[+{stat:1023}% 룬 효과]", "plPL": "ÿc9[+{stat:1023}% Efekt run]", "ruRU": "ÿc9[+{stat:1023}% Эффект рун]", "zhCN": "ÿc9[+{stat:1023}% 符文效果]", "zhTW": "ÿc9[+{stat:1023}% 符文效果]", "esMX": "ÿc9[+{stat:1023}% Efecto de runas]", "jaJP": "ÿc9[+{stat:1023}% ルーン効果]", "ptBR": "ÿc9[+{stat:1023}% Efeito de runas]"}},
     // Superior boots with the maximum total gold roll (+20%): never hidden, highlighted at every level
-    {"comment": "R057 | Superior boots with the maximum total gold roll (+20%) | never hide+label", "itemTypes": ["boot"], "quality": "superior", "itemStats": [{"stat": "total_gold_found", "op": ">=", "value": 20}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4+20% Total Gold ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4+20% Gesamtgold ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4+20% Oro total ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4+20% Or total ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4+20% Oro totale ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4+20% 총 금화 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4+20% Całkowite złoto ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4+20% Всего золота ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4+20% 总金币 ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4+20% 總金幣 ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4+20% Oro total ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4+20% 総ゴールド ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4+20% Ouro total ÿc1*ÿc2*ÿc3"}, "nameSuffix": {"enUS": "ÿc1[+{stat:1025}% Total Gold]", "deDE": "ÿc1[+{stat:1025}% Gesamtgold]", "esES": "ÿc1[+{stat:1025}% Oro total]", "frFR": "ÿc1[+{stat:1025}% Or total]", "itIT": "ÿc1[+{stat:1025}% Oro totale]", "koKR": "ÿc1[+{stat:1025}% 총 금화]", "plPL": "ÿc1[+{stat:1025}% Całkowite złoto]", "ruRU": "ÿc1[+{stat:1025}% Всего золота]", "zhCN": "ÿc1[+{stat:1025}% 总金币]", "zhTW": "ÿc1[+{stat:1025}% 總金幣]", "esMX": "ÿc1[+{stat:1025}% Oro total]", "jaJP": "ÿc1[+{stat:1025}% 総ゴールド]", "ptBR": "ÿc1[+{stat:1025}% Ouro total]"}},
+    {"comment": "R057 | Superior boots with the maximum total gold roll (+20%) | never hide+chat+sound+label+name", "itemTypes": ["boot"], "quality": "superior", "itemStats": [{"stat": "total_gold_found", "op": ">=", "value": 20}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4+20% Total Gold ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4+20% Gesamtgold ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4+20% Oro total ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4+20% Or total ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4+20% Oro totale ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4+20% 총 금화 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4+20% Całkowite złoto ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4+20% Всего золота ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4+20% 总金币 ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4+20% 總金幣 ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4+20% Oro total ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4+20% 総ゴールド ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4+20% Ouro total ÿc1*ÿc2*ÿc3"}, "nameSuffix": {"enUS": "ÿc1[+{stat:1025}% Total Gold]", "deDE": "ÿc1[+{stat:1025}% Gesamtgold]", "esES": "ÿc1[+{stat:1025}% Oro total]", "frFR": "ÿc1[+{stat:1025}% Or total]", "itIT": "ÿc1[+{stat:1025}% Oro totale]", "koKR": "ÿc1[+{stat:1025}% 총 금화]", "plPL": "ÿc1[+{stat:1025}% Całkowite złoto]", "ruRU": "ÿc1[+{stat:1025}% Всего золота]", "zhCN": "ÿc1[+{stat:1025}% 总金币]", "zhTW": "ÿc1[+{stat:1025}% 總金幣]", "esMX": "ÿc1[+{stat:1025}% Oro total]", "jaJP": "ÿc1[+{stat:1025}% 総ゴールド]", "ptBR": "ÿc1[+{stat:1025}% Ouro total]"}},
     // Superior boots with a lower total gold roll (below +20%): never hidden and highlighted at levels 1-3
-    {"comment": "R058 | Superior boots with a lower total gold roll (below +20%) | never hide+label", "itemTypes": ["boot"], "quality": "superior", "itemStats": [{"stat": "total_gold_found", "op": ">=", "value": 1}, {"stat": "total_gold_found", "op": "<", "value": 20}], "activeInLevels": [1, 2, 3], "show": true, "useStyle": "AffixGood", "nameSuffix": {"enUS": "ÿc9[+{stat:1025}% Total Gold]", "deDE": "ÿc9[+{stat:1025}% Gesamtgold]", "esES": "ÿc9[+{stat:1025}% Oro total]", "frFR": "ÿc9[+{stat:1025}% Or total]", "itIT": "ÿc9[+{stat:1025}% Oro totale]", "koKR": "ÿc9[+{stat:1025}% 총 금화]", "plPL": "ÿc9[+{stat:1025}% Całkowite złoto]", "ruRU": "ÿc9[+{stat:1025}% Всего золота]", "zhCN": "ÿc9[+{stat:1025}% 总金币]", "zhTW": "ÿc9[+{stat:1025}% 總金幣]", "esMX": "ÿc9[+{stat:1025}% Oro total]", "jaJP": "ÿc9[+{stat:1025}% 総ゴールド]", "ptBR": "ÿc9[+{stat:1025}% Ouro total]"}},
+    {"comment": "R058 | Superior boots with a lower total gold roll (below +20%) | never hide+label+name (L1-3)", "itemTypes": ["boot"], "quality": "superior", "itemStats": [{"stat": "total_gold_found", "op": ">=", "value": 1}, {"stat": "total_gold_found", "op": "<", "value": 20}], "activeInLevels": [1, 2, 3], "show": true, "useStyle": "AffixGood", "nameSuffix": {"enUS": "ÿc9[+{stat:1025}% Total Gold]", "deDE": "ÿc9[+{stat:1025}% Gesamtgold]", "esES": "ÿc9[+{stat:1025}% Oro total]", "frFR": "ÿc9[+{stat:1025}% Or total]", "itIT": "ÿc9[+{stat:1025}% Oro totale]", "koKR": "ÿc9[+{stat:1025}% 총 금화]", "plPL": "ÿc9[+{stat:1025}% Całkowite złoto]", "ruRU": "ÿc9[+{stat:1025}% Всего золота]", "zhCN": "ÿc9[+{stat:1025}% 总金币]", "zhTW": "ÿc9[+{stat:1025}% 總金幣]", "esMX": "ÿc9[+{stat:1025}% Oro total]", "jaJP": "ÿc9[+{stat:1025}% 総ゴールド]", "ptBR": "ÿc9[+{stat:1025}% Ouro total]"}},
     // Superior boots with Phasing (always the maximum roll): never hidden, highlighted at every level
-    {"comment": "R059 | Superior boots with Phasing (always the maximum roll) | never hide+label", "itemTypes": ["boot"], "quality": "superior", "itemStats": [{"stat": "phasing", "op": ">=", "value": 1}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4Phasing ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4Durchgleiten ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4Fase ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4Phasage ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4Phasing ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4위상 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4Przenikanie ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4Фазирование ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4相位 ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4相位 ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4Fase ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4フェイジング ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4Fase ÿc1*ÿc2*ÿc3"}},
+    {"comment": "R059 | Superior boots with Phasing (always the maximum roll) | never hide+chat+sound+label", "itemTypes": ["boot"], "quality": "superior", "itemStats": [{"stat": "phasing", "op": ">=", "value": 1}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4Phasing ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4Durchgleiten ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4Fase ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4Phasage ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4Phasing ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4위상 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4Przenikanie ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4Фазирование ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4相位 ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4相位 ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4Fase ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4フェイジング ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4Fase ÿc1*ÿc2*ÿc3"}},
 
     // ---- Missile weapons, crossbows and helms
     // Highlights for projectile speed (missile weapons), maximum crossbow bolts, total crossbow damage and reload speed limit (crossbows) and maximum curses (helms). A maximum roll is never hidden and is highlighted at every level; a lower roll is never hidden and is highlighted at levels 1-3.
 
     // Superior missile weapons with the maximum projectile speed roll (+25%): never hidden, highlighted at every level
-    {"comment": "R697 | Superior missile weapons with the maximum projectile speed roll (+25%) | never hide+label", "itemTypes": ["miss"], "quality": "superior", "itemStats": [{"stat": "projectilespeed", "op": ">=", "value": 25}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4+25% Projectile Speed ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4+25% Projektilgeschwindigkeit ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4+25% de velocidad de proyectiles ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4+25% de vitesse des projectiles ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4+25% velocità dei proiettili ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4+25% 투사체 속도 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4+25% prędkości pocisków ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4+25% к скорости снарядов ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4+25% 投射物速度 ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4+25% 投射物速度 ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4+25% de velocidad de proyectiles ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4+25% 投射物速度 ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4+25% de velocidade dos projéteis ÿc1*ÿc2*ÿc3"}, "nameSuffix": {"enUS": "ÿc1[+{stat:516}% Projectile Speed]", "deDE": "ÿc1[+{stat:516}% Projektilgeschwindigkeit]", "esES": "ÿc1[+{stat:516}% de velocidad de proyectiles]", "frFR": "ÿc1[+{stat:516}% de vitesse des projectiles]", "itIT": "ÿc1[+{stat:516}% velocità dei proiettili]", "koKR": "ÿc1[+{stat:516}% 투사체 속도]", "plPL": "ÿc1[+{stat:516}% prędkości pocisków]", "ruRU": "ÿc1[+{stat:516}% к скорости снарядов]", "zhCN": "ÿc1[+{stat:516}% 投射物速度]", "zhTW": "ÿc1[+{stat:516}% 投射物速度]", "esMX": "ÿc1[+{stat:516}% de velocidad de proyectiles]", "jaJP": "ÿc1[+{stat:516}% 投射物速度]", "ptBR": "ÿc1[+{stat:516}% de velocidade dos projéteis]"}},
+    {"comment": "R697 | Superior missile weapons with the maximum projectile speed roll (+25%) | never hide+chat+sound+label+name", "itemTypes": ["miss"], "quality": "superior", "itemStats": [{"stat": "projectilespeed", "op": ">=", "value": 25}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4+25% Projectile Speed ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4+25% Projektilgeschwindigkeit ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4+25% de velocidad de proyectiles ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4+25% de vitesse des projectiles ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4+25% velocità dei proiettili ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4+25% 투사체 속도 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4+25% prędkości pocisków ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4+25% к скорости снарядов ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4+25% 投射物速度 ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4+25% 投射物速度 ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4+25% de velocidad de proyectiles ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4+25% 投射物速度 ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4+25% de velocidade dos projéteis ÿc1*ÿc2*ÿc3"}, "nameSuffix": {"enUS": "ÿc1[+{stat:516}% Projectile Speed]", "deDE": "ÿc1[+{stat:516}% Projektilgeschwindigkeit]", "esES": "ÿc1[+{stat:516}% de velocidad de proyectiles]", "frFR": "ÿc1[+{stat:516}% de vitesse des projectiles]", "itIT": "ÿc1[+{stat:516}% velocità dei proiettili]", "koKR": "ÿc1[+{stat:516}% 투사체 속도]", "plPL": "ÿc1[+{stat:516}% prędkości pocisków]", "ruRU": "ÿc1[+{stat:516}% к скорости снарядов]", "zhCN": "ÿc1[+{stat:516}% 投射物速度]", "zhTW": "ÿc1[+{stat:516}% 投射物速度]", "esMX": "ÿc1[+{stat:516}% de velocidad de proyectiles]", "jaJP": "ÿc1[+{stat:516}% 投射物速度]", "ptBR": "ÿc1[+{stat:516}% de velocidade dos projéteis]"}},
     // Superior missile weapons with a lower projectile speed roll (+5% to +24%): never hidden and highlighted at levels 1-3
-    {"comment": "R698 | Superior missile weapons with a lower projectile speed roll (below +25%) | never hide+label", "itemTypes": ["miss"], "quality": "superior", "itemStats": [{"stat": "projectilespeed", "op": ">=", "value": 1}, {"stat": "projectilespeed", "op": "<", "value": 25}], "activeInLevels": [1, 2, 3], "show": true, "useStyle": "AffixGood", "nameSuffix": {"enUS": "ÿc9[+{stat:516}% Projectile Speed]", "deDE": "ÿc9[+{stat:516}% Projektilgeschwindigkeit]", "esES": "ÿc9[+{stat:516}% de velocidad de proyectiles]", "frFR": "ÿc9[+{stat:516}% de vitesse des projectiles]", "itIT": "ÿc9[+{stat:516}% velocità dei proiettili]", "koKR": "ÿc9[+{stat:516}% 투사체 속도]", "plPL": "ÿc9[+{stat:516}% prędkości pocisków]", "ruRU": "ÿc9[+{stat:516}% к скорости снарядов]", "zhCN": "ÿc9[+{stat:516}% 投射物速度]", "zhTW": "ÿc9[+{stat:516}% 投射物速度]", "esMX": "ÿc9[+{stat:516}% de velocidad de proyectiles]", "jaJP": "ÿc9[+{stat:516}% 投射物速度]", "ptBR": "ÿc9[+{stat:516}% de velocidade dos projéteis]"}},
+    {"comment": "R698 | Superior missile weapons with a lower projectile speed roll (below +25%) | never hide+label+name (L1-3)", "itemTypes": ["miss"], "quality": "superior", "itemStats": [{"stat": "projectilespeed", "op": ">=", "value": 1}, {"stat": "projectilespeed", "op": "<", "value": 25}], "activeInLevels": [1, 2, 3], "show": true, "useStyle": "AffixGood", "nameSuffix": {"enUS": "ÿc9[+{stat:516}% Projectile Speed]", "deDE": "ÿc9[+{stat:516}% Projektilgeschwindigkeit]", "esES": "ÿc9[+{stat:516}% de velocidad de proyectiles]", "frFR": "ÿc9[+{stat:516}% de vitesse des projectiles]", "itIT": "ÿc9[+{stat:516}% velocità dei proiettili]", "koKR": "ÿc9[+{stat:516}% 투사체 속도]", "plPL": "ÿc9[+{stat:516}% prędkości pocisków]", "ruRU": "ÿc9[+{stat:516}% к скорости снарядов]", "zhCN": "ÿc9[+{stat:516}% 投射物速度]", "zhTW": "ÿc9[+{stat:516}% 投射物速度]", "esMX": "ÿc9[+{stat:516}% de velocidad de proyectiles]", "jaJP": "ÿc9[+{stat:516}% 投射物速度]", "ptBR": "ÿc9[+{stat:516}% de velocidade dos projéteis]"}},
     // Superior crossbows with +1 to Maximum Crossbow Bolts (the only roll; it also gives -10% Total Crossbow Damage): never hidden, highlighted at every level
-    {"comment": "R699 | Superior crossbows with +1 to Maximum Crossbow Bolts (the only roll) | never hide+label", "itemTypes": ["xbow"], "quality": "superior", "itemStats": [{"stat": "totalcrossbowbolts", "op": ">=", "value": 1}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4+1 to Maximum Crossbow Bolts ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4+1 auf maximale Armbrustbolzen ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4+1 a virotes de ballesta máximos ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4+1 au nombre maximal de carreaux d'arbalète ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4+1 ai dardi massimi della balestra ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4최대 석궁 볼트 수 +1 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4+1 do maksymalnej liczby bełtów do kuszy ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4+1 к максимальному числу арбалетных болтов ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4+1 最大弩箭数量 ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4+1 最大弩箭數量 ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4+1 a virotes de ballesta máximos ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4最大クロスボウボルト数 +1 ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4+1 em virotes de besta máximos ÿc1*ÿc2*ÿc3"}, "nameSuffix": {"enUS": "ÿc1[+{stat:513} to Maximum Crossbow Bolts]", "deDE": "ÿc1[+{stat:513} auf maximale Armbrustbolzen]", "esES": "ÿc1[+{stat:513} a virotes de ballesta máximos]", "frFR": "ÿc1[+{stat:513} au nombre maximal de carreaux d'arbalète]", "itIT": "ÿc1[+{stat:513} ai dardi massimi della balestra]", "koKR": "ÿc1[최대 석궁 볼트 수 +{stat:513}]", "plPL": "ÿc1[+{stat:513} do maksymalnej liczby bełtów do kuszy]", "ruRU": "ÿc1[+{stat:513} к максимальному числу арбалетных болтов]", "zhCN": "ÿc1[+{stat:513} 最大弩箭数量]", "zhTW": "ÿc1[+{stat:513} 最大弩箭數量]", "esMX": "ÿc1[+{stat:513} a virotes de ballesta máximos]", "jaJP": "ÿc1[最大クロスボウボルト数 +{stat:513}]", "ptBR": "ÿc1[+{stat:513} em virotes de besta máximos]"}},
+    {"comment": "R699 | Superior crossbows with +1 to Maximum Crossbow Bolts (the only roll) | never hide+chat+sound+label+name", "itemTypes": ["xbow"], "quality": "superior", "itemStats": [{"stat": "totalcrossbowbolts", "op": ">=", "value": 1}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4+1 to Maximum Crossbow Bolts ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4+1 auf maximale Armbrustbolzen ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4+1 a virotes de ballesta máximos ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4+1 au nombre maximal de carreaux d'arbalète ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4+1 ai dardi massimi della balestra ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4최대 석궁 볼트 수 +1 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4+1 do maksymalnej liczby bełtów do kuszy ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4+1 к максимальному числу арбалетных болтов ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4+1 最大弩箭数量 ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4+1 最大弩箭數量 ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4+1 a virotes de ballesta máximos ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4最大クロスボウボルト数 +1 ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4+1 em virotes de besta máximos ÿc1*ÿc2*ÿc3"}, "nameSuffix": {"enUS": "ÿc1[+{stat:513} to Maximum Crossbow Bolts]", "deDE": "ÿc1[+{stat:513} auf maximale Armbrustbolzen]", "esES": "ÿc1[+{stat:513} a virotes de ballesta máximos]", "frFR": "ÿc1[+{stat:513} au nombre maximal de carreaux d'arbalète]", "itIT": "ÿc1[+{stat:513} ai dardi massimi della balestra]", "koKR": "ÿc1[최대 석궁 볼트 수 +{stat:513}]", "plPL": "ÿc1[+{stat:513} do maksymalnej liczby bełtów do kuszy]", "ruRU": "ÿc1[+{stat:513} к максимальному числу арбалетных болтов]", "zhCN": "ÿc1[+{stat:513} 最大弩箭数量]", "zhTW": "ÿc1[+{stat:513} 最大弩箭數量]", "esMX": "ÿc1[+{stat:513} a virotes de ballesta máximos]", "jaJP": "ÿc1[最大クロスボウボルト数 +{stat:513}]", "ptBR": "ÿc1[+{stat:513} em virotes de besta máximos]"}},
     // Superior crossbows with the maximum total crossbow damage roll (+25%): never hidden, highlighted at every level
-    {"comment": "R700 | Superior crossbows with the maximum total crossbow damage roll (+25%) | never hide+label", "itemTypes": ["xbow"], "quality": "superior", "itemStats": [{"stat": "totalcrossbowdamage", "op": ">=", "value": 25}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4+25% Total Crossbow Damage ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4+25% Gesamtschaden mit Armbrüsten ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4+25% de daño total con ballesta ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4+25% de dégâts totaux à l'arbalète ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4+25% danni totali con la balestra ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4+25% 석궁 총 피해 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4+25% całkowitych obrażeń z kuszy ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4+25% к общему урону арбалетов ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4+25% 弩总伤害 ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4+25% 弩總傷害 ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4+25% de daño total con ballesta ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4+25% クロスボウ総ダメージ ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4+25% de dano total com besta ÿc1*ÿc2*ÿc3"}, "nameSuffix": {"enUS": "ÿc1[+{stat:515}% Total Crossbow Damage]", "deDE": "ÿc1[+{stat:515}% Gesamtschaden mit Armbrüsten]", "esES": "ÿc1[+{stat:515}% de daño total con ballesta]", "frFR": "ÿc1[+{stat:515}% de dégâts totaux à l'arbalète]", "itIT": "ÿc1[+{stat:515}% danni totali con la balestra]", "koKR": "ÿc1[+{stat:515}% 석궁 총 피해]", "plPL": "ÿc1[+{stat:515}% całkowitych obrażeń z kuszy]", "ruRU": "ÿc1[+{stat:515}% к общему урону арбалетов]", "zhCN": "ÿc1[+{stat:515}% 弩总伤害]", "zhTW": "ÿc1[+{stat:515}% 弩總傷害]", "esMX": "ÿc1[+{stat:515}% de daño total con ballesta]", "jaJP": "ÿc1[+{stat:515}% クロスボウ総ダメージ]", "ptBR": "ÿc1[+{stat:515}% de dano total com besta]"}},
+    {"comment": "R700 | Superior crossbows with the maximum total crossbow damage roll (+25%) | never hide+chat+sound+label+name", "itemTypes": ["xbow"], "quality": "superior", "itemStats": [{"stat": "totalcrossbowdamage", "op": ">=", "value": 25}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4+25% Total Crossbow Damage ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4+25% Gesamtschaden mit Armbrüsten ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4+25% de daño total con ballesta ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4+25% de dégâts totaux à l'arbalète ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4+25% danni totali con la balestra ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4+25% 석궁 총 피해 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4+25% całkowitych obrażeń z kuszy ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4+25% к общему урону арбалетов ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4+25% 弩总伤害 ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4+25% 弩總傷害 ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4+25% de daño total con ballesta ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4+25% クロスボウ総ダメージ ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4+25% de dano total com besta ÿc1*ÿc2*ÿc3"}, "nameSuffix": {"enUS": "ÿc1[+{stat:515}% Total Crossbow Damage]", "deDE": "ÿc1[+{stat:515}% Gesamtschaden mit Armbrüsten]", "esES": "ÿc1[+{stat:515}% de daño total con ballesta]", "frFR": "ÿc1[+{stat:515}% de dégâts totaux à l'arbalète]", "itIT": "ÿc1[+{stat:515}% danni totali con la balestra]", "koKR": "ÿc1[+{stat:515}% 석궁 총 피해]", "plPL": "ÿc1[+{stat:515}% całkowitych obrażeń z kuszy]", "ruRU": "ÿc1[+{stat:515}% к общему урону арбалетов]", "zhCN": "ÿc1[+{stat:515}% 弩总伤害]", "zhTW": "ÿc1[+{stat:515}% 弩總傷害]", "esMX": "ÿc1[+{stat:515}% de daño total con ballesta]", "jaJP": "ÿc1[+{stat:515}% クロスボウ総ダメージ]", "ptBR": "ÿc1[+{stat:515}% de dano total com besta]"}},
     // Superior crossbows with a lower total crossbow damage roll (+20% to +24%): never hidden and highlighted at levels 1-3. The bolts roll's -10% does not count.
-    {"comment": "R701 | Superior crossbows with a lower total crossbow damage roll (below +25%) | never hide+label", "itemTypes": ["xbow"], "quality": "superior", "itemStats": [{"stat": "totalcrossbowdamage", "op": ">=", "value": 1}, {"stat": "totalcrossbowdamage", "op": "<", "value": 25}], "activeInLevels": [1, 2, 3], "show": true, "useStyle": "AffixGood", "nameSuffix": {"enUS": "ÿc9[+{stat:515}% Total Crossbow Damage]", "deDE": "ÿc9[+{stat:515}% Gesamtschaden mit Armbrüsten]", "esES": "ÿc9[+{stat:515}% de daño total con ballesta]", "frFR": "ÿc9[+{stat:515}% de dégâts totaux à l'arbalète]", "itIT": "ÿc9[+{stat:515}% danni totali con la balestra]", "koKR": "ÿc9[+{stat:515}% 석궁 총 피해]", "plPL": "ÿc9[+{stat:515}% całkowitych obrażeń z kuszy]", "ruRU": "ÿc9[+{stat:515}% к общему урону арбалетов]", "zhCN": "ÿc9[+{stat:515}% 弩总伤害]", "zhTW": "ÿc9[+{stat:515}% 弩總傷害]", "esMX": "ÿc9[+{stat:515}% de daño total con ballesta]", "jaJP": "ÿc9[+{stat:515}% クロスボウ総ダメージ]", "ptBR": "ÿc9[+{stat:515}% de dano total com besta]"}},
+    {"comment": "R701 | Superior crossbows with a lower total crossbow damage roll (below +25%) | never hide+label+name (L1-3)", "itemTypes": ["xbow"], "quality": "superior", "itemStats": [{"stat": "totalcrossbowdamage", "op": ">=", "value": 1}, {"stat": "totalcrossbowdamage", "op": "<", "value": 25}], "activeInLevels": [1, 2, 3], "show": true, "useStyle": "AffixGood", "nameSuffix": {"enUS": "ÿc9[+{stat:515}% Total Crossbow Damage]", "deDE": "ÿc9[+{stat:515}% Gesamtschaden mit Armbrüsten]", "esES": "ÿc9[+{stat:515}% de daño total con ballesta]", "frFR": "ÿc9[+{stat:515}% de dégâts totaux à l'arbalète]", "itIT": "ÿc9[+{stat:515}% danni totali con la balestra]", "koKR": "ÿc9[+{stat:515}% 석궁 총 피해]", "plPL": "ÿc9[+{stat:515}% całkowitych obrażeń z kuszy]", "ruRU": "ÿc9[+{stat:515}% к общему урону арбалетов]", "zhCN": "ÿc9[+{stat:515}% 弩总伤害]", "zhTW": "ÿc9[+{stat:515}% 弩總傷害]", "esMX": "ÿc9[+{stat:515}% de daño total con ballesta]", "jaJP": "ÿc9[+{stat:515}% クロスボウ総ダメージ]", "ptBR": "ÿc9[+{stat:515}% de dano total com besta]"}},
     // Superior crossbows with the maximum crossbow reload speed limit roll (5%): never hidden, highlighted at every level
-    {"comment": "R702 | Superior crossbows with the maximum reload speed limit roll (5%) | never hide+label", "itemTypes": ["xbow"], "quality": "superior", "itemStats": [{"stat": "crossbowreloadspeedlimit", "op": ">=", "value": 5}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4Crossbow Reload Speed Limit Reduced by 5% ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4Grenze der Armbrust-Nachladegeschwindigkeit um 5% verringert ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4Límite de velocidad de recarga de ballesta reducido en un 5% ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4Limite de vitesse de rechargement de l'arbalète réduite de 5% ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4Limite della velocità di ricarica della balestra ridotto del 5% ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4석궁 재장전 속도 한도가 5% 감소 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4Limit prędkości przeładowania kuszy zmniejszony o 5% ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4Предел скорости перезарядки арбалета снижен на 5% ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4弩装填速度上限降低 5% ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4弩裝填速度上限降低 5% ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4Límite de velocidad de recarga de ballesta reducido en un 5% ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4クロスボウのリロード速度上限が 5% 減少 ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4Limite de velocidade de recarga da besta reduzido em 5% ÿc1*ÿc2*ÿc3"}, "nameSuffix": {"enUS": "ÿc1[Crossbow Reload Speed Limit Reduced by {stat:518}%]", "deDE": "ÿc1[Grenze der Armbrust-Nachladegeschwindigkeit um {stat:518}% verringert]", "esES": "ÿc1[Límite de velocidad de recarga de ballesta reducido en un {stat:518}%]", "frFR": "ÿc1[Limite de vitesse de rechargement de l'arbalète réduite de {stat:518}%]", "itIT": "ÿc1[Limite della velocità di ricarica della balestra ridotto del {stat:518}%]", "koKR": "ÿc1[석궁 재장전 속도 한도가 {stat:518}% 감소]", "plPL": "ÿc1[Limit prędkości przeładowania kuszy zmniejszony o {stat:518}%]", "ruRU": "ÿc1[Предел скорости перезарядки арбалета снижен на {stat:518}%]", "zhCN": "ÿc1[弩装填速度上限降低 {stat:518}%]", "zhTW": "ÿc1[弩裝填速度上限降低 {stat:518}%]", "esMX": "ÿc1[Límite de velocidad de recarga de ballesta reducido en un {stat:518}%]", "jaJP": "ÿc1[クロスボウのリロード速度上限が {stat:518}% 減少]", "ptBR": "ÿc1[Limite de velocidade de recarga da besta reduzido em {stat:518}%]"}},
+    {"comment": "R702 | Superior crossbows with the maximum reload speed limit roll (5%) | never hide+chat+sound+label+name", "itemTypes": ["xbow"], "quality": "superior", "itemStats": [{"stat": "crossbowreloadspeedlimit", "op": ">=", "value": 5}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4Crossbow Reload Speed Limit Reduced by 5% ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4Grenze der Armbrust-Nachladegeschwindigkeit um 5% verringert ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4Límite de velocidad de recarga de ballesta reducido en un 5% ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4Limite de vitesse de rechargement de l'arbalète réduite de 5% ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4Limite della velocità di ricarica della balestra ridotto del 5% ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4석궁 재장전 속도 한도가 5% 감소 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4Limit prędkości przeładowania kuszy zmniejszony o 5% ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4Предел скорости перезарядки арбалета снижен на 5% ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4弩装填速度上限降低 5% ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4弩裝填速度上限降低 5% ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4Límite de velocidad de recarga de ballesta reducido en un 5% ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4クロスボウのリロード速度上限が 5% 減少 ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4Limite de velocidade de recarga da besta reduzido em 5% ÿc1*ÿc2*ÿc3"}, "nameSuffix": {"enUS": "ÿc1[Crossbow Reload Speed Limit Reduced by {stat:518}%]", "deDE": "ÿc1[Grenze der Armbrust-Nachladegeschwindigkeit um {stat:518}% verringert]", "esES": "ÿc1[Límite de velocidad de recarga de ballesta reducido en un {stat:518}%]", "frFR": "ÿc1[Limite de vitesse de rechargement de l'arbalète réduite de {stat:518}%]", "itIT": "ÿc1[Limite della velocità di ricarica della balestra ridotto del {stat:518}%]", "koKR": "ÿc1[석궁 재장전 속도 한도가 {stat:518}% 감소]", "plPL": "ÿc1[Limit prędkości przeładowania kuszy zmniejszony o {stat:518}%]", "ruRU": "ÿc1[Предел скорости перезарядки арбалета снижен на {stat:518}%]", "zhCN": "ÿc1[弩装填速度上限降低 {stat:518}%]", "zhTW": "ÿc1[弩裝填速度上限降低 {stat:518}%]", "esMX": "ÿc1[Límite de velocidad de recarga de ballesta reducido en un {stat:518}%]", "jaJP": "ÿc1[クロスボウのリロード速度上限が {stat:518}% 減少]", "ptBR": "ÿc1[Limite de velocidade de recarga da besta reduzido em {stat:518}%]"}},
     // Superior crossbows with the lower crossbow reload speed limit roll (4%): never hidden and highlighted at levels 1-3
-    {"comment": "R703 | Superior crossbows with the lower reload speed limit roll (4%) | never hide+label", "itemTypes": ["xbow"], "quality": "superior", "itemStats": [{"stat": "crossbowreloadspeedlimit", "op": ">=", "value": 1}, {"stat": "crossbowreloadspeedlimit", "op": "<", "value": 5}], "activeInLevels": [1, 2, 3], "show": true, "useStyle": "AffixGood", "nameSuffix": {"enUS": "ÿc9[Crossbow Reload Speed Limit Reduced by {stat:518}%]", "deDE": "ÿc9[Grenze der Armbrust-Nachladegeschwindigkeit um {stat:518}% verringert]", "esES": "ÿc9[Límite de velocidad de recarga de ballesta reducido en un {stat:518}%]", "frFR": "ÿc9[Limite de vitesse de rechargement de l'arbalète réduite de {stat:518}%]", "itIT": "ÿc9[Limite della velocità di ricarica della balestra ridotto del {stat:518}%]", "koKR": "ÿc9[석궁 재장전 속도 한도가 {stat:518}% 감소]", "plPL": "ÿc9[Limit prędkości przeładowania kuszy zmniejszony o {stat:518}%]", "ruRU": "ÿc9[Предел скорости перезарядки арбалета снижен на {stat:518}%]", "zhCN": "ÿc9[弩装填速度上限降低 {stat:518}%]", "zhTW": "ÿc9[弩裝填速度上限降低 {stat:518}%]", "esMX": "ÿc9[Límite de velocidad de recarga de ballesta reducido en un {stat:518}%]", "jaJP": "ÿc9[クロスボウのリロード速度上限が {stat:518}% 減少]", "ptBR": "ÿc9[Limite de velocidade de recarga da besta reduzido em {stat:518}%]"}},
+    {"comment": "R703 | Superior crossbows with the lower reload speed limit roll (4%) | never hide+label+name (L1-3)", "itemTypes": ["xbow"], "quality": "superior", "itemStats": [{"stat": "crossbowreloadspeedlimit", "op": ">=", "value": 1}, {"stat": "crossbowreloadspeedlimit", "op": "<", "value": 5}], "activeInLevels": [1, 2, 3], "show": true, "useStyle": "AffixGood", "nameSuffix": {"enUS": "ÿc9[Crossbow Reload Speed Limit Reduced by {stat:518}%]", "deDE": "ÿc9[Grenze der Armbrust-Nachladegeschwindigkeit um {stat:518}% verringert]", "esES": "ÿc9[Límite de velocidad de recarga de ballesta reducido en un {stat:518}%]", "frFR": "ÿc9[Limite de vitesse de rechargement de l'arbalète réduite de {stat:518}%]", "itIT": "ÿc9[Limite della velocità di ricarica della balestra ridotto del {stat:518}%]", "koKR": "ÿc9[석궁 재장전 속도 한도가 {stat:518}% 감소]", "plPL": "ÿc9[Limit prędkości przeładowania kuszy zmniejszony o {stat:518}%]", "ruRU": "ÿc9[Предел скорости перезарядки арбалета снижен на {stat:518}%]", "zhCN": "ÿc9[弩装填速度上限降低 {stat:518}%]", "zhTW": "ÿc9[弩裝填速度上限降低 {stat:518}%]", "esMX": "ÿc9[Límite de velocidad de recarga de ballesta reducido en un {stat:518}%]", "jaJP": "ÿc9[クロスボウのリロード速度上限が {stat:518}% 減少]", "ptBR": "ÿc9[Limite de velocidade de recarga da besta reduzido em {stat:518}%]"}},
     // Superior helms with +1 to Maximum Curses (the only roll): never hidden, highlighted at every level
-    {"comment": "R704 | Superior helms with +1 to Maximum Curses (the only roll) | never hide+label", "itemTypes": ["helm"], "quality": "superior", "itemStats": [{"stat": "extra_curse", "op": ">=", "value": 1}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4+1 to Maximum Curses ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4+1 zu maximalen Flüchen ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4+1 a las maldiciones máximas ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4+1 aux malédictions maximums ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4+1 alle maledizioni massime ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4최대 저주 +1 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4+1 do maksymalnej liczby klątw ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4+1 к максимальному количеству проклятий ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4+1 诅咒上限 ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4+1 詛咒上限 ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4+1 a las maldiciones máximas ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4呪いの上限 +1 ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4+1 para o número máximo de maldições ÿc1*ÿc2*ÿc3"}, "nameSuffix": {"enUS": "ÿc1[+{stat:1016} to Maximum Curses]", "deDE": "ÿc1[+{stat:1016} zu maximalen Flüchen]", "esES": "ÿc1[+{stat:1016} a las maldiciones máximas]", "frFR": "ÿc1[+{stat:1016} aux malédictions maximums]", "itIT": "ÿc1[+{stat:1016} alle maledizioni massime]", "koKR": "ÿc1[최대 저주 +{stat:1016}]", "plPL": "ÿc1[+{stat:1016} do maksymalnej liczby klątw]", "ruRU": "ÿc1[+{stat:1016} к максимальному количеству проклятий]", "zhCN": "ÿc1[+{stat:1016} 诅咒上限]", "zhTW": "ÿc1[+{stat:1016} 詛咒上限]", "esMX": "ÿc1[+{stat:1016} a las maldiciones máximas]", "jaJP": "ÿc1[呪いの上限 +{stat:1016}]", "ptBR": "ÿc1[+{stat:1016} para o número máximo de maldições]"}},
+    {"comment": "R704 | Superior helms with +1 to Maximum Curses (the only roll) | never hide+chat+sound+label+name", "itemTypes": ["helm"], "quality": "superior", "itemStats": [{"stat": "extra_curse", "op": ">=", "value": 1}], "show": true, "useStyle": "AffixMax", "chatMessage": {"enUS": "ÿc1*ÿc2*ÿc3 ÿc4+1 to Maximum Curses ÿc1*ÿc2*ÿc3", "deDE": "ÿc1*ÿc2*ÿc3 ÿc4+1 zu maximalen Flüchen ÿc1*ÿc2*ÿc3", "esES": "ÿc1*ÿc2*ÿc3 ÿc4+1 a las maldiciones máximas ÿc1*ÿc2*ÿc3", "frFR": "ÿc1*ÿc2*ÿc3 ÿc4+1 aux malédictions maximums ÿc1*ÿc2*ÿc3", "itIT": "ÿc1*ÿc2*ÿc3 ÿc4+1 alle maledizioni massime ÿc1*ÿc2*ÿc3", "koKR": "ÿc1*ÿc2*ÿc3 ÿc4최대 저주 +1 ÿc1*ÿc2*ÿc3", "plPL": "ÿc1*ÿc2*ÿc3 ÿc4+1 do maksymalnej liczby klątw ÿc1*ÿc2*ÿc3", "ruRU": "ÿc1*ÿc2*ÿc3 ÿc4+1 к максимальному количеству проклятий ÿc1*ÿc2*ÿc3", "zhCN": "ÿc1*ÿc2*ÿc3 ÿc4+1 诅咒上限 ÿc1*ÿc2*ÿc3", "zhTW": "ÿc1*ÿc2*ÿc3 ÿc4+1 詛咒上限 ÿc1*ÿc2*ÿc3", "esMX": "ÿc1*ÿc2*ÿc3 ÿc4+1 a las maldiciones máximas ÿc1*ÿc2*ÿc3", "jaJP": "ÿc1*ÿc2*ÿc3 ÿc4呪いの上限 +1 ÿc1*ÿc2*ÿc3", "ptBR": "ÿc1*ÿc2*ÿc3 ÿc4+1 para o número máximo de maldições ÿc1*ÿc2*ÿc3"}, "nameSuffix": {"enUS": "ÿc1[+{stat:1016} to Maximum Curses]", "deDE": "ÿc1[+{stat:1016} zu maximalen Flüchen]", "esES": "ÿc1[+{stat:1016} a las maldiciones máximas]", "frFR": "ÿc1[+{stat:1016} aux malédictions maximums]", "itIT": "ÿc1[+{stat:1016} alle maledizioni massime]", "koKR": "ÿc1[최대 저주 +{stat:1016}]", "plPL": "ÿc1[+{stat:1016} do maksymalnej liczby klątw]", "ruRU": "ÿc1[+{stat:1016} к максимальному количеству проклятий]", "zhCN": "ÿc1[+{stat:1016} 诅咒上限]", "zhTW": "ÿc1[+{stat:1016} 詛咒上限]", "esMX": "ÿc1[+{stat:1016} a las maldiciones máximas]", "jaJP": "ÿc1[呪いの上限 +{stat:1016}]", "ptBR": "ÿc1[+{stat:1016} para o número máximo de maldições]"}},
 
     // ==== Hide by Strictness
     // Hide rules by item class. The level is in each rule's title. Level 1 is Leveling, 2 Strict, 3 Very-Strict, 4 Ultra-Strict. Hidden items stay hidden whatever later rules say, unless a Protection rule matched first.
@@ -581,7 +581,7 @@
     },
     // Levels 2-4: gold up to 249 from clvl 40, up to 999 from clvl 70. Never in town.
     {
-      "comment": "R066 | Levels 2-4: gold up to 249 from clvl 40, up to 999 from clvl 70 | hide at L2-4",
+      "comment": "R066 | Levels 2-4: gold up to 249 from clvl 40 | hide at L2-4",
       "itemCodes": ["gld"],
       "itemStats": [{"stat": "gold", "op": "<=", "value": 249}],
       "playerStats": [{"stat": "level", "op": ">=", "value": 40}],
@@ -659,7 +659,7 @@
     // Low healing, mana and throwing potions are hidden by character level and strictness.
 
     {
-      "comment": "R075 | Mini and healing potions (mp1, hp1) are hidden at character level 12+ outside towns | hide at all levels",
+      "comment": "R075 | Minor healing and mana potions (hp1, mp1) are hidden at character level 12+ outside towns | hide at all levels",
       "itemCodes": ["mp1", "hp1"],
       "playerStats": [{"stat": "level", "op": ">=", "value": 12}],
       "excludeAreas": [1, 40, 75, 103, 109],
@@ -703,7 +703,7 @@
       "hide": true
     },
     {
-      "comment": "R081 | Levels 3-4: light healing/mana potions always; normal ones from clvl 25 | hide at L3-4",
+      "comment": "R081 | Levels 3-4: light healing/mana potions always | hide at L3-4",
       "itemCodes": ["hp2", "mp2"],
       "excludeAreas": [1, 40, 75, 103, 109],
       "activeInLevels": [3, 4],
@@ -718,7 +718,7 @@
       "hide": true
     },
     {
-      "comment": "R083 | Level 4: normal healing/mana potions always; greater and super from clvl 30 | hide at L4",
+      "comment": "R083 | Level 4: normal healing/mana potions always | hide at L4",
       "itemCodes": ["hp3", "mp3"],
       "excludeAreas": [1, 40, 75, 103, 109],
       "activeInLevels": [4],
@@ -780,7 +780,7 @@
       "hide": true
     },
     {
-      "comment": "R091 | Levels 2-4: flawed gems from clvl 30; levels 3-4 always | hide at L2",
+      "comment": "R091 | Level 2: flawed gems from clvl 30 (levels 3-4 hide them always) | hide at L2",
       "itemCodes": ["gfv", "gfy", "gfb", "gfg", "gfr", "gfw", "skf", "gfk"],
       "playerStats": [{"stat": "level", "op": ">=", "value": 30}],
       "excludeAreas": [1, 40, 75, 103, 109],
@@ -795,7 +795,7 @@
       "hide": true
     },
     {
-      "comment": "R093 | Levels 2-3: standard gems from clvl 50; level 4 always | hide at L2-3",
+      "comment": "R093 | Levels 2-3: standard gems from clvl 50 (level 4 hides them always) | hide at L2-3",
       "itemCodes": ["gsv", "gsy", "gsb", "gsg", "gsr", "gsw", "sku", "gsk"],
       "playerStats": [{"stat": "level", "op": ">=", "value": 50}],
       "excludeAreas": [1, 40, 75, 103, 109],
@@ -824,7 +824,7 @@
     {
       "comment": "R096 | Hides normal-quality weapons and armor with at most 1 socket at character level 10+ outside… | hide at all levels",
       "itemTypes": ["weap", "armo"],
-      "excludeItemCodes": ["7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
+      "excludeItemCodes": ["dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
       "quality": "normal",
       "sockets": {"max": 1},
       "playerStats": [{"stat": "level", "op": ">=", "value": 10}],
@@ -846,7 +846,7 @@
     {
       "comment": "R098 | Hides magic-quality weapons and armor at character level 20+ outside towns | hide at all levels",
       "itemTypes": ["weap", "armo"],
-      "excludeItemCodes": ["7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
+      "excludeItemCodes": ["dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
       "quality": "magic",
       "playerStats": [{"stat": "level", "op": ">=", "value": 20}],
       "excludeAreas": [1, 40, 75, 103, 109],
@@ -865,7 +865,7 @@
     {
       "comment": "R100 | On level 3, hides normal-quality weapons and armor outside towns | hide at L3",
       "itemTypes": ["weap", "armo"],
-      "excludeItemCodes": ["7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "kgk", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
+      "excludeItemCodes": ["dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "kgk", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
       "quality": "normal",
       "excludeAreas": [1, 40, 75, 103, 109],
       "activeInLevels": [3],
@@ -879,7 +879,7 @@
       "itemStats": [{"stat": "item_allskills", "op": "<", "value": 1}],
       "quality": "superior",
       "baseTier": {"max": 0},
-      "excludeItemCodes": ["scl", "plt", "ful", "kit", "tow", "gts", "fts", "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
+      "excludeItemCodes": ["scl", "plt", "ful", "kit", "tow", "gts", "fts", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
       "excludeAreas": [1, 40, 75, 103, 109],
       "activeInLevels": [3],
       "hide": true,
@@ -892,7 +892,7 @@
       "itemStats": [{"stat": "item_allskills", "op": "<", "value": 1}],
       "quality": "superior",
       "baseTier": {"max": 1},
-      "excludeItemCodes": ["wsp", "crs", "wax", "mpi", "9mp", "9pa", "9cr", "9ws", "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
+      "excludeItemCodes": ["wsp", "crs", "wax", "mpi", "9mp", "9pa", "9cr", "9ws", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
       "excludeAreas": [1, 40, 75, 103, 109],
       "activeInLevels": [3],
       "hide": true,
@@ -906,17 +906,17 @@
       "activeInLevels": [3],
       "hide": true
     },
-    // On level 4, hides weapons and armor at superior quality or below that have no All Skills, outside towns. Mythicals and the excluded codes are kept.
+    // On level 4, hides rare weapons and armor outside towns. Mythicals and the excluded codes are kept.
     {
-      "comment": "R104 | On level 4, hides weapons and armor at superior quality or below that have no All Skills… | hide at L4",
+      "comment": "R104 | On level 4, hides rare weapons and armor outside towns | hide at L4",
       "itemTypes": ["weap", "armo"],
       "excludeItemCodes": [
-        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
-        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
-        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
-        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
-        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
-        "qf1", "qf2"
+        "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14",
+        "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30",
+        "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45",
+        "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60",
+        "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1",
+        "qf2"
       ],
       "quality": "rare",
       "excludeAreas": [1, 40, 75, 103, 109],
@@ -940,12 +940,12 @@
       "comment": "R106 | On level 3, hides rare weapons and armor with no sockets, outside towns | hide at L3",
       "itemTypes": ["weap", "armo"],
       "excludeItemCodes": [
-        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
-        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
-        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
-        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
-        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
-        "qf1", "qf2"
+        "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14",
+        "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30",
+        "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45",
+        "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60",
+        "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1",
+        "qf2"
       ],
       "quality": "rare",
       "sockets": 0,
@@ -953,11 +953,11 @@
       "activeInLevels": [3],
       "hide": true
     },
-    // On level 4, hides rare weapons and armor outside towns. Mythicals and the excluded codes are kept.
+    // On level 4, hides weapons and armor at superior quality or below that have no All Skills, no +3 skill tab and no Summons Limit, outside towns. Mythicals and the excluded codes are kept.
     {
-      "comment": "R107 | On level 4, hides rare weapons and armor outside towns | hide at L4",
+      "comment": "R107 | On level 4, hides weapons and armor at superior quality or below without All Skills, outside towns | hide at L4",
       "itemTypes": ["weap", "armo"],
-      "excludeItemCodes": ["7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
+      "excludeItemCodes": ["dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
       "itemStats": [{"stat": "item_allskills", "op": "<", "value": 1}],
       "quality": {"max": "superior"},
       "excludeAreas": [1, 40, 75, 103, 109],
@@ -976,7 +976,7 @@
     {
       "comment": "R109 | Level 2: rare unsocketed normal-tier armor/weapons from clvl 50 | hide at L2",
       "itemTypes": ["weap", "armo"],
-      "excludeItemCodes": ["7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
+      "excludeItemCodes": ["dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
       "quality": "rare",
       "baseTier": "normal",
       "sockets": 0,
@@ -994,12 +994,12 @@
       "comment": "R110 | On level 3, hides normal-tier uniques (baseTier 0) outside towns | hide at L3",
       "itemTypes": ["weap", "armo"],
       "excludeItemCodes": [
-        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
-        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
-        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
-        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
-        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "kgk", "leg", "msf", "opl", "opm",
-        "ops", "qf1", "qf2"
+        "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14",
+        "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30",
+        "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45",
+        "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60",
+        "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "kgk", "leg", "msf", "opl", "opm", "ops",
+        "qf1", "qf2"
       ],
       "quality": "unique",
       "baseTier": 0,
@@ -1013,12 +1013,12 @@
       "comment": "R112 | On level 4, hides normal and exceptional uniques (baseTier 0-1) outside towns | hide at L4",
       "itemTypes": ["weap", "armo"],
       "excludeItemCodes": [
-        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
-        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
-        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
-        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
-        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "kgk", "leg", "msf", "opl", "opm",
-        "ops", "qf1", "qf2"
+        "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14",
+        "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30",
+        "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45",
+        "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60",
+        "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "kgk", "leg", "msf", "opl", "opm", "ops",
+        "qf1", "qf2"
       ],
       "quality": "unique",
       "baseTier": {"max": 1},
@@ -1032,12 +1032,12 @@
       "comment": "R114 | On level 4, hides elite-tier uniques (baseTier 2) outside towns | hide at L4",
       "itemTypes": ["weap", "armo"],
       "excludeItemCodes": [
-        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
-        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
-        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
-        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
-        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
-        "qf1", "qf2"
+        "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14",
+        "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30",
+        "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45",
+        "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60",
+        "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1",
+        "qf2"
       ],
       "quality": "unique",
       "baseTier": 2,
@@ -1050,11 +1050,13 @@
     // Magic and white mythical bases.
 
     {
-      "comment": "R115 | On level 4, hides magic-quality mythical bases (m01-m39) outside towns | hide at L4",
+      "comment": "R115 | On level 4, hides magic-quality mythical bases (all 61) outside towns | hide at L4",
       "itemCodes": [
         "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15",
-        "m16", "m17", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31",
-        "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39"
+        "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31",
+        "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46",
+        "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61",
+        "dd1"
       ],
       "quality": "magic",
       "excludeAreas": [1, 40, 75, 103, 109],
@@ -1062,11 +1064,13 @@
       "hide": true
     },
     {
-      "comment": "R116 | On level 4, hides normal-quality mythical bases (m01-m39) outside towns | hide at L4",
+      "comment": "R116 | On level 4, hides normal-quality mythical bases (all 61) outside towns | hide at L4",
       "itemCodes": [
         "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15",
-        "m16", "m17", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31",
-        "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39"
+        "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31",
+        "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46",
+        "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61",
+        "dd1"
       ],
       "quality": "normal",
       "excludeAreas": [1, 40, 75, 103, 109],
@@ -1078,7 +1082,7 @@
     // Magic rings, amulets, class jewellery and coupons.
 
     {
-      "comment": "R117 | On level 3, hides rings, amulets and rng items that are magic or below, outside towns | hide at L3",
+      "comment": "R117 | On level 3, hides rings and amulets that are magic or below, outside towns | hide at L3",
       "itemCodes": ["amu", "rin"],
       "quality": {"max": "magic"},
       "excludeAreas": [1, 40, 75, 103, 109],
@@ -1103,7 +1107,7 @@
       "hide": true
     },
     {
-      "comment": "R119 | On level 3, hides magic-quality rings, amulets and class jewellery outside towns | hide at L3",
+      "comment": "R119 | On level 3, hides magic-quality amulets, class jewellery and charms outside towns | hide at L3",
       "itemCodes": ["amu", "zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "wrn", "wam", "aam", "cm1", "cm2", "cm3", "cx1", "cx2", "cx3"],
       "quality": "magic",
       "excludeAreas": [1, 40, 75, 103, 109],
@@ -1323,12 +1327,12 @@
       "comment": "R152 | Normal-tier unique armor and weapons (baseTier 0), levels 1-2: uses the UniqueLabel style… | sound+label (L1-2)",
       "itemTypes": ["weap", "armo"],
       "excludeItemCodes": [
-        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
-        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
-        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
-        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
-        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
-        "qf1", "qf2"
+        "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14",
+        "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30",
+        "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45",
+        "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60",
+        "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1",
+        "qf2"
       ],
       "quality": "unique",
       "baseTier": 0,
@@ -1340,12 +1344,12 @@
       "comment": "R153 | Exceptional-tier unique armor and weapons (baseTier 1), levels 1-2: uses the UniqueLabel… | sound+label (L1-2)",
       "itemTypes": ["weap", "armo"],
       "excludeItemCodes": [
-        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
-        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
-        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
-        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
-        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
-        "qf1", "qf2"
+        "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14",
+        "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30",
+        "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45",
+        "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60",
+        "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1",
+        "qf2"
       ],
       "quality": "unique",
       "baseTier": 1,
@@ -1356,15 +1360,15 @@
     {
       "comment": "R154 | Elite-tier unique armor and weapons (baseTier 2), levels 1-3: uses the UniqueLabel style | sound+label (L1-3)",
       "itemTypes": ["weap", "armo"],
-      "excludeItemCodes": ["7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2", "ci3"],
+      "excludeItemCodes": ["dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2", "ci3"],
       "quality": "unique",
       "baseTier": 2,
       "activeInLevels": [1, 2, 3],
       "useStyle": "UniqueLabel"
     },
-    // Uniques from rings, amulets, class jewellery and charms: chat line, other.mp3 sound, red border, goldstar icon.
+    // Uniques from rings, amulets and class jewellery: chat line, other.mp3 sound, red border, goldstar icon.
     {
-      "comment": "R155 | Uniques from rings, amulets, class jewellery and charms: chat line, other.mp3 sound, red… | chat+sound+label",
+      "comment": "R155 | Uniques from rings, amulets and class jewellery: chat line, other.mp3 sound, red border, goldstar icon | chat+sound+label",
       "itemCodes": ["rin", "amu", "zrn", "srn", "nrn", "prn", "brg", "drn", "arn", "zam", "sam", "nam", "pam", "bam", "dam", "aam", "wam", "wrn"],
       "quality": "unique",
       "chatMessage": "ÿc1*ÿc2*ÿc3 ÿc4{name} ÿc1*ÿc2*ÿc3",
@@ -1386,31 +1390,31 @@
     {"comment": "R158 | Normal-tier set items (baseTier 0), levels 1-2: uses the SetLabel style (green border, star… | sound+label (L1-2)", "quality": "set", "baseTier": 0, "activeInLevels": [1, 2], "useStyle": "SetLabel"},
     {"comment": "R159 | Exceptional-tier set items (baseTier 1), levels 1-2: uses the SetLabel style | sound+label (L1-2)", "quality": "set", "baseTier": 1, "activeInLevels": [1, 2], "useStyle": "SetLabel"},
     {"comment": "R160 | Elite-tier set items (baseTier 2), levels 1-3: uses the SetLabel style | sound+label (L1-3)", "quality": "set", "baseTier": 2, "activeInLevels": [1, 2, 3], "useStyle": "SetLabel"},
-    // All unique armor and weapons that are not mythical: adds a gold [baseTier] tag to the name. Label only, all levels.
+    // All unique armor and weapons that are not mythical: adds a grey [baseTier] tag before the gold name. Label only, all levels.
     {
-      "comment": "R161 | All unique armor and weapons that are not mythical: adds a gold [baseTier] tag to the name | name",
+      "comment": "R161 | All unique armor and weapons that are not mythical: adds a grey [baseTier] tag before the name | name",
       "itemTypes": ["weap", "armo"],
       "excludeItemCodes": [
-        "7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13",
-        "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29",
-        "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44",
-        "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59",
-        "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops",
-        "qf1", "qf2"
+        "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14",
+        "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30",
+        "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45",
+        "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60",
+        "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1",
+        "qf2"
       ],
       "quality": "unique",
       "replaceName": "ÿc5[{baseTier}]ÿc4{name}"
     },
-    // All set items: adds a green [baseTier] tag to the name. Label only, all levels.
-    {"comment": "R162 | All set items: adds a green [baseTier] tag to the name | name", "quality": "set", "replaceName": "ÿc5[{baseTier}]ÿc2{name}"},
+    // All set items: adds a grey [baseTier] tag before the green name. Label only, all levels.
+    {"comment": "R162 | All set items: adds a grey [baseTier] tag before the name | name", "quality": "set", "replaceName": "ÿc5[{baseTier}]ÿc2{name}"},
 
     // ---- Mythicals
     // Mythical labels and the superior mythical base style.
 
-    // Superior mythical bases (m01-m39): dark teal background with black border. Label only.
+    // Superior mythical bases (all 61): dark teal background with black border. Label only.
     {
-      "comment": "R163 | Superior mythical bases (m01-m39): dark teal background with black border | label",
-      "itemCodes": ["m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39"],
+      "comment": "R163 | Superior mythical bases (all 61): dark teal background with black border | label",
+      "itemCodes": ["m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "dd1"],
       "quality": "superior",
       "labelBackground": [0, 50, 50, 255],
       "labelBorder": {"color": [0, 0, 0, 255], "width": 1},
@@ -1458,9 +1462,9 @@
     // ---- Coupons
     // Coupon borders and the high-tier unique coupon style.
 
-    // Normal coupons: renames the label to Normal: with an orange border. Label only.
+    // Normal coupons: adds a Norm: prefix to the name with an orange border. Label only.
     {
-      "comment": "R202 | Normal coupons: renames the label to Normal: with an orange border | label+name",
+      "comment": "R202 | Normal coupons: adds a Norm: prefix with an orange border | label+name",
       "itemCodes": [
         "01c", "02c", "03c", "04c", "05c", "06c", "07c", "08c", "09c", "10c", "11c", "12c", "13c", "14c", "15c",
         "16c", "17c", "18c", "19c", "20c", "21c", "22c", "23c", "24c", "25c", "26c", "27c", "28c", "29c", "30c",
@@ -1475,9 +1479,9 @@
       "replaceName": {"enUS": "ÿc5Norm:ÿc4{name}", "deDE": "ÿc5Normal:ÿc4{name}", "esES": "ÿc5Normal:ÿc4{name}", "frFR": "ÿc5Normal:ÿc4{name}", "itIT": "ÿc5Normale:ÿc4{name}", "koKR": "ÿc5보통:ÿc4{name}", "plPL": "ÿc5Normalny:ÿc4{name}", "ruRU": "ÿc5Обычная:ÿc4{name}", "zhCN": "ÿc5普通:ÿc4{name}", "zhTW": "ÿc5普通:ÿc4{name}", "esMX": "ÿc5Normal:ÿc4{name}", "jaJP": "ÿc5ノーマル:ÿc4{name}", "ptBR": "ÿc5Normal:ÿc4{name}"},
       "labelBorder": {"color": [255, 165, 0, 255], "width": 1}
     },
-    // Exceptional coupons: renames the label to Exceptional: with an orange border. Label only.
+    // Exceptional coupons: adds an Exc: prefix to the name with an orange border. Label only.
     {
-      "comment": "R203 | Exceptional coupons: renames the label to Exceptional: with an orange border | label+name",
+      "comment": "R203 | Exceptional coupons: adds an Exc: prefix with an orange border | label+name",
       "itemCodes": [
         "01d", "02d", "03d", "04d", "05d", "06d", "07d", "08d", "09d", "10d", "11d", "12d", "13d", "14d", "15d", "16d",
         "17d", "18d", "19d", "20d", "21d", "22d", "23d", "24d", "25d", "26d", "27d", "28d", "29d", "30d", "31d",
@@ -1493,9 +1497,9 @@
       "replaceName": {"enUS": "ÿc5Exc:ÿc4{name}", "deDE": "ÿc5Außergewöhnlich:ÿc4{name}", "esES": "ÿc5Excepcional:ÿc4{name}", "frFR": "ÿc5Exceptionnel:ÿc4{name}", "itIT": "ÿc5Eccezionale:ÿc4{name}", "koKR": "ÿc5특급:ÿc4{name}", "plPL": "ÿc5Wyjątkowy:ÿc4{name}", "ruRU": "ÿc5Особые:ÿc4{name}", "zhCN": "ÿc5扩展级:ÿc4{name}", "zhTW": "ÿc5卓越:ÿc4{name}", "esMX": "ÿc5Excepcional:ÿc4{name}", "jaJP": "ÿc5エクセプショナル:ÿc4{name}", "ptBR": "ÿc5Excepcional:ÿc4{name}"},
       "labelBorder": {"color": [255, 165, 0, 255], "width": 1}
     },
-    // Elite coupons, levels 1-3: renames the label to Elite: with an orange border and plays other.mp3.
+    // Elite coupons, levels 1-3: adds an Elt: prefix to the name with an orange border and plays other.mp3.
     {
-      "comment": "R204 | Elite coupons, levels 1-3: renames the label to Elite: with an orange border and plays… | sound+label+name (L1-3)",
+      "comment": "R204 | Elite coupons, levels 1-3: adds an Elt: prefix, an orange border and plays other.mp3 | sound+label+name (L1-3)",
       "itemCodes": ["01e", "02e", "04e", "05e", "07e", "08e", "09e", "10e", "11e", "12e", "13e", "15e", "16e", "17e", "18e", "19e", "20e", "21e", "22e", "23e", "24e", "25e", "26e", "27e", "28e", "29e", "30e", "31e", "32e", "33e", "34e", "35e", "36e", "37e", "38e", "39e", "01h", "02k", "03h", "04h", "05h", "06h", "07h", "08h", "09h", "10h", "11h", "12k", "13h", "14h", "15h", "16h", "17h", "18h", "19h", "20h", "21h", "22k", "23h", "24h", "25h", "26h", "27h", "28h", "29h", "30h", "31h", "32k", "33h", "34h", "35h", "36h", "37h", "38h", "39h", "40h", "41h", "42k", "43h", "44h", "45h", "47h", "48h", "49h", "50h", "51h", "52k", "53h", "54h", "55h", "56h", "57h", "58h", "59h", "60h", "61h", "62k", "09i", "10i", "11i", "12i", "09j", "10j", "11j", "12j", "13i", "42e", "43e", "44e", "45e", "46e", "47e", "63k", "64k", "98j"],
       "activeInLevels": [1, 2, 3],
       "replaceName": {"enUS": "ÿc5Elt:ÿc4{name}", "deDE": "ÿc5Elite:ÿc4{name}", "esES": "ÿc5Élite:ÿc4{name}", "frFR": "ÿc5Élite:ÿc4{name}", "itIT": "ÿc5Élite:ÿc4{name}", "koKR": "ÿc5정예:ÿc4{name}", "plPL": "ÿc5Elitarny:ÿc4{name}", "ruRU": "ÿc5Элитные:ÿc4{name}", "zhCN": "ÿc5精英:ÿc4{name}", "zhTW": "ÿc5精英:ÿc4{name}", "esMX": "ÿc5Élite:ÿc4{name}", "jaJP": "ÿc5エリート:ÿc4{name}", "ptBR": "ÿc5Elite:ÿc4{name}"},
@@ -1503,9 +1507,9 @@
       "labelBorder": {"color": [255, 165, 0, 255], "width": 1},
       "excludeItemCodes": ["03j", "46h", "41e", "03e", "40e", "06e", "43e", "14e"]
     },
-    // Elite coupons, all levels: renames the label to Elite: with an orange border. Label only.
+    // Elite coupons, all levels: adds an Elt: prefix to the name with an orange border. Label only.
     {
-      "comment": "R205 | Elite coupons, all levels: renames the label to Elite: with an orange border | label+name",
+      "comment": "R205 | Elite coupons, all levels: adds an Elt: prefix with an orange border | label+name",
       "itemCodes": ["01e", "02e", "04e", "05e", "07e", "08e", "09e", "10e", "11e", "12e", "13e", "15e", "16e", "17e", "18e", "19e", "20e", "21e", "22e", "23e", "24e", "25e", "26e", "27e", "28e", "29e", "30e", "31e", "32e", "33e", "34e", "35e", "36e", "37e", "38e", "39e", "01h", "02k", "03h", "04h", "05h", "06h", "07h", "08h", "09h", "10h", "11h", "12k", "13h", "14h", "15h", "16h", "17h", "18h", "19h", "20h", "21h", "22k", "23h", "24h", "25h", "26h", "27h", "28h", "29h", "30h", "31h", "32k", "33h", "34h", "35h", "36h", "37h", "38h", "39h", "40h", "41h", "42k", "43h", "44h", "45h", "47h", "48h", "49h", "50h", "51h", "52k", "53h", "54h", "55h", "56h", "57h", "58h", "59h", "60h", "61h", "62k", "09i", "10i", "11i", "12i", "09j", "10j", "11j", "12j", "13i", "42e", "43e", "44e", "45e", "46e", "47e", "63k", "64k", "98j"],
       "replaceName": {"enUS": "ÿc5Elt:ÿc4{name}", "deDE": "ÿc5Elite:ÿc4{name}", "esES": "ÿc5Élite:ÿc4{name}", "frFR": "ÿc5Élite:ÿc4{name}", "itIT": "ÿc5Élite:ÿc4{name}", "koKR": "ÿc5정예:ÿc4{name}", "plPL": "ÿc5Elitarny:ÿc4{name}", "ruRU": "ÿc5Элитные:ÿc4{name}", "zhCN": "ÿc5精英:ÿc4{name}", "zhTW": "ÿc5精英:ÿc4{name}", "esMX": "ÿc5Élite:ÿc4{name}", "jaJP": "ÿc5エリート:ÿc4{name}", "ptBR": "ÿc5Elite:ÿc4{name}"},
       "labelBorder": {"color": [255, 165, 0, 255], "width": 1},
@@ -1530,9 +1534,9 @@
     // ---- Crafting reagents and perfect gems
     // Reagent gems and perfect gem labels.
 
-    // Crafting reagents (same codes as the chat rule at line 167): gold border and cube icon. Label only.
+    // Crafting reagents (same codes as the R016 chat rule): gold border and cube icon. Label only.
     {
-      "comment": "R211 | Crafting reagents (same codes as the chat rule at line 167): gold border and cube icon | label",
+      "comment": "R211 | Crafting reagents (same codes as the R016 chat rule): gold border and cube icon | label",
       "itemCodes": ["qll", "hrt", "brz", "jaw", "eyz", "hrn", "tal", "flg", "fng", "sol", "scz", "spe", "zzz"],
       "labelBorder": {"color": [200, 150, 0, 255], "width": 1},
       "icon": {"iconName": "cube", "iconSize": 27}
@@ -1889,7 +1893,7 @@
       "quality": ["normal", "superior"],
       "sockets": {"min": 2},
       "isRuneword": false,
-      "excludeItemCodes": ["7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
+      "excludeItemCodes": ["dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
       "useStyle": "BaseSockets"
     },
     {
@@ -1899,7 +1903,7 @@
       "baseTier": 2,
       "sockets": {"min": 4},
       "isRuneword": false,
-      "excludeItemCodes": ["7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
+      "excludeItemCodes": ["dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
       "useStyle": "BaseTop"
     },
     {
@@ -1910,7 +1914,7 @@
       "isEthereal": true,
       "sockets": {"max": 3},
       "isRuneword": false,
-      "excludeItemCodes": ["7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
+      "excludeItemCodes": ["dd1", "m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10", "m11", "m12", "m13", "m14", "m15", "m16", "m17", "m18", "m20", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m60", "m61", "d33", "g33", "gpl", "gpm", "gps", "hdm", "hfh", "hst", "leg", "msf", "opl", "opm", "ops", "qf1", "qf2"],
       "useStyle": "BaseTop"
     },
 
@@ -1918,7 +1922,7 @@
     // Style for ethereal mythical bases.
 
     // Ethereal mythical base weapons (white/superior bases, not the uniques) with 0 or 2+ sockets (1-socket ones excluded): EtherealMythical style (chat line, other.mp3, myth map icon).
-    {"comment": "R277 | Ethereal mythical base weapons (white/superior bases, not the uniques) with 0 or 2+ sockets… | chat+sound+label", "itemCodes": ["7wd", "dd1", "m01", "m02", "m03", "m04", "m05", "m07", "m08", "m09", "m11", "m12", "m13", "m14", "m16", "m17", "m18", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m61"], "quality": ["normal", "superior"], "isEthereal": true, "sockets": [0, 2, 3, 4, 5, 6], "useStyle": "EtherealMythical"},
+    {"comment": "R277 | Ethereal mythical base weapons (white/superior bases, not the uniques) with 0 or 2+ sockets… | chat+sound+label", "itemCodes": ["dd1", "m01", "m02", "m03", "m04", "m05", "m07", "m08", "m09", "m11", "m12", "m13", "m14", "m16", "m17", "m18", "m21", "m22", "m23", "m24", "m25", "m26", "m27", "m28", "m29", "m30", "m31", "m32", "m33", "m34", "m35", "m36", "m37", "m38", "m39", "m40", "m41", "m42", "m43", "m44", "m45", "m46", "m47", "m48", "m49", "m50", "m51", "m52", "m53", "m54", "m55", "m56", "m57", "m58", "m59", "m61"], "quality": ["normal", "superior"], "isEthereal": true, "sockets": [0, 2, 3, 4, 5, 6], "useStyle": "EtherealMythical"},
 
     // ==== Name Shortening
     // Rules that rename labels to a shorter name: organs, coupons and decals. They run last so their names win. Switch off a section in the editor to see the full game names again.
